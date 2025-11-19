@@ -117,7 +117,7 @@ func createcircle() -> void:
 
 	# cantidad de puntos
 	var number_points: int = 1 + abs(int(anguloFinal)) + int(calc /256)
-	print(number_points)
+	#print(number_points)
 	var needed_points: int = number_points + 1
 	var current_points: int = line.get_point_count()
 

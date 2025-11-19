@@ -1,1 +1,7 @@
 res://metaball/audioAnalizer.tres
+res://scripts/bullets/SpiralBullet.gd
+res://prefabs/cupi.tscn
+res://animations/cupiMouth.tres
+res://scripts/player/cupi.gd
+res://metaball/polygon_2d.gd
+res://metaball/metaball.tscn

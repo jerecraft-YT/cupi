@@ -13,10 +13,13 @@ shader_parameter/outline_color = Color(0, 0, 0, 1)
 [node name="metaball" type="Node2D" groups=["spectro"]]
 script = ExtResource("1_jhxxm")
 
-[node name="ball" type="Polygon2D" parent="."]
+[node name="ball" type="Polygon2D" parent="." node_paths=PackedStringArray("poligono", "metaball", "line")]
 material = SubResource("ShaderMaterial_jhxxm")
 color = Color(0, 0, 0, 1)
 script = ExtResource("1_5scw5")
+poligono = NodePath(".")
+metaball = NodePath("..")
+line = NodePath("Line2D")
 
 [node name="Line2D" type="Line2D" parent="ball"]
 closed = true

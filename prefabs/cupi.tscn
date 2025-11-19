@@ -132,8 +132,10 @@ animations = [{
 _data = [Vector2(0, 0.35), 0.0, 2.5923755, 0, 0, Vector2(0.25, 1), 0.0, 0.0, 0, 0, Vector2(0.75, 1), 0.0, -2.5923755, 0, 0, Vector2(1, 0.35190612), 0.0, 0.0, 0, 0]
 point_count = 4
 
-[node name="Cupi" type="Node2D" node_paths=PackedStringArray("levelMusic", "barBeat0Player", "barBeat1Player", "cupiMouth")]
+[node name="Cupi" type="Node2D" node_paths=PackedStringArray("cupi", "cupiContainer", "levelMusic", "barBeat0Player", "barBeat1Player", "cupiMouth")]
 script = ExtResource("1_d23ml")
+cupi = NodePath("cupiContainer/Face")
+cupiContainer = NodePath("cupiContainer")
 levelMusic = NodePath("LevelMusic")
 barBeat0Player = NodePath("beat0")
 barBeat1Player = NodePath("beat1")
@@ -163,9 +165,6 @@ animation = &"mouth"
 points = PackedVector2Array(25.981, -15, 27.716, -11.481, 28.978, -7.765, 29.743, -3.916, 30, 0, 29.743, 3.916, 28.978, 7.765, 27, 12, 23, 17)
 width = 2.0
 width_curve = SubResource("Curve_d23ml")
-joint_mode = 2
-begin_cap_mode = 2
-end_cap_mode = 2
 
 [node name="beat0" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_lqyft")

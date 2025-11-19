@@ -1,6 +1,7 @@
 extends Node2D
 
-@onready var cupi = $cupiContainer/Face
+@export var cupi:Node2D
+@export var cupiContainer:Node2D
 @onready var line = $Shield
 @onready var BG = get_tree().get_first_node_in_group("BG")
 var wave_amp = 0.025
@@ -16,7 +17,6 @@ var particulasBullet:PackedScene = load("res://prefabs/particulas_destruir_bulle
 @onready var slider = get_tree().get_first_node_in_group("slider")
 @onready var controladorGeneral = get_tree().get_first_node_in_group("controlador")
 @onready var bg3d:MeshInstance3D = get_tree().get_first_node_in_group("Bg3D")
-
 #variables del shield
 @export var amp:float = 35
 var actual_angle:float
@@ -99,9 +99,8 @@ func loadJSON():
 	return(data)
 
 func _process(delta: float) -> void:
-	lineScale = $cupiContainer.lineScale
-	createcircle()
-
+	line.scale = Vector2.ONE*cupiContainer.lineScale
+	line.rotation = controladorGeneral.rotation
 	convertedBPM = bpm*TimeMultiplier
 
 	timeBPM += delta*abs(TimeMultiplier)
@@ -178,4 +177,4 @@ func createcircle():
 		
 		#crear puntos en orden en forma de circulo
 		actual_angle = (float(i)*(cobertura/number_points))-(cobertura/2.0)
-		line.add_point(Vector2(cos(controladorGeneral.rotation + deg_to_rad( actual_angle))*amp*lineScale,sin(controladorGeneral.rotation +deg_to_rad(actual_angle))*amp*lineScale),i)
+		line.add_point(Vector2(cos(deg_to_rad( actual_angle))*amp,sin(deg_to_rad(actual_angle))*amp),i)
