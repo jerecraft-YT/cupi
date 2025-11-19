@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://bk8q65ctlgoef"]
+
+[ext_resource type="Script" uid="uid://n2c72dch62rh" path="res://scripts/bullet_spawner.gd" id="1_6afby"]
+[ext_resource type="PackedScene" uid="uid://d0kmnpjiacab" path="res://prefabs/cupi.tscn" id="1_i2pjl"]
+[ext_resource type="Script" uid="uid://cf7o7opy36uvt" path="res://scripts/backgroundAnim.gd" id="1_n4c2o"]
+
+[sub_resource type="Gradient" id="Gradient_n4c2o"]
+offsets = PackedFloat32Array(0.0952381, 0.32967034)
+colors = PackedColorArray(0, 0, 0, 1, 0.24115604, 0.24115604, 0.24115601, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6afby"]
+gradient = SubResource("Gradient_n4c2o")
+width = 240
+height = 240
+fill_to = Vector2(1, 1)
+repeat = 2
+
+[node name="TestZone" type="Node2D"]
+
+[node name="background" type="Sprite2D" parent="."]
+texture = SubResource("GradientTexture2D_6afby")
+script = ExtResource("1_n4c2o")
+
+[node name="bullet spawner" type="Node" parent="." node_paths=PackedStringArray("cupi") groups=["bulletSpawner"]]
+script = ExtResource("1_6afby")
+cupi = NodePath("../Cupi")
+
+[node name="Cupi" parent="." groups=["cupi"] instance=ExtResource("1_i2pjl")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(0, 94)
+zoom = Vector2(3, 3)
+position_smoothing_enabled = true

@@ -1,0 +1,6 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://b2j5ac01hh5be"]
+
+[ext_resource type="Texture2D" uid="uid://bler7o18gyany" path="res://sprites/cupi/boca/cupiMouthExpresions.png" id="1_jp3bx"]
+
+[resource]
+atlas = ExtResource("1_jp3bx")

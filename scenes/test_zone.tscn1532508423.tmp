@@ -1,0 +1,120 @@
+[gd_scene load_steps=12 format=3 uid="uid://bk8q65ctlgoef"]
+
+[ext_resource type="Script" uid="uid://n2c72dch62rh" path="res://scripts/bullet_spawner.gd" id="1_6afby"]
+[ext_resource type="PackedScene" uid="uid://d0kmnpjiacab" path="res://prefabs/cupi.tscn" id="1_i2pjl"]
+[ext_resource type="Script" uid="uid://cf7o7opy36uvt" path="res://scripts/backgroundAnim.gd" id="1_n4c2o"]
+[ext_resource type="Shader" uid="uid://b37la2eanlw08" path="res://shaders/WaterNoise.gdshader" id="4_pp1aq"]
+[ext_resource type="Shader" uid="uid://dcl5kmnunr7ip" path="res://shaders/Controller.tres" id="5_m86cr"]
+
+[sub_resource type="Gradient" id="Gradient_n4c2o"]
+offsets = PackedFloat32Array(0.0952381, 0.32967034)
+colors = PackedColorArray(0, 0, 0, 1, 0.32915837, 0.3291584, 0.3291584, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6afby"]
+gradient = SubResource("Gradient_n4c2o")
+width = 240
+height = 240
+fill_to = Vector2(1, 1)
+repeat = 2
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_vy3mc"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_delq5"]
+noise = SubResource("FastNoiseLite_vy3mc")
+seamless = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hsuob"]
+shader = ExtResource("4_pp1aq")
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_delq5")
+shader_parameter/smoke_color = Color(0, 0, 0, 1)
+shader_parameter/distortion_speed = 0.2
+shader_parameter/density = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ntdbd"]
+shader = ExtResource("5_m86cr")
+shader_parameter/scrollVel = Vector2(0.5, 0)
+shader_parameter/ColorParameter2 = Color(1, 1, 1, 1)
+shader_parameter/radius = 0.5
+shader_parameter/center = Vector2(0.5, 0.5)
+shader_parameter/circleAperture = 0.4
+
+[node name="TestZone" type="Node2D"]
+
+[node name="background" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
+texture = SubResource("GradientTexture2D_6afby")
+script = ExtResource("1_n4c2o")
+
+[node name="bullet spawner" type="Node" parent="." node_paths=PackedStringArray("cupi") groups=["bulletSpawner"]]
+script = ExtResource("1_6afby")
+speed = 0.2
+cupi = NodePath("../Cupi")
+
+[node name="spirales" type="Node2D" parent="bullet spawner"]
+scale = Vector2(3, 3)
+
+[node name="normales" type="Node2D" parent="bullet spawner"]
+scale = Vector2(3, 3)
+
+[node name="Cupi" parent="." groups=["cupi"] instance=ExtResource("1_i2pjl")]
+scale = Vector2(3, 3)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(0, 278)
+ignore_rotation = false
+position_smoothing_enabled = true
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="ControlVelocity" type="HSlider" parent="HUD" groups=["slider"]]
+offset_left = 65.0
+offset_top = 675.0
+offset_right = 674.0
+offset_bottom = 723.0
+min_value = -2.0
+max_value = 10.0
+step = 0.01
+value = 1.0
+
+[node name="background2" type="ColorRect" parent="HUD"]
+z_index = 200
+z_as_relative = false
+material = SubResource("ShaderMaterial_hsuob")
+custom_minimum_size = Vector2(720, 558)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -360.0
+offset_top = -558.0
+offset_right = 360.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(120, 93)
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HUD"]
+offset_right = 321.0
+offset_bottom = 257.0
+text = "TEXTO INSANO"
+
+[node name="controles" type="Node2D" parent="HUD"]
+position = Vector2(376, 584)
+
+[node name="controlador" type="ColorRect" parent="HUD/controles"]
+z_index = 210
+z_as_relative = false
+material = SubResource("ShaderMaterial_ntdbd")
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -271.0
+offset_top = 145.0
+offset_right = 257.0
+offset_bottom = 673.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(88, 88)

@@ -1,0 +1,6 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://cuu52i5ueaqmu"]
+
+[ext_resource type="Texture2D" uid="uid://vld3jhw3acr1" path="res://sprites/cupi/ojos/cupiEyesExpresions.png" id="1_d281g"]
+
+[resource]
+atlas = ExtResource("1_d281g")

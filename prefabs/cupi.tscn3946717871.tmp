@@ -1,0 +1,61 @@
+[gd_scene load_steps=8 format=3 uid="uid://d0kmnpjiacab"]
+
+[ext_resource type="Texture2D" uid="uid://bwmj05m8fppwo" path="res://sprites/cupi/cupi_1.png" id="1_4rtjv"]
+[ext_resource type="Script" uid="uid://bp713wa275s4p" path="res://scripts/cupi.gd" id="1_d23ml"]
+[ext_resource type="Texture2D" uid="uid://e441f6casgbm" path="res://sprites/cupi/cupi_2.png" id="2_d23ml"]
+[ext_resource type="AudioStream" uid="uid://bhydjv1fxr53t" path="res://music/musiquitaTest.ogg" id="2_x2j8a"]
+[ext_resource type="AudioStream" uid="uid://cdannsch5vxx4" path="res://music/beatBar0.ogg" id="5_lqyft"]
+[ext_resource type="AudioStream" uid="uid://bg6tq4trreu05" path="res://music/beatBar1.ogg" id="6_66pfm"]
+
+[sub_resource type="Curve" id="Curve_d23ml"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.25543478, 1), 0.0, 0.0, 0, 0, Vector2(0.75, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[node name="Cupi" type="Node2D" node_paths=PackedStringArray("timerBPM", "levelMusic", "barBeat0Player", "barBeat1Player", "test")]
+script = ExtResource("1_d23ml")
+timerBPM = NodePath("beatController")
+levelMusic = NodePath("AudioStreamPlayer")
+barBeat0Player = NodePath("beat0")
+barBeat1Player = NodePath("beat1")
+test = NodePath("RichTextLabel")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_x2j8a")
+
+[node name="beatController" type="Timer" parent="."]
+autostart = true
+
+[node name="cupiContainer" type="Node2D" parent="."]
+
+[node name="Face" type="Node2D" parent="cupiContainer"]
+
+[node name="eyes" type="Sprite2D" parent="cupiContainer/Face"]
+texture_filter = 1
+position = Vector2(0, -4)
+texture = ExtResource("1_4rtjv")
+
+[node name="mouth" type="Sprite2D" parent="cupiContainer/Face"]
+texture_filter = 1
+position = Vector2(0, 8)
+texture = ExtResource("2_d23ml")
+
+[node name="Shield" type="Line2D" parent="."]
+width = 2.0
+width_curve = SubResource("Curve_d23ml")
+
+[node name="beat0" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_lqyft")
+
+[node name="beat1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_66pfm")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -109.0
+offset_top = -111.0
+offset_right = 601.0
+offset_bottom = 119.0
+scale = Vector2(0.3, 0.3)
+theme_override_font_sizes/normal_font_size = 51
+text = "MUSICAAAA"
+
+[connection signal="timeout" from="beatController" to="." method="_on_beat_controller_timeout"]

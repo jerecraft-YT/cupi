@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bv1q1ckfcnds8"]
+
+[ext_resource type="Script" uid="uid://n2c72dch62rh" path="res://scripts/bullet_spawner.gd" id="2_v5r4t"]
+[ext_resource type="PackedScene" uid="uid://d0kmnpjiacab" path="res://prefabs/cupi.tscn" id="3_7dn3w"]
+
+[node name="Gameplay" type="Node2D"]
+
+[node name="bullet spawner" type="Node2D" parent="." node_paths=PackedStringArray("cupi") groups=["bulletSpawner"]]
+script = ExtResource("2_v5r4t")
+speed = 0.2
+cupi = NodePath("../Cupi")
+
+[node name="spirales" type="Node2D" parent="bullet spawner"]
+scale = Vector2(3, 3)
+
+[node name="normales" type="Node2D" parent="bullet spawner"]
+scale = Vector2(3, 3)
+
+[node name="Cupi" parent="." groups=["cupi"] instance=ExtResource("3_7dn3w")]
+scale = Vector2(3, 3)

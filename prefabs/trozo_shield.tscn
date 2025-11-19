@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cn7ycauqortg6"]
+
+[ext_resource type="Script" uid="uid://lwsyqdtf6bes" path="res://scripts/trozo_shield.gd" id="1_jpx0v"]
+
+[sub_resource type="Curve" id="Curve_c48gg"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.2527881, 1), 0.0, 0.0, 0, 0, Vector2(0.7472119, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[node name="TrozoShield" type="Line2D"]
+points = PackedVector2Array(0, -2, 0, 0, 0, 2)
+width = 2.0
+width_curve = SubResource("Curve_c48gg")
+joint_mode = 2
+script = ExtResource("1_jpx0v")

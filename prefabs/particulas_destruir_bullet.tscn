@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dceudugpm2jeq"]
+
+[ext_resource type="Material" uid="uid://2xaw3ehd0fhy" path="res://particulas/shieldParticles.tres" id="1_yxm3q"]
+[ext_resource type="Script" uid="uid://6ghjiqyemyni" path="res://scripts/particulas_destruir_bullet.gd" id="2_58okv"]
+
+[node name="particulas_destruir_bullet" type="GPUParticles2D"]
+amount = 16
+lifetime = 0.1
+process_material = ExtResource("1_yxm3q")
+script = ExtResource("2_58okv")

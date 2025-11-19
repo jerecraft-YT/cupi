@@ -1,0 +1,67 @@
+[gd_scene load_steps=11 format=3 uid="uid://jjppi74it83l"]
+
+[ext_resource type="Shader" uid="uid://dwro78a8bfmp3" path="res://shaders/efectoEsfera.gdshader" id="1_wbvui"]
+[ext_resource type="Script" uid="uid://bxk4nrhap8o4m" path="res://scripts/movimientoEsferaBG.gd" id="2_oum2u"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_v5r4t"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_7dn3w"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_ntdbd"]
+panorama = SubResource("NoiseTexture2D_7dn3w")
+filter = false
+
+[sub_resource type="Sky" id="Sky_5vd6e"]
+sky_material = SubResource("PanoramaSkyMaterial_ntdbd")
+radiance_size = 4
+
+[sub_resource type="Environment" id="Environment_nbo5w"]
+background_mode = 2
+sky = SubResource("Sky_5vd6e")
+
+[sub_resource type="World3D" id="World3D_hgjke"]
+environment = SubResource("Environment_nbo5w")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2gq7b"]
+render_priority = 0
+shader = ExtResource("1_wbvui")
+shader_parameter/amplitude = 0.0
+shader_parameter/frequency = 25.0
+shader_parameter/sharpness = 5.0
+shader_parameter/noise_strength = 0.15
+shader_parameter/base_color = Color(0.43282261, 0.43282261, 0.43282261, 1)
+shader_parameter/roughness = 0.6
+shader_parameter/metallic = 0.1
+
+[sub_resource type="SphereMesh" id="SphereMesh_5vd6e"]
+lightmap_size_hint = Vector2i(17, 9)
+material = SubResource("ShaderMaterial_2gq7b")
+
+[node name="central3DBG" type="Sprite2D"]
+texture_filter = 1
+texture = SubResource("ViewportTexture_v5r4t")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+world_3d = SubResource("World3D_hgjke")
+transparent_bg = true
+anisotropic_filtering_level = 0
+canvas_cull_mask = 4293918721
+oversampling = false
+
+[node name="Camera3D" type="Camera3D" parent="SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.213297)
+cull_mask = 1
+v_offset = 0.175
+fov = 61.01806
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="SubViewport" groups=["Bg3D"]]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0.2, 0)
+mesh = SubResource("SphereMesh_5vd6e")
+skeleton = NodePath("../..")
+script = ExtResource("2_oum2u")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewport"]
+transform = Transform3D(0.9999519, 0, -0.009808593, 0, 1, 0, 0.009808593, 0, 0.9999519, 0, 0, 2.7682738)
+
+[node name="Camera2D" type="Camera2D" parent="."]
