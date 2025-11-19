@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0kmnpjiacab"]
+
+[ext_resource type="Texture2D" uid="uid://bwmj05m8fppwo" path="res://sprites/cupi/cupi_1.png" id="1_4rtjv"]
+[ext_resource type="Script" uid="uid://bp713wa275s4p" path="res://cupi.gd" id="1_d23ml"]
+[ext_resource type="Texture2D" uid="uid://e441f6casgbm" path="res://sprites/cupi/cupi_2.png" id="2_d23ml"]
+
+[node name="Cupi" type="Node2D"]
+script = ExtResource("1_d23ml")
+
+[node name="Face" type="Node2D" parent="."]
+
+[node name="eyes" type="Sprite2D" parent="Face"]
+texture_filter = 1
+position = Vector2(0, -4)
+texture = ExtResource("1_4rtjv")
+
+[node name="mouth" type="Sprite2D" parent="Face"]
+texture_filter = 1
+position = Vector2(0, 8)
+texture = ExtResource("2_d23ml")
+
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2(-2, 19)
+points = PackedVector2Array(158, 29, 113, 28, 83, 12, 48, 0, 3, 24, -12, 20, -23, 8, -48, 14, -57, -23, -33, -31, -10, -38, 9, -45, 90, -58, 113, -16)
+width = 5.0
+default_color = Color(0.5001345, 0.7178444, 0.28689858, 1)
