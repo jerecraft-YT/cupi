@@ -2,7 +2,7 @@ extends Node2D
 
 @export var cupi:Node2D
 @export var cupiContainer:Node2D
-@onready var line = $Shield
+@export var line:Line2D
 @onready var BG = get_tree().get_first_node_in_group("BG")
 var wave_amp = 0.025
 
@@ -151,16 +151,6 @@ func BulletDestroy(bullet):
 		materialparticulas.scale_min = scale.x*1.5
 		particles.position = bullet.position
 		particles.rotation = bullet.angle
-		
-		if 0 == 1:
-			var angleProgress:float = cobertura/2.0
-			var angleMin:int = cobertura / line.get_point_count()
-			for i in range(line.get_point_count()):
-				var trocito = trozo.instantiate()
-				cupi.add_child(trocito)
-				trocito.position = Vector2(line.get_point_position(i).x,line.get_point_position(i).y)
-				trocito.rotationrandom = controladorGeneral.rotation-angleProgress
-				angleProgress += angleMin
 	
 func WAVEBEAT():
 	wave_amp = 0.05

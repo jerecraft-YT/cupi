@@ -132,10 +132,11 @@ animations = [{
 _data = [Vector2(0, 0.35), 0.0, 2.5923755, 0, 0, Vector2(0.25, 1), 0.0, 0.0, 0, 0, Vector2(0.75, 1), 0.0, -2.5923755, 0, 0, Vector2(1, 0.35190612), 0.0, 0.0, 0, 0]
 point_count = 4
 
-[node name="Cupi" type="Node2D" node_paths=PackedStringArray("cupi", "cupiContainer", "levelMusic", "barBeat0Player", "barBeat1Player", "cupiMouth")]
+[node name="Cupi" type="Node2D" node_paths=PackedStringArray("cupi", "cupiContainer", "line", "levelMusic", "barBeat0Player", "barBeat1Player", "cupiMouth")]
 script = ExtResource("1_d23ml")
 cupi = NodePath("cupiContainer/Face")
 cupiContainer = NodePath("cupiContainer")
+line = NodePath("Shield")
 levelMusic = NodePath("LevelMusic")
 barBeat0Player = NodePath("beat0")
 barBeat1Player = NodePath("beat1")
