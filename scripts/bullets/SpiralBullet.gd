@@ -50,7 +50,7 @@ var easing_functions = [
 	"easeInOutBounce" # 24
 ]
 
-@export var idFuncion = 15
+@export var idFuncion = 0
 # --------------------------------------------------------
 # PROCESS
 # --------------------------------------------------------
@@ -78,7 +78,7 @@ func getCalc() -> float:
 # CÁLCULO DE ÁNGULO GLOBAL (EASING APLICADO UNA VEZ)
 # --------------------------------------------------------
 func calcAngle() -> void:
-	angleRef = AngleFinal - AngleStart
+	angleRef = AngleStart-AngleFinal 
 
 	var ampStartSpiral: float = bulletStart.ampSpiral
 	var ampFinalSpiral: float = bulletFinal.ampSpiral

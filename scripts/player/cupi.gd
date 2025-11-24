@@ -91,7 +91,7 @@ func get_song_time() -> float:
 	return TimeScene - beatStartTime
 
 func loadJSON():
-	var data = load("res://charts/daidaidaikirai.json")
+	var data = load("res://charts/daidaidaikirai_modificado.json")
 	return(data)
 
 func _process(delta: float) -> void:

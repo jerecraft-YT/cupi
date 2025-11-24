@@ -98,15 +98,15 @@ func _process(delta: float) -> void:
 				spirales.add_child(spiral)
 						
 				#establecer datos de bala inicial
-				spiral.AngleStart=cupi.chartData.data.spiral[actualview_chartSpiral-1]["startAngle"]
-				spiral.AngleFinal=cupi.chartData.data.spiral[actualview_chartSpiral-1]["finalAngle"]
+				spiral.AngleStart=-cupi.chartData.data.spiral[actualview_chartSpiral-1]["startAngle"]
+				spiral.AngleFinal=-cupi.chartData.data.spiral[actualview_chartSpiral-1]["finalAngle"]
 				bullet_index = actualview_chartSpiral
 				spiral.calc = (spiralTime + duracion)-(spiralTime)
 				
 				spiral.bulletStart.baseSpawnTime = song_time
 				spiral.bulletStart.baseStrumTime = next_timeSpiral
 				spiral.bulletStart.distance = (next_timeSpiral - song_time)
-				spiral.bulletStart.angle = cupi.chartData.data.spiral[actualview_chartSpiral-1]["startAngle"]
+				spiral.bulletStart.angle = -cupi.chartData.data.spiral[actualview_chartSpiral-1]["startAngle"]
 				spiral.bulletStart.expresionContain=cupi.chartData.data.spiral[actualview_chartSpiral-1]["expresion"]
 				spiral.bulletStart.isSpiral = true
 				spiral.bulletStart.spiralStart = true
@@ -114,7 +114,7 @@ func _process(delta: float) -> void:
 				spiral.bulletFinal.baseSpawnTime = song_time
 				spiral.bulletFinal.baseStrumTime = next_timeSpiral + duracion
 				spiral.bulletFinal.distance = (next_timeSpiral - song_time)+duracion
-				spiral.bulletFinal.angle = cupi.chartData.data.spiral[actualview_chartSpiral-1]["finalAngle"]
+				spiral.bulletFinal.angle = -cupi.chartData.data.spiral[actualview_chartSpiral-1]["finalAngle"]
 				spiral.bulletFinal.expresionContain=cupi.chartData.data.spiral[actualview_chartSpiral-1]["expresion"]
 				spiral.bulletFinal.isSpiral = true
 				spiral.bulletFinal.spiralStart = false
@@ -141,16 +141,16 @@ func _process(delta: float) -> void:
 				
 				spirales.add_child(spiral)
 				
-				spiral.AngleStart= cupi.chartData.data.spiral[reverseView]["startAngle"]
+				spiral.AngleStart= -cupi.chartData.data.spiral[reverseView]["startAngle"]
 				bullet_index = actualview_chartSpiral
-				spiral.AngleFinal= cupi.chartData.data.spiral[reverseView]["finalAngle"]
+				spiral.AngleFinal= -cupi.chartData.data.spiral[reverseView]["finalAngle"]
 				spiral.ampFinal = ((cupi.chartData.data.spiral[reverseView]["time"] + duracion) - song_time)
 				spiral.calc = (spiralTime + duracion)-(spiralTime)
 				#establecer datos de bala inicial
 				spiral.bulletStart.baseSpawnTime = 0
 				spiral.bulletStart.baseStrumTime = cupi.chartData.data.spiral[reverseView]["time"]
 				spiral.bulletStart.distance = cupi.chartData.data.spiral[reverseView]["time"]
-				spiral.bulletStart.angle = cupi.chartData.data.spiral[reverseView]["finalAngle"]
+				spiral.bulletStart.angle = -cupi.chartData.data.spiral[reverseView]["finalAngle"]
 				spiral.bulletStart.expresionContain=cupi.chartData.data.spiral[reverseView-1]["expresion"]
 				spiral.bulletStart.isSpiral = true
 				spiral.bulletStart.spiralStart = true
@@ -158,7 +158,7 @@ func _process(delta: float) -> void:
 				spiral.bulletFinal.baseSpawnTime = cupi.get_song_time()
 				spiral.bulletFinal.baseStrumTime = cupi.chartData.data.spiral[reverseView]["time"] + duracion
 				spiral.bulletFinal.distance = ((cupi.chartData.data.spiral[reverseView]["time"] + duracion) - song_time)
-				spiral.bulletFinal.angle = cupi.chartData.data.spiral[reverseView]["finalAngle"]
+				spiral.bulletFinal.angle = -cupi.chartData.data.spiral[reverseView]["finalAngle"]
 				spiral.bulletFinal.expresionContain=cupi.chartData.data.spiral[reverseView-1]["expresion"]
 				spiral.bulletFinal.isSpiral = true
 				

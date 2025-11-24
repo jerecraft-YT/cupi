@@ -13,3 +13,5 @@ res://scripts/bullets/SpiralBullet.gd
 res://scenes/background.gd
 res://scripts/bullets/StandartBullet.gd
 res://scripts/bullets/BulletSpawner.gd
+res://scenes/StartLoad.tscn
+res://charts/daidaidaikirai_modificado.json
