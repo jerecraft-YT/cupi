@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1fqn8rr6ofpe"]
+
+[ext_resource type="PackedScene" uid="uid://cmwdw8kgbef6b" path="res://prefabs/metaball.tscn" id="2_pri23"]
+[ext_resource type="PackedScene" uid="uid://c515s8eiyg4px" path="res://prefabs/cupi_container.tscn" id="3_6ajat"]
+[ext_resource type="AudioStream" uid="uid://bhydjv1fxr53t" path="res://music/StandartMusic/daidaidaikirai.ogg" id="3_t3ibd"]
+
+[node name="PantallaTitulo" type="Node2D"]
+
+[node name="metaball" parent="." instance=ExtResource("2_pri23")]
+scale = Vector2(2, 2)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Label" type="Label" parent="."]
+offset_left = -360.0
+offset_top = -555.0
+offset_right = 360.0
+offset_bottom = -292.0
+theme_override_font_sizes/font_size = 128
+text = "CUPI"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_t3ibd")
+autoplay = true
+
+[node name="cupiContainer" parent="." instance=ExtResource("3_6ajat")]
+scale = Vector2(6, 6)
+
+[editable path="cupiContainer"]

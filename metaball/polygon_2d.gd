@@ -6,7 +6,7 @@ extends Polygon2D
 @export var line:Line2D
 
 # Configuración básica
-const NUMERO_PUNTOS := 32
+const NUMERO_PUNTOS := 48
 var tiempo: float = 0.0
 var radio_base := 70.0
 var ancho_pico := 100.0

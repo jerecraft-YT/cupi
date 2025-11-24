@@ -2,16 +2,17 @@
 
 [ext_resource type="Script" uid="uid://n2c72dch62rh" path="res://scripts/bullets/BulletSpawner.gd" id="2_v5r4t"]
 [ext_resource type="PackedScene" uid="uid://d0kmnpjiacab" path="res://prefabs/cupi.tscn" id="3_7dn3w"]
-[ext_resource type="PackedScene" uid="uid://cmwdw8kgbef6b" path="res://metaball/metaball.tscn" id="5_7dn3w"]
+[ext_resource type="PackedScene" uid="uid://cmwdw8kgbef6b" path="res://prefabs/metaball.tscn" id="5_7dn3w"]
 
 [node name="Gameplay" type="Node2D"]
 
 [node name="metaball" parent="." instance=ExtResource("5_7dn3w")]
 
-[node name="bullet spawner" type="Node2D" parent="." node_paths=PackedStringArray("cupi") groups=["bulletSpawner"]]
+[node name="bullet spawner" type="Node2D" parent="." node_paths=PackedStringArray("cupi", "cupiContainer") groups=["bulletSpawner"]]
 script = ExtResource("2_v5r4t")
 speed = 0.2
 cupi = NodePath("../Cupi")
+cupiContainer = NodePath("../Cupi/cupiContainer")
 
 [node name="spirales" type="Node2D" parent="bullet spawner"]
 scale = Vector2(3, 3)
@@ -21,3 +22,6 @@ scale = Vector2(3, 3)
 
 [node name="Cupi" parent="." groups=["cupi"] instance=ExtResource("3_7dn3w")]
 scale = Vector2(3, 3)
+
+[editable path="Cupi"]
+[editable path="Cupi/cupiContainer"]

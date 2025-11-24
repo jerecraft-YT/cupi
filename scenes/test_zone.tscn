@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://bk8q65ctlgoef"]
+[gd_scene load_steps=13 format=3 uid="uid://bk8q65ctlgoef"]
 
 [ext_resource type="PackedScene" uid="uid://bv1q1ckfcnds8" path="res://prefabs/gameplay.tscn" id="1_6afby"]
+[ext_resource type="Script" uid="uid://dqguof25omg2e" path="res://scenes/background.gd" id="2_hsuob"]
 [ext_resource type="Script" uid="uid://dinxdtthuvvkf" path="res://scripts/debug/control_velocity.gd" id="3_vy3mc"]
 [ext_resource type="Script" uid="uid://b32sgw55o2c8f" path="res://scripts/player/controles.gd" id="4_m86cr"]
 [ext_resource type="Shader" uid="uid://b37la2eanlw08" path="res://shaders/WaterNoise.gdshader" id="4_pp1aq"]
@@ -26,7 +27,7 @@ seamless = true
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hsuob"]
 shader = ExtResource("4_pp1aq")
 shader_parameter/noise_texture = SubResource("NoiseTexture2D_delq5")
-shader_parameter/smoke_color = Color(0, 0, 0, 1)
+shader_parameter/smoke_color = Color(0.2123048, 0.21230489, 0.21230468, 1)
 shader_parameter/distortion_speed = 0.5
 shader_parameter/density = 1.0
 
@@ -45,6 +46,7 @@ anchor_right = 0.5
 offset_right = 721.0
 offset_bottom = 720.0
 grow_horizontal = 2
+script = ExtResource("2_hsuob")
 
 [node name="Gameplay" parent="." instance=ExtResource("1_6afby")]
 position = Vector2(360, 360)

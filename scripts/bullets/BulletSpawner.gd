@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 
 var prefabBulletNormal:PackedScene = load("res://prefabs/bullet.tscn")
 var prefabBulletSpiral:PackedScene = load("res://prefabs/SpiralBullet.tscn")
@@ -12,7 +12,8 @@ var bullet_spiral_index: int = -1
 
 @export var speed:float = 0.75
 # Referencia a cupi
-@export var cupi:Node 
+@export var cupi:Node2D
+@export var cupiContainer:Node2D
 
 @warning_ignore("unused_parameter")
 func _process(delta: float) -> void:
@@ -37,15 +38,18 @@ func _process(delta: float) -> void:
 				time_offset = next_time+1
 				
 			if bullet_index != actualview_chart:
-				var bullet = prefabBulletNormal.instantiate()  
+				var bullet:CupiBullet = prefabBulletNormal.instantiate()  
 				normales.add_child(bullet)
 				bullet.baseSpawnTime = cupi.get_song_time()
 				bullet.baseStrumTime = next_time
 				bullet.distance = (next_time - song_time)
-				bullet.position = Vector2.ONE * 1000
 				bullet.angle = cupi.chartData.data.bullets[actualview_chart-1]["angle"]
 				bullet_index = actualview_chart
 				bullet.expresionContain=cupi.chartData.data.bullets[actualview_chart-1]["expresion"]
+				bullet.cupi = cupi
+				bullet.cupiContainer = cupiContainer
+				bullet.spawner = self
+				
 						
 		else:
 			
@@ -54,15 +58,18 @@ func _process(delta: float) -> void:
 			if reverseView<0:
 				break
 			if song_time < cupi.chartData.data.bullets[reverseView]["time"]:
-				var bullet = prefabBulletNormal.instantiate()  
+				var bullet:CupiBullet = prefabBulletNormal.instantiate()  
 				normales.add_child(bullet)
 				bullet.baseSpawnTime = cupi.get_song_time()
 				bullet.baseStrumTime = cupi.chartData.data.bullets[reverseView]["time"]
 				bullet.distance = (cupi.chartData.data.bullets[reverseView]["time"] - song_time)
-				bullet.position = Vector2.ONE * 1000
 				bullet.angle = cupi.chartData.data.bullets[reverseView]["angle"]
 				bullet_index = actualview_chart
 				bullet.expresionContain=cupi.chartData.data.bullets[reverseView-1]["expresion"]
+				bullet.cupi = cupi
+				bullet.cupiContainer = cupiContainer
+				bullet.spawner = self
+				
 				#cupi.cupiMouth.frame=cupi.chartData.data.bullets[reverseView]["expresion"]
 				#print(cupi.chartData.data.bullets[reverseView]["time"])
 
@@ -84,35 +91,43 @@ func _process(delta: float) -> void:
 				continue
 				
 			if bullet_spiral_index != actualview_chartSpiral:
-				var bullet = prefabBulletSpiral.instantiate()  
+				var spiral = prefabBulletSpiral.instantiate()  
 				var duracion = cupi.chartData.data.spiral[actualview_chartSpiral-1]["duration"]
-				#print(duracion)
-				spirales.add_child(bullet)
+				var spiralTime = cupi.chartData.data.spiral[actualview_chartSpiral-1]["time"]
+				
+				spirales.add_child(spiral)
 						
-						#establecer datos de bala inicial
-				bullet.bulletStart.baseSpawnTime = song_time
-				bullet.bulletStart.baseStrumTime = next_timeSpiral
-				bullet.bulletStart.distance = (next_timeSpiral - song_time)
-				bullet.bulletStart.position = Vector2.ONE * 1000
-				bullet.bulletStart.angle = cupi.chartData.data.spiral[actualview_chartSpiral-1]["startAngle"]
-				bullet.AngleStart=cupi.chartData.data.spiral[actualview_chartSpiral-1]["startAngle"]
+				#establecer datos de bala inicial
+				spiral.AngleStart=cupi.chartData.data.spiral[actualview_chartSpiral-1]["startAngle"]
+				spiral.AngleFinal=cupi.chartData.data.spiral[actualview_chartSpiral-1]["finalAngle"]
 				bullet_index = actualview_chartSpiral
-				bullet.bulletStart.expresionContain=cupi.chartData.data.spiral[actualview_chartSpiral-1]["expresion"]
-				bullet.bulletStart.isSpiral = true
-				bullet.bulletStart.spiralStart = true
-						#ahora la otra bala
-				bullet.bulletFinal.baseSpawnTime = song_time
-				bullet.bulletFinal.baseStrumTime = next_timeSpiral + duracion
-				bullet.bulletFinal.distance = (next_timeSpiral - song_time)+duracion
-				bullet.bulletFinal.position = Vector2.ONE * 1000
-				bullet.bulletFinal.angle = cupi.chartData.data.spiral[actualview_chartSpiral-1]["finalAngle"]
-				bullet.AngleFinal=cupi.chartData.data.spiral[actualview_chartSpiral-1]["finalAngle"]
-				bullet_index = actualview_chartSpiral
-				bullet.bulletFinal.expresionContain=cupi.chartData.data.spiral[actualview_chartSpiral-1]["expresion"]
-				bullet.bulletFinal.isSpiral = true
-				bullet.bulletFinal.spiralStart = false
-				bullet.calc = (cupi.chartData.data.spiral[actualview_chartSpiral-1]["time"] + duracion)-(cupi.chartData.data.spiral[actualview_chartSpiral-1]["time"])
+				spiral.calc = (spiralTime + duracion)-(spiralTime)
+				
+				spiral.bulletStart.baseSpawnTime = song_time
+				spiral.bulletStart.baseStrumTime = next_timeSpiral
+				spiral.bulletStart.distance = (next_timeSpiral - song_time)
+				spiral.bulletStart.angle = cupi.chartData.data.spiral[actualview_chartSpiral-1]["startAngle"]
+				spiral.bulletStart.expresionContain=cupi.chartData.data.spiral[actualview_chartSpiral-1]["expresion"]
+				spiral.bulletStart.isSpiral = true
+				spiral.bulletStart.spiralStart = true
+				#ahora la otra bala
+				spiral.bulletFinal.baseSpawnTime = song_time
+				spiral.bulletFinal.baseStrumTime = next_timeSpiral + duracion
+				spiral.bulletFinal.distance = (next_timeSpiral - song_time)+duracion
+				spiral.bulletFinal.angle = cupi.chartData.data.spiral[actualview_chartSpiral-1]["finalAngle"]
+				spiral.bulletFinal.expresionContain=cupi.chartData.data.spiral[actualview_chartSpiral-1]["expresion"]
+				spiral.bulletFinal.isSpiral = true
+				spiral.bulletFinal.spiralStart = false
 
+				#referencia de datos
+				spiral.bulletStart.cupi = cupi
+				spiral.bulletStart.cupiContainer = cupiContainer
+				spiral.bulletStart.spawner = self
+				
+				spiral.bulletFinal.cupi = cupi
+				spiral.bulletFinal.cupiContainer = cupiContainer
+				spiral.bulletFinal.spawner = self
+				
 		else:
 			
 			var reverseView = actualview_chartSpiral-spirales.get_child_count()-1
@@ -120,31 +135,38 @@ func _process(delta: float) -> void:
 				break
 				
 			if song_time < cupi.chartData.data.spiral[reverseView]["time"]+cupi.chartData.data.spiral[reverseView]["duration"]:
-				var bullet = prefabBulletSpiral.instantiate()  
+				var spiral = prefabBulletSpiral.instantiate()  
 				var duracion = cupi.chartData.data.spiral[actualview_chartSpiral-1]["duration"]
-				#print(duracion)
-				spirales.add_child(bullet)
+				var spiralTime = cupi.chartData.data.spiral[reverseView]["time"]
+				
+				spirales.add_child(spiral)
+				
+				spiral.AngleStart= cupi.chartData.data.spiral[reverseView]["startAngle"]
+				bullet_index = actualview_chartSpiral
+				spiral.AngleFinal= cupi.chartData.data.spiral[reverseView]["finalAngle"]
+				spiral.ampFinal = ((cupi.chartData.data.spiral[reverseView]["time"] + duracion) - song_time)
+				spiral.calc = (spiralTime + duracion)-(spiralTime)
 				#establecer datos de bala inicial
-				bullet.bulletStart.baseSpawnTime = 0
-				bullet.bulletStart.baseStrumTime = cupi.chartData.data.spiral[reverseView]["time"]
-				bullet.bulletStart.distance = cupi.chartData.data.spiral[reverseView]["time"]
-				bullet.bulletStart.position = Vector2.ONE * 1000
-				bullet.bulletStart.angle = cupi.chartData.data.spiral[reverseView]["startAngle"]
-				bullet.AngleStart= cupi.chartData.data.spiral[reverseView]["startAngle"]
-				bullet.ampStart = 0
-				bullet_index = actualview_chartSpiral
-				bullet.bulletStart.expresionContain=cupi.chartData.data.spiral[reverseView-1]["expresion"]
-				bullet.bulletStart.isSpiral = true
-				bullet.bulletStart.spiralStart = true
+				spiral.bulletStart.baseSpawnTime = 0
+				spiral.bulletStart.baseStrumTime = cupi.chartData.data.spiral[reverseView]["time"]
+				spiral.bulletStart.distance = cupi.chartData.data.spiral[reverseView]["time"]
+				spiral.bulletStart.angle = cupi.chartData.data.spiral[reverseView]["finalAngle"]
+				spiral.bulletStart.expresionContain=cupi.chartData.data.spiral[reverseView-1]["expresion"]
+				spiral.bulletStart.isSpiral = true
+				spiral.bulletStart.spiralStart = true
 				#ahora la otra bala
-				bullet.bulletFinal.baseSpawnTime = cupi.get_song_time()
-				bullet.bulletFinal.baseStrumTime = cupi.chartData.data.spiral[reverseView]["time"] + duracion
-				bullet.bulletFinal.distance = ((cupi.chartData.data.spiral[reverseView]["time"] + duracion) - song_time)
-				bullet.bulletFinal.position = Vector2.ONE * 1000
-				bullet.bulletFinal.angle = cupi.chartData.data.spiral[reverseView]["finalAngle"]
-				bullet.AngleFinal= cupi.chartData.data.spiral[reverseView]["finalAngle"]
-				bullet.ampFinal = ((cupi.chartData.data.spiral[reverseView]["time"] + duracion) - song_time)
-				bullet_index = actualview_chartSpiral
-				bullet.bulletFinal.expresionContain=cupi.chartData.data.spiral[reverseView-1]["expresion"]
-				bullet.bulletFinal.isSpiral = true
-				bullet.calc = (cupi.chartData.data.spiral[reverseView]["time"] + duracion)-(cupi.chartData.data.spiral[reverseView]["time"])
+				spiral.bulletFinal.baseSpawnTime = cupi.get_song_time()
+				spiral.bulletFinal.baseStrumTime = cupi.chartData.data.spiral[reverseView]["time"] + duracion
+				spiral.bulletFinal.distance = ((cupi.chartData.data.spiral[reverseView]["time"] + duracion) - song_time)
+				spiral.bulletFinal.angle = cupi.chartData.data.spiral[reverseView]["finalAngle"]
+				spiral.bulletFinal.expresionContain=cupi.chartData.data.spiral[reverseView-1]["expresion"]
+				spiral.bulletFinal.isSpiral = true
+				
+				#referencia de datos
+				spiral.bulletStart.cupi = cupi
+				spiral.bulletStart.cupiContainer = cupiContainer
+				spiral.bulletStart.spawner = self
+				
+				spiral.bulletFinal.cupi = cupi
+				spiral.bulletFinal.cupiContainer = cupiContainer
+				spiral.bulletFinal.spawner = self

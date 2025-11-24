@@ -7,8 +7,8 @@ extends Node2D
 
 @onready var bulletStart: Node2D = $startNote
 @onready var bulletFinal: Node2D = $FinalNote
-@onready var cupi: Node = get_tree().get_first_node_in_group("cupi")
-@onready var spawner: Node = get_tree().get_first_node_in_group("bulletSpawner")
+@onready var cupi: Node2D = get_tree().get_first_node_in_group("cupi")
+@onready var spawner: Node2D = get_tree().get_first_node_in_group("bulletSpawner")
 
 # --------------------------------------------------------
 # VARIABLES DE CONFIGURACIÓN (TIPADAS)
@@ -50,7 +50,7 @@ var easing_functions = [
 	"easeInOutBounce" # 24
 ]
 
-@export var idFuncion = 0
+@export var idFuncion = 15
 # --------------------------------------------------------
 # PROCESS
 # --------------------------------------------------------

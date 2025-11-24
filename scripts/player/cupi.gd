@@ -54,10 +54,6 @@ var convertedBPM:float
 	get:
 		return TimeMultiplier
 
-
-#Cupi values
-var posy:float
-@export var cupiMouth:AnimatedSprite2D
 ##beat values
 var chartData:JSON = loadJSON()
 
@@ -100,7 +96,8 @@ func loadJSON():
 
 func _process(delta: float) -> void:
 	line.scale = Vector2.ONE*cupiContainer.lineScale
-	line.rotation = controladorGeneral.rotation
+	if controladorGeneral != null:
+		line.rotation = controladorGeneral.rotation
 	convertedBPM = bpm*TimeMultiplier
 
 	timeBPM += delta*abs(TimeMultiplier)
@@ -134,8 +131,9 @@ func _process(delta: float) -> void:
 	TimeScene = max(0,TimeScene)
 	levelMusic.pitch_scale = max(0.001,abs(TimeMultiplier))
 	
-	BG.material.set_shader_parameter("wave_amp", wave_amp)
-	wave_amp = lerp(wave_amp,0.025,0.1*DataGame.time_fixed)
+	
+func WAVEBEAT():
+	wave_amp = 0.05
 	
 func BulletDestroy(bullet):
 		var particles:GPUParticles2D = particulasBullet.instantiate()
@@ -151,9 +149,6 @@ func BulletDestroy(bullet):
 		materialparticulas.scale_min = scale.x*1.5
 		particles.position = bullet.position
 		particles.rotation = bullet.angle
-	
-func WAVEBEAT():
-	wave_amp = 0.05
 
 func BgBeat():
 	pass

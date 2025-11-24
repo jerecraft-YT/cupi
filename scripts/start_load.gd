@@ -1,12 +1,12 @@
 extends Control
 
 func _ready() -> void:
-	ResourceLoader.load_threaded_request("res://scenes/test_zone.tscn")
+	ResourceLoader.load_threaded_request("res://scenes/Pantalla_Titulo.tscn")
 	
 @warning_ignore("unused_parameter")
 func _process(delta: float) -> void:
-	if ResourceLoader.load_threaded_get_status("res://scenes/test_zone.tscn") == ResourceLoader.THREAD_LOAD_LOADED:
-		var scene = ResourceLoader.load_threaded_get("res://scenes/test_zone.tscn")
+	if ResourceLoader.load_threaded_get_status("res://scenes/Pantalla_Titulo.tscn") == ResourceLoader.THREAD_LOAD_LOADED:
+		var scene = ResourceLoader.load_threaded_get("res://scenes/Pantalla_Titulo.tscn")
 		if scene:
 			get_tree().change_scene_to_packed(scene)
 		set_process(false)

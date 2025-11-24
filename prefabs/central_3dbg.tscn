@@ -19,6 +19,8 @@ radiance_size = 4
 [sub_resource type="Environment" id="Environment_nbo5w"]
 background_mode = 2
 sky = SubResource("Sky_5vd6e")
+adjustment_enabled = true
+adjustment_saturation = 0.01
 
 [sub_resource type="World3D" id="World3D_hgjke"]
 environment = SubResource("Environment_nbo5w")

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://c515s8eiyg4px"]
+
+[ext_resource type="Script" uid="uid://bs5gkvsjdkqnr" path="res://scripts/ExpresionesCupi.gd" id="1_1n5mj"]
+[ext_resource type="SpriteFrames" uid="uid://uaopc4watrc5" path="res://animations/cupiMouth.tres" id="2_1n5mj"]
+[ext_resource type="SpriteFrames" uid="uid://d2pw6wdp10rkc" path="res://animations/cupiEyes.tres" id="2_64fe8"]
+
+[node name="cupiContainer" type="Node2D" groups=["CupiContainer"]]
+script = ExtResource("1_1n5mj")
+
+[node name="Face" type="Node2D" parent="."]
+
+[node name="eyes" type="AnimatedSprite2D" parent="Face"]
+texture_filter = 1
+sprite_frames = ExtResource("2_64fe8")
+offset = Vector2(0, -5)
+
+[node name="mouth" type="AnimatedSprite2D" parent="Face"]
+texture_filter = 1
+sprite_frames = ExtResource("2_1n5mj")
+animation = &"mouth"
+offset = Vector2(0, 9)
