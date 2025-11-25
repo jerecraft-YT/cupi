@@ -4714,12 +4714,23 @@
 	  "expresion": 0,
 	  "time": 1847.0,
 	  "duration": 2000,
-	  "startAngle": 90,
+	  "startAngle": 270,
 	  "finalAngle": 0,
 	  "moveAngle": 0.0,
 	  "expresionMouth": 0.0,
 	  "expresionEyes": 0.0,
-	  "tipeMoveAngle": 0.0
+	  "tipeMoveAngle": 15.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 5000.0,
+	  "duration": 2000,
+	  "startAngle": 0,
+	  "finalAngle": 360,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 15.0
 	}
   ]
 }

@@ -1,16 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://bv1q1ckfcnds8"]
+[gd_scene load_steps=6 format=3 uid="uid://bv1q1ckfcnds8"]
 
 [ext_resource type="Script" uid="uid://n2c72dch62rh" path="res://scripts/bullets/BulletSpawner.gd" id="2_v5r4t"]
 [ext_resource type="PackedScene" uid="uid://d0kmnpjiacab" path="res://prefabs/cupi.tscn" id="3_7dn3w"]
+[ext_resource type="PackedScene" uid="uid://bvjuwoyoq48kd" path="res://prefabs/bullet.tscn" id="3_v5r4t"]
+[ext_resource type="PackedScene" uid="uid://cjvixm8nwnbvl" path="res://prefabs/SpiralBullet.tscn" id="4_7dn3w"]
 [ext_resource type="PackedScene" uid="uid://cmwdw8kgbef6b" path="res://prefabs/metaball.tscn" id="5_7dn3w"]
 
 [node name="Gameplay" type="Node2D"]
 
 [node name="metaball" parent="." instance=ExtResource("5_7dn3w")]
 
-[node name="bullet spawner" type="Node2D" parent="." node_paths=PackedStringArray("cupi", "cupiContainer") groups=["bulletSpawner"]]
+[node name="bullet spawner" type="Node2D" parent="." node_paths=PackedStringArray("spirales", "normales", "cupi", "cupiContainer") groups=["bulletSpawner"]]
 script = ExtResource("2_v5r4t")
-speed = 0.2
+prefabBulletNormal = ExtResource("3_v5r4t")
+prefabBulletSpiral = ExtResource("4_7dn3w")
+spirales = NodePath("spirales")
+normales = NodePath("normales")
+speed = 0.25
 cupi = NodePath("../Cupi")
 cupiContainer = NodePath("../Cupi/cupiContainer")
 

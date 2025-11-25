@@ -2,11 +2,11 @@ extends Polygon2D
 
 @export var poligono:Polygon2D
 @export var metaball:Node2D
-@onready var spectro = get_tree().get_first_node_in_group("spectro")
+@export var spectro:Node2D
 @export var line:Line2D
 
 # Configuración básica
-const NUMERO_PUNTOS := 48
+@export var NUMERO_PUNTOS := 48
 var tiempo: float = 0.0
 var radio_base := 70.0
 var ancho_pico := 100.0
@@ -100,7 +100,7 @@ func _normalizar_angulo(angulo: float) -> float:
 
 func _process(delta: float) -> void:
 	# Animación continua
-	metaball.rotation += 0.01 * DataGame.time_fixed
+	poligono.rotation += 0.01 * DataGame.time_fixed
 	tiempo += delta
 	
 	# Actualizar amplitudes desde el espectro - OPTIMIZADO

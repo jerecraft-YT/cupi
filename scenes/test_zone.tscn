@@ -134,3 +134,7 @@ z_index = 200
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("8_hsuob")
 offset = Vector2(5, -4)
+
+[editable path="Gameplay"]
+[editable path="Gameplay/Cupi"]
+[editable path="Gameplay/Cupi/cupiContainer"]

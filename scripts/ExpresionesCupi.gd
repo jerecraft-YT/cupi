@@ -1,4 +1,5 @@
 extends Node2D
+class_name CupiContainer
 
 @onready var ojosCupi = $Face/eyes
 @onready var BocaCupi = $Face/mouth

@@ -1,4 +1,5 @@
 extends Node2D
+class_name Cupi
 
 @export var cupi:Node2D
 @export var cupiContainer:Node2D

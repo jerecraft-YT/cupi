@@ -1,5 +1,5 @@
 extends Node2D
-
+class_name CupiSpiral
 # --------------------------------------------------------
 # NODOS
 # --------------------------------------------------------
@@ -117,6 +117,8 @@ func createcircle() -> void:
 
 	# cantidad de puntos
 	var number_points: int = 1 + abs(int(anguloFinal)) + int(calc /256)
+	#@warning_ignore("narrowing_conversion")
+	#var number_points: int = 1 + abs(anguloFinal) + int(calc/128)
 	#print(number_points)
 	var needed_points: int = number_points + 1
 	var current_points: int = line.get_point_count()
@@ -126,6 +128,7 @@ func createcircle() -> void:
 		if needed_points > current_points:
 			for i in range(needed_points - current_points):
 				line.add_point(Vector2.ZERO)
+				print("puntos añadidos ", needed_points- current_points)
 		else:
 			for i in range(current_points - needed_points):
 				line.remove_point(line.get_point_count() - 1)

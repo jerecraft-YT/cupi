@@ -1,19 +1,21 @@
 extends Node2D
+class_name BulletSpawner
 
-var prefabBulletNormal:PackedScene = load("res://prefabs/bullet.tscn")
-var prefabBulletSpiral:PackedScene = load("res://prefabs/SpiralBullet.tscn")
-var rng = RandomNumberGenerator.new()
+@export var prefabBulletNormal:PackedScene
+@export var prefabBulletSpiral:PackedScene
+
 var actualview_chart:int = 0
 var bullet_index:int = -1
 var actualview_chartSpiral:int = 0
 var bullet_spiral_index: int = -1
-@onready var spirales:Node2D = $spirales
-@onready var normales:Node2D = $normales
+
+@export var spirales:Node2D 
+@export var normales:Node2D
 
 @export var speed:float = 0.75
 # Referencia a cupi
-@export var cupi:Node2D
-@export var cupiContainer:Node2D
+@export var cupi:Cupi
+@export var cupiContainer:CupiContainer
 
 @warning_ignore("unused_parameter")
 func _process(delta: float) -> void:
@@ -30,7 +32,6 @@ func _process(delta: float) -> void:
 				break
 
 			var next_time:float = cupi.chartData.data.bullets[actualview_chart]["time"]
-			#var time_difference = next_time - cur_time 
 			
 			if cur_time >= next_time:
 				actualview_chart += 1
@@ -49,7 +50,6 @@ func _process(delta: float) -> void:
 				bullet.cupi = cupi
 				bullet.cupiContainer = cupiContainer
 				bullet.spawner = self
-				
 						
 		else:
 			
@@ -79,7 +79,6 @@ func _process(delta: float) -> void:
 		#print(time_offsetSpiral)
 		if cupi.musicNormalOrInverted:
 			if cur_timeSpiral >= 2000 + song_time or actualview_chartSpiral >= cupi.chartData.data.spiral.size() or actualview_chartSpiral<0:
-				#print(cur_time,"|||",2000+snapped(song_time,0),"|||",actualview_chart,"|||",str(Time.get_ticks_msec()),"|||",cupi.musicNormalOrInverted)
 				break
 			var next_timeSpiral:float = cupi.chartData.data.spiral[actualview_chartSpiral]["time"]
 			#var time_difference = next_time - cur_time 
@@ -91,7 +90,7 @@ func _process(delta: float) -> void:
 				continue
 				
 			if bullet_spiral_index != actualview_chartSpiral:
-				var spiral = prefabBulletSpiral.instantiate()  
+				var spiral:CupiSpiral = prefabBulletSpiral.instantiate()  
 				var duracion = cupi.chartData.data.spiral[actualview_chartSpiral-1]["duration"]
 				var spiralTime = cupi.chartData.data.spiral[actualview_chartSpiral-1]["time"]
 				
@@ -102,7 +101,8 @@ func _process(delta: float) -> void:
 				spiral.AngleFinal=-cupi.chartData.data.spiral[actualview_chartSpiral-1]["finalAngle"]
 				bullet_index = actualview_chartSpiral
 				spiral.calc = (spiralTime + duracion)-(spiralTime)
-				
+				spiral.idFuncion = cupi.chartData.data.spiral[actualview_chartSpiral-1]["tipeMoveAngle"]
+
 				spiral.bulletStart.baseSpawnTime = song_time
 				spiral.bulletStart.baseStrumTime = next_timeSpiral
 				spiral.bulletStart.distance = (next_timeSpiral - song_time)
@@ -135,7 +135,7 @@ func _process(delta: float) -> void:
 				break
 				
 			if song_time < cupi.chartData.data.spiral[reverseView]["time"]+cupi.chartData.data.spiral[reverseView]["duration"]:
-				var spiral = prefabBulletSpiral.instantiate()  
+				var spiral:CupiSpiral = prefabBulletSpiral.instantiate()  
 				var duracion = cupi.chartData.data.spiral[actualview_chartSpiral-1]["duration"]
 				var spiralTime = cupi.chartData.data.spiral[reverseView]["time"]
 				
@@ -146,6 +146,8 @@ func _process(delta: float) -> void:
 				spiral.AngleFinal= -cupi.chartData.data.spiral[reverseView]["finalAngle"]
 				spiral.ampFinal = ((cupi.chartData.data.spiral[reverseView]["time"] + duracion) - song_time)
 				spiral.calc = (spiralTime + duracion)-(spiralTime)
+				spiral.idFuncion = cupi.chartData.data.spiral[reverseView]["tipeMoveAngle"]
+				
 				#establecer datos de bala inicial
 				spiral.bulletStart.baseSpawnTime = 0
 				spiral.bulletStart.baseStrumTime = cupi.chartData.data.spiral[reverseView]["time"]
