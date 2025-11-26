@@ -136,7 +136,7 @@ func createcircle() -> void:
 		var diferencia = abs(yActual - prevY)
 		
 		# Lógica de densidad: menos diferencia = más puntos
-		minPoints = abs(int(angleRef/8))
+		minPoints = abs(int(angleRef/segmentos))
 		#print(minPoints)
 		var puntosUsar = max(minPoints, segmentos - int(diferencia * segmentos))
 		
