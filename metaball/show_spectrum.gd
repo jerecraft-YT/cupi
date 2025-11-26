@@ -1,6 +1,7 @@
 extends Node2D
+class_name SpectroAnalizer
 
-const VU_COUNT = 9
+@export var VU_COUNT = 9
 const FREQ_MAX = 15050.0
 
 const WIDTH = 800

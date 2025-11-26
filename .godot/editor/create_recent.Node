@@ -1,6 +1,11 @@
-Camera2D
-AnimatedSprite2D
+Node
 Node2D
+Control
+HTTPRequest
+Sprite2D
+Cupi
+AnimatedSprite2D
+Camera2D
 AudioStreamPlayer
 AudioStreamPlayer2D
 Label

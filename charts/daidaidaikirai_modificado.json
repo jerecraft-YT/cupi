@@ -4714,12 +4714,12 @@
 	  "expresion": 0,
 	  "time": 1847.0,
 	  "duration": 2000,
-	  "startAngle": 270,
+	  "startAngle": 100,
 	  "finalAngle": 0,
 	  "moveAngle": 0.0,
 	  "expresionMouth": 0.0,
 	  "expresionEyes": 0.0,
-	  "tipeMoveAngle": 15.0
+	  "tipeMoveAngle": 10.0
 	},
 	{
 	  "expresion": 0,

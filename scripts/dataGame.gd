@@ -1,10 +1,13 @@
 extends Node
 
+var documentos = OS.get_system_dir(OS.SYSTEM_DIR_DOCUMENTS)
 var mainConfig = FileAccess.open("user://config.cfg",FileAccess.WRITE_READ)
 var time_fixed:float
 var cupi:Node2D
 
 func _ready() -> void:
+	DirAccess.make_dir_recursive_absolute(documentos+"/CUPI/Levels")
+	#var levels = DirAccess.open()
 	if FileAccess.file_exists("user://config.cfg"):
 		print("funciono")
 	else:

@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://7yvx75kpug2u"]
+
+[ext_resource type="Script" uid="uid://cx6wk5yxgaalf" path="res://scenes/sprite_2d.gd" id="1_m1nff"]
+[ext_resource type="Texture2D" uid="uid://ck4sa4dap5f7s" path="res://sprites/cupi/circuloRitmo/bordeCirculo2.png" id="2_7nw1l"]
+[ext_resource type="Script" uid="uid://de21rbsaslsxw" path="res://metaball/show_spectrum.gd" id="2_ctm4h"]
+[ext_resource type="Texture2D" uid="uid://bag8lvtsxurme" path="res://sprites/cupi/circuloRitmo/bordeCirculo1.png" id="3_ctm4h"]
+
+[node name="metaballStatic" type="Node2D" node_paths=PackedStringArray("spectro")]
+script = ExtResource("1_m1nff")
+spectro = NodePath("Spectro")
+
+[node name="Spectro" type="Node2D" parent="."]
+script = ExtResource("2_ctm4h")
+
+[node name="back" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+texture = ExtResource("2_7nw1l")
+offset = Vector2(0, -5)
+
+[node name="front" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 1, 1)
+texture = ExtResource("3_ctm4h")
+offset = Vector2(0, -5)

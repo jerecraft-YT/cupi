@@ -76,10 +76,8 @@ func _ready() -> void:
 	DataGame.loadCupi()
 	
 	loadSong()
-
 	#generar circulo al inicio de la escena
 	createcircle()
-	
 	# Reproducir música a la vez que el beat
 	levelMusic.play()
 	beatStartTime = TimeScene # Tiempo de marca actual

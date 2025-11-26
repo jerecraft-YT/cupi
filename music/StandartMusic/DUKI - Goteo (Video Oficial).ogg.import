@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bg73advgi4km4"
+path="res://.godot/imported/DUKI - Goteo (Video Oficial).ogg-e6488e66f8faea97fde57f6d10218500.oggvorbisstr"
+
+[deps]
+
+source_file="res://music/StandartMusic/DUKI - Goteo (Video Oficial).ogg"
+dest_files=["res://.godot/imported/DUKI - Goteo (Video Oficial).ogg-e6488e66f8faea97fde57f6d10218500.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

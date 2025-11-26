@@ -24,6 +24,7 @@ class_name CupiSpiral
 @export var progresoSpiral: float = 0.0
 @export var segmentos:int = 7  # Nueva variable para controlar segmentos base
 @export var minPoints:int = 24
+@export var maxPoints:int = 1024
 
 var easing_functions = [
 	"linear",         # 0
@@ -138,7 +139,7 @@ func createcircle() -> void:
 		# Lógica de densidad: menos diferencia = más puntos
 		minPoints = abs(int(angleRef/segmentos))
 		#print(minPoints)
-		var puntosUsar = max(minPoints, segmentos - int(diferencia * segmentos))
+		var puntosUsar = min(maxPoints,max(minPoints, segmentos - int(diferencia * segmentos)))
 		
 		# Puntos intermedios
 		for j in range(1, puntosUsar):

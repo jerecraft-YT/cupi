@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://di18gl1g4w1gr"
+path="res://.godot/imported/daidaidaikiraiReverse.ogg-307013c830a95b5b10bf160186545b47.oggvorbisstr"
+
+[deps]
+
+source_file="res://Niveles/ダイダイダイダイダイキライ - 初音ミク VS 重音テト  (Daidaidaidaidaikirai - HatsuneMiku VS KasaneTeto)/ReverseMusic/daidaidaikiraiReverse.ogg"
+dest_files=["res://.godot/imported/daidaidaikiraiReverse.ogg-307013c830a95b5b10bf160186545b47.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
