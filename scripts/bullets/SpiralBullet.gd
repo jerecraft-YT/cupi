@@ -1,5 +1,6 @@
 extends Node2D
 class_name CupiSpiral
+
 # --------------------------------------------------------
 # NODOS
 # --------------------------------------------------------
@@ -21,6 +22,8 @@ class_name CupiSpiral
 @export var calc: float = 1.0
 @export var angleRef: float = 0.0
 @export var progresoSpiral: float = 0.0
+@export var segmentos:int = 7  # Nueva variable para controlar segmentos base
+@export var minPoints:int = 24
 
 var easing_functions = [
 	"linear",         # 0
@@ -51,6 +54,7 @@ var easing_functions = [
 ]
 
 @export var idFuncion = 0
+
 # --------------------------------------------------------
 # PROCESS
 # --------------------------------------------------------
@@ -65,6 +69,7 @@ func _process(delta: float) -> void:
 	# condición de eliminación
 	if bulletFinal.timeLerp <= 0:
 		queue_free()
+	#print(line.get_point_count())
 
 # --------------------------------------------------------
 # OBTENER CALC
@@ -73,12 +78,11 @@ func getCalc() -> float:
 	calc = (bulletFinal.ampSpiral - bulletStart.ampSpiral)
 	return calc
 
-
 # --------------------------------------------------------
 # CÁLCULO DE ÁNGULO GLOBAL (EASING APLICADO UNA VEZ)
 # --------------------------------------------------------
 func calcAngle() -> void:
-	angleRef = AngleStart-AngleFinal 
+	angleRef = AngleStart - AngleFinal 
 
 	var ampStartSpiral: float = bulletStart.ampSpiral
 	var ampFinalSpiral: float = bulletFinal.ampSpiral
@@ -89,19 +93,17 @@ func calcAngle() -> void:
 	progresoSpiral = (ampFinalSpiral - ampStartSpiral) / calc
 	progresoSpiral = clamp(progresoSpiral, 0.0, 1.0)
 
-	# easing global
-	#var eased_global: float = DataGame._easeOutElastic(progresoSpiral)
-	var eased_global:float = progress(progresoSpiral,idFuncion)
+	var eased_global: float = progress(progresoSpiral, idFuncion)
 	anguloFinal = angleRef * eased_global
 
 # --------------------------------------------------------
 # CALCULO DE PROGRESO
 # --------------------------------------------------------
-func progress(time,idFunction):
+func progress(time, idFunction):
 	return DataGame.call(easing_functions[idFunction], time)
 
 # --------------------------------------------------------
-# CREACIÓN DE LA CURVA DE PUNTOS
+# CREACIÓN DE LA CURVA DE PUNTOS CON DENSIDAD VARIABLE
 # --------------------------------------------------------
 func createcircle() -> void:
 	var ampStartSpiral: float = bulletStart.ampSpiral
@@ -115,47 +117,58 @@ func createcircle() -> void:
 	if calc == 0.0:
 		return
 
-	# cantidad de puntos
-	var number_points: int = 1 + abs(int(anguloFinal)) + int(calc /256)
-	#@warning_ignore("narrowing_conversion")
-	#var number_points: int = 1 + abs(anguloFinal) + int(calc/128)
-	#print(number_points)
-	var needed_points: int = number_points + 1
-	var current_points: int = line.get_point_count()
+	# Limpiar puntos existentes
+	line.clear_points()
 
-	# ajustar número de puntos solo si cambia
-	if needed_points != current_points:
-		if needed_points > current_points:
-			for i in range(needed_points - current_points):
-				line.add_point(Vector2.ZERO)
-				print("puntos añadidos ", needed_points- current_points)
-		else:
-			for i in range(current_points - needed_points):
-				line.remove_point(line.get_point_count() - 1)
+	# Sistema de densidad variable adaptado
+	var paso = 1.0 / segmentos
+	var prevPaso: float = 0.0
+	var prevY = progress(progress_global * prevPaso, idFuncion)
+	
+	# Punto inicial
+	var initial_point = calculate_spiral_point(prevPaso, prevY)
+	line.add_point(initial_point)
+	
+	# Generar puntos con densidad variable
+	for i in segmentos:
+		var pasoActual = paso * (i + 1)
+		var yActual = progress(progress_global * pasoActual, idFuncion)
+		var diferencia = abs(yActual - prevY)
+		
+		# Lógica de densidad: menos diferencia = más puntos
+		minPoints = abs(int(angleRef/8))
+		#print(minPoints)
+		var puntosUsar = max(minPoints, segmentos - int(diferencia * segmentos))
+		
+		# Puntos intermedios
+		for j in range(1, puntosUsar):
+			var factor = float(j) / puntosUsar
+			var t = prevPaso + (pasoActual - prevPaso) * factor
+			var y = progress(progress_global * t, idFuncion)
+			var point = calculate_spiral_point(t, y)
+			line.add_point(point)
+		
+		# Punto final del segmento
+		var final_point = calculate_spiral_point(pasoActual, yActual)
+		line.add_point(final_point)
+		
+		prevPaso = pasoActual
+		prevY = yActual
 
-	# precálculos
-	var pasAmp: float = bulletStart.amp - bulletFinal.amp
+# --------------------------------------------------------
+# CALCULAR PUNTO DE LA ESPIRAL
+# --------------------------------------------------------
+func calculate_spiral_point(t: float, eased_value: float) -> Vector2:
+	# Ángulo interpolado con las oscilaciones del easing
+	var angle_t: float = eased_value * angleRef
 	var angle_offset_rad: float = deg_to_rad(AngleFinal)
+	var actual_angle_rad: float = deg_to_rad(angle_t) + angle_offset_rad
 
-	# LOOP PRINCIPAL
-	for i in range(needed_points):
-		var t: float = float(i) / number_points
+	# Interpolación de amplitud
+	var pasAmp: float = bulletStart.amp - bulletFinal.amp
+	var actual_amp: float = bulletFinal.amp + pasAmp * t
 
-		# easing local sincronizado con la fase global
-		#var eased_local: float = DataGame._easeOutElastic(progress_global * t)
-		var eased_local:float = progress(progress_global*t,idFuncion)
-		# ángulo interpolado con las oscilaciones del easing
-		var angle_t: float = eased_local * angleRef
-		var actual_angle_rad: float = deg_to_rad(angle_t) + angle_offset_rad
-
-		# interpolación de amplitud
-		var actual_amp: float = bulletFinal.amp + pasAmp * t
-
-		# actualizar punto
-		line.set_point_position(
-			i,
-			Vector2(
-				cos(actual_angle_rad) * actual_amp,
-				sin(actual_angle_rad) * actual_amp
-			)
-		)
+	return Vector2(
+		cos(actual_angle_rad) * actual_amp,
+		sin(actual_angle_rad) * actual_amp
+	)

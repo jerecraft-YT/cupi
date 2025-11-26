@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://d1fqn8rr6ofpe"]
+[gd_scene load_steps=5 format=3 uid="uid://d1fqn8rr6ofpe"]
 
 [ext_resource type="PackedScene" uid="uid://cmwdw8kgbef6b" path="res://prefabs/metaball.tscn" id="2_pri23"]
 [ext_resource type="PackedScene" uid="uid://c515s8eiyg4px" path="res://prefabs/cupi_container.tscn" id="3_6ajat"]
 [ext_resource type="AudioStream" uid="uid://bhydjv1fxr53t" path="res://music/StandartMusic/daidaidaikirai.ogg" id="3_t3ibd"]
+[ext_resource type="Script" uid="uid://bx3fjtbbwusd3" path="res://scenes/button.gd" id="4_6ajat"]
 
 [node name="PantallaTitulo" type="Node2D"]
 
@@ -27,5 +28,16 @@ autoplay = true
 
 [node name="cupiContainer" parent="." instance=ExtResource("3_6ajat")]
 scale = Vector2(6, 6)
+
+[node name="Button" type="Button" parent="."]
+offset_left = -133.0
+offset_top = 308.0
+offset_right = 134.0
+offset_bottom = 441.0
+theme_override_font_sizes/font_size = 68
+text = "JUGAR"
+script = ExtResource("4_6ajat")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
 
 [editable path="cupiContainer"]
