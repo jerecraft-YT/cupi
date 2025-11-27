@@ -85,7 +85,7 @@
 	{
 	  "expresion": 6,
 	  "time": 3924.0,
-	  "angle": 0.0,
+	  "angle": -720,
 	  "moveAngle": 0.0,
 	  "expresionMouth": 0.0,
 	  "expresionEyes": 0.0,
@@ -4704,7 +4704,7 @@
 	  "moveAngle": 0.0,
 	  "expresionMouth": 0.0,
 	  "expresionEyes": 0.0,
-	  "tipeMoveAngle": 14.0
+	  "tipeMoveAngle": 0.0
 	},
 	{
 	  "expresion": 0,

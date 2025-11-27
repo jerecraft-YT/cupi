@@ -1,10 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://d1fqn8rr6ofpe"]
+[gd_scene load_steps=8 format=3 uid="uid://d1fqn8rr6ofpe"]
 
 [ext_resource type="AudioStream" uid="uid://22cckucuj2lw" path="res://Niveles/DECO27 - マシュマロ feat. 初音ミク/StandartMusic/DECO27 - マシュマロ feat. 初音ミク.ogg" id="1_wjr8j"]
 [ext_resource type="PackedScene" uid="uid://7yvx75kpug2u" path="res://prefabs/metaball_static.tscn" id="2_bjdlj"]
 [ext_resource type="PackedScene" uid="uid://cmwdw8kgbef6b" path="res://prefabs/metaball.tscn" id="2_pri23"]
 [ext_resource type="PackedScene" uid="uid://c515s8eiyg4px" path="res://prefabs/cupi_container.tscn" id="3_6ajat"]
-[ext_resource type="Script" uid="uid://dbbyxbbf2gp17" path="res://scripts/debug/debugInfo.gd" id="5_bjdlj"]
 [ext_resource type="Script" uid="uid://chk3wajfd26dd" path="res://scenes/niveles.gd" id="6_w0iw6"]
 [ext_resource type="Script" uid="uid://ylyvmroyq0sy" path="res://scenes/level_loader.gd" id="7_wjr8j"]
 
@@ -46,10 +45,10 @@ stream = ExtResource("1_wjr8j")
 autoplay = true
 
 [node name="metaball" parent="." instance=ExtResource("2_pri23")]
+visible = false
 scale = Vector2(2, 2)
 
 [node name="metaballStatic" parent="." instance=ExtResource("2_bjdlj")]
-visible = false
 
 [node name="cupiContainer" parent="." instance=ExtResource("3_6ajat")]
 scale = Vector2(6, 6)
@@ -68,22 +67,6 @@ offset_bottom = 441.0
 theme_override_font_sizes/font_size = 68
 text = "JUGAR"
 script = SubResource("GDScript_bjdlj")
-
-[node name="DebugInfo" type="RichTextLabel" parent="."]
-clip_contents = false
-offset_left = -342.0
-offset_top = -621.0
-offset_right = 2001.3333
-offset_bottom = 419.0
-scale = Vector2(0.3, 0.3)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 50
-theme_override_font_sizes/normal_font_size = 90
-bbcode_enabled = true
-text = "Debug Info..."
-scroll_active = false
-tab_size = 3
-script = ExtResource("5_bjdlj")
 
 [node name="Niveles" type="Control" parent="."]
 layout_mode = 3

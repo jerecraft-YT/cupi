@@ -6,7 +6,8 @@ class_name Cupi
 @export var line:Line2D
 @onready var BG = get_tree().get_first_node_in_group("BG")
 var wave_amp = 0.025
-
+var puntosNivel = 0
+var errores = 0
 var trozo:PackedScene = load("res://prefabs/trozo_shield.tscn")
 var particulasBullet:PackedScene = load("res://prefabs/particulas_destruir_bullet.tscn")
 
@@ -72,6 +73,8 @@ var normalMusic:AudioStream
 var reverseMusic:AudioStream
 var bpm:float = chartData.data.bpm
 var rng = RandomNumberGenerator.new()
+var timeMultiplierObjective:float = 1.0
+var wah:float
 @onready var lineScale:float
 
 func _ready() -> void:
@@ -95,7 +98,12 @@ func loadJSON():
 	var data = load("res://charts/daidaidaikirai_modificado.json")
 	return(data)
 
+func ralentizar():
+	TimeMultiplier = 0.5+(wah*0.15)
+
 func _process(delta: float) -> void:
+	wah = cos(TimeScene*0.1)
+	TimeMultiplier = lerp(TimeMultiplier,timeMultiplierObjective,0.2*DataGame.time_fixed)
 	line.scale = Vector2.ONE*cupiContainer.lineScale
 	if controladorGeneral != null:
 		line.rotation = controladorGeneral.rotation
