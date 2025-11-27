@@ -17,7 +17,7 @@ shader_parameter/seed = 42.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_p3wh2"]
 shader = ExtResource("6_nvmvs")
-shader_parameter/frequency = 66.275
+shader_parameter/frequency = 60.0
 shader_parameter/amplitude = 0.003
 
 [node name="metaballStatic" type="Node2D" node_paths=PackedStringArray("spectro")]
