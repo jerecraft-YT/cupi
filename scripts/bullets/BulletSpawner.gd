@@ -136,7 +136,7 @@ func _process(delta: float) -> void:
 				
 			if song_time < cupi.chartData.data.spiral[reverseView]["time"]+cupi.chartData.data.spiral[reverseView]["duration"]:
 				var spiral:CupiSpiral = prefabBulletSpiral.instantiate()  
-				var duracion = cupi.chartData.data.spiral[actualview_chartSpiral-1]["duration"]
+				var duracion = cupi.chartData.data.spiral[reverseView]["duration"]
 				var spiralTime = cupi.chartData.data.spiral[reverseView]["time"]
 				
 				spirales.add_child(spiral)

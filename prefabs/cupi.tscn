@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://d0kmnpjiacab"]
 
 [ext_resource type="Script" uid="uid://bp713wa275s4p" path="res://scripts/player/cupi.gd" id="1_d23ml"]
-[ext_resource type="AudioStream" uid="uid://bhydjv1fxr53t" path="res://music/StandartMusic/daidaidaikirai.ogg" id="2_x2j8a"]
+[ext_resource type="AudioStream" uid="uid://bejvmsgghpqlt" path="res://Niveles/ダイダイダイダイダイキライ - 初音ミク VS 重音テト  (Daidaidaidaidaikirai - HatsuneMiku VS KasaneTeto)/StandartMusic/daidaidaikirai.ogg" id="2_bnee4"]
 [ext_resource type="PackedScene" uid="uid://c515s8eiyg4px" path="res://prefabs/cupi_container.tscn" id="3_bnee4"]
 [ext_resource type="AudioStream" uid="uid://cdannsch5vxx4" path="res://sfx/beatBar0.ogg" id="5_lqyft"]
 [ext_resource type="AudioStream" uid="uid://bg6tq4trreu05" path="res://sfx/beatBar1.ogg" id="6_66pfm"]
@@ -20,7 +20,7 @@ barBeat0Player = NodePath("beat0")
 barBeat1Player = NodePath("beat1")
 
 [node name="LevelMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_x2j8a")
+stream = ExtResource("2_bnee4")
 
 [node name="cupiContainer" parent="." instance=ExtResource("3_bnee4")]
 

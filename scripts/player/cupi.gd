@@ -18,6 +18,8 @@ var particulasBullet:PackedScene = load("res://prefabs/particulas_destruir_bulle
 @onready var slider = get_tree().get_first_node_in_group("slider")
 @onready var controladorGeneral = get_tree().get_first_node_in_group("controlador")
 @onready var bg3d:MeshInstance3D = get_tree().get_first_node_in_group("Bg3D")
+@export var musicaNormalDir:String = "res://Niveles/ダイダイダイダイダイキライ - 初音ミク VS 重音テト  (Daidaidaidaidaikirai - HatsuneMiku VS KasaneTeto)/StandartMusic/daidaidaikirai.ogg"
+@export var musicaReverseDir:String = "res://Niveles/ダイダイダイダイダイキライ - 初音ミク VS 重音テト  (Daidaidaidaidaikirai - HatsuneMiku VS KasaneTeto)/ReverseMusic/daidaidaikiraiReverse.ogg"
 #variables del shield
 @export var amp:float = 35
 var actual_angle:float
@@ -83,8 +85,8 @@ func _ready() -> void:
 	beatStartTime = TimeScene # Tiempo de marca actual
 	
 func loadSong():
-	normalMusic = load("res://music/StandartMusic/daidaidaikirai.ogg")
-	reverseMusic = load("res://music/ReverseMusic/daidaidaikiraiReverse.ogg")
+	normalMusic = load(musicaNormalDir)
+	reverseMusic = load(musicaReverseDir)
 	
 func get_song_time() -> float:
 	return TimeScene - beatStartTime

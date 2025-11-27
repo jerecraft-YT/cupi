@@ -4,6 +4,7 @@ extends Polygon2D
 @export var metaball:Node2D
 @export var spectro:Node2D
 @export var line:Line2D
+@export var distorsion:Line2D
 
 # Configuración básica
 @export var NUMERO_PUNTOS := 48
@@ -38,8 +39,10 @@ func _ready() -> void:
 func _crear_linea():
 	"""Inicializa la línea con puntos vacíos"""
 	line.clear_points()
+	distorsion.clear_points()
 	for i in NUMERO_PUNTOS:
 		line.add_point(Vector2.ZERO)
+		distorsion.add_point(Vector2.ZERO)
 
 func _actualizar_cache_picos():
 	"""Precalcula los ángulos en radianes para evitar conversiones en tiempo real"""
@@ -52,6 +55,7 @@ func _actualizar_linea():
 	var puntos_poligono = poligono.polygon
 	for i in NUMERO_PUNTOS:
 		line.set_point_position(i, puntos_poligono[i])
+		distorsion.set_point_position(i,puntos_poligono[i])
 
 func _animar_circulo():
 	"""Genera la forma del polígono basado en los picos definidos - OPTIMIZADO"""

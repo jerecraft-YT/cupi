@@ -51,6 +51,9 @@ script = ExtResource("2_hsuob")
 [node name="Gameplay" parent="." instance=ExtResource("1_6afby")]
 position = Vector2(360, 360)
 
+[node name="metaballStatic" parent="Gameplay" index="0"]
+magnitudExtra = 0.5
+
 [node name="HUD" type="CanvasLayer" parent="."]
 
 [node name="ControlVelocity" type="HSlider" parent="HUD" groups=["slider"]]
@@ -136,5 +139,6 @@ texture = ExtResource("8_hsuob")
 offset = Vector2(5, -4)
 
 [editable path="Gameplay"]
+[editable path="Gameplay/metaballStatic"]
 [editable path="Gameplay/Cupi"]
 [editable path="Gameplay/Cupi/cupiContainer"]

@@ -42,6 +42,7 @@ func _process(delta: float) -> void:
 	position = Vector2(spawner.position.x + cos(deg_to_rad(angle))*amp,spawner.position.y + sin(deg_to_rad(angle))*amp)
 	# De momento, eliminar la bala si se pasa de rango
 	if timeLerp <= 0 and not isSpiral:
+		print(baseStrumTime)
 		#elimina objeto y aplica los cambios que necesita
 		cupiContainer.cupiBeat()
 		#cupi.cupiMouth.frame=expresionContain

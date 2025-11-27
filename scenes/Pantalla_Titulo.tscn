@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://d1fqn8rr6ofpe"]
 
-[ext_resource type="AudioStream" uid="uid://dchkym8uj4y7q" path="res://music/StandartMusic/DECO27 - マシュマロ feat. 初音ミク.ogg" id="1_w0iw6"]
+[ext_resource type="AudioStream" uid="uid://22cckucuj2lw" path="res://Niveles/DECO27 - マシュマロ feat. 初音ミク/StandartMusic/DECO27 - マシュマロ feat. 初音ミク.ogg" id="1_wjr8j"]
 [ext_resource type="PackedScene" uid="uid://7yvx75kpug2u" path="res://prefabs/metaball_static.tscn" id="2_bjdlj"]
 [ext_resource type="PackedScene" uid="uid://cmwdw8kgbef6b" path="res://prefabs/metaball.tscn" id="2_pri23"]
 [ext_resource type="PackedScene" uid="uid://c515s8eiyg4px" path="res://prefabs/cupi_container.tscn" id="3_6ajat"]
@@ -41,7 +41,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("1_w0iw6")
+stream = ExtResource("1_wjr8j")
 autoplay = true
 
 [node name="metaball" parent="." instance=ExtResource("2_pri23")]
@@ -96,4 +96,5 @@ script = ExtResource("7_wjr8j")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
 
+[editable path="metaballStatic"]
 [editable path="cupiContainer"]
