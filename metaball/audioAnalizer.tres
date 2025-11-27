@@ -1,8 +1,13 @@
-[gd_resource type="AudioBusLayout" load_steps=2 format=3 uid="uid://byfcaghl26y8j"]
+[gd_resource type="AudioBusLayout" load_steps=3 format=3 uid="uid://byfcaghl26y8j"]
 
 [sub_resource type="AudioEffectSpectrumAnalyzer" id="AudioEffectSpectrumAnalyzer_ihlsb"]
 resource_name = "SpectrumAnalyzer"
 
+[sub_resource type="AudioEffectCapture" id="AudioEffectCapture_hppws"]
+resource_name = "Capture"
+
 [resource]
 bus/0/effect/0/effect = SubResource("AudioEffectSpectrumAnalyzer_ihlsb")
 bus/0/effect/0/enabled = true
+bus/0/effect/1/effect = SubResource("AudioEffectCapture_hppws")
+bus/0/effect/1/enabled = true

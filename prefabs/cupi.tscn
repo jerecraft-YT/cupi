@@ -7,7 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://bg6tq4trreu05" path="res://sfx/beatBar1.ogg" id="6_66pfm"]
 
 [sub_resource type="Curve" id="Curve_d23ml"]
-_data = [Vector2(0, 0.35), 0.0, 2.5923755, 0, 0, Vector2(0.25, 1), 0.0, 0.0, 0, 0, Vector2(0.75, 1), 0.0, -2.5923755, 0, 0, Vector2(1, 0.35190612), 0.0, 0.0, 0, 0]
+_data = [Vector2(0, 0.35), 0.0, 2.6, 0, 1, Vector2(0.25, 1), 2.6, 0.0, 1, 0, Vector2(0.75, 1), 0.0, -2.5923755, 0, 0, Vector2(1, 0.35190612), -2.5923755, 0.0, 1, 0]
 point_count = 4
 
 [node name="Cupi" type="Node2D" node_paths=PackedStringArray("cupi", "cupiContainer", "line", "levelMusic", "barBeat0Player", "barBeat1Player")]

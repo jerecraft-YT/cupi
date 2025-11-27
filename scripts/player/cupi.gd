@@ -73,7 +73,7 @@ var normalMusic:AudioStream
 var reverseMusic:AudioStream
 var bpm:float = chartData.data.bpm
 var rng = RandomNumberGenerator.new()
-var timeMultiplierObjective:float = 1.0
+@export var timeMultiplierObjective:float = 1.0
 var wah:float
 @onready var lineScale:float
 

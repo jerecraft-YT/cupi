@@ -1,11 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://d1fqn8rr6ofpe"]
+[gd_scene load_steps=10 format=3 uid="uid://d1fqn8rr6ofpe"]
 
 [ext_resource type="AudioStream" uid="uid://22cckucuj2lw" path="res://Niveles/DECO27 - マシュマロ feat. 初音ミク/StandartMusic/DECO27 - マシュマロ feat. 初音ミク.ogg" id="1_wjr8j"]
 [ext_resource type="PackedScene" uid="uid://7yvx75kpug2u" path="res://prefabs/metaball_static.tscn" id="2_bjdlj"]
 [ext_resource type="PackedScene" uid="uid://cmwdw8kgbef6b" path="res://prefabs/metaball.tscn" id="2_pri23"]
 [ext_resource type="PackedScene" uid="uid://c515s8eiyg4px" path="res://prefabs/cupi_container.tscn" id="3_6ajat"]
 [ext_resource type="Script" uid="uid://chk3wajfd26dd" path="res://scenes/niveles.gd" id="6_w0iw6"]
+[ext_resource type="Texture2D" uid="uid://cqk3ysk80cik" path="res://icon.svg" id="7_4pcd2"]
 [ext_resource type="Script" uid="uid://ylyvmroyq0sy" path="res://scenes/level_loader.gd" id="7_wjr8j"]
+[ext_resource type="Script" uid="uid://c3bplxso2r8il" path="res://scenes/beatDetect.gd" id="8_e767d"]
 
 [sub_resource type="GDScript" id="GDScript_bjdlj"]
 script/source = "extends Button
@@ -45,10 +47,16 @@ stream = ExtResource("1_wjr8j")
 autoplay = true
 
 [node name="metaball" parent="." instance=ExtResource("2_pri23")]
-visible = false
 scale = Vector2(2, 2)
 
+[node name="distorsion" parent="metaball/ball" index="1"]
+ScaleFrequency = 2.0
+
 [node name="metaballStatic" parent="." instance=ExtResource("2_bjdlj")]
+visible = false
+
+[node name="distorsion" parent="metaballStatic" index="3"]
+ScaleFrequency = 2.0
 
 [node name="cupiContainer" parent="." instance=ExtResource("3_6ajat")]
 scale = Vector2(6, 6)
@@ -78,7 +86,13 @@ script = ExtResource("6_w0iw6")
 [node name="LevelLoader" type="Node" parent="."]
 script = ExtResource("7_wjr8j")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-191, -289)
+texture = ExtResource("7_4pcd2")
+script = ExtResource("8_e767d")
+
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
 
+[editable path="metaball"]
 [editable path="metaballStatic"]
 [editable path="cupiContainer"]
