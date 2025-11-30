@@ -1,12 +1,13 @@
 [gd_scene load_steps=6 format=3 uid="uid://cmwdw8kgbef6b"]
 
-[ext_resource type="Script" uid="uid://rujdkhv2ul8t" path="res://metaball/polygon_2d.gd" id="1_5scw5"]
+[ext_resource type="Script" uid="uid://rujdkhv2ul8t" path="res://metaball/Metaball.gd" id="1_5scw5"]
 [ext_resource type="Script" uid="uid://de21rbsaslsxw" path="res://metaball/show_spectrum.gd" id="1_jhxxm"]
-[ext_resource type="Script" uid="uid://dhgymk6ayct4i" path="res://scripts/distorsionLine.gd" id="4_luhwx"]
-[ext_resource type="Shader" uid="uid://ckpngky0h0tqs" path="res://shaders/distorsion.gdshader" id="4_ut3li"]
+[ext_resource type="Shader" uid="uid://rghpfcnh0win" path="res://shaders/sinCos.tres" id="3_luhwx"]
+[ext_resource type="Script" uid="uid://dhgymk6ayct4i" path="res://scripts/shaderController/distorsionLine.gd" id="4_luhwx"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2m0ka"]
-shader = ExtResource("4_ut3li")
+shader = ExtResource("3_luhwx")
+shader_parameter/TimeMultiplier = 5.0
 shader_parameter/frequency = 60.0
 shader_parameter/amplitude = 0.002
 
@@ -30,5 +31,5 @@ default_color = Color(0, 0, 1, 1)
 material = SubResource("ShaderMaterial_2m0ka")
 scale = Vector2(0.75, 0.75)
 closed = true
-width = 45.0
+width = 50.0
 script = ExtResource("4_luhwx")

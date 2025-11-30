@@ -8,7 +8,7 @@ gradient = SubResource("Gradient_66pfm")
 
 [resource]
 emission_shape = 3
-emission_box_extents = Vector3(3, 6, 1)
+emission_box_extents = Vector3(2.205, 6, 1)
 spread = 20.0
 initial_velocity_min = 200.0
 initial_velocity_max = 200.0

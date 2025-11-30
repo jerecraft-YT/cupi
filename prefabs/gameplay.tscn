@@ -18,7 +18,6 @@ prefabBulletNormal = ExtResource("3_v5r4t")
 prefabBulletSpiral = ExtResource("4_7dn3w")
 spirales = NodePath("spirales")
 normales = NodePath("normales")
-speed = 0.25
 cupi = NodePath("../Cupi")
 cupiContainer = NodePath("../Cupi/cupiContainer")
 

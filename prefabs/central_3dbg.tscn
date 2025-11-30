@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://jjppi74it83l"]
 
 [ext_resource type="Shader" uid="uid://dwro78a8bfmp3" path="res://shaders/efectoEsfera.gdshader" id="1_wbvui"]
-[ext_resource type="Script" uid="uid://bxk4nrhap8o4m" path="res://scripts/movimientoEsferaBG.gd" id="2_oum2u"]
+[ext_resource type="Script" uid="uid://bxk4nrhap8o4m" path="res://scripts/shaderController/movimientoEsferaBG.gd" id="2_oum2u"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_v5r4t"]
 viewport_path = NodePath("SubViewport")

@@ -1,6 +1,6 @@
 {
-    "bpm" : 130,
-    "bullets": [
+	"bpm" : 130,
+	"bullets": [
 	{
 	  "expresion": 2,
 	  "time": 2193.0,
@@ -10,5 +10,5 @@
 	  "expresionEyes": 0.0,
 	  "tipeMoveAngle": 0.0
 	}
-    ]
+	]
 }

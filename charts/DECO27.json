@@ -1,0 +1,5336 @@
+{
+	"bpm":130,
+  "bullets": [
+	{
+	  "expresion": 0,
+	  "time": 5540.0,
+	  "angle": 89.59651526494125,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 5690.0,
+	  "angle": 10.304846468766032,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 7340.0,
+	  "angle": 352.59308787150474,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 7790.0,
+	  "angle": 35.07375449334831,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 8840.0,
+	  "angle": 191.53462065364468,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 9215.0,
+	  "angle": 186.6544250460066,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 9590.0,
+	  "angle": 302.7352262721076,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 9740.0,
+	  "angle": 242.86009407067905,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 10340.0,
+	  "angle": 21.068974931931223,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 10490.0,
+	  "angle": 347.4986459444796,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 11990.0,
+	  "angle": 257.09259132873416,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 12140.0,
+	  "angle": 285.70863782901574,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 12590.0,
+	  "angle": 226.44759968685648,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 12740.0,
+	  "angle": 226.44759968685648,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 13940.0,
+	  "angle": 13.614182744829352,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 14015.0,
+	  "angle": 13.614182744829352,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 14390.0,
+	  "angle": 39.36931724236475,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 14540.0,
+	  "angle": 350.25290986089254,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 14690.0,
+	  "angle": 43.806510576017956,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 23915.0,
+	  "angle": 243.6455941220774,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 23990.0,
+	  "angle": 243.6455941220774,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 24140.0,
+	  "angle": 331.6992442339936,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 25040.0,
+	  "angle": 342.9794743884801,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 25490.0,
+	  "angle": 84.94013115373588,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 26240.0,
+	  "angle": 201.1342398803672,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 26390.0,
+	  "angle": 145.52078431387437,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 26540.0,
+	  "angle": 175.39990433373674,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 27440.0,
+	  "angle": 189.5002413153373,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 27590.0,
+	  "angle": 213.21525149373718,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 28340.0,
+	  "angle": 176.08842818747135,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 28790.0,
+	  "angle": 46.30195267257888,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 28865.0,
+	  "angle": 46.30195267257888,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 29840.0,
+	  "angle": 324.3503436284238,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 29990.0,
+	  "angle": 280.61965527615513,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 31040.0,
+	  "angle": 275.13975737899057,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 31190.0,
+	  "angle": 299.6871816391937,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 31340.0,
+	  "angle": 297.8972710309476,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 31790.0,
+	  "angle": 130.17923392190735,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 32240.0,
+	  "angle": 76.81703484145918,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 32390.0,
+	  "angle": 76.81703484145918,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 32915.0,
+	  "angle": 161.43086926896217,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 32990.0,
+	  "angle": 161.43086926896217,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 33140.0,
+	  "angle": 181.73570458892837,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 33590.0,
+	  "angle": 81.67434966957317,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 33740.0,
+	  "angle": 145.33655414649934,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 34340.0,
+	  "angle": 263.4633663512029,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 34490.0,
+	  "angle": 219.20720350496782,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 35390.0,
+	  "angle": 196.4728917147366,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 35540.0,
+	  "angle": 196.4728917147366,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 35990.0,
+	  "angle": 99.9638041899072,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 36890.0,
+	  "angle": 111.99740340664216,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 38015.0,
+	  "angle": 0.7131886350175813,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 38390.0,
+	  "angle": 317.7988985135763,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 38540.0,
+	  "angle": 314.22786642888406,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 39140.0,
+	  "angle": 356.7947840689865,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 39290.0,
+	  "angle": 78.111341960372,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 39740.0,
+	  "angle": 173.08877288097534,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 40490.0,
+	  "angle": 204.74674821262613,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 40940.0,
+	  "angle": 247.7860267744959,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 42515.0,
+	  "angle": 3.964654722856126,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 42815.0,
+	  "angle": 359.07595464722726,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 43190.0,
+	  "angle": 54.49056063822469,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 43340.0,
+	  "angle": 11.836775367862732,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 43490.0,
+	  "angle": 34.38876190896327,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 54740.0,
+	  "angle": 288.6989828041811,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 54890.0,
+	  "angle": 288.6989828041811,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 55190.0,
+	  "angle": 127.69424046668917,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 56390.0,
+	  "angle": 117.43972794819932,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 56540.0,
+	  "angle": 117.43972794819932,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 56840.0,
+	  "angle": 137.56377021146503,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 59540.0,
+	  "angle": 250.6936996593996,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 59690.0,
+	  "angle": 250.6936996593996,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 59990.0,
+	  "angle": 263.99099404250546,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 61340.0,
+	  "angle": 169.2374627768575,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 63290.0,
+	  "angle": 198.22884978553788,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 64340.0,
+	  "angle": 250.523424501068,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 64415.0,
+	  "angle": 244.94599786160092,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 64490.0,
+	  "angle": 239.5344550805401,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 65990.0,
+	  "angle": 279.75242494165377,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 66440.0,
+	  "angle": 87.90109406679645,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 66890.0,
+	  "angle": 59.22246961446552,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 67040.0,
+	  "angle": 59.22246961446552,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 68090.0,
+	  "angle": 342.030860259843,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 69140.0,
+	  "angle": 102.35155915003018,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 69215.0,
+	  "angle": 94.29986282019208,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 69290.0,
+	  "angle": 85.53284093861073,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 70790.0,
+	  "angle": 270.2984128199949,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 71240.0,
+	  "angle": 198.82471001824007,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 71315.0,
+	  "angle": 198.82471001824007,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 71915.0,
+	  "angle": 58.93483511450136,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 71990.0,
+	  "angle": 58.93483511450136,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 72140.0,
+	  "angle": 90.59993388025396,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 72740.0,
+	  "angle": 356.3477772196937,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 73190.0,
+	  "angle": 323.43837797782396,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 74090.0,
+	  "angle": 284.20676611776037,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 74240.0,
+	  "angle": 284.20676611776037,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 75140.0,
+	  "angle": 175.82143103111054,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 75590.0,
+	  "angle": 185.05382605006434,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 76490.0,
+	  "angle": 282.05399167690894,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 76640.0,
+	  "angle": 282.05399167690894,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 77540.0,
+	  "angle": 48.64549634461136,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 77990.0,
+	  "angle": 47.14758542829851,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 78890.0,
+	  "angle": 243.74975763031114,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 79040.0,
+	  "angle": 243.74975763031114,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 79940.0,
+	  "angle": 18.924644416051247,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 80390.0,
+	  "angle": 334.1912848157478,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 81290.0,
+	  "angle": 111.07749411698673,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 81365.0,
+	  "angle": 111.07749411698673,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 82640.0,
+	  "angle": 229.7636416907262,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 83090.0,
+	  "angle": 150.7406645330659,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 83840.0,
+	  "angle": 19.290046219188724,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 83990.0,
+	  "angle": 83.94580810588519,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 84140.0,
+	  "angle": 60.64224645720875,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 85040.0,
+	  "angle": 248.9225058830133,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 85190.0,
+	  "angle": 242.65012421993012,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 85940.0,
+	  "angle": 322.3704680031787,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 86015.0,
+	  "angle": 324.85308020417483,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 86090.0,
+	  "angle": 327.7145581856011,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 86240.0,
+	  "angle": 315.5787255656078,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 87440.0,
+	  "angle": 7.159080423076819,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 87590.0,
+	  "angle": 46.621145913653415,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 88640.0,
+	  "angle": 257.34149069120235,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 88790.0,
+	  "angle": 258.19756579221644,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 88940.0,
+	  "angle": 292.8684950246497,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 89090.0,
+	  "angle": 250.82099197418927,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 89690.0,
+	  "angle": 126.0760115563686,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 90590.0,
+	  "angle": 235.89872580575286,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 90740.0,
+	  "angle": 211.78725312166475,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 90890.0,
+	  "angle": 262.0106732336031,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 90965.0,
+	  "angle": 262.0106732336031,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 91490.0,
+	  "angle": 343.3007557660064,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 100940.0,
+	  "angle": 52.750036422919315,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 101690.0,
+	  "angle": 351.11214830878026,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 102440.0,
+	  "angle": 260.09581678702614,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 102590.0,
+	  "angle": 267.0390638658362,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 102740.0,
+	  "angle": 292.29058248419375,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 103640.0,
+	  "angle": 189.31708606912625,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 103790.0,
+	  "angle": 163.65521033078866,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 104540.0,
+	  "angle": 174.72610404264825,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 105290.0,
+	  "angle": 252.21611155730747,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 105440.0,
+	  "angle": 272.34413247406985,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 105815.0,
+	  "angle": 319.68126950336335,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 106490.0,
+	  "angle": 11.668774000368952,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 107240.0,
+	  "angle": 88.80651057601797,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 107390.0,
+	  "angle": 45.24803212815649,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 107540.0,
+	  "angle": 93.73139699916045,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 108440.0,
+	  "angle": 272.9814612199822,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 108890.0,
+	  "angle": 248.881276017609,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 109040.0,
+	  "angle": 248.881276017609,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 110090.0,
+	  "angle": 79.11447294534125,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 110165.0,
+	  "angle": 79.11447294534125,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 110390.0,
+	  "angle": 115.23000984394176,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 110465.0,
+	  "angle": 115.23000984394176,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 110690.0,
+	  "angle": 138.10166402986843,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 121940.0,
+	  "angle": 285.59281093926637,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 122090.0,
+	  "angle": 285.59281093926637,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 122390.0,
+	  "angle": 255.4195796027962,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 123590.0,
+	  "angle": 254.5896085618503,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 123740.0,
+	  "angle": 254.5896085618503,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 124040.0,
+	  "angle": 327.80426606528675,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 126890.0,
+	  "angle": 230.23386164721643,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 127190.0,
+	  "angle": 226.59114027119458,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 128390.0,
+	  "angle": 278.0428942335053,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 128540.0,
+	  "angle": 240.1540680503126,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 130490.0,
+	  "angle": 256.8142386978123,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 130640.0,
+	  "angle": 268.21008939175397,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 130790.0,
+	  "angle": 289.7723505325714,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 131540.0,
+	  "angle": 125.99149625797483,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 131615.0,
+	  "angle": 118.04015297793495,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 131690.0,
+	  "angle": 108.04782106877107,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 131840.0,
+	  "angle": 158.96248897457818,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 132290.0,
+	  "angle": 186.20982614718625,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 132440.0,
+	  "angle": 169.04593735660166,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 132890.0,
+	  "angle": 257.3764364022974,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 133040.0,
+	  "angle": 265.6839724801344,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 133190.0,
+	  "angle": 287.91878459315717,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 133640.0,
+	  "angle": 343.0546766226209,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 134240.0,
+	  "angle": 99.17172903016595,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 135290.0,
+	  "angle": 248.88649992163474,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 135440.0,
+	  "angle": 187.03341645969493,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 135590.0,
+	  "angle": 132.35745470593528,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 136340.0,
+	  "angle": 170.82827096983405,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 136415.0,
+	  "angle": 171.73003841301883,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 136490.0,
+	  "angle": 172.50414236027015,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 136640.0,
+	  "angle": 229.89909245378774,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 137090.0,
+	  "angle": 263.23382517744693,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 137240.0,
+	  "angle": 293.8059435184577,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 137390.0,
+	  "angle": 299.1198612229247,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 137840.0,
+	  "angle": 205.86635679409451,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 137990.0,
+	  "angle": 318.01278750418334,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 138440.0,
+	  "angle": 332.4298628176678,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 138965.0,
+	  "angle": 87.56335175318986,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 140240.0,
+	  "angle": 314.39690880561943,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 141140.0,
+	  "angle": 113.87937136434488,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 141215.0,
+	  "angle": 113.87937136434488,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 141890.0,
+	  "angle": 221.8778695378843,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 142040.0,
+	  "angle": 197.52556837372288,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 142490.0,
+	  "angle": 159.86369657175186,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 142640.0,
+	  "angle": 205.76932762433873,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 142790.0,
+	  "angle": 254.7448812969422,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 143240.0,
+	  "angle": 257.3764364022974,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 143840.0,
+	  "angle": 325.9499098725487,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 145040.0,
+	  "angle": 152.74467162505695,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 145940.0,
+	  "angle": 80.53767779197439,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 146690.0,
+	  "angle": 260.78897345918335,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 146840.0,
+	  "angle": 260.78897345918335,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 147290.0,
+	  "angle": 334.33716998445215,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 147440.0,
+	  "angle": 334.33716998445215,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 147590.0,
+	  "angle": 357.73204546409414,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 148040.0,
+	  "angle": 249.68717372979262,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 148115.0,
+	  "angle": 249.68717372979262,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 149390.0,
+	  "angle": 131.85504253530198,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 149465.0,
+	  "angle": 136.57366405410255,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 149540.0,
+	  "angle": 138.1221304621157,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 149690.0,
+	  "angle": 156.27160892404746,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 150065.0,
+	  "angle": 197.14989891957532,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 150665.0,
+	  "angle": 234.43082370679366,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 150740.0,
+	  "angle": 234.43082370679366,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 151190.0,
+	  "angle": 204.27444113443946,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 151265.0,
+	  "angle": 204.27444113443946,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 151640.0,
+	  "angle": 85.53284093861073,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 151790.0,
+	  "angle": 47.563770211465005,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 151865.0,
+	  "angle": 53.40337109056082,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 151940.0,
+	  "angle": 59.93141717813753,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 152090.0,
+	  "angle": 4.899092453787761,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 152465.0,
+	  "angle": 343.46516214265483,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 152840.0,
+	  "angle": 286.92751306414704,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 153290.0,
+	  "angle": 228.96465472285612,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 153365.0,
+	  "angle": 235.7842978675626,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 153440.0,
+	  "angle": 240.1908857932935,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 153890.0,
+	  "angle": 191.13630943118173,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 154265.0,
+	  "angle": 109.27219706726987,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 154340.0,
+	  "angle": 109.27219706726987,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 154490.0,
+	  "angle": 133.46839220798898,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 154865.0,
+	  "angle": 179.50394503960476,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 154940.0,
+	  "angle": 179.50394503960476,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 155390.0,
+	  "angle": 249.7107994622302,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 155465.0,
+	  "angle": 244.11700921609466,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 155540.0,
+	  "angle": 239.2314583156426,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 155690.0,
+	  "angle": 283.7550394459949,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 156065.0,
+	  "angle": 331.6992442339936,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 156140.0,
+	  "angle": 331.6992442339936,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 156590.0,
+	  "angle": 347.2344342189414,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 156665.0,
+	  "angle": 347.2344342189414,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 157265.0,
+	  "angle": 87.6140559696112,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 157640.0,
+	  "angle": 13.03865658302297,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 157715.0,
+	  "angle": 13.03865658302297,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 158090.0,
+	  "angle": 122.7995312726192,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 158240.0,
+	  "angle": 322.1842673924269,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 159290.0,
+	  "angle": 8.471144633014834,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 159440.0,
+	  "angle": 316.45635863433967,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 159815.0,
+	  "angle": 101.19511142629999,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 160490.0,
+	  "angle": 126.18841668855971,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 160640.0,
+	  "angle": 116.29479007058386,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 161015.0,
+	  "angle": 190.61965527615513,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 161090.0,
+	  "angle": 190.61965527615513,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 161240.0,
+	  "angle": 230.1944289077348,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 162215.0,
+	  "angle": 30.21727395738432,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 162290.0,
+	  "angle": 30.21727395738432,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 162440.0,
+	  "angle": 355.08821182749404,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 162515.0,
+	  "angle": 355.08821182749404,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 162815.0,
+	  "angle": 6.3989566273689205,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 163115.0,
+	  "angle": 316.58017247280003,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 164090.0,
+	  "angle": 206.20011484134733,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 164240.0,
+	  "angle": 191.30993247402023,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 164615.0,
+	  "angle": 143.63341982736378,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 165290.0,
+	  "angle": 352.5685920288275,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 165440.0,
+	  "angle": 72.16814237145852,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 165515.0,
+	  "angle": 72.16814237145852,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 165890.0,
+	  "angle": 0.44761417086055233,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 166040.0,
+	  "angle": 32.61924307119282,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 166790.0,
+	  "angle": 17.03776779562563,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 166940.0,
+	  "angle": 336.7005367393175,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 167690.0,
+	  "angle": 310.23635830927384,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 167765.0,
+	  "angle": 310.23635830927384,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 167990.0,
+	  "angle": 240.5050441823123,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 168065.0,
+	  "angle": 240.5050441823123,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 168290.0,
+	  "angle": 270.0,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 8.0
+	}
+  ],
+  "spiral": [
+	{
+	  "expresion": 0,
+	  "time": 5090.0,
+	  "duration": 3780.0,
+	  "startAngle": 151.75895841718088,
+	  "finalAngle": 211.75895841718088,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 5840.0,
+	  "duration": 816.0000000000001,
+	  "startAngle": 10.304846468766032,
+	  "finalAngle": 70.30484646876603,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 6140.0,
+	  "duration": 9152.0,
+	  "startAngle": 148.39249775375112,
+	  "finalAngle": 208.39249775375112,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 6440.0,
+	  "duration": 108.0,
+	  "startAngle": 297.5290718724566,
+	  "finalAngle": 357.5290718724566,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 6890.0,
+	  "duration": 100.0,
+	  "startAngle": 320.3893117599734,
+	  "finalAngle": 20.389311759973396,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 7490.0,
+	  "duration": 42700.0,
+	  "startAngle": 33.457474299563145,
+	  "finalAngle": 93.45747429956315,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 7940.0,
+	  "duration": 1536.0,
+	  "startAngle": 77.09259132873417,
+	  "finalAngle": 137.09259132873416,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 8240.0,
+	  "duration": 924.0,
+	  "startAngle": 13.298570330494279,
+	  "finalAngle": 73.29857033049427,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 8540.0,
+	  "duration": 10780.0,
+	  "startAngle": 78.27488798483492,
+	  "finalAngle": 138.27488798483492,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 8990.0,
+	  "duration": 1164.0,
+	  "startAngle": 155.96571184055742,
+	  "finalAngle": 215.96571184055742,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 9290.0,
+	  "duration": 683.9999999999999,
+	  "startAngle": 186.6544250460066,
+	  "finalAngle": 246.6544250460066,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 9890.0,
+	  "duration": 100.0,
+	  "startAngle": 290.55604521958344,
+	  "finalAngle": 350.55604521958344,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 10640.0,
+	  "duration": 572.0,
+	  "startAngle": 347.4986459444796,
+	  "finalAngle": 47.49864594447962,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 10940.0,
+	  "duration": 14740.0,
+	  "startAngle": 29.868630088348688,
+	  "finalAngle": 89.86863008834868,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 11240.0,
+	  "duration": 1236.0,
+	  "startAngle": 78.40782458970892,
+	  "finalAngle": 138.40782458970892,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 11690.0,
+	  "duration": 844.0,
+	  "startAngle": 164.60445074600491,
+	  "finalAngle": 224.60445074600491,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 12290.0,
+	  "duration": 20300.0,
+	  "startAngle": 196.6657575168754,
+	  "finalAngle": 256.6657575168754,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 12890.0,
+	  "duration": 564.0,
+	  "startAngle": 232.59464336859145,
+	  "finalAngle": 292.59464336859145,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 13190.0,
+	  "duration": 1340.0,
+	  "startAngle": 127.56859202882751,
+	  "finalAngle": 187.5685920288275,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 13490.0,
+	  "duration": 16632.0,
+	  "startAngle": 82.04247477308286,
+	  "finalAngle": 142.04247477308286,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 14090.0,
+	  "duration": 1016.0,
+	  "startAngle": 13.614182744829352,
+	  "finalAngle": 73.61418274482935,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 23690.0,
+	  "duration": 836.0,
+	  "startAngle": 253.57460499009912,
+	  "finalAngle": 313.57460499009915,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 24290.0,
+	  "duration": 7699.999999999999,
+	  "startAngle": 291.5124042223464,
+	  "finalAngle": 351.5124042223464,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 24740.0,
+	  "duration": 780.0,
+	  "startAngle": 0.6714041828499823,
+	  "finalAngle": 60.67140418284998,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 25190.0,
+	  "duration": 1280.0,
+	  "startAngle": 52.28028908399372,
+	  "finalAngle": 112.28028908399372,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 25640.0,
+	  "duration": 1136.0,
+	  "startAngle": 98.65254179111473,
+	  "finalAngle": 158.65254179111474,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 25940.0,
+	  "duration": 1536.0,
+	  "startAngle": 126.48601207024966,
+	  "finalAngle": 186.48601207024967,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 26690.0,
+	  "duration": 27864.0,
+	  "startAngle": 225.97102193107915,
+	  "finalAngle": 285.9710219310791,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 27140.0,
+	  "duration": 100.0,
+	  "startAngle": 233.13010235415598,
+	  "finalAngle": 293.13010235415595,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 27740.0,
+	  "duration": 2520.0,
+	  "startAngle": 168.92979742206063,
+	  "finalAngle": 228.92979742206063,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 28040.0,
+	  "duration": 1536.0,
+	  "startAngle": 133.62516521943058,
+	  "finalAngle": 193.62516521943058,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 28490.0,
+	  "duration": 1232.0,
+	  "startAngle": 94.92710994764901,
+	  "finalAngle": 154.927109947649,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 28940.0,
+	  "duration": 1488.0,
+	  "startAngle": 46.30195267257888,
+	  "finalAngle": 106.30195267257888,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 29090.0,
+	  "duration": 49020.0,
+	  "startAngle": 21.021644014054214,
+	  "finalAngle": 81.02164401405422,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 29540.0,
+	  "duration": 864.0,
+	  "startAngle": 19.707978842978736,
+	  "finalAngle": 79.70797884297873,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 30140.0,
+	  "duration": 1140.0,
+	  "startAngle": 246.09233950582748,
+	  "finalAngle": 306.09233950582745,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 30440.0,
+	  "duration": 100.0,
+	  "startAngle": 318.3664606634298,
+	  "finalAngle": 18.36646066342979,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 30740.0,
+	  "duration": 604.0,
+	  "startAngle": 342.86700384965684,
+	  "finalAngle": 42.86700384965684,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 31490.0,
+	  "duration": 7740.0,
+	  "startAngle": 248.13142081462746,
+	  "finalAngle": 308.13142081462746,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 31940.0,
+	  "duration": 424.0,
+	  "startAngle": 297.0955524937518,
+	  "finalAngle": 357.0955524937518,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 32540.0,
+	  "duration": 3048.0,
+	  "startAngle": 152.48010756904984,
+	  "finalAngle": 212.48010756904984,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 33290.0,
+	  "duration": 60028.0,
+	  "startAngle": 139.37293127688113,
+	  "finalAngle": 199.37293127688113,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 33890.0,
+	  "duration": 22355.999999999996,
+	  "startAngle": 17.35402463626132,
+	  "finalAngle": 77.35402463626133,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 34640.0,
+	  "duration": 520.0,
+	  "startAngle": 219.20720350496782,
+	  "finalAngle": 279.2072035049678,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 34940.0,
+	  "duration": 5460.0,
+	  "startAngle": 210.86491399727004,
+	  "finalAngle": 270.86491399727004,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 35690.0,
+	  "duration": 844.0,
+	  "startAngle": 165.78414652632642,
+	  "finalAngle": 225.78414652632642,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 36140.0,
+	  "duration": 15444.0,
+	  "startAngle": 133.71060209593975,
+	  "finalAngle": 193.71060209593975,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 36590.0,
+	  "duration": 924.0,
+	  "startAngle": 166.93068210371783,
+	  "finalAngle": 226.93068210371783,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 37040.0,
+	  "duration": 1372.0,
+	  "startAngle": 111.99740340664216,
+	  "finalAngle": 171.99740340664215,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 37340.0,
+	  "duration": 53760.0,
+	  "startAngle": 46.531607792011016,
+	  "finalAngle": 106.53160779201102,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 37790.0,
+	  "duration": 768.0,
+	  "startAngle": 0.0,
+	  "finalAngle": 60.0,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 38090.0,
+	  "duration": 780.0,
+	  "startAngle": 0.7131886350175813,
+	  "finalAngle": 60.71318863501758,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 38690.0,
+	  "duration": 100.0,
+	  "startAngle": 277.71189241265887,
+	  "finalAngle": 337.71189241265887,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 39440.0,
+	  "duration": 996.0,
+	  "startAngle": 78.111341960372,
+	  "finalAngle": 138.111341960372,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 39890.0,
+	  "duration": 45220.0,
+	  "startAngle": 146.37710217304095,
+	  "finalAngle": 206.37710217304095,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 40190.0,
+	  "duration": 580.0,
+	  "startAngle": 197.0764102848616,
+	  "finalAngle": 257.0764102848616,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 40640.0,
+	  "duration": 296.0,
+	  "startAngle": 204.74674821262613,
+	  "finalAngle": 264.74674821262613,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 41090.0,
+	  "duration": 4267.999999999999,
+	  "startAngle": 292.83365417791754,
+	  "finalAngle": 352.83365417791754,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 41540.0,
+	  "duration": 640.0,
+	  "startAngle": 206.565051177078,
+	  "finalAngle": 266.565051177078,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 41840.0,
+	  "duration": 100.0,
+	  "startAngle": 285.1540680503126,
+	  "finalAngle": 345.1540680503126,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 42140.0,
+	  "duration": 884.0,
+	  "startAngle": 165.48330004114536,
+	  "finalAngle": 225.48330004114536,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 42590.0,
+	  "duration": 27860.0,
+	  "startAngle": 3.964654722856126,
+	  "finalAngle": 63.964654722856125,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 42890.0,
+	  "duration": 752.0,
+	  "startAngle": 359.07595464722726,
+	  "finalAngle": 59.07595464722726,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 53090.0,
+	  "duration": 25800.0,
+	  "startAngle": 349.5175616024401,
+	  "finalAngle": 49.51756160244008,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 53990.0,
+	  "duration": 648.0,
+	  "startAngle": 203.80594351845772,
+	  "finalAngle": 263.80594351845775,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 55490.0,
+	  "duration": 61920.0,
+	  "startAngle": 63.70843495358886,
+	  "finalAngle": 123.70843495358886,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 56990.0,
+	  "duration": 1100.0,
+	  "startAngle": 160.62348596565866,
+	  "finalAngle": 220.62348596565866,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 57590.0,
+	  "duration": 756.0,
+	  "startAngle": 181.53434149970076,
+	  "finalAngle": 241.53434149970076,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 57890.0,
+	  "duration": 3096.0,
+	  "startAngle": 32.39984017391931,
+	  "finalAngle": 92.3998401739193,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 58790.0,
+	  "duration": 112.0,
+	  "startAngle": 327.1509110409142,
+	  "finalAngle": 27.150911040914195,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 60290.0,
+	  "duration": 27864.0,
+	  "startAngle": 188.05441444638174,
+	  "finalAngle": 248.05441444638174,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 60890.0,
+	  "duration": 904.0,
+	  "startAngle": 24.10223450116114,
+	  "finalAngle": 84.10223450116113,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 62690.0,
+	  "duration": 53760.0,
+	  "startAngle": 101.19511142629999,
+	  "finalAngle": 161.1951114263,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 62990.0,
+	  "duration": 896.0,
+	  "startAngle": 26.9276778510405,
+	  "finalAngle": 86.9276778510405,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 63440.0,
+	  "duration": 1080.0,
+	  "startAngle": 154.29004621918875,
+	  "finalAngle": 214.29004621918875,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 63740.0,
+	  "duration": 7876.0,
+	  "startAngle": 187.87393813172562,
+	  "finalAngle": 247.87393813172562,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 64040.0,
+	  "duration": 100.0,
+	  "startAngle": 219.17927575447496,
+	  "finalAngle": 279.17927575447493,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 64640.0,
+	  "duration": 456.0,
+	  "startAngle": 279.4623222080256,
+	  "finalAngle": 339.4623222080256,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 65090.0,
+	  "duration": 27159.999999999996,
+	  "startAngle": 0.44761417086055233,
+	  "finalAngle": 60.447614170860554,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 65390.0,
+	  "duration": 284.0,
+	  "startAngle": 302.132895859981,
+	  "finalAngle": 2.1328958599809766,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 65690.0,
+	  "duration": 960.0,
+	  "startAngle": 26.095424157388347,
+	  "finalAngle": 86.09542415738835,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 66140.0,
+	  "duration": 556.0,
+	  "startAngle": 256.21840276434637,
+	  "finalAngle": 316.21840276434637,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 66590.0,
+	  "duration": 1300.0,
+	  "startAngle": 132.7630209365623,
+	  "finalAngle": 192.7630209365623,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 67190.0,
+	  "duration": 1536.0,
+	  "startAngle": 44.703133332675314,
+	  "finalAngle": 104.70313333267532,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 67490.0,
+	  "duration": 26040.0,
+	  "startAngle": 356.26860300083956,
+	  "finalAngle": 56.26860300083956,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 67790.0,
+	  "duration": 176.0,
+	  "startAngle": 329.96671956400485,
+	  "finalAngle": 29.966719564004848,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 68240.0,
+	  "duration": 100.0,
+	  "startAngle": 300.66892664971493,
+	  "finalAngle": 0.6689266497149333,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 68540.0,
+	  "duration": 9944.0,
+	  "startAngle": 93.3664606634298,
+	  "finalAngle": 153.3664606634298,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 68840.0,
+	  "duration": 1072.0,
+	  "startAngle": 39.559667968994496,
+	  "finalAngle": 99.55966796899449,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 69440.0,
+	  "duration": 1508.0,
+	  "startAngle": 129.22188093087334,
+	  "finalAngle": 189.22188093087334,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 69890.0,
+	  "duration": 24640.0,
+	  "startAngle": 187.65770969371385,
+	  "finalAngle": 247.65770969371385,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 70190.0,
+	  "duration": 608.0,
+	  "startAngle": 190.16912833449067,
+	  "finalAngle": 250.16912833449067,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 70490.0,
+	  "duration": 160.0,
+	  "startAngle": 244.96247426513492,
+	  "finalAngle": 304.9624742651349,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 70940.0,
+	  "duration": 472.0,
+	  "startAngle": 310.40945681439393,
+	  "finalAngle": 10.409456814393934,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 71390.0,
+	  "duration": 24780.0,
+	  "startAngle": 198.82471001824007,
+	  "finalAngle": 258.82471001824007,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 71690.0,
+	  "duration": 827.9999999999999,
+	  "startAngle": 19.230672375661293,
+	  "finalAngle": 79.2306723756613,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 72290.0,
+	  "duration": 28424.0,
+	  "startAngle": 47.80475533086325,
+	  "finalAngle": 107.80475533086326,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 72890.0,
+	  "duration": 448.0,
+	  "startAngle": 341.565051177078,
+	  "finalAngle": 41.565051177077976,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 73340.0,
+	  "duration": 432.0,
+	  "startAngle": 324.7824070318073,
+	  "finalAngle": 24.78240703180728,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 73640.0,
+	  "duration": 775.9999999999999,
+	  "startAngle": 0.9391909457355724,
+	  "finalAngle": 60.939190945735575,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 74390.0,
+	  "duration": 580.0,
+	  "startAngle": 210.1243179983612,
+	  "finalAngle": 270.1243179983612,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 74690.0,
+	  "duration": 40764.0,
+	  "startAngle": 140.71059313749964,
+	  "finalAngle": 200.71059313749964,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 75290.0,
+	  "duration": 1404.0,
+	  "startAngle": 147.01725184256446,
+	  "finalAngle": 207.01725184256446,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 75740.0,
+	  "duration": 340.0,
+	  "startAngle": 210.58989052014422,
+	  "finalAngle": 270.5898905201442,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 76040.0,
+	  "duration": 124.0,
+	  "startAngle": 235.4160283075707,
+	  "finalAngle": 295.41602830757074,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 76790.0,
+	  "duration": 444.0,
+	  "startAngle": 303.69006752597977,
+	  "finalAngle": 3.690067525979771,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 77090.0,
+	  "duration": 3372.0,
+	  "startAngle": 127.78573796079326,
+	  "finalAngle": 187.78573796079326,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 77690.0,
+	  "duration": 1244.0,
+	  "startAngle": 24.931066352783535,
+	  "finalAngle": 84.93106635278353,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 78140.0,
+	  "duration": 896.0,
+	  "startAngle": 10.420712396794512,
+	  "finalAngle": 70.42071239679451,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 78440.0,
+	  "duration": 772.0,
+	  "startAngle": 175.91438322002512,
+	  "finalAngle": 235.91438322002512,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 79190.0,
+	  "duration": 100.0,
+	  "startAngle": 280.61965527615513,
+	  "finalAngle": 340.61965527615513,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 79490.0,
+	  "duration": 18060.0,
+	  "startAngle": 341.2299919584689,
+	  "finalAngle": 41.22999195846887,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 80090.0,
+	  "duration": 1128.0,
+	  "startAngle": 28.03728216024455,
+	  "finalAngle": 88.03728216024456,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 80540.0,
+	  "duration": 708.0,
+	  "startAngle": 248.19859051364818,
+	  "finalAngle": 308.1985905136482,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 80840.0,
+	  "duration": 1396.0,
+	  "startAngle": 60.452010641129704,
+	  "finalAngle": 120.4520106411297,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 81440.0,
+	  "duration": 1536.0,
+	  "startAngle": 111.07749411698673,
+	  "finalAngle": 171.0774941169867,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 81590.0,
+	  "duration": 1016.0,
+	  "startAngle": 144.21102654081668,
+	  "finalAngle": 204.21102654081668,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 81890.0,
+	  "duration": 14040.0,
+	  "startAngle": 323.2407118297079,
+	  "finalAngle": 23.24071182970789,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 82340.0,
+	  "duration": 320.0,
+	  "startAngle": 259.38034472384487,
+	  "finalAngle": 319.38034472384487,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 82790.0,
+	  "duration": 504.0,
+	  "startAngle": 194.73232616677498,
+	  "finalAngle": 254.73232616677498,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 83240.0,
+	  "duration": 1140.0,
+	  "startAngle": 150.7406645330659,
+	  "finalAngle": 210.7406645330659,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 83540.0,
+	  "duration": 732.0,
+	  "startAngle": 183.84245312791487,
+	  "finalAngle": 243.84245312791487,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 84290.0,
+	  "duration": 59512.0,
+	  "startAngle": 107.65012421993013,
+	  "finalAngle": 167.65012421993015,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 84740.0,
+	  "duration": 672.0000000000001,
+	  "startAngle": 330.2551187030578,
+	  "finalAngle": 30.255118703057803,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 85340.0,
+	  "duration": 132.0,
+	  "startAngle": 295.41417469890456,
+	  "finalAngle": 355.41417469890456,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 85640.0,
+	  "duration": 536.0,
+	  "startAngle": 346.2485244631554,
+	  "finalAngle": 46.24852446315538,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 86390.0,
+	  "duration": 920.0000000000001,
+	  "startAngle": 19.2197734259139,
+	  "finalAngle": 79.2197734259139,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 86690.0,
+	  "duration": 34916.0,
+	  "startAngle": 145.49147701233161,
+	  "finalAngle": 205.49147701233161,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 87140.0,
+	  "duration": 1484.0,
+	  "startAngle": 64.07869453709739,
+	  "finalAngle": 124.07869453709739,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 87740.0,
+	  "duration": 1776.0,
+	  "startAngle": 329.60127228583394,
+	  "finalAngle": 29.601272285833943,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 88040.0,
+	  "duration": 544.0,
+	  "startAngle": 345.52970589993413,
+	  "finalAngle": 45.52970589993413,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 88340.0,
+	  "duration": 260.0,
+	  "startAngle": 292.2665882733124,
+	  "finalAngle": 352.2665882733124,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 89390.0,
+	  "duration": 4608.0,
+	  "startAngle": 74.01519847976543,
+	  "finalAngle": 134.01519847976544,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 89840.0,
+	  "duration": 796.0,
+	  "startAngle": 4.497151614667767,
+	  "finalAngle": 64.49715161466777,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 90140.0,
+	  "duration": 39044.0,
+	  "startAngle": 169.87532834460217,
+	  "finalAngle": 229.87532834460217,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 91040.0,
+	  "duration": 100.0,
+	  "startAngle": 262.0106732336031,
+	  "finalAngle": 322.0106732336031,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 91190.0,
+	  "duration": 436.0,
+	  "startAngle": 302.0673916032605,
+	  "finalAngle": 2.0673916032604893,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 91565.0,
+	  "duration": 4608.0,
+	  "startAngle": 0.0,
+	  "finalAngle": 60.0,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 101090.0,
+	  "duration": 3708.0,
+	  "startAngle": 26.962242592632432,
+	  "finalAngle": 86.96224259263244,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 101390.0,
+	  "duration": 528.0,
+	  "startAngle": 328.26085920418484,
+	  "finalAngle": 28.26085920418484,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 101840.0,
+	  "duration": 616.0,
+	  "startAngle": 351.11214830878026,
+	  "finalAngle": 51.11214830878026,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 102140.0,
+	  "duration": 6160.0,
+	  "startAngle": 296.565051177078,
+	  "finalAngle": 356.565051177078,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 102890.0,
+	  "duration": 100.0,
+	  "startAngle": 240.1908857932935,
+	  "finalAngle": 300.1908857932935,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 103190.0,
+	  "duration": 852.0,
+	  "startAngle": 162.59729586864373,
+	  "finalAngle": 222.59729586864373,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 103940.0,
+	  "duration": 412.0,
+	  "startAngle": 208.05467662262086,
+	  "finalAngle": 268.05467662262083,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 104240.0,
+	  "duration": 100.0,
+	  "startAngle": 243.19671410641075,
+	  "finalAngle": 303.19671410641075,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 104690.0,
+	  "duration": 17080.0,
+	  "startAngle": 310.6012946450045,
+	  "finalAngle": 10.601294645004486,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 104990.0,
+	  "duration": 296.0,
+	  "startAngle": 233.91492695714786,
+	  "finalAngle": 293.9149269571478,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 105590.0,
+	  "duration": 488.0,
+	  "startAngle": 332.5924245621816,
+	  "finalAngle": 32.59242456218158,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 105890.0,
+	  "duration": 308.0,
+	  "startAngle": 319.68126950336335,
+	  "finalAngle": 19.681269503363353,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 106190.0,
+	  "duration": 792.0,
+	  "startAngle": 1.4320961841646416,
+	  "finalAngle": 61.43209618416464,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 106640.0,
+	  "duration": 844.0,
+	  "startAngle": 11.668774000368952,
+	  "finalAngle": 71.66877400036896,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 106940.0,
+	  "duration": 49000.0,
+	  "startAngle": 31.682366027050637,
+	  "finalAngle": 91.68236602705063,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 107690.0,
+	  "duration": 1536.0,
+	  "startAngle": 65.62353138332524,
+	  "finalAngle": 125.62353138332524,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 107990.0,
+	  "duration": 864.0,
+	  "startAngle": 152.44718842328223,
+	  "finalAngle": 212.44718842328223,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 108590.0,
+	  "duration": 6468.0,
+	  "startAngle": 322.1934700552955,
+	  "finalAngle": 22.193470055295506,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 109190.0,
+	  "duration": 532.0,
+	  "startAngle": 202.0041059739167,
+	  "finalAngle": 262.0041059739167,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 109490.0,
+	  "duration": 31500.0,
+	  "startAngle": 39.52263127117112,
+	  "finalAngle": 99.52263127117112,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 109790.0,
+	  "duration": 1120.0,
+	  "startAngle": 113.90205041101085,
+	  "finalAngle": 173.90205041101086,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 110240.0,
+	  "duration": 1392.0,
+	  "startAngle": 79.11447294534125,
+	  "finalAngle": 139.11447294534125,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 110540.0,
+	  "duration": 1532.0,
+	  "startAngle": 115.23000984394176,
+	  "finalAngle": 175.23000984394176,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 120290.0,
+	  "duration": 216.0,
+	  "startAngle": 294.14554196042167,
+	  "finalAngle": 354.14554196042167,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 121190.0,
+	  "duration": 1536.0,
+	  "startAngle": 116.08559977828143,
+	  "finalAngle": 176.08559977828145,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 122690.0,
+	  "duration": 24424.0,
+	  "startAngle": 204.64166199955832,
+	  "finalAngle": 264.6416619995583,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 124190.0,
+	  "duration": 384.0,
+	  "startAngle": 292.6198649480404,
+	  "finalAngle": 352.6198649480404,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 124790.0,
+	  "duration": 1016.0,
+	  "startAngle": 13.614182744829352,
+	  "finalAngle": 73.61418274482935,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 125090.0,
+	  "duration": 4416.0,
+	  "startAngle": 55.71312302279105,
+	  "finalAngle": 115.71312302279105,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 125690.0,
+	  "duration": 600.0,
+	  "startAngle": 338.9272733800494,
+	  "finalAngle": 38.92727338004943,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 126290.0,
+	  "duration": 1536.0,
+	  "startAngle": 111.07749411698673,
+	  "finalAngle": 171.0774941169867,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 127490.0,
+	  "duration": 46440.0,
+	  "startAngle": 158.59681714720628,
+	  "finalAngle": 218.59681714720628,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 127790.0,
+	  "duration": 328.0,
+	  "startAngle": 220.897203076758,
+	  "finalAngle": 280.897203076758,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 128090.0,
+	  "duration": 556.0,
+	  "startAngle": 191.74136844245282,
+	  "finalAngle": 251.74136844245282,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 129890.0,
+	  "duration": 2208.0,
+	  "startAngle": 357.98160083320687,
+	  "finalAngle": 57.98160083320687,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 130190.0,
+	  "duration": 280.0,
+	  "startAngle": 293.48139068260764,
+	  "finalAngle": 353.48139068260764,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 130940.0,
+	  "duration": 1548.0,
+	  "startAngle": 219.28940686250036,
+	  "finalAngle": 279.28940686250036,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 131240.0,
+	  "duration": 1164.0,
+	  "startAngle": 51.766174822553054,
+	  "finalAngle": 111.76617482255305,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 131990.0,
+	  "duration": 1532.0,
+	  "startAngle": 132.00378154668883,
+	  "finalAngle": 192.00378154668883,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 132590.0,
+	  "duration": 232.0,
+	  "startAngle": 229.11818970398878,
+	  "finalAngle": 289.1181897039888,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 133340.0,
+	  "duration": 25620.0,
+	  "startAngle": 353.0656510987304,
+	  "finalAngle": 53.06565109873043,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 133790.0,
+	  "duration": 1132.0,
+	  "startAngle": 21.501434324047896,
+	  "finalAngle": 81.50143432404789,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 134390.0,
+	  "duration": 983.9999999999999,
+	  "startAngle": 56.30993247402023,
+	  "finalAngle": 116.30993247402023,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 134690.0,
+	  "duration": 2064.0,
+	  "startAngle": 198.15270588665115,
+	  "finalAngle": 258.1527058866511,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 134990.0,
+	  "duration": 184.0,
+	  "startAngle": 209.69665253769907,
+	  "finalAngle": 269.69665253769904,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 135740.0,
+	  "duration": 4608.0,
+	  "startAngle": 129.45153370628194,
+	  "finalAngle": 189.45153370628194,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 136040.0,
+	  "duration": 688.0,
+	  "startAngle": 198.15270588665115,
+	  "finalAngle": 258.1527058866511,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 136790.0,
+	  "duration": 360.0,
+	  "startAngle": 219.66784111834045,
+	  "finalAngle": 279.66784111834045,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 137540.0,
+	  "duration": 872.0,
+	  "startAngle": 12.225122675735749,
+	  "finalAngle": 72.22512267573575,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 138140.0,
+	  "duration": 100.0,
+	  "startAngle": 267.31622484053105,
+	  "finalAngle": 327.31622484053105,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 138590.0,
+	  "duration": 700.0,
+	  "startAngle": 195.33328479305354,
+	  "finalAngle": 255.33328479305354,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 139040.0,
+	  "duration": 1520.0,
+	  "startAngle": 87.56335175318986,
+	  "finalAngle": 147.56335175318986,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 139190.0,
+	  "duration": 1536.0,
+	  "startAngle": 55.28933177119962,
+	  "finalAngle": 115.28933177119961,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 139490.0,
+	  "duration": 4260.0,
+	  "startAngle": 36.41087354493057,
+	  "finalAngle": 96.41087354493057,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 139940.0,
+	  "duration": 564.0,
+	  "startAngle": 331.51781425295957,
+	  "finalAngle": 31.517814252959568,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 140390.0,
+	  "duration": 20860.0,
+	  "startAngle": 350.46510559580906,
+	  "finalAngle": 50.465105595809064,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 140840.0,
+	  "duration": 764.0,
+	  "startAngle": 333.434948822922,
+	  "finalAngle": 33.434948822922024,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 141290.0,
+	  "duration": 1536.0,
+	  "startAngle": 113.87937136434488,
+	  "finalAngle": 173.87937136434488,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 141590.0,
+	  "duration": 848.0,
+	  "startAngle": 174.4278021960362,
+	  "finalAngle": 234.4278021960362,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 142190.0,
+	  "duration": 100.0,
+	  "startAngle": 254.56827663536995,
+	  "finalAngle": 314.56827663536995,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 142940.0,
+	  "duration": 3000.0,
+	  "startAngle": 95.9061411137705,
+	  "finalAngle": 155.9061411137705,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 143390.0,
+	  "duration": 612.0,
+	  "startAngle": 331.2201936956028,
+	  "finalAngle": 31.220193695602802,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 143990.0,
+	  "duration": 228.0,
+	  "startAngle": 305.6979452887012,
+	  "finalAngle": 5.697945288701192,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 144290.0,
+	  "duration": 100.0,
+	  "startAngle": 228.14495746469802,
+	  "finalAngle": 288.144957464698,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 144740.0,
+	  "duration": 908.0,
+	  "startAngle": 172.21485985670384,
+	  "finalAngle": 232.21485985670384,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 145190.0,
+	  "duration": 4608.0,
+	  "startAngle": 108.70310183936549,
+	  "finalAngle": 168.7031018393655,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 145640.0,
+	  "duration": 1388.0,
+	  "startAngle": 143.82826465397318,
+	  "finalAngle": 203.82826465397318,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 146090.0,
+	  "duration": 548.0,
+	  "startAngle": 285.2551187030578,
+	  "finalAngle": 345.2551187030578,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 146390.0,
+	  "duration": 1340.0,
+	  "startAngle": 57.52880770915151,
+	  "finalAngle": 117.52880770915151,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 146990.0,
+	  "duration": 736.0,
+	  "startAngle": 355.5153939904554,
+	  "finalAngle": 55.51539399045538,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 147740.0,
+	  "duration": 3920.0,
+	  "startAngle": 313.9325003162598,
+	  "finalAngle": 13.932500316259791,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 148190.0,
+	  "duration": 100.0,
+	  "startAngle": 249.68717372979262,
+	  "finalAngle": 309.6871737297926,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 148490.0,
+	  "duration": 292.0,
+	  "startAngle": 268.5558744690642,
+	  "finalAngle": 328.5558744690642,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 148790.0,
+	  "duration": 544.0,
+	  "startAngle": 225.0,
+	  "finalAngle": 285.0,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 149090.0,
+	  "duration": 3720.000000000001,
+	  "startAngle": 71.27421215472742,
+	  "finalAngle": 131.27421215472742,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 149840.0,
+	  "duration": 1048.0,
+	  "startAngle": 161.96571443287013,
+	  "finalAngle": 221.96571443287013,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 150140.0,
+	  "duration": 1356.0,
+	  "startAngle": 197.14989891957532,
+	  "finalAngle": 257.1498989195753,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 150440.0,
+	  "duration": 128.0,
+	  "startAngle": 255.29169610031727,
+	  "finalAngle": 315.29169610031727,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 150890.0,
+	  "duration": 296.0,
+	  "startAngle": 290.02208323664473,
+	  "finalAngle": 350.02208323664473,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 151340.0,
+	  "duration": 23660.0,
+	  "startAngle": 204.27444113443946,
+	  "finalAngle": 264.2744411344395,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 152240.0,
+	  "duration": 1032.0,
+	  "startAngle": 15.19524852681988,
+	  "finalAngle": 75.19524852681988,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 152540.0,
+	  "duration": 1392.0,
+	  "startAngle": 343.46516214265483,
+	  "finalAngle": 43.46516214265483,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 152990.0,
+	  "duration": 100.0,
+	  "startAngle": 299.8091142067065,
+	  "finalAngle": 359.8091142067065,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 153590.0,
+	  "duration": 732.0,
+	  "startAngle": 340.90650799951436,
+	  "finalAngle": 40.90650799951436,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 154040.0,
+	  "duration": 1052.0,
+	  "startAngle": 120.00492087082402,
+	  "finalAngle": 180.00492087082404,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 154640.0,
+	  "duration": 1068.0,
+	  "startAngle": 162.57774989049145,
+	  "finalAngle": 222.57774989049145,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 155090.0,
+	  "duration": 13860.0,
+	  "startAngle": 199.96513419516413,
+	  "finalAngle": 259.9651341951641,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 155840.0,
+	  "duration": 412.0,
+	  "startAngle": 274.49715161466776,
+	  "finalAngle": 334.49715161466776,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 156290.0,
+	  "duration": 3300.0,
+	  "startAngle": 28.636863249125245,
+	  "finalAngle": 88.63686324912524,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 156740.0,
+	  "duration": 536.0,
+	  "startAngle": 347.2344342189414,
+	  "finalAngle": 47.234434218941374,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 157040.0,
+	  "duration": 992.0,
+	  "startAngle": 34.33021719550333,
+	  "finalAngle": 94.33021719550334,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 157340.0,
+	  "duration": 4608.0,
+	  "startAngle": 87.6140559696112,
+	  "finalAngle": 147.6140559696112,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 157790.0,
+	  "duration": 856.0,
+	  "startAngle": 13.03865658302297,
+	  "finalAngle": 73.03865658302297,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 158390.0,
+	  "duration": 683.9999999999999,
+	  "startAngle": 192.59332995610313,
+	  "finalAngle": 252.59332995610313,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 158690.0,
+	  "duration": 18340.0,
+	  "startAngle": 343.6552103307887,
+	  "finalAngle": 43.65521033078869,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 158990.0,
+	  "duration": 100.0,
+	  "startAngle": 280.90766179549814,
+	  "finalAngle": 340.90766179549814,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 159590.0,
+	  "duration": 2928.0,
+	  "startAngle": 46.123302714075415,
+	  "finalAngle": 106.12330271407541,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 159890.0,
+	  "duration": 1536.0,
+	  "startAngle": 101.19511142629999,
+	  "finalAngle": 161.1951114263,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 160190.0,
+	  "duration": 556.0,
+	  "startAngle": 206.56505117707798,
+	  "finalAngle": 266.565051177078,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 160790.0,
+	  "duration": 900.0,
+	  "startAngle": 170.7217599843301,
+	  "finalAngle": 230.7217599843301,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 161390.0,
+	  "duration": 100.0,
+	  "startAngle": 229.1538530869512,
+	  "finalAngle": 289.1538530869512,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 161690.0,
+	  "duration": 30444.0,
+	  "startAngle": 323.13010235415595,
+	  "finalAngle": 23.13010235415595,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 161990.0,
+	  "duration": 1220.0,
+	  "startAngle": 45.77074874539198,
+	  "finalAngle": 105.77074874539198,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 162590.0,
+	  "duration": 2040.0,
+	  "startAngle": 355.08821182749404,
+	  "finalAngle": 55.088211827494035,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 162890.0,
+	  "duration": 816.0000000000001,
+	  "startAngle": 6.3989566273689205,
+	  "finalAngle": 66.39895662736892,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 163190.0,
+	  "duration": 204.00000000000003,
+	  "startAngle": 316.58017247280003,
+	  "finalAngle": 16.58017247280003,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 163340.0,
+	  "duration": 100.0,
+	  "startAngle": 280.61965527615513,
+	  "finalAngle": 340.61965527615513,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 163490.0,
+	  "duration": 100.0,
+	  "startAngle": 243.91440022171855,
+	  "finalAngle": 303.91440022171855,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 163790.0,
+	  "duration": 860.0,
+	  "startAngle": 94.96974072811031,
+	  "finalAngle": 154.9697407281103,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 164390.0,
+	  "duration": 2436.0,
+	  "startAngle": 177.45005098703982,
+	  "finalAngle": 237.45005098703982,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 164690.0,
+	  "duration": 1092.0,
+	  "startAngle": 143.63341982736378,
+	  "finalAngle": 203.63341982736378,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 164990.0,
+	  "duration": 1536.0,
+	  "startAngle": 98.88065915052024,
+	  "finalAngle": 158.88065915052024,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 165590.0,
+	  "duration": 1340.0,
+	  "startAngle": 72.16814237145852,
+	  "finalAngle": 132.16814237145852,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 166190.0,
+	  "duration": 644.0,
+	  "startAngle": 348.8304980769171,
+	  "finalAngle": 48.83049807691708,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 166490.0,
+	  "duration": 2924.0,
+	  "startAngle": 324.68235100164816,
+	  "finalAngle": 24.682351001648158,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 167090.0,
+	  "duration": 2988.0,
+	  "startAngle": 48.742988295687155,
+	  "finalAngle": 108.74298829568716,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 167390.0,
+	  "duration": 696.0,
+	  "startAngle": 198.434948822922,
+	  "finalAngle": 258.434948822922,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 167840.0,
+	  "duration": 560.0,
+	  "startAngle": 310.23635830927384,
+	  "finalAngle": 10.23635830927384,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	},
+	{
+	  "expresion": 0,
+	  "time": 168140.0,
+	  "duration": 372.0,
+	  "startAngle": 240.5050441823123,
+	  "finalAngle": 300.5050441823123,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 2.0
+	}
+  ]
+}

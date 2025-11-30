@@ -1,7 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://bk8q65ctlgoef"]
+[gd_scene load_steps=17 format=3 uid="uid://bk8q65ctlgoef"]
 
 [ext_resource type="PackedScene" uid="uid://bv1q1ckfcnds8" path="res://prefabs/gameplay.tscn" id="1_6afby"]
-[ext_resource type="Script" uid="uid://dqguof25omg2e" path="res://scenes/background.gd" id="2_hsuob"]
+[ext_resource type="Script" uid="uid://dqguof25omg2e" path="res://scripts/background.gd" id="2_hsuob"]
 [ext_resource type="Script" uid="uid://dinxdtthuvvkf" path="res://scripts/debug/control_velocity.gd" id="3_vy3mc"]
 [ext_resource type="Script" uid="uid://b32sgw55o2c8f" path="res://scripts/player/controles.gd" id="4_m86cr"]
 [ext_resource type="Shader" uid="uid://b37la2eanlw08" path="res://shaders/WaterNoise.gdshader" id="4_pp1aq"]
@@ -9,13 +9,14 @@
 [ext_resource type="Texture2D" uid="uid://c1ce3lbjrnp2o" path="res://sprites/controller/UseYourIllusion.png" id="8_hsuob"]
 [ext_resource type="Shader" uid="uid://14kk4kka54n1" path="res://shaders/grid.gdshader" id="9_ntdbd"]
 [ext_resource type="Texture2D" uid="uid://cqk3ysk80cik" path="res://icon.svg" id="9_p7d8n"]
-[ext_resource type="Script" uid="uid://c3bplxso2r8il" path="res://scenes/beatDetect.gd" id="10_nbo5w"]
+[ext_resource type="Script" uid="uid://c3bplxso2r8il" path="res://scripts/beatDetect.gd" id="10_nbo5w"]
+[ext_resource type="Shader" uid="uid://cl8yl2k65osub" path="res://scenes/test_zone.gdshader" id="11_nbo5w"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_p7d8n"]
 shader = ExtResource("9_ntdbd")
 shader_parameter/bottom_color = Color(0.61339027, 0.61339027, 0.61339027, 1)
 shader_parameter/top_color = Color(0, 0, 0, 1)
-shader_parameter/wave_amp = 0.02400000276993999
+shader_parameter/wave_amp = 0.03400000324494
 shader_parameter/wave_size = 2.0000000475
 shader_parameter/wave_time_mul = 0.50000002049012
 shader_parameter/total_phases = 9
@@ -33,6 +34,12 @@ shader_parameter/smoke_color = Color(0.2123048, 0.21230489, 0.21230468, 1)
 shader_parameter/distortion_speed = 0.5
 shader_parameter/density = 1.0
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rjiow"]
+shader = ExtResource("11_nbo5w")
+shader_parameter/r_displacement = Vector2(3, 0)
+shader_parameter/g_displacement = Vector2(0, 0)
+shader_parameter/b_displacement = Vector2(-3, 0)
+
 [node name="TestZone" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -41,6 +48,7 @@ ignore_rotation = false
 position_smoothing_enabled = true
 
 [node name="BG" type="ColorRect" parent="." groups=["BG"]]
+z_index = -15
 material = SubResource("ShaderMaterial_p7d8n")
 anchors_preset = 5
 anchor_left = 0.5
@@ -152,10 +160,19 @@ scale = Vector2(0.25, 0.25)
 texture = ExtResource("8_hsuob")
 offset = Vector2(5, -4)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(382, 165)
+[node name="beatDetected" type="Sprite2D" parent="."]
+position = Vector2(63, -73)
 texture = ExtResource("9_p7d8n")
 script = ExtResource("10_nbo5w")
+
+[node name="BackBufferCopy" type="BackBufferCopy" parent="."]
+rect = Rect2(0, 0, 720, 720)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 100
+material = SubResource("ShaderMaterial_rjiow")
+offset_right = 720.0
+offset_bottom = 720.0
 
 [editable path="Gameplay"]
 [editable path="Gameplay/metaballStatic"]

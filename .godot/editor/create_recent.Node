@@ -1,6 +1,9 @@
+BackBufferCopy
+ColorRect
 Sprite2D
-Cupi
 AnimatedSprite2D
+GPUParticles2D
+Cupi
 Node
 Node2D
 Control

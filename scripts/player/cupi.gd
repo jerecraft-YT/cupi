@@ -8,7 +8,6 @@ class_name Cupi
 var wave_amp = 0.025
 var puntosNivel = 0
 var errores = 0
-var trozo:PackedScene = load("res://prefabs/trozo_shield.tscn")
 var particulasBullet:PackedScene = load("res://prefabs/particulas_destruir_bullet.tscn")
 
 #ASTRID paso por aca 22/10/2025 y eta punto del colapso mental uwu
@@ -16,9 +15,7 @@ var particulasBullet:PackedScene = load("res://prefabs/particulas_destruir_bulle
 @export var levelMusic:AudioStreamPlayer
 @export var barBeat0Player:AudioStreamPlayer
 @export var barBeat1Player:AudioStreamPlayer
-@onready var slider = get_tree().get_first_node_in_group("slider")
 @onready var controladorGeneral = get_tree().get_first_node_in_group("controlador")
-@onready var bg3d:MeshInstance3D = get_tree().get_first_node_in_group("Bg3D")
 @export var musicaNormalDir:String = "res://Niveles/ダイダイダイダイダイキライ - 初音ミク VS 重音テト  (Daidaidaidaidaikirai - HatsuneMiku VS KasaneTeto)/StandartMusic/daidaidaikirai.ogg"
 @export var musicaReverseDir:String = "res://Niveles/ダイダイダイダイダイキライ - 初音ミク VS 重音テト  (Daidaidaidaidaikirai - HatsuneMiku VS KasaneTeto)/ReverseMusic/daidaidaikiraiReverse.ogg"
 #variables del shield
@@ -95,7 +92,7 @@ func get_song_time() -> float:
 	return TimeScene - beatStartTime
 
 func loadJSON():
-	var data = load("res://charts/daidaidaikirai_modificado.json")
+	var data = load("res://charts/PARADISIO.json")
 	return(data)
 
 func ralentizar():
@@ -116,13 +113,13 @@ func _process(delta: float) -> void:
 		if beat % 4 == 0:
 			# beat 0 significa el inicio de una marca, las marcas duran 4 beats
 			# (en time signature 4/4)
-			barBeat0Player.play()
+			#barBeat0Player.play()
 			#BgBeat()
 			WAVEBEAT()
 			#cupiBeat(time)
 		else:
 			# beat 1 al 3, fin de marca
-			barBeat1Player.play()
+			#barBeat1Player.play()
 			#BgBeat()
 			WAVEBEAT()
 			#cupiBeat(time)
@@ -130,7 +127,6 @@ func _process(delta: float) -> void:
 		
 		# Sincronizarrrrrr
 		var song_time = get_song_time()
-		#print(song_time)
 		if song_time > 0 and abs(song_time - (levelMusic.get_playback_position() + AudioServer.get_time_since_last_mix())) >= 1.0/120.0 and musicNormalOrInverted:
 			# Sincronizar si está atrasado por 8 milisegundos
 			levelMusic.seek(song_time / 1000.0) # este espera tiempo en decimal, no enteros

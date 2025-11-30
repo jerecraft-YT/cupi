@@ -1,13 +1,61 @@
-[gd_scene load_steps=10 format=3 uid="uid://d1fqn8rr6ofpe"]
+[gd_scene load_steps=21 format=3 uid="uid://d1fqn8rr6ofpe"]
 
-[ext_resource type="AudioStream" uid="uid://22cckucuj2lw" path="res://Niveles/DECO27 - マシュマロ feat. 初音ミク/StandartMusic/DECO27 - マシュマロ feat. 初音ミク.ogg" id="1_wjr8j"]
+[ext_resource type="Texture2D" uid="uid://bowvms2w6ac6j" path="res://sprites/background/Background_1.png" id="1_e767d"]
 [ext_resource type="PackedScene" uid="uid://7yvx75kpug2u" path="res://prefabs/metaball_static.tscn" id="2_bjdlj"]
+[ext_resource type="Texture2D" uid="uid://lmhfiai4rdll" path="res://sprites/background/Background_2.png" id="2_mmg26"]
 [ext_resource type="PackedScene" uid="uid://cmwdw8kgbef6b" path="res://prefabs/metaball.tscn" id="2_pri23"]
+[ext_resource type="Texture2D" uid="uid://cer4rjvbsm2xp" path="res://sprites/background/Background_3.png" id="3_0fgxx"]
 [ext_resource type="PackedScene" uid="uid://c515s8eiyg4px" path="res://prefabs/cupi_container.tscn" id="3_6ajat"]
-[ext_resource type="Script" uid="uid://chk3wajfd26dd" path="res://scenes/niveles.gd" id="6_w0iw6"]
+[ext_resource type="Texture2D" uid="uid://buok78nq5p1ik" path="res://sprites/background/Background_4.png" id="4_6xp4g"]
+[ext_resource type="Texture2D" uid="uid://cit8xgcws0kuc" path="res://sprites/background/Background_5.png" id="5_h8syl"]
+[ext_resource type="Texture2D" uid="uid://ksv03ym07omq" path="res://sprites/background/Background_6.png" id="6_hgevq"]
+[ext_resource type="Script" uid="uid://chk3wajfd26dd" path="res://scripts/niveles.gd" id="6_w0iw6"]
 [ext_resource type="Texture2D" uid="uid://cqk3ysk80cik" path="res://icon.svg" id="7_4pcd2"]
-[ext_resource type="Script" uid="uid://ylyvmroyq0sy" path="res://scenes/level_loader.gd" id="7_wjr8j"]
-[ext_resource type="Script" uid="uid://c3bplxso2r8il" path="res://scenes/beatDetect.gd" id="8_e767d"]
+[ext_resource type="Script" uid="uid://cud1i8mhv12n7" path="res://scenes/background_1.gd" id="7_6xp4g"]
+[ext_resource type="Script" uid="uid://ylyvmroyq0sy" path="res://scripts/level_loader.gd" id="7_wjr8j"]
+[ext_resource type="AudioStream" uid="uid://22cckucuj2lw" path="res://Niveles/DECO27 - マシュマロ feat. 初音ミク/StandartMusic/DECO27 - マシュマロ feat. 初音ミク.ogg" id="8_6xp4g"]
+[ext_resource type="Script" uid="uid://c3bplxso2r8il" path="res://scripts/beatDetect.gd" id="8_e767d"]
+[ext_resource type="Shader" uid="uid://cl8yl2k65osub" path="res://scenes/test_zone.gdshader" id="15_0fgxx"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4pcd2"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(400, 700, 1)
+gravity = Vector3(0, 98, 0)
+scale_min = 6.0
+scale_max = 6.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uquea"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_e767d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_mmg26")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0fgxx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6xp4g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_h8syl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hgevq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6xp4g"]
+shader = ExtResource("15_0fgxx")
+shader_parameter/r_displacement = Vector2(4, 0)
+shader_parameter/g_displacement = Vector2(0, 0)
+shader_parameter/b_displacement = Vector2(-4, 0)
 
 [sub_resource type="GDScript" id="GDScript_bjdlj"]
 script/source = "extends Button
@@ -31,6 +79,17 @@ func _on_pressed() -> void:
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+amount = 64
+preprocess = 3.0
+process_material = SubResource("ParticleProcessMaterial_4pcd2")
+
+[node name="Background1" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_uquea")
+frame = 4
+script = ExtResource("7_6xp4g")
+
 [node name="Label" type="Label" parent="."]
 visible = false
 offset_left = -360.0
@@ -43,7 +102,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("1_wjr8j")
+stream = ExtResource("8_6xp4g")
 autoplay = true
 
 [node name="metaball" parent="." instance=ExtResource("2_pri23")]
@@ -67,15 +126,6 @@ frame = 6
 [node name="mouth" parent="cupiContainer/Face" index="1"]
 frame = 7
 
-[node name="Button" type="Button" parent="."]
-offset_left = -133.0
-offset_top = 308.0
-offset_right = 134.0
-offset_bottom = 441.0
-theme_override_font_sizes/font_size = 68
-text = "JUGAR"
-script = SubResource("GDScript_bjdlj")
-
 [node name="Niveles" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -86,10 +136,29 @@ script = ExtResource("6_w0iw6")
 [node name="LevelLoader" type="Node" parent="."]
 script = ExtResource("7_wjr8j")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="BeatDetecter" type="Sprite2D" parent="."]
 position = Vector2(-191, -289)
 texture = ExtResource("7_4pcd2")
 script = ExtResource("8_e767d")
+
+[node name="BackBufferCopy" type="BackBufferCopy" parent="."]
+rect = Rect2(0, 0, 720, 1280)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_6xp4g")
+offset_left = -360.0
+offset_top = -640.0
+offset_right = 360.0
+offset_bottom = 640.0
+
+[node name="Button" type="Button" parent="."]
+offset_left = -133.0
+offset_top = 308.0
+offset_right = 134.0
+offset_bottom = 441.0
+theme_override_font_sizes/font_size = 68
+text = "JUGAR"
+script = SubResource("GDScript_bjdlj")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
 

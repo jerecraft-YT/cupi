@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c515s8eiyg4px"]
 
-[ext_resource type="Script" uid="uid://bs5gkvsjdkqnr" path="res://scripts/ExpresionesCupi.gd" id="1_1n5mj"]
+[ext_resource type="Script" uid="uid://bs5gkvsjdkqnr" path="res://scripts/player/ExpresionesCupi.gd" id="1_1n5mj"]
 [ext_resource type="SpriteFrames" uid="uid://uaopc4watrc5" path="res://animations/cupiMouth.tres" id="2_1n5mj"]
 [ext_resource type="SpriteFrames" uid="uid://d2pw6wdp10rkc" path="res://animations/cupiEyes.tres" id="2_64fe8"]
 

@@ -1,8 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://qwgdhe76ve32"]
+[gd_scene load_steps=2 format=3 uid="uid://qwgdhe76ve32"]
 
-[ext_resource type="Script" uid="uid://dmhy14nbg60km" path="res://scripts/start_load.gd" id="1_qa2m7"]
-[ext_resource type="Texture2D" uid="uid://cqk3ysk80cik" path="res://icon.svg" id="2_8hvle"]
-[ext_resource type="Script" uid="uid://c0i72r5xwg6ru" path="res://scripts/sprite_2d.gd" id="3_7utbg"]
+[ext_resource type="Script" uid="uid://dmhy14nbg60km" path="res://scripts/loadLevels/start_load.gd" id="1_qa2m7"]
 
 [node name="StartLoad" type="Control"]
 layout_mode = 3
@@ -19,9 +17,3 @@ grow_horizontal = 2
 grow_vertical = 2
 rotation = -0.00066591706
 script = ExtResource("1_qa2m7")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(360, 640)
-texture = ExtResource("2_8hvle")
-script = ExtResource("3_7utbg")
