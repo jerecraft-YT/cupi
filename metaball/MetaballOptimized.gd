@@ -11,7 +11,6 @@ func _ready() -> void:
 	magnitudExtra = magnitudExtra
 	spectrum = AudioServer.get_bus_effect_instance(0, 0)
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	time += delta

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bv1q1ckfcnds8"]
 
-[ext_resource type="PackedScene" uid="uid://7yvx75kpug2u" path="res://prefabs/metaball_static.tscn" id="1_7dn3w"]
+[ext_resource type="PackedScene" uid="uid://cmwdw8kgbef6b" path="res://prefabs/metaball.tscn" id="1_7dn3w"]
 [ext_resource type="Script" uid="uid://n2c72dch62rh" path="res://scripts/bullets/BulletSpawner.gd" id="2_v5r4t"]
 [ext_resource type="PackedScene" uid="uid://d0kmnpjiacab" path="res://prefabs/cupi.tscn" id="3_7dn3w"]
 [ext_resource type="PackedScene" uid="uid://bvjuwoyoq48kd" path="res://prefabs/bullet.tscn" id="3_v5r4t"]
@@ -8,9 +8,10 @@
 
 [node name="Gameplay" type="Node2D"]
 
-[node name="metaballStatic" parent="." instance=ExtResource("1_7dn3w")]
-scale = Vector2(0.5, 0.5)
-defaultScale = Vector2(0.6, 0.6)
+[node name="metaball" parent="." instance=ExtResource("1_7dn3w")]
+
+[node name="distorsion" parent="metaball/ball" index="2"]
+ScaleFrequency = 3.0
 
 [node name="bullet spawner" type="Node2D" parent="." node_paths=PackedStringArray("spirales", "normales", "cupi", "cupiContainer") groups=["bulletSpawner"]]
 script = ExtResource("2_v5r4t")
@@ -30,8 +31,4 @@ scale = Vector2(3, 3)
 [node name="Cupi" parent="." groups=["cupi"] instance=ExtResource("3_7dn3w")]
 scale = Vector2(3, 3)
 
-[node name="LevelMusic" parent="Cupi" index="0"]
-autoplay = true
-
-[editable path="Cupi"]
-[editable path="Cupi/cupiContainer"]
+[editable path="metaball"]

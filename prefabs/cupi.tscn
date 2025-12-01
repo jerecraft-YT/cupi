@@ -1,26 +1,37 @@
-[gd_scene load_steps=7 format=3 uid="uid://d0kmnpjiacab"]
+[gd_scene load_steps=8 format=3 uid="uid://d0kmnpjiacab"]
 
 [ext_resource type="Script" uid="uid://bp713wa275s4p" path="res://scripts/player/cupi.gd" id="1_d23ml"]
-[ext_resource type="AudioStream" uid="uid://da6pmm2yor5oj" path="res://music/StandartMusic/audio.mp3" id="2_bnee4"]
+[ext_resource type="Script" uid="uid://d3eu6dejhuca6" path="res://scripts/reverseAudio/reversable_audio_stream_player.gd" id="2_lqyft"]
 [ext_resource type="PackedScene" uid="uid://c515s8eiyg4px" path="res://prefabs/cupi_container.tscn" id="3_bnee4"]
 [ext_resource type="AudioStream" uid="uid://cdannsch5vxx4" path="res://sfx/beatBar0.ogg" id="5_lqyft"]
 [ext_resource type="AudioStream" uid="uid://bg6tq4trreu05" path="res://sfx/beatBar1.ogg" id="6_66pfm"]
+
+[sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_bnee4"]
+mix_rate_mode = 0
+buffer_length = 0.1
 
 [sub_resource type="Curve" id="Curve_d23ml"]
 _data = [Vector2(0, 0.35), 0.0, 2.6, 0, 1, Vector2(0.25, 1), 2.6, 0.0, 1, 0, Vector2(0.75, 1), 0.0, -2.5923755, 0, 0, Vector2(1, 0.35190612), -2.5923755, 0.0, 1, 0]
 point_count = 4
 
-[node name="Cupi" type="Node2D" node_paths=PackedStringArray("cupi", "cupiContainer", "line", "levelMusic", "barBeat0Player", "barBeat1Player")]
+[node name="Cupi" type="Node2D" node_paths=PackedStringArray("cupi", "cupiContainer", "line", "levelMusic", "InverseLevelMusic", "barBeat0Player", "barBeat1Player")]
 script = ExtResource("1_d23ml")
 cupi = NodePath(".")
 cupiContainer = NodePath("cupiContainer")
 line = NodePath("Shield")
 levelMusic = NodePath("LevelMusic")
+InverseLevelMusic = NodePath("ReversableAudioStreamPlayer")
 barBeat0Player = NodePath("beat0")
 barBeat1Player = NodePath("beat1")
 
+[node name="ReversableAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamGenerator_bnee4")
+volume_db = -80.0
+script = ExtResource("2_lqyft")
+metadata/_custom_type_script = "uid://d3eu6dejhuca6"
+
 [node name="LevelMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_bnee4")
+autoplay = true
 
 [node name="cupiContainer" parent="." instance=ExtResource("3_bnee4")]
 

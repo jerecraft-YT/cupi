@@ -13,17 +13,17 @@ var particulasBullet:PackedScene = load("res://prefabs/particulas_destruir_bulle
 #ASTRID paso por aca 22/10/2025 y eta punto del colapso mental uwu
 #variable que se puede acceder desde el editor :P
 @export var levelMusic:AudioStreamPlayer
+@export var InverseLevelMusic:ReversableAudioStreamPlayer
 @export var barBeat0Player:AudioStreamPlayer
 @export var barBeat1Player:AudioStreamPlayer
-@onready var controladorGeneral = get_tree().get_first_node_in_group("controlador")
-@export var musicaNormalDir:String = "res://Niveles/ダイダイダイダイダイキライ - 初音ミク VS 重音テト  (Daidaidaidaidaikirai - HatsuneMiku VS KasaneTeto)/StandartMusic/daidaidaikirai.ogg"
-@export var musicaReverseDir:String = "res://Niveles/ダイダイダイダイダイキライ - 初音ミク VS 重音テト  (Daidaidaidaidaikirai - HatsuneMiku VS KasaneTeto)/ReverseMusic/daidaidaikiraiReverse.ogg"
+@onready var controladorGeneral:Node2D = get_tree().get_first_node_in_group("controlador")
+@export var cupiBot:bool
+@export var levelName:String
 #variables del shield
 @export var amp:float = 35
 var actual_angle:float
 var number_points:int = 16
 var cobertura:float = 60
-
 #variables para el beat
 var time:float
 var TimeScene:float
@@ -46,17 +46,16 @@ var convertedBPM:float
 			previewPlayBackPos = levelMusic.get_playback_position()
 
 			if musicNormalOrInverted:
-				levelMusic.stream = normalMusic
+				levelMusic.volume_db = 0
+				InverseLevelMusic.volume_db = -80
 			else:
-				levelMusic.stream = reverseMusic
+				levelMusic.volume_db = -80
+				InverseLevelMusic.volume_db = 0
 
-			levelMusic.play()
 			levelMusic.seek((levelMusic.stream.get_length() - previewPlayBackPos))
+			InverseLevelMusic.seek((levelMusic.stream.get_length() - previewPlayBackPos))
 	get:
 		return TimeMultiplier
-
-##beat values
-var chartData:JSON = loadJSON()
 
 var beat:int = 0
 var beatStartTime:float = 0
@@ -68,38 +67,55 @@ var musicChangeApply=true
 var previewPlayBackPos:float
 var normalMusic:AudioStream
 var reverseMusic:AudioStream
-var bpm:float = chartData.data.bpm
-var rng = RandomNumberGenerator.new()
+var chartData:JSON
+var bpm:float
 @export var timeMultiplierObjective:float = 1.0
 var wah:float
 @onready var lineScale:float
-
+var musicFile:String
 func _ready() -> void:
+	musicFile = detectMusicFile()
 	DataGame.loadCupi()
-	
+	##beat values
+	chartData = loadJSON()
+	bpm = chartData.data.bpm
+
 	loadSong()
+	InverseLevelMusic.bstream = normalMusic
+	InverseLevelMusic.play()
+	levelMusic.stream = normalMusic
+	levelMusic.play()
 	#generar circulo al inicio de la escena
 	createcircle()
 	# Reproducir música a la vez que el beat
-	levelMusic.play()
 	beatStartTime = TimeScene # Tiempo de marca actual
 	
+func detectMusicFile():
+	var archivos = DirAccess.get_files_at(DataGame.direccionNiveles+levelName+"/mainMusic")
+	for archivo in archivos:
+		if archivo.right(4) == ".ogg" or archivo.right(4) == ".mp3" or archivo.right(4) == ".wav":
+			return archivo
+
+
 func loadSong():
-	normalMusic = load(musicaNormalDir)
-	reverseMusic = load(musicaReverseDir)
+	normalMusic = load(DataGame.direccionNiveles+levelName+"/mainMusic/"+musicFile)
 	
 func get_song_time() -> float:
 	return TimeScene - beatStartTime
 
 func loadJSON():
-	var data = load("res://charts/PARADISIO.json")
+	var data = load(DataGame.direccionNiveles+levelName+"/chart.json")
 	return(data)
 
 func ralentizar():
+	#print("hi")
 	TimeMultiplier = 0.5+(wah*0.15)
 
 func _process(delta: float) -> void:
-	wah = cos(TimeScene*0.1)
+	if cupiBot:
+		controladorGeneral.rotation += deg_to_rad(2*DataGame.time_fixed)
+	
+	wah = cos(TimeScene*0.025)
 	TimeMultiplier = lerp(TimeMultiplier,timeMultiplierObjective,0.2*DataGame.time_fixed)
 	line.scale = Vector2.ONE*cupiContainer.lineScale
 	if controladorGeneral != null:
@@ -130,11 +146,13 @@ func _process(delta: float) -> void:
 		if song_time > 0 and abs(song_time - (levelMusic.get_playback_position() + AudioServer.get_time_since_last_mix())) >= 1.0/120.0 and musicNormalOrInverted:
 			# Sincronizar si está atrasado por 8 milisegundos
 			levelMusic.seek(song_time / 1000.0) # este espera tiempo en decimal, no enteros
+			#print("sinc")
 			pass
 	
 	TimeScene += (delta * TimeMultiplier) * 1000.0
 	TimeScene = max(0,TimeScene)
 	levelMusic.pitch_scale = max(0.001,abs(TimeMultiplier))
+	InverseLevelMusic.playback_rate = TimeMultiplier
 	
 	
 func WAVEBEAT():

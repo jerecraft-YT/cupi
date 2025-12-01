@@ -27,6 +27,9 @@ distorsion = NodePath("distorsion")
 closed = true
 default_color = Color(0, 0, 1, 1)
 
+[node name="BackBufferCopy" type="BackBufferCopy" parent="ball"]
+copy_mode = 2
+
 [node name="distorsion" type="Line2D" parent="ball"]
 material = SubResource("ShaderMaterial_2m0ka")
 scale = Vector2(0.75, 0.75)

@@ -19,10 +19,10 @@ class_name CupiSpiral
 @export var progresoSpiral: float = 0.0
 
 # Control de resolución / densidad
-@export var segmentos:int = 7
-@export var minPoints:int = 24
-@export var maxPoints:int = 128  # valor por defecto más conservador
-@export var update_interval: float = 0.012  # segundos entre actualizaciones (throttle)
+@export var segmentos:int = 5
+@export var minPoints:int = 8
+@export var maxPoints:int = 32  # valor por defecto más conservador
+@export var update_interval: float = 0.020  # segundos entre actualizaciones (throttle)
 
 # Easing: nombres (se asume que DataGame es un singleton con esas funciones)
 var easing_functions = [

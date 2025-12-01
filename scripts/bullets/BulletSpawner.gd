@@ -45,11 +45,14 @@ func _process(delta: float) -> void:
 				bullet.baseStrumTime = next_time
 				bullet.distance = (next_time - song_time)
 				bullet.angle = cupi.chartData.data.bullets[actualview_chart-1]["angle"]
+				actualview_chart += 1
 				bullet_index = actualview_chart
 				bullet.expresionContain=cupi.chartData.data.bullets[actualview_chart-1]["expresion"]
 				bullet.cupi = cupi
 				bullet.cupiContainer = cupiContainer
 				bullet.spawner = self
+				print(cupi.chartData.data.bullets[actualview_chart-1]["id"])
+				
 						
 		else:
 			
@@ -99,6 +102,7 @@ func _process(delta: float) -> void:
 				#establecer datos de bala inicial
 				spiral.AngleStart=-cupi.chartData.data.spiral[actualview_chartSpiral-1]["startAngle"]
 				spiral.AngleFinal=-cupi.chartData.data.spiral[actualview_chartSpiral-1]["finalAngle"]
+				
 				bullet_index = actualview_chartSpiral
 				spiral.calc = (spiralTime + duracion)-(spiralTime)
 				spiral.idFuncion = cupi.chartData.data.spiral[actualview_chartSpiral-1]["tipeMoveAngle"]

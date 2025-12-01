@@ -1,6 +1,7 @@
-[gd_scene load_steps=21 format=3 uid="uid://d1fqn8rr6ofpe"]
+[gd_scene load_steps=25 format=3 uid="uid://d1fqn8rr6ofpe"]
 
 [ext_resource type="Texture2D" uid="uid://bowvms2w6ac6j" path="res://sprites/background/Background_1.png" id="1_e767d"]
+[ext_resource type="Script" uid="uid://btqx7jldobmj5" path="res://scripts/musicRandom.gd" id="1_h8syl"]
 [ext_resource type="PackedScene" uid="uid://7yvx75kpug2u" path="res://prefabs/metaball_static.tscn" id="2_bjdlj"]
 [ext_resource type="Texture2D" uid="uid://lmhfiai4rdll" path="res://sprites/background/Background_2.png" id="2_mmg26"]
 [ext_resource type="PackedScene" uid="uid://cmwdw8kgbef6b" path="res://prefabs/metaball.tscn" id="2_pri23"]
@@ -10,12 +11,15 @@
 [ext_resource type="Texture2D" uid="uid://cit8xgcws0kuc" path="res://sprites/background/Background_5.png" id="5_h8syl"]
 [ext_resource type="Texture2D" uid="uid://ksv03ym07omq" path="res://sprites/background/Background_6.png" id="6_hgevq"]
 [ext_resource type="Script" uid="uid://chk3wajfd26dd" path="res://scripts/niveles.gd" id="6_w0iw6"]
-[ext_resource type="Texture2D" uid="uid://cqk3ysk80cik" path="res://icon.svg" id="7_4pcd2"]
-[ext_resource type="Script" uid="uid://cud1i8mhv12n7" path="res://scenes/background_1.gd" id="7_6xp4g"]
+[ext_resource type="Script" uid="uid://cud1i8mhv12n7" path="res://scripts/background_1.gd" id="7_6xp4g"]
 [ext_resource type="Script" uid="uid://ylyvmroyq0sy" path="res://scripts/level_loader.gd" id="7_wjr8j"]
-[ext_resource type="AudioStream" uid="uid://22cckucuj2lw" path="res://Niveles/DECO27 - マシュマロ feat. 初音ミク/StandartMusic/DECO27 - マシュマロ feat. 初音ミク.ogg" id="8_6xp4g"]
+[ext_resource type="AudioStream" uid="uid://22cckucuj2lw" path="res://Niveles/DECO27 - マシュマロ feat. 初音ミク/mainMusic/audio.ogg" id="8_6xp4g"]
 [ext_resource type="Script" uid="uid://c3bplxso2r8il" path="res://scripts/beatDetect.gd" id="8_e767d"]
-[ext_resource type="Shader" uid="uid://cl8yl2k65osub" path="res://scenes/test_zone.gdshader" id="15_0fgxx"]
+[ext_resource type="Script" uid="uid://c0xylibq7685x" path="res://scenes/controladorMenu.gd" id="10_uquea"]
+[ext_resource type="Shader" uid="uid://cwngsxqx2coqb" path="res://shaders/AberracionCromatica.gdshader" id="17_hgevq"]
+[ext_resource type="Script" uid="uid://cjlssy54gqe62" path="res://scripts/showMenu.gd" id="18_hgevq"]
+[ext_resource type="Script" uid="uid://bx3fjtbbwusd3" path="res://scenes/button.gd" id="20_21mn0"]
+[ext_resource type="Shader" uid="uid://co88i1klqein" path="res://shaders/3_sample_blur.gdshader" id="20_icyuc"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4pcd2"]
 particle_flag_disable_z = true
@@ -51,31 +55,40 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_21mn0"]
+shader = ExtResource("20_icyuc")
+shader_parameter/blur_amount = 2.50000021375
+shader_parameter/mix_amount = 0.0
+shader_parameter/color_over = Color(0, 0, 0, 1)
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6xp4g"]
-shader = ExtResource("15_0fgxx")
+shader = ExtResource("17_hgevq")
 shader_parameter/r_displacement = Vector2(4, 0)
 shader_parameter/g_displacement = Vector2(0, 0)
 shader_parameter/b_displacement = Vector2(-4, 0)
 
-[sub_resource type="GDScript" id="GDScript_bjdlj"]
-script/source = "extends Button
+[node name="PantallaTitulo" type="Node2D" node_paths=PackedStringArray("audio")]
+script = ExtResource("1_h8syl")
+audio = NodePath("AudioStreamPlayer")
 
-var cargar = false
-@warning_ignore(\"unused_parameter\")
-func _process(delta: float) -> void:
-	if cargar == true:
-		if ResourceLoader.load_threaded_get_status(\"res://scenes/test_zone.tscn\") == ResourceLoader.THREAD_LOAD_LOADED:
-			var scene = ResourceLoader.load_threaded_get(\"res://scenes/test_zone.tscn\")
-			if scene:
-				get_tree().change_scene_to_packed(scene)
-			set_process(false)
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_6xp4g")
+autoplay = true
 
-func _on_pressed() -> void:
-	cargar = true
-	ResourceLoader.load_threaded_request(\"res://scenes/test_zone.tscn\")
-"
+[node name="Niveles" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("6_w0iw6")
 
-[node name="PantallaTitulo" type="Node2D"]
+[node name="LevelLoader" type="Node" parent="."]
+script = ExtResource("7_wjr8j")
+
+[node name="BeatDetecter" type="Node2D" parent="." node_paths=PackedStringArray("camarita")]
+position = Vector2(-191, -289)
+script = ExtResource("8_e767d")
+camarita = NodePath("../Camera2D")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -90,8 +103,42 @@ sprite_frames = SubResource("SpriteFrames_uquea")
 frame = 4
 script = ExtResource("7_6xp4g")
 
-[node name="Label" type="Label" parent="."]
+[node name="Blur" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_21mn0")
+offset_left = -360.0
+offset_top = -640.0
+offset_right = 360.0
+offset_bottom = 640.0
+
+[node name="CupiMenu" type="Node2D" parent="."]
+scale = Vector2(2, 2)
+script = ExtResource("10_uquea")
+
+[node name="metaball" parent="CupiMenu" instance=ExtResource("2_pri23")]
+scale = Vector2(0.9, 0.9)
+
+[node name="distorsion" parent="CupiMenu/metaball/ball" index="2"]
+ScaleFrequency = 2.5
+
+[node name="metaballStatic" parent="CupiMenu" instance=ExtResource("2_bjdlj")]
 visible = false
+scale = Vector2(0.5, 0.5)
+defaultScale = Vector2(0.5, 0.5)
+magnitudExtra = 0.5
+
+[node name="distorsion" parent="CupiMenu/metaballStatic" index="4"]
+ScaleFrequency = 2.0
+
+[node name="cupiContainer" parent="CupiMenu" instance=ExtResource("3_6ajat")]
+scale = Vector2(3, 3)
+
+[node name="eyes" parent="CupiMenu/cupiContainer/Face" index="0"]
+frame = 6
+
+[node name="mouth" parent="CupiMenu/cupiContainer/Face" index="1"]
+frame = 7
+
+[node name="Titulo" type="Label" parent="."]
 offset_left = -360.0
 offset_top = -555.0
 offset_right = 360.0
@@ -101,50 +148,21 @@ text = "CUPI"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("8_6xp4g")
-autoplay = true
-
-[node name="metaball" parent="." instance=ExtResource("2_pri23")]
-scale = Vector2(2, 2)
-
-[node name="distorsion" parent="metaball/ball" index="1"]
-ScaleFrequency = 2.0
-
-[node name="metaballStatic" parent="." instance=ExtResource("2_bjdlj")]
-visible = false
-
-[node name="distorsion" parent="metaballStatic" index="3"]
-ScaleFrequency = 2.0
-
-[node name="cupiContainer" parent="." instance=ExtResource("3_6ajat")]
-scale = Vector2(6, 6)
-
-[node name="eyes" parent="cupiContainer/Face" index="0"]
-frame = 6
-
-[node name="mouth" parent="cupiContainer/Face" index="1"]
-frame = 7
-
-[node name="Niveles" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("6_w0iw6")
-
-[node name="LevelLoader" type="Node" parent="."]
-script = ExtResource("7_wjr8j")
-
-[node name="BeatDetecter" type="Sprite2D" parent="."]
-position = Vector2(-191, -289)
-texture = ExtResource("7_4pcd2")
-script = ExtResource("8_e767d")
+[node name="comenzar" type="Label" parent="."]
+offset_left = -360.0
+offset_top = 400.0
+offset_right = 360.0
+offset_bottom = 477.0
+theme_override_font_sizes/font_size = 56
+text = "¡Toca para jugar!"
+horizontal_alignment = 1
+script = ExtResource("18_hgevq")
 
 [node name="BackBufferCopy" type="BackBufferCopy" parent="."]
+copy_mode = 2
 rect = Rect2(0, 0, 720, 1280)
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="RGB" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_6xp4g")
 offset_left = -360.0
 offset_top = -640.0
@@ -158,10 +176,12 @@ offset_right = 134.0
 offset_bottom = 441.0
 theme_override_font_sizes/font_size = 68
 text = "JUGAR"
-script = SubResource("GDScript_bjdlj")
+script = ExtResource("20_21mn0")
 
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
+[connection signal="showMenu" from="comenzar" to="CupiMenu" method="_on_comenzar_show_menu"]
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
 
-[editable path="metaball"]
-[editable path="metaballStatic"]
-[editable path="cupiContainer"]
+[editable path="CupiMenu/metaball"]
+[editable path="CupiMenu/metaballStatic"]
+[editable path="CupiMenu/cupiContainer"]

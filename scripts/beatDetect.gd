@@ -1,4 +1,4 @@
-extends Sprite2D
+extends Node2D
 
 signal beatless
 
@@ -11,7 +11,8 @@ signal beatless
 @export var min_energy: float = 1e-6       	# energía mínima para evitar ruido
 @export var cooldown: float = 0.15	        # tiempo mínimo entre beats (segundos)
 @export var bass_lowpass_alpha: float = 0.2 # IIR alpha para enfatizar bajas frecuencias (0..1)
-
+@export var camarita:Camera2D
+@export var background:ColorRect
 var capture = null
 var smoothed_energy: float = 0.0
 var last_beat_time: float = -10.0
@@ -31,7 +32,11 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	_detect_beat()
 	# suavizado visual de la escala hacia 1.0
-	scale = scale.lerp(Vector2.ONE, 0.01)
+	scale = scale.lerp(Vector2.ONE, 0.1*DataGame.time_fixed)
+	if camarita != null:
+		camarita.zoom = scale
+	if background != null:
+		background.scale = scale
 
 func _detect_beat() -> void:
 	if not capture:
@@ -62,4 +67,4 @@ func _detect_beat() -> void:
 
 func _beat() -> void:
 	emit_signal("beatless")
-	scale = Vector2.ONE * 1.25
+	scale = Vector2.ONE * 1.05
