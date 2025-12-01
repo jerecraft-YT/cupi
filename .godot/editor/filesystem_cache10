@@ -1,138 +1,149 @@
 72322a848ab928aa5c89f0cb78209805
-::res://::1764557068
-chart-easy.json::JSON::-1::1764472464::0::1::::<><><>0<>0<><>::
-estructura json chartt.txt::TextFile::-1::1764519897::0::1::::<><><>0<>0<><>::
-export_presets.cfg::TextFile::-1::1764528236::0::1::::<><><>0<>0<><>::
-icon.svg::CompressedTexture2D::174066192364344378::1763514687::1764441367::1::::<><><>0<>0<>d26cd61c336390e624049fd21c72787b<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-::res://animations/::1764557062
-cupiEyes.tres::SpriteFrames::9086718789934383266::1764557062::0::1::::<><><>0<>0<><>::uid://cuu52i5ueaqmu::::res://sprites/cupi/ojos/CupiEyes.tres
-cupiMouth.tres::SpriteFrames::1404653848414325822::1764557062::0::1::::<><><>0<>0<><>::uid://b2j5ac01hh5be::::res://sprites/cupi/boca/CupiMouth.tres
-::res://metaball/::1764556948
-audioAnalizer.tres::AudioBusLayout::4081396580252559891::1764556948::0::1::::<><><>0<>0<><>::
-Metaball.gd::GDScript::1235050244282516177::1764536606::0::1::::MetaballVisualizer<>Polygon2D<><>0<>0<><>::
-metaball.gdshader::Shader::5857679592818050605::1764202443::0::1::::<><><>0<>0<><>::
-MetaballOptimized.gd::GDScript::6452535727045554619::1764537385::0::1::::<>Node2D<><>0<>0<><>::
-show_spectrum.gd::GDScript::7497364705653695588::1764546598::0::1::::SpectroAnalizer<>Node2D<><>0<>0<><>::
-::res://Niveles/::1764557067
-::res://Niveles/BLACKPINK - How You Like That (Stixy)/::1764542172
-chart.json::JSON::-1::1764541097::0::1::::<><><>0<>0<><>::
-::res://Niveles/BLACKPINK - How You Like That (Stixy)/mainMusic/::1764542172
-audio.mp3::AudioStreamMP3::5927910185750819872::1764541008::1764542172::1::::<><><>0<>0<>96f7e682f427cafd87f180330f0c6c94<>res://.godot/imported/audio.mp3-2af7b1fae8074cf498e5247f6d43ed05.mp3str::
-::res://Niveles/DECO27 - マシュマロ feat. 初音ミク/::1764542174
-chart.json::JSON::-1::1764537591::0::1::::<><><>0<>0<><>::
-level.json::JSON::-1::1764537627::0::1::::<><><>0<>0<><>::
-::res://Niveles/DECO27 - マシュマロ feat. 初音ミク/mainMusic/::1764557063
-audio.ogg::AudioStreamOggVorbis::1950962539407403712::1764196286::1764557068::1::::<><><>0<>0<>6899f4fc158907f6beeaf34936607340<>res://.godot/imported/audio.ogg-6e680a188a8abce39b393e0e0334e4e0.oggvorbisstr::
-::res://Niveles/fiveNights/::1764557067
-chart.json::JSON::-1::1764527452::0::1::::<><><>0<>0<><>::
-::res://Niveles/fiveNights/mainMusic/::1764542181
-audio.mp3::AudioStreamMP3::1648015515813961309::1764468731::1764542181::1::::<><><>0<>0<>f79902f638ca427acf82c1c7dcc17fd1<>res://.godot/imported/audio.mp3-8cc2ad4d1af31ab76bc5074b98001095.mp3str::
-::res://Niveles/Juan Luis Guerra - Las Avispas (Millesimale)/::1764542218
-chart.json::JSON::-1::1764541648::0::1::::<><><>0<>0<><>::
-::res://Niveles/Juan Luis Guerra - Las Avispas (Millesimale)/mainMusic/::1764542218
-audio.ogg::AudioStreamOggVorbis::7155572668438207013::1764541598::1764542218::1::::<><><>0<>0<>231028355c4a7735818df9ad3ffa6f36<>res://.godot/imported/audio.ogg-124bb709d145bb657fdcd7af9493fb42.oggvorbisstr::
-::res://Niveles/KINEMA106 - Luna (-Eresh)/::1764542215
-chart.json::JSON::-1::1764541107::0::1::::<><><>0<>0<><>::
-::res://Niveles/KINEMA106 - Luna (-Eresh)/mainMusic/::1764542215
-audio.mp3::AudioStreamMP3::2473030674497196004::1764540219::1764542215::1::::<><><>0<>0<>3d4a3121299de7e73c34091e5c66e802<>res://.godot/imported/audio.mp3-73884cdb46af96bf6ee8defedcffada5.mp3str::
-::res://Niveles/Paradiso feat. Maria Garcia & Dj Patrick Samoy - Bailando (Cut Ver.) (Den59)/::1764543383
-chart.json::JSON::-1::1764526218::0::1::::<><><>0<>0<><>::
-::res://Niveles/Paradiso feat. Maria Garcia & Dj Patrick Samoy - Bailando (Cut Ver.) (Den59)/mainMusic/::1764543370
-PARADISIO.mp3::AudioStreamMP3::2093464353233706382::1764468090::1764543370::1::::<><><>0<>0<>12abca3123e9416ed329346e17ef7713<>res://.godot/imported/PARADISIO.mp3-c52acf0598dfc2df53fe20edff14e31d.mp3str::
-::res://Niveles/Ricky Martin - Livin' La Vida Loca (schoolboy)/::1764543278
-chart.json::JSON::-1::1764522611::0::1::::<><><>0<>0<><>::
-::res://Niveles/Ricky Martin - Livin' La Vida Loca (schoolboy)/mainMusic/::1764543278
-audio.mp3::AudioStreamMP3::7224190618973295109::1764472899::1764543278::1::::<><><>0<>0<>7ce2dc5a4f41b71c349aaf614cb71b5a<>res://.godot/imported/audio.mp3-59b627024bf786bb7423b6c90f1d19de.mp3str::
-::res://Niveles/toby fox - MEGALOVANIA (Kyshiro)/::1764543350
-chart.json::JSON::-1::1764531368::0::1::::<><><>0<>0<><>::
-::res://Niveles/toby fox - MEGALOVANIA (Kyshiro)/mainMusic/::1764543346
-toby fox - UNDERTALE Soundtrack - 100 MEGALOVANIA 192.mp3::AudioStreamMP3::3207970357883842729::1764531298::1764543319::1::::<><><>0<>0<>998eaa2076ad382009be16aa22c7b87f<>res://.godot/imported/toby fox - UNDERTALE Soundtrack - 100 MEGALOVANIA 192.mp3-5f9e2ff732ef6185fb4399106a5d34b1.mp3str::
-::res://Niveles/ダイダイダイダイダイキライ - 初音ミク VS 重音テト  (Daidaidaidaidaikirai - HatsuneMiku VS KasaneTeto)/::1764543662
-daidaidaikirai_modificado.json::JSON::-1::1764543662::0::1::::<><><>0<>0<><>::
-level.json::JSON::-1::1764539985::0::1::::<><><>0<>0<><>::
-::res://Niveles/ダイダイダイダイダイキライ - 初音ミク VS 重音テト  (Daidaidaidaidaikirai - HatsuneMiku VS KasaneTeto)/mainMusic/::1764542223
-audio.ogg::AudioStreamOggVorbis::2687052899378427505::1764196286::1764542223::1::::<><><>0<>0<>6da7ded1b7d63e0542c9f4a3819e941b<>res://.godot/imported/audio.ogg-2a085c34f79ba76cc7ddf9b8086a084a.oggvorbisstr::
-::res://particulas/::1764519863
-shieldParticles.tres::ParticleProcessMaterial::1942620231192224242::1764519863::0::1::::<><><>0<>0<><>::
-::res://prefabs/::1764555509
-beat_detected.tscn::PackedScene::610351513580080197::1764536164::0::1::::<><><>0<>0<><>::uid://cqk3ysk80cik::::res://icon.svg<>uid://c3bplxso2r8il::::res://scripts/beatDetect.gd
-bullet.tscn::PackedScene::3880220200260419715::1764538072::0::1::::<><><>0<>0<><>::uid://dc7fcu80avr8w::::res://scripts/bullets/StandartBullet.gd
-central_3dbg.tscn::PackedScene::651217005278546175::1764451506::0::1::::<><><>0<>0<><>::uid://dwro78a8bfmp3::::res://shaders/efectoEsfera.gdshader<>uid://bxk4nrhap8o4m::::res://scripts/shaderController/movimientoEsferaBG.gd
-cupi.tscn::PackedScene::262805280615344873::1764555509::0::1::::<><><>0<>0<><>::uid://bp713wa275s4p::::res://scripts/player/cupi.gd<>uid://d3eu6dejhuca6::::res://scripts/reverseAudio/reversable_audio_stream_player.gd<>uid://c515s8eiyg4px::::res://prefabs/cupi_container.tscn<>uid://cdannsch5vxx4::::res://sfx/beatBar0.ogg<>uid://bg6tq4trreu05::::res://sfx/beatBar1.ogg
-cupi_container.tscn::PackedScene::6934035892051607609::1764444018::0::1::::<><><>0<>0<><>::uid://bs5gkvsjdkqnr::::res://scripts/player/ExpresionesCupi.gd<>uid://uaopc4watrc5::::res://animations/cupiMouth.tres<>uid://d2pw6wdp10rkc::::res://animations/cupiEyes.tres
-gameplay.tscn::PackedScene::3915078244948235321::1764553438::0::1::::<><><>0<>0<><>::uid://cmwdw8kgbef6b::::res://prefabs/metaball.tscn<>uid://n2c72dch62rh::::res://scripts/bullets/BulletSpawner.gd<>uid://d0kmnpjiacab::::res://prefabs/cupi.tscn<>uid://bvjuwoyoq48kd::::res://prefabs/bullet.tscn<>uid://cjvixm8nwnbvl::::res://prefabs/SpiralBullet.tscn
-metaball.tscn::PackedScene::5660746989068824739::1764548088::0::1::::<><><>0<>0<><>::uid://rujdkhv2ul8t::::res://metaball/Metaball.gd<>uid://de21rbsaslsxw::::res://metaball/show_spectrum.gd<>uid://rghpfcnh0win::::res://shaders/sinCos.tres<>uid://dhgymk6ayct4i::::res://scripts/shaderController/distorsionLine.gd
-metaball_static.tscn::PackedScene::2296905920188909586::1764548104::0::1::::<><><>0<>0<><>::uid://cx6wk5yxgaalf::::res://metaball/MetaballOptimized.gd<>uid://ck4sa4dap5f7s::::res://sprites/cupi/circuloRitmo/bordeCirculo2.png<>uid://de21rbsaslsxw::::res://metaball/show_spectrum.gd<>uid://bag8lvtsxurme::::res://sprites/cupi/circuloRitmo/bordeCirculo1.png<>uid://rghpfcnh0win::::res://shaders/sinCos.tres<>uid://diphwn7jukihk::::res://scripts/shaderController/distorsion.gd
-particulas_destruir_bullet.tscn::PackedScene::7309118007043119540::1764448354::0::1::::<><><>0<>0<><>::uid://2xaw3ehd0fhy::::res://particulas/shieldParticles.tres<>uid://6ghjiqyemyni::::res://scripts/particulas_destruir_bullet.gd
-SpiralBullet.tscn::PackedScene::5448420384045013377::1764451316::0::1::::<><><>0<>0<><>::uid://bbo5yvl7gkhxw::::res://scripts/bullets/SpiralBullet.gd<>uid://bvjuwoyoq48kd::::res://prefabs/bullet.tscn
-::res://scenes/::1764557067
-button.gd::GDScript::4058887321154594986::1764556800::0::1::::<>Button<><>0<>0<><>::
-controladorMenu.gd::GDScript::6576520420742328271::1764546687::0::1::::<>Node2D<><>0<>0<><>::
-Level.tscn::PackedScene::3157461997121050757::1764556669::0::1::::<><><>0<>0<><>::uid://14kk4kka54n1::::res://shaders/grid.gdshader<>uid://dqguof25omg2e::::res://scripts/background.gd<>uid://bv1q1ckfcnds8::::res://prefabs/gameplay.tscn<>uid://dinxdtthuvvkf::::res://scripts/debug/control_velocity.gd<>uid://dbbyxbbf2gp17::::res://scripts/debug/debugInfo.gd<>uid://b32sgw55o2c8f::::res://scripts/player/controles.gd<>uid://c1ce3lbjrnp2o::::res://sprites/controller/disco.png<>uid://cwngsxqx2coqb::::res://shaders/AberracionCromatica.gdshader<>uid://c13sikyb73spn::::res://scenes/level_loader.gd
-level_loader.gd::GDScript::6656661633707880787::1764552746::0::1::::<>Node2D<><>0<>0<><>::
-Pantalla_Titulo.tscn::PackedScene::8995490321990086102::1764557067::0::1::::<><><>0<>0<><>::uid://bowvms2w6ac6j::::res://sprites/background/Background_1.png<>uid://btqx7jldobmj5::::res://scripts/musicRandom.gd<>uid://7yvx75kpug2u::::res://prefabs/metaball_static.tscn<>uid://lmhfiai4rdll::::res://sprites/background/Background_2.png<>uid://cmwdw8kgbef6b::::res://prefabs/metaball.tscn<>uid://cer4rjvbsm2xp::::res://sprites/background/Background_3.png<>uid://c515s8eiyg4px::::res://prefabs/cupi_container.tscn<>uid://buok78nq5p1ik::::res://sprites/background/Background_4.png<>uid://cit8xgcws0kuc::::res://sprites/background/Background_5.png<>uid://ksv03ym07omq::::res://sprites/background/Background_6.png<>uid://chk3wajfd26dd::::res://scripts/niveles.gd<>uid://cud1i8mhv12n7::::res://scripts/background_1.gd<>uid://ylyvmroyq0sy::::res://scripts/level_loader.gd<>uid://22cckucuj2lw::::res://Niveles/DECO27 - マシュマロ feat. 初音ミク/mainMusic/audio.ogg<>uid://c3bplxso2r8il::::res://scripts/beatDetect.gd<>uid://c0xylibq7685x::::res://scenes/controladorMenu.gd<>uid://cwngsxqx2coqb::::res://shaders/AberracionCromatica.gdshader<>uid://cjlssy54gqe62::::res://scripts/showMenu.gd<>uid://bx3fjtbbwusd3::::res://scenes/button.gd<>uid://co88i1klqein::::res://shaders/3_sample_blur.gdshader
-StartLoad.tscn::PackedScene::1168807843475006331::1764444213::0::1::::<><><>0<>0<><>::uid://dmhy14nbg60km::::res://scripts/loadLevels/start_load.gd
-::res://scripts/::1764549007
-background.gd::GDScript::8295909462490898674::1763943234::0::1::::<>ColorRect<><>0<>0<><>::
-background_1.gd::GDScript::6184406053727568710::1764456985::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
-beatDetect.gd::GDScript::6741125002146035863::1764549007::0::1::::<>Node2D<><>0<>0<><>::
-dataGame.gd::GDScript::3975429187141085249::1764548882::0::1::::<>Node<><>0<>0<><>::
-level_loader.gd::GDScript::1708735769316535904::1764196286::0::1::::<>Node<><>0<>0<><>::
-musicRandom.gd::GDScript::3754492882977326472::1764548937::0::1::::<>Node2D<><>0<>0<><>::
-niveles.gd::GDScript::5286546427791918285::1764196286::0::1::::<>Control<><>0<>0<><>::
-particulas_destruir_bullet.gd::GDScript::2188681956397839042::1763514687::0::1::::<>GPUParticles2D<><>0<>0<><>::
-showMenu.gd::GDScript::5428375473814051401::1764545998::0::1::::<>Label<><>0<>0<><>::
-::res://scripts/bullets/::1764555189
-BulletSpawner.gd::GDScript::968373168910867101::1764531821::0::1::::BulletSpawner<>Node2D<><>0<>0<><>::
-SpiralBullet.gd::GDScript::2487376306170236848::1764528949::0::1::::CupiSpiral<>Node2D<><>0<>0<><>::
-StandartBullet.gd::GDScript::7366008085619203268::1764555189::0::1::::CupiBullet<>Node2D<><>0<>0<><>::
-::res://scripts/debug/::1764553221
-control_velocity.gd::GDScript::7749012586842244021::1764273727::0::1::::<>HSlider<><>0<>0<><>::
-debugInfo.gd::GDScript::7233013607889269904::1764553221::0::1::::<>RichTextLabel<><>0<>0<><>::
-::res://scripts/loadLevels/::1764444048
-start_load.gd::GDScript::8017484000796345340::1763920980::0::1::::<>Control<><>0<>0<><>::
-::res://scripts/player/::1764556029
-controles.gd::GDScript::4408551328791519207::1764211177::0::1::::<>Node2D<><>0<>0<><>::
-cupi.gd::GDScript::3506943227219188097::1764556028::0::1::::Cupi<>Node2D<><>0<>0<><>::
-ExpresionesCupi.gd::GDScript::3712134492905297323::1764128456::0::1::::CupiContainer<>Node2D<><>0<>0<><>::
-::res://scripts/reverseAudio/::1764550801
-reversable_audio_stream_player.gd::GDScript::9134077047595159767::1764550801::0::1::::ReversableAudioStreamPlayer<>AudioStreamPlayer<><>0<>1<><>::
-::res://scripts/shaderController/::1764451506
-distorsion.gd::GDScript::7752203505583073096::1764443571::0::1::::<>Sprite2D<><>0<>0<><>::
-distorsionLine.gd::GDScript::7664449433577754366::1764443707::0::1::::<>Line2D<><>0<>0<><>::
-movimientoEsferaBG.gd::GDScript::4023192776751377366::1763514687::0::1::::<>MeshInstance3D<><>0<>0<><>::
-::res://sfx/::1764128688
-beatBar0.ogg::AudioStreamOggVorbis::4984221383395929199::1763514687::1763515356::1::::<><><>0<>0<>b9a6cbadbf8bd86303da2d031c4c0337<>res://.godot/imported/beatBar0.ogg-241758c9fa0508d2a871917a5fb450f8.oggvorbisstr::
-beatBar1.ogg::AudioStreamOggVorbis::2872733204785928784::1763514687::1763515356::1::::<><><>0<>0<>ae0f081a0ff1c9b2bdfe81d56d529127<>res://.godot/imported/beatBar1.ogg-6dca954d6c2ca3e19beae88868e6be88.oggvorbisstr::
-::res://shaders/::1764557062
-3_sample_blur.gdshader::Shader::171342028614460189::1764557062::0::1::::<><><>0<>0<><>::
-AberracionCromatica.gdshader::Shader::6344230518307693689::1764557062::0::1::::<><><>0<>0<><>::
-cupi.gdshader::Shader::5891174223316013381::1764519863::0::1::::<><><>0<>0<><>::
-distorsion.gdshader::Shader::5506496069201868502::1764519863::0::1::::<><><>0<>0<><>::
-efectoEsfera.gdshader::Shader::8739419951010189986::1763514687::0::1::::<><><>0<>0<><>::
-grid.gdshader::Shader::1885403456404054776::1764519863::0::1::::<><><>0<>0<><>::
-metaball_static.gdshader::Shader::4682756219470297099::1764519863::0::1::::<><><>0<>0<><>::
-sinCos.tres::VisualShader::1206048680536230605::1764557062::0::1::::<><><>0<>0<><>::
-WaterNoise.gdshader::Shader::4418437704935854323::1763514687::0::1::::<><><>0<>0<><>::
-::res://sprites/::1764444707
-::res://sprites/background/::1764444951
-Background_1.png::CompressedTexture2D::3415778279760854943::1764444725::1764444758::1::::<><><>0<>0<>84ee646c142ba0723dfbcfbcf7a5adb4<>res://.godot/imported/Background_1.png-9c8de04f1318a05b259e09601761b468.ctex::
-Background_2.png::CompressedTexture2D::797284181575673573::1764444725::1764444913::1::::<><><>0<>0<>7894b8efe83063ceef34764b125d2b27<>res://.godot/imported/Background_2.png-858284dd4f690f0f9154b7d5b4baa5cf.ctex::
-Background_3.png::CompressedTexture2D::5090482820264995689::1764444725::1764444922::1::::<><><>0<>0<>8f0e8a295d61688a3a4a72cdefd1acc1<>res://.godot/imported/Background_3.png-ca14d4c4646494db4675cc4757514d5d.ctex::
-Background_4.png::CompressedTexture2D::3819764914463895834::1764444725::1764444934::1::::<><><>0<>0<>d0601c7718996a387cb7272a046b950a<>res://.godot/imported/Background_4.png-d50453ce49a386723e65343413be7b21.ctex::
-Background_5.png::CompressedTexture2D::5375620347093040762::1764444725::1764444943::1::::<><><>0<>0<>22de4d93c7e90eb9a3b35353529e0467<>res://.godot/imported/Background_5.png-c81de7adbf8c4129973bea109ac1707a.ctex::
-Background_6.png::CompressedTexture2D::740368445958135792::1764444725::1764444951::1::::<><><>0<>0<>f371d76d771079c1f9e0bda3e671dc41<>res://.godot/imported/Background_6.png-c17446d1571fb95f902463698131d59a.ctex::
-::res://sprites/controller/::1764545660
-disco.png::CompressedTexture2D::6602173507417388344::1763514687::1764545660::1::::<><><>0<>0<>21d104077036ab7488976f1908b8f37b<>res://.godot/imported/disco.png-3d21f5c421e4820c71b0433baa281419.ctex::
-::res://sprites/cupi/::1764545640
-::res://sprites/cupi/boca/::1764128688
-CupiMouth.tres::AtlasTexture::4301920516347303238::1763514687::0::1::::<><><>0<>0<><>::uid://bler7o18gyany::::res://sprites/cupi/boca/cupiMouthExpresions.png
-cupiMouthExpresions.png::CompressedTexture2D::3167845586009830546::1763514687::1763515356::1::::<><><>0<>0<>a972cc4d606045c6df4a08fb95f202ea<>res://.godot/imported/cupiMouthExpresions.png-bf8ec55665701dca327801e24dbd0676.ctex::
-::res://sprites/cupi/circuloRitmo/::1764197690
-bordeCirculo1.png::CompressedTexture2D::2400831387902723312::1764196286::1764197690::1::::<><><>0<>0<>bf7d2e19e0cf7aa63dcee150acd12ece<>res://.godot/imported/bordeCirculo1.png-ab19202d36556adfa9ccddcf9f2a2883.ctex::
-bordeCirculo2.png::CompressedTexture2D::5535691192336854278::1764196286::1764197690::1::::<><><>0<>0<>017af58a21c2a5452f35ab42c7514456<>res://.godot/imported/bordeCirculo2.png-21e0d9924f7a938df84467786bb1818a.ctex::
-::res://sprites/cupi/ojos/::1764128688
-CupiEyes.tres::AtlasTexture::6219775988891477804::1763514687::0::1::::<><><>0<>0<><>::uid://vld3jhw3acr1::::res://sprites/cupi/ojos/cupiEyesExpresions.png
-cupiEyesExpresions.png::CompressedTexture2D::1496906509461755940::1763514687::1763515356::1::::<><><>0<>0<>34b78f9e0bdf07615510a3cca2b4de2c<>res://.godot/imported/cupiEyesExpresions.png-292735151f65bd79e8f91c839303fc5d.ctex::
-::res://sprites/testing/::1764128688
-notita.png::CompressedTexture2D::6857715550077730380::1763514687::1763515356::1::::<><><>0<>0<>338fb7597191ee0d281b03536fa1a6d9<>res://.godot/imported/notita.png-c87a752e4c2a762a28bbc8ab21c9d728.ctex::
+::res://::1764596346
+chart-easy.json::JSON::-1::1764596310::0::1::::<><><>0<>0<><>::
+estructura json chartt.txt::TextFile::-1::1764596310::0::1::::<><><>0<>0<><>::
+export_presets.cfg::TextFile::-1::1764596310::0::1::::<><><>0<>0<><>::
+icon.svg::CompressedTexture2D::174066192364344378::1764596310::1764596346::1::::<><><>0<>0<>d26cd61c336390e624049fd21c72787b<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://animations/::1764596458
+cupiEyes.tres::SpriteFrames::9086718789934383266::1764596458::0::1::::<><><>0<>0<><>::uid://cuu52i5ueaqmu::::res://sprites/cupi/ojos/CupiEyes.tres
+cupiMouth.tres::SpriteFrames::1404653848414325822::1764596458::0::1::::<><><>0<>0<><>::uid://b2j5ac01hh5be::::res://sprites/cupi/boca/CupiMouth.tres
+::res://metaball/::1764596346
+audioAnalizer.tres::AudioBusLayout::4081396580252559891::1764596346::0::1::::<><><>0<>0<><>::
+Metaball.gd::GDScript::1235050244282516177::1764596310::0::1::::MetaballVisualizer<>Polygon2D<><>0<>0<><>::
+metaball.gdshader::Shader::5857679592818050605::1764596310::0::1::::<><><>0<>0<><>::
+MetaballOptimized.gd::GDScript::6452535727045554619::1764596310::0::1::::<>Node2D<><>0<>0<><>::
+show_spectrum.gd::GDScript::7497364705653695588::1764596310::0::1::::SpectroAnalizer<>Node2D<><>0<>0<><>::
+::res://Niveles/::1764598944
+::res://Niveles/1287352 Crystal Castles - Untrust Us/::1764598413
+chart.json::JSON::-1::1764598413::0::1::::<><><>0<>0<><>::
+::res://Niveles/1287352 Crystal Castles - Untrust Us/mainMusic/::1764598347
+audio.mp3::AudioStreamMP3::4571020835538404002::1764598347::1764598347::1::::<><><>0<>0<>8bdd53900bd4cbcc0b58ca5fcd725d57<>res://.godot/imported/audio.mp3-df3e0dfed14181e7c3d6dc946fe181dd.mp3str::
+::res://Niveles/1775229 89ers - Go Go Go Go! (Radio Edit) (Nightcore & Cut Ver.)/::1764598959
+::res://Niveles/1775229 89ers - Go Go Go Go! (Radio Edit) (Nightcore & Cut Ver.)/mainMusic/::1764598971
+audio.mp3::AudioStreamMP3::1511247318307617296::1764598971::1764598971::1::::<><><>0<>0<>c78e229dc6a8cde43e47e262ece2c2e6<>res://.godot/imported/audio.mp3-5b40d3b6b7e0b7a89f93e8d0b2d51e02.mp3str::
+::res://Niveles/2368598 Crystal Castles - Knights/::1764597593
+chart.json::JSON::-1::1764597593::0::1::::<><><>0<>0<><>::
+::res://Niveles/2368598 Crystal Castles - Knights/mainMusic/::1764597538
+audio.mp3::AudioStreamMP3::6855372443187208968::1764597538::1764597538::1::::<><><>0<>0<>6a384d118204d525f6925804c1f45750<>res://.godot/imported/audio.mp3-34c0c010446ef777ccea8321edf832f1.mp3str::
+::res://Niveles/BLACKPINK - How You Like That (Stixy)/::1764596310
+chart.json::JSON::-1::1764596310::0::1::::<><><>0<>0<><>::
+::res://Niveles/BLACKPINK - How You Like That (Stixy)/mainMusic/::1764596346
+audio.mp3::AudioStreamMP3::5927910185750819872::1764596310::1764596346::1::::<><><>0<>0<>96f7e682f427cafd87f180330f0c6c94<>res://.godot/imported/audio.mp3-2af7b1fae8074cf498e5247f6d43ed05.mp3str::
+::res://Niveles/DECO27 - マシュマロ feat. 初音ミク/::1764596310
+chart.json::JSON::-1::1764596310::0::1::::<><><>0<>0<><>::
+level.json::JSON::-1::1764596310::0::1::::<><><>0<>0<><>::
+::res://Niveles/DECO27 - マシュマロ feat. 初音ミク/mainMusic/::1764596346
+audio.ogg::AudioStreamOggVorbis::1950962539407403712::1764596310::1764596346::1::::<><><>0<>0<>6899f4fc158907f6beeaf34936607340<>res://.godot/imported/audio.ogg-6e680a188a8abce39b393e0e0334e4e0.oggvorbisstr::
+::res://Niveles/fiveNights/::1764596310
+chart.json::JSON::-1::1764596310::0::1::::<><><>0<>0<><>::
+::res://Niveles/fiveNights/mainMusic/::1764596346
+audio.mp3::AudioStreamMP3::1648015515813961309::1764596310::1764596346::1::::<><><>0<>0<>f79902f638ca427acf82c1c7dcc17fd1<>res://.godot/imported/audio.mp3-8cc2ad4d1af31ab76bc5074b98001095.mp3str::
+::res://Niveles/Juan Luis Guerra - Las Avispas (Millesimale)/::1764596310
+chart.json::JSON::-1::1764596310::0::1::::<><><>0<>0<><>::
+::res://Niveles/Juan Luis Guerra - Las Avispas (Millesimale)/mainMusic/::1764596346
+audio.ogg::AudioStreamOggVorbis::7155572668438207013::1764596310::1764596346::1::::<><><>0<>0<>231028355c4a7735818df9ad3ffa6f36<>res://.godot/imported/audio.ogg-124bb709d145bb657fdcd7af9493fb42.oggvorbisstr::
+::res://Niveles/KINEMA106 - Luna (-Eresh)/::1764596310
+chart.json::JSON::-1::1764596310::0::1::::<><><>0<>0<><>::
+::res://Niveles/KINEMA106 - Luna (-Eresh)/mainMusic/::1764596346
+audio.mp3::AudioStreamMP3::2473030674497196004::1764596310::1764596346::1::::<><><>0<>0<>3d4a3121299de7e73c34091e5c66e802<>res://.godot/imported/audio.mp3-73884cdb46af96bf6ee8defedcffada5.mp3str::
+::res://Niveles/Paradiso feat. Maria Garcia & Dj Patrick Samoy - Bailando (Cut Ver.) (Den59)/::1764596310
+chart.json::JSON::-1::1764596310::0::1::::<><><>0<>0<><>::
+::res://Niveles/Paradiso feat. Maria Garcia & Dj Patrick Samoy - Bailando (Cut Ver.) (Den59)/mainMusic/::1764596346
+PARADISIO.mp3::AudioStreamMP3::2093464353233706382::1764596310::1764596346::1::::<><><>0<>0<>12abca3123e9416ed329346e17ef7713<>res://.godot/imported/PARADISIO.mp3-c52acf0598dfc2df53fe20edff14e31d.mp3str::
+::res://Niveles/Ricky Martin - Livin' La Vida Loca (schoolboy)/::1764596310
+chart.json::JSON::-1::1764596310::0::1::::<><><>0<>0<><>::
+::res://Niveles/Ricky Martin - Livin' La Vida Loca (schoolboy)/mainMusic/::1764596346
+audio.mp3::AudioStreamMP3::7224190618973295109::1764596310::1764596346::1::::<><><>0<>0<>7ce2dc5a4f41b71c349aaf614cb71b5a<>res://.godot/imported/audio.mp3-59b627024bf786bb7423b6c90f1d19de.mp3str::
+::res://Niveles/toby fox - MEGALOVANIA (Kyshiro)/::1764596310
+chart.json::JSON::-1::1764596310::0::1::::<><><>0<>0<><>::
+::res://Niveles/toby fox - MEGALOVANIA (Kyshiro)/mainMusic/::1764596346
+toby fox - UNDERTALE Soundtrack - 100 MEGALOVANIA 192.mp3::AudioStreamMP3::3207970357883842729::1764596310::1764596346::1::::<><><>0<>0<>998eaa2076ad382009be16aa22c7b87f<>res://.godot/imported/toby fox - UNDERTALE Soundtrack - 100 MEGALOVANIA 192.mp3-5f9e2ff732ef6185fb4399106a5d34b1.mp3str::
+::res://Niveles/ダイダイダイダイダイキライ - 初音ミク VS 重音テト  (Daidaidaidaidaikirai - HatsuneMiku VS KasaneTeto)/::1764596310
+daidaidaikirai_modificado.json::JSON::-1::1764596310::0::1::::<><><>0<>0<><>::
+level.json::JSON::-1::1764596310::0::1::::<><><>0<>0<><>::
+::res://Niveles/ダイダイダイダイダイキライ - 初音ミク VS 重音テト  (Daidaidaidaidaikirai - HatsuneMiku VS KasaneTeto)/mainMusic/::1764596346
+audio.ogg::AudioStreamOggVorbis::2687052899378427505::1764596310::1764596346::1::::<><><>0<>0<>6da7ded1b7d63e0542c9f4a3819e941b<>res://.godot/imported/audio.ogg-2a085c34f79ba76cc7ddf9b8086a084a.oggvorbisstr::
+::res://particulas/::1764596310
+shieldParticles.tres::ParticleProcessMaterial::1942620231192224242::1764596310::0::1::::<><><>0<>0<><>::
+::res://prefabs/::1764598097
+beat_detected.tscn::PackedScene::610351513580080197::1764596310::0::1::::<><><>0<>0<><>::uid://cqk3ysk80cik::::res://icon.svg<>uid://c3bplxso2r8il::::res://scripts/beatDetect.gd
+bullet.tscn::PackedScene::3880220200260419715::1764596310::0::1::::<><><>0<>0<><>::uid://dc7fcu80avr8w::::res://scripts/bullets/StandartBullet.gd
+central_3dbg.tscn::PackedScene::651217005278546175::1764596310::0::1::::<><><>0<>0<><>::uid://dwro78a8bfmp3::::res://shaders/efectoEsfera.gdshader<>uid://bxk4nrhap8o4m::::res://scripts/shaderController/movimientoEsferaBG.gd
+cupi.tscn::PackedScene::262805280615344873::1764596458::0::1::::<><><>0<>0<><>::uid://bp713wa275s4p::::res://scripts/player/cupi.gd<>uid://d3eu6dejhuca6::::res://scripts/reverseAudio/reversable_audio_stream_player.gd<>uid://c515s8eiyg4px::::res://prefabs/cupi_container.tscn<>uid://cdannsch5vxx4::::res://sfx/beatBar0.ogg<>uid://bg6tq4trreu05::::res://sfx/beatBar1.ogg
+cupi_container.tscn::PackedScene::6934035892051607609::1764596310::0::1::::<><><>0<>0<><>::uid://bs5gkvsjdkqnr::::res://scripts/player/ExpresionesCupi.gd<>uid://uaopc4watrc5::::res://animations/cupiMouth.tres<>uid://d2pw6wdp10rkc::::res://animations/cupiEyes.tres
+gameplay.tscn::PackedScene::3915078244948235321::1764596310::0::1::::<><><>0<>0<><>::uid://cmwdw8kgbef6b::::res://prefabs/metaball.tscn<>uid://n2c72dch62rh::::res://scripts/bullets/BulletSpawner.gd<>uid://d0kmnpjiacab::::res://prefabs/cupi.tscn<>uid://bvjuwoyoq48kd::::res://prefabs/bullet.tscn<>uid://cjvixm8nwnbvl::::res://prefabs/SpiralBullet.tscn
+metaball.tscn::PackedScene::5660746989068824739::1764598097::0::1::::<><><>0<>0<><>::uid://rujdkhv2ul8t::::res://metaball/Metaball.gd<>uid://de21rbsaslsxw::::res://metaball/show_spectrum.gd<>uid://rghpfcnh0win::::res://shaders/sinCos.tres<>uid://dhgymk6ayct4i::::res://scripts/shaderController/distorsionLine.gd
+metaball_static.tscn::PackedScene::2296905920188909586::1764598094::0::1::::<><><>0<>0<><>::uid://cx6wk5yxgaalf::::res://metaball/MetaballOptimized.gd<>uid://ck4sa4dap5f7s::::res://sprites/cupi/circuloRitmo/bordeCirculo2.png<>uid://de21rbsaslsxw::::res://metaball/show_spectrum.gd<>uid://bag8lvtsxurme::::res://sprites/cupi/circuloRitmo/bordeCirculo1.png<>uid://rghpfcnh0win::::res://shaders/sinCos.tres<>uid://diphwn7jukihk::::res://scripts/shaderController/distorsion.gd
+particulas_destruir_bullet.tscn::PackedScene::7309118007043119540::1764596310::0::1::::<><><>0<>0<><>::uid://2xaw3ehd0fhy::::res://particulas/shieldParticles.tres<>uid://6ghjiqyemyni::::res://scripts/particulas_destruir_bullet.gd
+SpiralBullet.tscn::PackedScene::5448420384045013377::1764596310::0::1::::<><><>0<>0<><>::uid://bbo5yvl7gkhxw::::res://scripts/bullets/SpiralBullet.gd<>uid://bvjuwoyoq48kd::::res://prefabs/bullet.tscn
+::res://scenes/::1764598428
+button.gd::GDScript::4058887321154594986::1764596310::0::1::::<>Button<><>0<>0<><>::
+controladorMenu.gd::GDScript::6576520420742328271::1764596310::0::1::::<>Node2D<><>0<>0<><>::
+Level.tscn::PackedScene::3157461997121050757::1764598428::0::1::::<><><>0<>0<><>::uid://14kk4kka54n1::::res://shaders/grid.gdshader<>uid://dqguof25omg2e::::res://scripts/background.gd<>uid://bv1q1ckfcnds8::::res://prefabs/gameplay.tscn<>uid://dinxdtthuvvkf::::res://scripts/debug/control_velocity.gd<>uid://dbbyxbbf2gp17::::res://scripts/debug/debugInfo.gd<>uid://b32sgw55o2c8f::::res://scripts/player/controles.gd<>uid://c1ce3lbjrnp2o::::res://sprites/controller/disco.png<>uid://cwngsxqx2coqb::::res://shaders/AberracionCromatica.gdshader<>uid://c13sikyb73spn::::res://scenes/level_loader.gd
+level_loader.gd::GDScript::6656661633707880787::1764596310::0::1::::<>Node2D<><>0<>0<><>::
+Pantalla_Titulo.tscn::PackedScene::8995490321990086102::1764598413::0::1::::<><><>0<>0<><>::uid://bowvms2w6ac6j::::res://sprites/background/Background_1.png<>uid://btqx7jldobmj5::::res://scripts/musicRandom.gd<>uid://7yvx75kpug2u::::res://prefabs/metaball_static.tscn<>uid://lmhfiai4rdll::::res://sprites/background/Background_2.png<>uid://cmwdw8kgbef6b::::res://prefabs/metaball.tscn<>uid://cer4rjvbsm2xp::::res://sprites/background/Background_3.png<>uid://c515s8eiyg4px::::res://prefabs/cupi_container.tscn<>uid://buok78nq5p1ik::::res://sprites/background/Background_4.png<>uid://cit8xgcws0kuc::::res://sprites/background/Background_5.png<>uid://ksv03ym07omq::::res://sprites/background/Background_6.png<>uid://chk3wajfd26dd::::res://scripts/niveles.gd<>uid://cud1i8mhv12n7::::res://scripts/background_1.gd<>uid://ylyvmroyq0sy::::res://scripts/level_loader.gd<>uid://22cckucuj2lw::::res://Niveles/DECO27 - マシュマロ feat. 初音ミク/mainMusic/audio.ogg<>uid://c3bplxso2r8il::::res://scripts/beatDetect.gd<>uid://c0xylibq7685x::::res://scenes/controladorMenu.gd<>uid://cwngsxqx2coqb::::res://shaders/AberracionCromatica.gdshader<>uid://cjlssy54gqe62::::res://scripts/showMenu.gd<>uid://bx3fjtbbwusd3::::res://scenes/button.gd
+StartLoad.tscn::PackedScene::1168807843475006331::1764596310::0::1::::<><><>0<>0<><>::uid://dmhy14nbg60km::::res://scripts/loadLevels/start_load.gd
+::res://scripts/::1764596310
+background.gd::GDScript::8295909462490898674::1764596310::0::1::::<>ColorRect<><>0<>0<><>::
+background_1.gd::GDScript::6184406053727568710::1764596310::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
+beatDetect.gd::GDScript::6741125002146035863::1764596310::0::1::::<>Node2D<><>0<>0<><>::
+dataGame.gd::GDScript::3975429187141085249::1764596310::0::1::::<>Node<><>0<>0<><>::
+level_loader.gd::GDScript::1708735769316535904::1764596310::0::1::::<>Node<><>0<>0<><>::
+musicRandom.gd::GDScript::3754492882977326472::1764596310::0::1::::<>Node2D<><>0<>0<><>::
+niveles.gd::GDScript::5286546427791918285::1764596310::0::1::::<>Control<><>0<>0<><>::
+particulas_destruir_bullet.gd::GDScript::2188681956397839042::1764596310::0::1::::<>GPUParticles2D<><>0<>0<><>::
+showMenu.gd::GDScript::5428375473814051401::1764596310::0::1::::<>Label<><>0<>0<><>::
+::res://scripts/bullets/::1764596310
+BulletSpawner.gd::GDScript::968373168910867101::1764596310::0::1::::BulletSpawner<>Node2D<><>0<>0<><>::
+SpiralBullet.gd::GDScript::2487376306170236848::1764596310::0::1::::CupiSpiral<>Node2D<><>0<>0<><>::
+StandartBullet.gd::GDScript::7366008085619203268::1764596310::0::1::::CupiBullet<>Node2D<><>0<>0<><>::
+::res://scripts/debug/::1764596310
+control_velocity.gd::GDScript::7749012586842244021::1764596310::0::1::::<>HSlider<><>0<>0<><>::
+debugInfo.gd::GDScript::7233013607889269904::1764596310::0::1::::<>RichTextLabel<><>0<>0<><>::
+::res://scripts/loadLevels/::1764596310
+start_load.gd::GDScript::8017484000796345340::1764596310::0::1::::<>Control<><>0<>0<><>::
+::res://scripts/player/::1764596458
+controles.gd::GDScript::4408551328791519207::1764596310::0::1::::<>Node2D<><>0<>0<><>::
+cupi.gd::GDScript::3506943227219188097::1764596458::0::1::::Cupi<>Node2D<><>0<>0<><>::
+ExpresionesCupi.gd::GDScript::3712134492905297323::1764596310::0::1::::CupiContainer<>Node2D<><>0<>0<><>::
+::res://scripts/reverseAudio/::1764596310
+reversable_audio_stream_player.gd::GDScript::9134077047595159767::1764596310::0::1::::ReversableAudioStreamPlayer<>AudioStreamPlayer<><>0<>1<><>::
+::res://scripts/shaderController/::1764596310
+distorsion.gd::GDScript::7752203505583073096::1764596310::0::1::::<>Sprite2D<><>0<>0<><>::
+distorsionLine.gd::GDScript::7664449433577754366::1764596310::0::1::::<>Line2D<><>0<>0<><>::
+movimientoEsferaBG.gd::GDScript::4023192776751377366::1764596310::0::1::::<>MeshInstance3D<><>0<>0<><>::
+::res://sfx/::1764596346
+beatBar0.ogg::AudioStreamOggVorbis::4984221383395929199::1764596310::1764596346::1::::<><><>0<>0<>b9a6cbadbf8bd86303da2d031c4c0337<>res://.godot/imported/beatBar0.ogg-241758c9fa0508d2a871917a5fb450f8.oggvorbisstr::
+beatBar1.ogg::AudioStreamOggVorbis::2872733204785928784::1764596310::1764596346::1::::<><><>0<>0<>ae0f081a0ff1c9b2bdfe81d56d529127<>res://.godot/imported/beatBar1.ogg-6dca954d6c2ca3e19beae88868e6be88.oggvorbisstr::
+::res://shaders/::1764596458
+3_sample_blur.gdshader::Shader::171342028614460189::1764596458::0::1::::<><><>0<>0<><>::
+AberracionCromatica.gdshader::Shader::6344230518307693689::1764596458::0::1::::<><><>0<>0<><>::
+cupi.gdshader::Shader::5891174223316013381::1764596310::0::1::::<><><>0<>0<><>::
+distorsion.gdshader::Shader::5506496069201868502::1764596310::0::1::::<><><>0<>0<><>::
+efectoEsfera.gdshader::Shader::8739419951010189986::1764596310::0::1::::<><><>0<>0<><>::
+grid.gdshader::Shader::1885403456404054776::1764596458::0::1::::<><><>0<>0<><>::
+metaball_static.gdshader::Shader::4682756219470297099::1764596310::0::1::::<><><>0<>0<><>::
+sinCos.tres::VisualShader::1206048680536230605::1764596458::0::1::::<><><>0<>0<><>::
+WaterNoise.gdshader::Shader::4418437704935854323::1764596310::0::1::::<><><>0<>0<><>::
+::res://sprites/::1764596310
+::res://sprites/background/::1764596348
+Background_1.png::CompressedTexture2D::3415778279760854943::1764596310::1764596347::1::::<><><>0<>0<>84ee646c142ba0723dfbcfbcf7a5adb4<>res://.godot/imported/Background_1.png-9c8de04f1318a05b259e09601761b468.ctex::
+Background_2.png::CompressedTexture2D::797284181575673573::1764596310::1764596347::1::::<><><>0<>0<>7894b8efe83063ceef34764b125d2b27<>res://.godot/imported/Background_2.png-858284dd4f690f0f9154b7d5b4baa5cf.ctex::
+Background_3.png::CompressedTexture2D::5090482820264995689::1764596310::1764596348::1::::<><><>0<>0<>8f0e8a295d61688a3a4a72cdefd1acc1<>res://.godot/imported/Background_3.png-ca14d4c4646494db4675cc4757514d5d.ctex::
+Background_4.png::CompressedTexture2D::3819764914463895834::1764596310::1764596347::1::::<><><>0<>0<>d0601c7718996a387cb7272a046b950a<>res://.godot/imported/Background_4.png-d50453ce49a386723e65343413be7b21.ctex::
+Background_5.png::CompressedTexture2D::5375620347093040762::1764596310::1764596347::1::::<><><>0<>0<>22de4d93c7e90eb9a3b35353529e0467<>res://.godot/imported/Background_5.png-c81de7adbf8c4129973bea109ac1707a.ctex::
+Background_6.png::CompressedTexture2D::740368445958135792::1764596310::1764596348::1::::<><><>0<>0<>f371d76d771079c1f9e0bda3e671dc41<>res://.godot/imported/Background_6.png-c17446d1571fb95f902463698131d59a.ctex::
+::res://sprites/controller/::1764596347
+disco.png::CompressedTexture2D::6602173507417388344::1764596310::1764596347::1::::<><><>0<>0<>21d104077036ab7488976f1908b8f37b<>res://.godot/imported/disco.png-3d21f5c421e4820c71b0433baa281419.ctex::
+::res://sprites/cupi/::1764596310
+::res://sprites/cupi/boca/::1764596346
+CupiMouth.tres::AtlasTexture::4301920516347303238::1764596310::0::1::::<><><>0<>0<><>::uid://bler7o18gyany::::res://sprites/cupi/boca/cupiMouthExpresions.png
+cupiMouthExpresions.png::CompressedTexture2D::3167845586009830546::1764596310::1764596346::1::::<><><>0<>0<>a972cc4d606045c6df4a08fb95f202ea<>res://.godot/imported/cupiMouthExpresions.png-bf8ec55665701dca327801e24dbd0676.ctex::
+::res://sprites/cupi/circuloRitmo/::1764596346
+bordeCirculo1.png::CompressedTexture2D::2400831387902723312::1764596310::1764596346::1::::<><><>0<>0<>bf7d2e19e0cf7aa63dcee150acd12ece<>res://.godot/imported/bordeCirculo1.png-ab19202d36556adfa9ccddcf9f2a2883.ctex::
+bordeCirculo2.png::CompressedTexture2D::5535691192336854278::1764596310::1764596346::1::::<><><>0<>0<>017af58a21c2a5452f35ab42c7514456<>res://.godot/imported/bordeCirculo2.png-21e0d9924f7a938df84467786bb1818a.ctex::
+::res://sprites/cupi/ojos/::1764596346
+CupiEyes.tres::AtlasTexture::6219775988891477804::1764596310::0::1::::<><><>0<>0<><>::uid://vld3jhw3acr1::::res://sprites/cupi/ojos/cupiEyesExpresions.png
+cupiEyesExpresions.png::CompressedTexture2D::1496906509461755940::1764596310::1764596346::1::::<><><>0<>0<>34b78f9e0bdf07615510a3cca2b4de2c<>res://.godot/imported/cupiEyesExpresions.png-292735151f65bd79e8f91c839303fc5d.ctex::
+::res://sprites/testing/::1764596346
+notita.png::CompressedTexture2D::6857715550077730380::1764596310::1764596346::1::::<><><>0<>0<>338fb7597191ee0d281b03536fa1a6d9<>res://.godot/imported/notita.png-c87a752e4c2a762a28bbc8ab21c9d728.ctex::

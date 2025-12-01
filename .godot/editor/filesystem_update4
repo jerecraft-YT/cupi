@@ -1,11 +1,21 @@
 res://metaball/audioAnalizer.tres
-res://scenes/Pantalla_Titulo.tscn
+res://prefabs/cupi.tscn
+res://shaders/grid.gdshader
 res://shaders/sinCos.tres
 res://animations/cupiMouth.tres
 res://animations/cupiEyes.tres
 res://shaders/AberracionCromatica.gdshader
 res://shaders/3_sample_blur.gdshader
-res://prefabs/gameplay.tscn
-res://prefabs/cupi.tscn
+res://scripts/player/cupi.gd
 res://scenes/Level.tscn
-res://shaders/grid.gdshader
+res://Niveles/2368598 Crystal Castles - Knights/chart.json
+res://scenes/Pantalla_Titulo.tscn
+res://prefabs/metaball_static.tscn
+res://prefabs/metaball.tscn
+res://Niveles/1287352 Crystal Castles - Untrust Us/chart.json
+res://Niveles/1775229 89ers - Go Go Go Go! (Radio Edit) (Nightcore & Cut Ver.)/chart.json
+res://scripts/player/controles.gd
+res://scenes/level.gd
+res://scenes/button.gd
+res://scripts/dataGame.gd
+res://scripts/bullets/BulletSpawner.gd

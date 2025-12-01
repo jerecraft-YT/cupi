@@ -3,9 +3,17 @@ extends Node
 var documentos = OS.get_system_dir(OS.SYSTEM_DIR_DOCUMENTS)
 var mainConfig = FileAccess.open("user://config.cfg",FileAccess.WRITE_READ)
 var time_fixed:float
-var cupi:Node2D
+var cupi:Cupi
 var direccionNiveles = "res://Niveles/"
-
+var musicFile
+var chartData
+var bpm
+var levelName:String = "1775229 89ers - Go Go Go Go! (Radio Edit) (Nightcore & Cut Ver.)"
+var Music
+var datalevel
+var loadElements = false
+var musicLoaded = false
+var JSONLoaded = false
 func _ready() -> void:
 	DirAccess.make_dir_recursive_absolute(documentos+"/CUPI/Levels")
 	#var levels = DirAccess.open()
@@ -13,8 +21,44 @@ func _ready() -> void:
 		print("funciono")
 	else:
 		print(":(")
+
+func loadLevelElements():
+	musicFile = detectMusicFile()
+	loadElements = true
+	ResourceLoader.load_threaded_request(direccionNiveles+levelName+"/mainMusic/"+musicFile)
+	ResourceLoader.load_threaded_request(direccionNiveles+levelName+"/chart.json")
+	#chartData = loadJSON()
+	#bpm = datalevel.data.bpm
+	#loadSong()
 	
+func detectMusicFile():
+	var archivos = DirAccess.get_files_at(direccionNiveles+levelName+"/mainMusic")
+	for archivo in archivos:
+		if archivo.right(4) == ".ogg" or archivo.right(4) == ".mp3" or archivo.right(4) == ".wav":
+			return archivo
+
+func loadSong():
+	if ResourceLoader.load_threaded_get_status(direccionNiveles+levelName+"/mainMusic/"+musicFile) == ResourceLoader.THREAD_LOAD_LOADED:
+		Music = ResourceLoader.load_threaded_get(direccionNiveles+levelName+"/mainMusic/"+musicFile)
+		if Music:
+			print("la Musica Cargo")
+			musicLoaded = true
+
+func loadJSON():
+	if ResourceLoader.load_threaded_get_status(direccionNiveles+levelName+"/chart.json") == ResourceLoader.THREAD_LOAD_LOADED:
+		datalevel = ResourceLoader.load_threaded_get(direccionNiveles+levelName+"/chart.json")
+		if datalevel:
+			print("El JSON cargo")
+			JSONLoaded = true
+			bpm = datalevel.data.bpm
+
+
 func _process(delta: float) -> void:
+	if loadElements == true:
+		if musicLoaded == false:
+			loadSong()
+		if JSONLoaded == false:
+			loadJSON()
 	time_fixed = delta*60
 	#if cupi != null:
 		#print(cupi.TimeMultiplier)

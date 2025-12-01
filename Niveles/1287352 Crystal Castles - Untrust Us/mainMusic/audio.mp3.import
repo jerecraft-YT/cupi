@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b6eibsnr4cy5g"
+path="res://.godot/imported/audio.mp3-df3e0dfed14181e7c3d6dc946fe181dd.mp3str"
+
+[deps]
+
+source_file="res://Niveles/1287352 Crystal Castles - Untrust Us/mainMusic/audio.mp3"
+dest_files=["res://.godot/imported/audio.mp3-df3e0dfed14181e7c3d6dc946fe181dd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

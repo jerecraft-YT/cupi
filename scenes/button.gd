@@ -1,15 +1,27 @@
 extends Button
 
 var cargar = false
+var sceneLoaded = false
+var scene = null
 @warning_ignore("unused_parameter")
 func _process(delta: float) -> void:
 	if cargar == true:
-		if ResourceLoader.load_threaded_get_status("res://scenes/Level.tscn") == ResourceLoader.THREAD_LOAD_LOADED:
-			var scene = ResourceLoader.load_threaded_get("res://scenes/Level.tscn")
-			if scene:
-				get_tree().change_scene_to_packed(scene)
-			set_process(false)
+		loadLevel()
+	if DataGame.musicLoaded == true and DataGame.JSONLoaded == true and sceneLoaded == true:
+		await get_tree().create_timer(2.0).timeout 
+		get_tree().change_scene_to_packed(scene)
+		
+func loadLevel():
+	if ResourceLoader.load_threaded_get_status("res://scenes/Level.tscn") == ResourceLoader.THREAD_LOAD_LOADED:
+		scene = ResourceLoader.load_threaded_get("res://scenes/Level.tscn")
+		if scene:
+			sceneLoaded = true
+			cargar = false
+			print("La escena cargo")
+
 
 func _on_pressed() -> void:
 	ResourceLoader.load_threaded_request("res://scenes/Level.tscn")
+	DataGame.loadLevelElements()
 	cargar = true
+	disabled = true

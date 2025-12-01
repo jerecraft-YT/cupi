@@ -1,34 +1,21 @@
 extends Node2D
 class_name Cupi
 
+signal waveBeat
+
+#ASTRID paso por aca 22/10/2025 y eta punto del colapso mental uwu
+
 @export var cupi:Node2D
 @export var cupiContainer:Node2D
 @export var line:Line2D
-@onready var BG = get_tree().get_first_node_in_group("BG")
-var wave_amp = 0.025
-var puntosNivel = 0
-var errores = 0
-var particulasBullet:PackedScene = load("res://prefabs/particulas_destruir_bullet.tscn")
-
-#ASTRID paso por aca 22/10/2025 y eta punto del colapso mental uwu
-#variable que se puede acceder desde el editor :P
 @export var levelMusic:AudioStreamPlayer
 @export var InverseLevelMusic:ReversableAudioStreamPlayer
 @export var barBeat0Player:AudioStreamPlayer
 @export var barBeat1Player:AudioStreamPlayer
-@onready var controladorGeneral:Node2D = get_tree().get_first_node_in_group("controlador")
 @export var cupiBot:bool
 @export var levelName:String
-#variables del shield
 @export var amp:float = 35
-var actual_angle:float
-var number_points:int = 16
-var cobertura:float = 60
-#variables para el beat
-var time:float
-var TimeScene:float
-var timeBPM:float
-var convertedBPM:float
+@export var timeMultiplierObjective:float = 1.0
 @export var TimeMultiplier:float=1.0 :
 	set(v):
 		TimeMultiplier = v
@@ -57,58 +44,47 @@ var convertedBPM:float
 	get:
 		return TimeMultiplier
 
-var beat:int = 0
-var beatStartTime:float = 0
-
-##gameplay values
-var velShield:float = 10
-var musicNormalOrInverted:bool = true
-var musicChangeApply=true
-var previewPlayBackPos:float
-var normalMusic:AudioStream
-var reverseMusic:AudioStream
-var chartData:JSON
-var bpm:float
-@export var timeMultiplierObjective:float = 1.0
-var wah:float
 @onready var lineScale:float
-var musicFile:String
-func _ready() -> void:
-	musicFile = detectMusicFile()
-	DataGame.loadCupi()
-	##beat values
-	chartData = loadJSON()
-	bpm = chartData.data.bpm
+@onready var controladorGeneral:Node2D = get_tree().get_first_node_in_group("controlador")
 
-	loadSong()
-	InverseLevelMusic.bstream = normalMusic
-	InverseLevelMusic.play()
-	levelMusic.stream = normalMusic
-	levelMusic.play()
+var particulasBullet:PackedScene = load("res://prefabs/particulas_destruir_bullet.tscn")
+var actual_angle:float
+var puntosNivel:float
+var cobertura:float = 60
+var time:float
+var TimeScene:float
+var timeBPM:float
+var convertedBPM:float
+var previewPlayBackPos:float
+var bpm:float
+var wah:float
+var beatStartTime:float = 0
+var errores:int
+var number_points:int = 8
+var beat:int = 0
+var musicNormalOrInverted:bool = true
+var musicChangeApply:bool=true
+var normalMusic:AudioStream
+var chartData:JSON
+
+func _ready() -> void:
+	DataGame.loadCupi()
 	#generar circulo al inicio de la escena
 	createcircle()
 	# Reproducir música a la vez que el beat
 	beatStartTime = TimeScene # Tiempo de marca actual
 	
-func detectMusicFile():
-	var archivos = DirAccess.get_files_at(DataGame.direccionNiveles+levelName+"/mainMusic")
-	for archivo in archivos:
-		if archivo.right(4) == ".ogg" or archivo.right(4) == ".mp3" or archivo.right(4) == ".wav":
-			return archivo
-
-
-func loadSong():
-	normalMusic = load(DataGame.direccionNiveles+levelName+"/mainMusic/"+musicFile)
+	chartData = DataGame.datalevel
+	bpm = chartData.data.bpm
+	InverseLevelMusic.bstream = DataGame.Music
+	InverseLevelMusic.play()
+	levelMusic.stream = DataGame.Music
+	levelMusic.play()
 	
 func get_song_time() -> float:
 	return TimeScene - beatStartTime
-
-func loadJSON():
-	var data = load(DataGame.direccionNiveles+levelName+"/chart.json")
-	return(data)
-
+	
 func ralentizar():
-	#print("hi")
 	TimeMultiplier = 0.5+(wah*0.15)
 
 func _process(delta: float) -> void:
@@ -131,13 +107,13 @@ func _process(delta: float) -> void:
 			# (en time signature 4/4)
 			#barBeat0Player.play()
 			#BgBeat()
-			WAVEBEAT()
+			waveBeat.emit()
 			#cupiBeat(time)
 		else:
 			# beat 1 al 3, fin de marca
 			#barBeat1Player.play()
 			#BgBeat()
-			WAVEBEAT()
+			waveBeat.emit()
 			#cupiBeat(time)
 		beat += 1
 		
@@ -153,10 +129,6 @@ func _process(delta: float) -> void:
 	TimeScene = max(0,TimeScene)
 	levelMusic.pitch_scale = max(0.001,abs(TimeMultiplier))
 	InverseLevelMusic.playback_rate = TimeMultiplier
-	
-	
-func WAVEBEAT():
-	wave_amp = 0.05
 	
 func BulletDestroy(bullet):
 		var particles:GPUParticles2D = particulasBullet.instantiate()

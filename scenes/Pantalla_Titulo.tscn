@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://d1fqn8rr6ofpe"]
+[gd_scene load_steps=23 format=3 uid="uid://d1fqn8rr6ofpe"]
 
 [ext_resource type="Texture2D" uid="uid://bowvms2w6ac6j" path="res://sprites/background/Background_1.png" id="1_e767d"]
 [ext_resource type="Script" uid="uid://btqx7jldobmj5" path="res://scripts/musicRandom.gd" id="1_h8syl"]
@@ -19,7 +19,6 @@
 [ext_resource type="Shader" uid="uid://cwngsxqx2coqb" path="res://shaders/AberracionCromatica.gdshader" id="17_hgevq"]
 [ext_resource type="Script" uid="uid://cjlssy54gqe62" path="res://scripts/showMenu.gd" id="18_hgevq"]
 [ext_resource type="Script" uid="uid://bx3fjtbbwusd3" path="res://scenes/button.gd" id="20_21mn0"]
-[ext_resource type="Shader" uid="uid://co88i1klqein" path="res://shaders/3_sample_blur.gdshader" id="20_icyuc"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4pcd2"]
 particle_flag_disable_z = true
@@ -54,12 +53,6 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_21mn0"]
-shader = ExtResource("20_icyuc")
-shader_parameter/blur_amount = 2.50000021375
-shader_parameter/mix_amount = 0.0
-shader_parameter/color_over = Color(0, 0, 0, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6xp4g"]
 shader = ExtResource("17_hgevq")
@@ -103,13 +96,6 @@ sprite_frames = SubResource("SpriteFrames_uquea")
 frame = 4
 script = ExtResource("7_6xp4g")
 
-[node name="Blur" type="ColorRect" parent="."]
-material = SubResource("ShaderMaterial_21mn0")
-offset_left = -360.0
-offset_top = -640.0
-offset_right = 360.0
-offset_bottom = 640.0
-
 [node name="CupiMenu" type="Node2D" parent="."]
 scale = Vector2(2, 2)
 script = ExtResource("10_uquea")
@@ -117,7 +103,7 @@ script = ExtResource("10_uquea")
 [node name="metaball" parent="CupiMenu" instance=ExtResource("2_pri23")]
 scale = Vector2(0.9, 0.9)
 
-[node name="distorsion" parent="CupiMenu/metaball/ball" index="2"]
+[node name="distorsion" parent="CupiMenu/metaball/ball" index="1"]
 ScaleFrequency = 2.5
 
 [node name="metaballStatic" parent="CupiMenu" instance=ExtResource("2_bjdlj")]
@@ -126,7 +112,7 @@ scale = Vector2(0.5, 0.5)
 defaultScale = Vector2(0.5, 0.5)
 magnitudExtra = 0.5
 
-[node name="distorsion" parent="CupiMenu/metaballStatic" index="4"]
+[node name="distorsion" parent="CupiMenu/metaballStatic" index="3"]
 ScaleFrequency = 2.0
 
 [node name="cupiContainer" parent="CupiMenu" instance=ExtResource("3_6ajat")]
@@ -177,6 +163,15 @@ offset_bottom = 441.0
 theme_override_font_sizes/font_size = 68
 text = "JUGAR"
 script = ExtResource("20_21mn0")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -129.0
+offset_top = -610.0
+offset_right = 569.0
+offset_bottom = -367.0
+theme_override_font_sizes/normal_font_size = 96
+bbcode_enabled = true
+text = "[wave amp=50.0 freq=5.0 connected=1][rainbow freq=0.05 sat=0.8 val=1.0 speed=5.0]CUPI[/rainbow][/wave]"
 
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
 [connection signal="showMenu" from="comenzar" to="CupiMenu" method="_on_comenzar_show_menu"]

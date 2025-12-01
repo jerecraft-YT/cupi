@@ -30,9 +30,6 @@ modulate = Color(0, 0, 1, 1)
 texture = ExtResource("3_ctm4h")
 offset = Vector2(0, -5)
 
-[node name="BackBufferCopy" type="BackBufferCopy" parent="."]
-copy_mode = 2
-
 [node name="distorsion" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_25ol6")
 scale = Vector2(0.95, 0.95)

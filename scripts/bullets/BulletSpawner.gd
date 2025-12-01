@@ -51,7 +51,7 @@ func _process(delta: float) -> void:
 				bullet.cupi = cupi
 				bullet.cupiContainer = cupiContainer
 				bullet.spawner = self
-				print(cupi.chartData.data.bullets[actualview_chart-1]["id"])
+				#print(cupi.chartData.data.bullets[actualview_chart-1]["id"])
 				
 						
 		else:
