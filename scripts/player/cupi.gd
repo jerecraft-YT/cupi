@@ -66,7 +66,8 @@ var musicNormalOrInverted:bool = true
 var musicChangeApply:bool=true
 var normalMusic:AudioStream
 var chartData:JSON
-
+var prestartLevel:float
+var firstLoad = false
 func _ready() -> void:
 	DataGame.loadCupi()
 	#generar circulo al inicio de la escena
@@ -77,9 +78,7 @@ func _ready() -> void:
 	chartData = DataGame.datalevel
 	bpm = chartData.data.bpm
 	InverseLevelMusic.bstream = DataGame.Music
-	InverseLevelMusic.play()
 	levelMusic.stream = DataGame.Music
-	levelMusic.play()
 	
 func get_song_time() -> float:
 	return TimeScene - beatStartTime
@@ -124,9 +123,15 @@ func _process(delta: float) -> void:
 			levelMusic.seek(song_time / 1000.0) # este espera tiempo en decimal, no enteros
 			#print("sinc")
 			pass
-	
-	TimeScene += (delta * TimeMultiplier) * 1000.0
-	TimeScene = max(0,TimeScene)
+	prestartLevel += (delta * TimeMultiplier) * 1000.0
+	if prestartLevel >= 1500:
+		if firstLoad == false:
+			InverseLevelMusic.play()
+			levelMusic.play()
+			firstLoad = true
+		TimeScene += (delta * TimeMultiplier) * 1000.0
+	#TimeScene += (delta * TimeMultiplier) * 1000.0
+	TimeScene = max(-2000,TimeScene)
 	levelMusic.pitch_scale = max(0.001,abs(TimeMultiplier))
 	InverseLevelMusic.playback_rate = TimeMultiplier
 	

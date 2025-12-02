@@ -1,14 +1,14 @@
 72322a848ab928aa5c89f0cb78209805
-::res://::1764642789
+::res://::1764643145
 chart-easy.json::JSON::-1::1764472464::0::1::::<><><>0<>0<><>::
 estructura json chartt.txt::TextFile::-1::1764519897::0::1::::<><><>0<>0<><>::
-export_presets.cfg::TextFile::-1::1764560952::0::1::::<><><>0<>0<><>::
+export_presets.cfg::TextFile::-1::1764642898::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::174066192364344378::1763514687::1764441367::1::::<><><>0<>0<>d26cd61c336390e624049fd21c72787b<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://animations/::1764636923
 cupiEyes.tres::SpriteFrames::9086718789934383266::1764636923::0::1::::<><><>0<>0<><>::uid://cuu52i5ueaqmu::::res://sprites/cupi/ojos/CupiEyes.tres
 cupiMouth.tres::SpriteFrames::1404653848414325822::1764636923::0::1::::<><><>0<>0<><>::uid://b2j5ac01hh5be::::res://sprites/cupi/boca/CupiMouth.tres
-::res://metaball/::1764636881
-audioAnalizer.tres::AudioBusLayout::4081396580252559891::1764636881::0::1::::<><><>0<>0<><>::
+::res://metaball/::1764642792
+audioAnalizer.tres::AudioBusLayout::4081396580252559891::1764642792::0::1::::<><><>0<>0<><>::
 Metaball.gd::GDScript::1235050244282516177::1764536606::0::1::::MetaballVisualizer<>Polygon2D<><>0<>0<><>::
 metaball.gdshader::Shader::5857679592818050605::1764202443::0::1::::<><><>0<>0<><>::
 MetaballOptimized.gd::GDScript::6452535727045554619::1764537385::0::1::::<>Node2D<><>0<>0<><>::

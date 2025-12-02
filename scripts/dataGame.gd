@@ -4,8 +4,8 @@ var documentos = OS.get_system_dir(OS.SYSTEM_DIR_DOCUMENTS)
 var mainConfig = FileAccess.open("user://config.cfg",FileAccess.WRITE_READ)
 var time_fixed:float
 var cupi:Cupi
-var direccionNiveles = "res://Niveles/"
-var musicFile
+var direccionNiveles:String = "res://Niveles/"
+var musicFile:String
 var chartData
 var bpm
 var levelName:String = "1775229 89ers - Go Go Go Go! (Radio Edit) (Nightcore & Cut Ver.)"
@@ -14,6 +14,8 @@ var datalevel
 var loadElements = false
 var musicLoaded = false
 var JSONLoaded = false
+@export var detectarCarpetasExternas:bool = false
+
 func _ready() -> void:
 	DirAccess.make_dir_recursive_absolute(documentos+"/CUPI/Levels")
 	#var levels = DirAccess.open()
@@ -32,10 +34,18 @@ func loadLevelElements():
 	#loadSong()
 	
 func detectMusicFile():
-	var archivos = DirAccess.get_files_at(direccionNiveles+levelName+"/mainMusic")
-	for archivo in archivos:
-		if archivo.right(4) == ".ogg" or archivo.right(4) == ".mp3" or archivo.right(4) == ".wav":
-			return archivo
+	#print(ResourceLoader.list_directory(direccionNiveles+levelName+"/mainMusic"))
+	
+	if detectarCarpetasExternas == true:
+		var archivos = DirAccess.get_files_at(direccionNiveles+levelName+"/mainMusic")
+		for archivo in archivos:
+			if archivo.right(4) == ".ogg" or archivo.right(4) == ".mp3" or archivo.right(4) == ".wav":
+				return archivo
+	else:
+		var archivos = ResourceLoader.list_directory(direccionNiveles+levelName+"/mainMusic")
+		for archivo in archivos:
+			if archivo.right(4) == ".ogg" or archivo.right(4) == ".mp3" or archivo.right(4) == ".wav":
+				return archivo
 
 func loadSong():
 	if ResourceLoader.load_threaded_get_status(direccionNiveles+levelName+"/mainMusic/"+musicFile) == ResourceLoader.THREAD_LOAD_LOADED:

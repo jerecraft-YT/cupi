@@ -11,12 +11,14 @@ config_version=5
 [application]
 
 config/name="CUPI"
+config/description="Que tan facil puede ser cantar?"
+config/version="0.0.11"
 run/main_scene="uid://qwgdhe76ve32"
 config/quit_on_go_back=false
 config/features=PackedStringArray("4.5", "Mobile")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/show_image=false
-config/icon="res://icon.svg"
+config/icon="uid://cqk3ysk80cik"
 
 [audio]
 
@@ -33,6 +35,10 @@ window/size/viewport_height=1280
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/handheld/orientation=1
+
+[filesystem]
+
+import/default_bus_layout="uid://byfcaghl26y8j"
 
 [global_group]
 
