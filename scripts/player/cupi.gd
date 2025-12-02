@@ -50,7 +50,7 @@ signal waveBeat
 var particulasBullet:PackedScene = load("res://prefabs/particulas_destruir_bullet.tscn")
 var actual_angle:float
 var puntosNivel:float
-var cobertura:float = 60
+var cobertura:float = 75
 var time:float
 var TimeScene:float
 var timeBPM:float
@@ -131,7 +131,7 @@ func _process(delta: float) -> void:
 			firstLoad = true
 		TimeScene += (delta * TimeMultiplier) * 1000.0
 	#TimeScene += (delta * TimeMultiplier) * 1000.0
-	TimeScene = max(-2000,TimeScene)
+	TimeScene = max(0,TimeScene)
 	levelMusic.pitch_scale = max(0.001,abs(TimeMultiplier))
 	InverseLevelMusic.playback_rate = TimeMultiplier
 	

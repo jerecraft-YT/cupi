@@ -18,7 +18,7 @@ shader_parameter/wave_size = 2.0000000475
 shader_parameter/wave_time_mul = 0.50000002049012
 shader_parameter/total_phases = 9
 
-[sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_2eouu"]
+[sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_faw0r"]
 mix_rate_mode = 0
 buffer_length = 0.1
 
@@ -57,7 +57,7 @@ speed = 0.2
 levelName = "BLACKPINK - How You Like That (Stixy)"
 
 [node name="ReversableAudioStreamPlayer" parent="Gameplay/Cupi" index="0"]
-stream = SubResource("AudioStreamGenerator_2eouu")
+stream = SubResource("AudioStreamGenerator_faw0r")
 
 [node name="LevelMusic" parent="Gameplay/Cupi" index="1"]
 autoplay = false

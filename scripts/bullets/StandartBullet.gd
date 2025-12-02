@@ -31,7 +31,9 @@ func _process(delta: float) -> void:
 		if spiralStart:
 			var circularAttack = get_parent()
 			angle = circularAttack.anguloFinal + circularAttack.AngleFinal
+			visible = true
 			if timeLerp <= 0 and cupi.TimeMultiplier > 0:
+				
 				if cupi.cupiBot:
 					controladorGeneral.rotation = deg_to_rad(angle)
 				
@@ -41,6 +43,7 @@ func _process(delta: float) -> void:
 				
 				# Lógica CORREGIDA - sin condiciones duplicadas
 				if shortest_diff <= cupi.cobertura / 2.0 and shortest_diff >= -cupi.cobertura / 2.0:
+					visible = false
 					if cooldown <= 0:
 						# ACIERTO
 						if shortest_diff <= (cupi.cobertura / 2.0) * 0.32:
