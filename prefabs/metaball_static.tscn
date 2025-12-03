@@ -9,9 +9,10 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_25ol6"]
 shader = ExtResource("7_ewiwc")
-shader_parameter/TimeMultiplier = 5.0
+shader_parameter/Color = Color(0, 0, 0, 1)
 shader_parameter/frequency = 60.0
-shader_parameter/amplitude = 0.5
+shader_parameter/TimeMultiplier = 5.0
+shader_parameter/amplitude = 1.0
 
 [node name="metaballStatic" type="Node2D" node_paths=PackedStringArray("spectro")]
 script = ExtResource("1_m1nff")
@@ -19,11 +20,6 @@ spectro = NodePath("Spectro")
 
 [node name="Spectro" type="Node2D" parent="."]
 script = ExtResource("2_ctm4h")
-
-[node name="back" type="Sprite2D" parent="."]
-modulate = Color(0, 0, 0, 1)
-texture = ExtResource("2_7nw1l")
-offset = Vector2(0, -5)
 
 [node name="front" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 1, 1)
@@ -34,4 +30,5 @@ offset = Vector2(0, -5)
 material = SubResource("ShaderMaterial_25ol6")
 scale = Vector2(0.95, 0.95)
 texture = ExtResource("2_7nw1l")
+offset = Vector2(0, -5)
 script = ExtResource("7_p3wh2")

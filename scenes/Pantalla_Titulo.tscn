@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://d1fqn8rr6ofpe"]
+[gd_scene load_steps=24 format=3 uid="uid://d1fqn8rr6ofpe"]
 
 [ext_resource type="Texture2D" uid="uid://bowvms2w6ac6j" path="res://sprites/background/Background_1.png" id="1_e767d"]
 [ext_resource type="Script" uid="uid://btqx7jldobmj5" path="res://scripts/musicRandom.gd" id="1_h8syl"]
@@ -12,14 +12,12 @@
 [ext_resource type="Script" uid="uid://cud1i8mhv12n7" path="res://scripts/background_1.gd" id="7_6xp4g"]
 [ext_resource type="Script" uid="uid://ylyvmroyq0sy" path="res://scripts/level_loader.gd" id="7_wjr8j"]
 [ext_resource type="Script" uid="uid://c3bplxso2r8il" path="res://scripts/beatDetect.gd" id="8_e767d"]
-[ext_resource type="Script" uid="uid://c0xylibq7685x" path="res://scenes/controladorMenu.gd" id="10_uquea"]
+[ext_resource type="Script" uid="uid://c0xylibq7685x" path="res://scripts/controladorMenu.gd" id="10_uquea"]
 [ext_resource type="Shader" uid="uid://co88i1klqein" path="res://shaders/3_sample_blur.gdshader" id="11_h8syl"]
+[ext_resource type="PackedScene" uid="uid://7yvx75kpug2u" path="res://prefabs/metaball_static.tscn" id="13_hgevq"]
 [ext_resource type="Shader" uid="uid://cwngsxqx2coqb" path="res://shaders/AberracionCromatica.gdshader" id="17_hgevq"]
 [ext_resource type="Script" uid="uid://cjlssy54gqe62" path="res://scripts/showMenu.gd" id="18_hgevq"]
-[ext_resource type="Shader" uid="uid://bewrqs73a7dy" path="res://scenes/Pantalla_Titulo.tres" id="18_uquea"]
-[ext_resource type="Texture2D" uid="uid://bid3vxyx6i5gf" path="res://sprites/mascara.png" id="19_icyuc"]
-[ext_resource type="Texture2D" uid="uid://cqk3ysk80cik" path="res://icon.svg" id="19_uquea"]
-[ext_resource type="Script" uid="uid://bx3fjtbbwusd3" path="res://scenes/button.gd" id="20_21mn0"]
+[ext_resource type="Script" uid="uid://bx3fjtbbwusd3" path="res://scripts/button.gd" id="20_21mn0"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4pcd2"]
 particle_flag_disable_z = true
@@ -77,11 +75,7 @@ corner_radius_bottom_left = 100
 corner_detail = 6
 shadow_size = 10
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_21mn0"]
-shader = ExtResource("18_uquea")
-shader_parameter/Texture2DParameter = ExtResource("19_icyuc")
-
-[node name="PantallaTitulo" type="Node2D" node_paths=PackedStringArray("audio")]
+[node name="PantallaTitulo" type="Node2D" node_paths=PackedStringArray("audio") groups=["PantallaTitulo"]]
 script = ExtResource("1_h8syl")
 audio = NodePath("AudioStreamPlayer")
 
@@ -109,16 +103,25 @@ sprite_frames = SubResource("SpriteFrames_uquea")
 frame = 4
 script = ExtResource("7_6xp4g")
 
-[node name="ColorRect2" type="ColorRect" parent="."]
+[node name="blur" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_hgevq")
 offset_left = -360.0
-offset_top = -640.0
+offset_top = -1000.0
 offset_right = 360.0
-offset_bottom = 640.0
+offset_bottom = 1000.0
 
 [node name="CupiMenu" type="Node2D" parent="."]
 scale = Vector2(2, 2)
 script = ExtResource("10_uquea")
+
+[node name="metaballStatic" parent="CupiMenu" instance=ExtResource("13_hgevq")]
+visible = false
+scale = Vector2(0.5, 0.5)
+defaultScale = Vector2(0.5, 0.5)
+magnitudExtra = 0.25
+
+[node name="distorsion" parent="CupiMenu/metaballStatic" index="2"]
+ScaleAmplitude = 2.0
 
 [node name="metaball" parent="CupiMenu" instance=ExtResource("2_pri23")]
 scale = Vector2(0.9, 0.9)
@@ -214,15 +217,10 @@ theme_override_font_sizes/font_size = 24
 text = "How You Like That (Stixy)"
 vertical_alignment = 1
 
-[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
-material = SubResource("ShaderMaterial_21mn0")
-position = Vector2(162, -33)
-scale = Vector2(3.4296875, 3.4296875)
-texture = ExtResource("19_uquea")
-
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
 [connection signal="showMenu" from="comenzar" to="CupiMenu" method="_on_comenzar_show_menu"]
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
 
+[editable path="CupiMenu/metaballStatic"]
 [editable path="CupiMenu/metaball"]
 [editable path="CupiMenu/cupiContainer"]

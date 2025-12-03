@@ -3,13 +3,21 @@ extends Button
 var cargar = false
 var sceneLoaded = false
 var scene = null
+
+signal load(scenaLoad)
+
+@export var externalLoad = true
+
 @warning_ignore("unused_parameter")
 func _process(delta: float) -> void:
 	if cargar == true:
 		loadLevel()
 	if DataGame.musicLoaded == true and DataGame.JSONLoaded == true and sceneLoaded == true:
 		await get_tree().create_timer(1.0).timeout 
-		get_tree().change_scene_to_packed(scene)
+		if externalLoad == false:
+			get_tree().change_scene_to_packed(scene)
+		else:
+			load.emit(scene)
 		
 func loadLevel():
 	if ResourceLoader.load_threaded_get_status("res://scenes/Level.tscn") == ResourceLoader.THREAD_LOAD_LOADED:

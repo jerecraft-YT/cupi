@@ -1,0 +1,208 @@
+[gd_scene load_steps=5 format=3 uid="uid://claqkikipq8rt"]
+
+[ext_resource type="Texture2D" uid="uid://cqk3ysk80cik" path="res://icon.svg" id="1_k2gmx"]
+[ext_resource type="Script" uid="uid://nhut8w43g1lx" path="res://scenes/LevelLoader.gd" id="2_i7jsx"]
+[ext_resource type="PackedScene" uid="uid://qwgdhe76ve32" path="res://scenes/StartLoad.tscn" id="2_k2gmx"]
+
+[sub_resource type="GDScript" id="GDScript_xp7q5"]
+resource_name = "GameView"
+script/source = "@tool
+extends SubViewportContainer
+
+## Height of the viewport, the width is determined by aspect_ratio
+## If free_aspect is true, then it's based on the aspect ratio of the window
+@export_range(1, 16384) var resolution:int = 720 : 
+	set(v): 
+		resolution = v
+		queue_resize()
+	get:
+		return resolution
+@export var aspect_ratio:float = 16.0/9.0 :
+	set(v):
+		aspect_ratio = v
+		queue_resize()
+	get:
+		return aspect_ratio
+
+## Same as stretch scale of window mode
+@export_range(0.5, 8) var gui_scale:float = 1 :
+	set(v):
+		gui_scale = v
+		queue_resize()
+	get:
+		return gui_scale
+## If true, aspect_ratio is ignores and the window aspect ratio is used instead
+@export var free_aspect:bool : 
+	set(v):
+		free_aspect = v
+		if not v:
+			expand = false
+		else:
+			queue_resize()
+	get:
+		return free_aspect
+## If true, the viewport will expand its size instead of scale
+## This is equivalent to the \"expand\" aspect mode in project settings
+@export var expand:bool :
+	set(v):
+		if free_aspect:
+			expand = v
+			queue_resize()
+		else:
+			expand = false
+	get:
+		return expand
+
+var current_scene:Node
+
+# Saving this to take it as a base for the viewport
+# Design size is the area where your 2D elements exist in
+# It should not change based on resolution, except for width, for unlimited aspect ratio
+var design_size:Vector2i = Vector2i(
+	ProjectSettings.get_setting(\"display/window/size/viewport_width\"),
+	ProjectSettings.get_setting(\"display/window/size/viewport_height\")
+)
+var subviewport:SubViewport
+var _resize_queued:float
+
+func _init() -> void:
+	if not Engine.is_editor_hint():
+		RenderingServer.set_default_clear_color(Color.BLACK)
+
+func _ready() -> void:
+	subviewport = get_child(0)
+	var scene = subviewport.get_child(0) if subviewport.get_child_count() > 0 else null
+	if scene and is_instance_valid(scene) and not scene.scene_file_path.is_empty():
+		current_scene = subviewport.get_child(0)
+	
+	get_window().dpi_changed.connect(queue_resize.call_deferred)
+	get_window().size_changed.connect(queue_resize.call_deferred)
+	queue_resize()
+	
+func queue_resize() -> void:
+	_resize_queued = 3
+
+func _process(_delta) -> void:
+	if _resize_queued < 1 or stretch:
+		if stretch:
+			push_warning(\"Don't use stretch for this SubViewportContainer, use the built-in variables instead!\")
+		stretch = false
+		return
+	_resize_queued -= 1
+	subviewport.size_2d_override = design_size
+	subviewport.size_2d_override_stretch = true
+	subviewport.size.y = resolution
+	
+	var sizew = Vector2(get_window().size)
+	# Set aspect
+	var aspect = aspect_ratio if not free_aspect else sizew.aspect()
+	subviewport.size.x = resolution * aspect
+	#
+	if expand:
+		var ratio = aspect / aspect_ratio
+		subviewport.size_2d_override = (sizew * ratio if aspect >= aspect_ratio else sizew / (ratio)) / gui_scale
+	else:
+		subviewport.size_2d_override.x = (design_size.y * aspect) / gui_scale
+		subviewport.size_2d_override.y = design_size.y / gui_scale
+	
+	# Center on screen
+	
+	var ox = sizew.x - subviewport.size_2d_override.x
+	var oy = -sizew.y + design_size.y / gui_scale
+	
+	if not Engine.is_editor_hint() and not expand:
+		if sizew.aspect() > aspect_ratio:
+			# Align horizontally
+			global_position.x = ox * .5 + oy * aspect * .5
+			global_position.y = 0
+			scale.y = sizew.y / float(subviewport.size.y)
+		else:
+			# Align vertically
+			global_position.x = 0
+			global_position.y = -ox / aspect * .5 - oy * .5
+			scale.y = sizew.x / float(subviewport.size.x)
+	else:
+		global_position = Vector2.ZERO
+		scale.y = sizew.y / float(resolution) if expand else design_size.y / float(resolution)
+	
+	scale.x = scale.y
+
+func _on_sub_viewport_size_changed() -> void:
+	if subviewport.size.y != resolution:
+		queue_resize()
+
+# Scene functions if you need it
+# Works the same as you'd do it with SceneTree
+
+func change_scene_to_packed(packed:PackedScene) -> Error:
+	if not packed.can_instantiate(): return ERR_CANT_CREATE
+	if current_scene:
+		subviewport.remove_child(current_scene)
+		current_scene.queue_free()
+		current_scene = null
+	
+	_change_scene.call_deferred(packed)
+	return OK
+
+func change_scene_to_file(path:String) -> Error:
+	var packed = load(path)
+	if packed is not PackedScene: 
+		packed = null
+		return ERR_CANT_OPEN
+	return change_scene_to_packed(packed)
+
+func reload_current_scene() -> Error:
+	var scene:Node = subviewport.get_child(0) if subviewport.get_child_count() == 1 else null
+	if not scene: return ERR_UNCONFIGURED
+	return change_scene_to_file(scene.scene_file_path)
+
+func unload_current_scene() -> void:
+	var scene =  subviewport.get_child(0) if subviewport.get_child_count() == 1 else null
+	if scene:
+		scene.queue_free()
+		current_scene = null
+		
+func _change_scene(packed:PackedScene) -> void:
+	var scene = packed.instantiate()
+	subviewport.add_child(scene)
+	current_scene = scene
+	
+"
+
+[node name="Background" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -432.0
+offset_right = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.54, 1.54)
+texture = ExtResource("1_k2gmx")
+expand_mode = 2
+stretch_mode = 1
+
+[node name="GameView" type="SubViewportContainer" parent="."]
+layout_mode = 0
+offset_left = 280.51947
+offset_right = 4942.5195
+offset_bottom = 4678.0
+script = SubResource("GDScript_xp7q5")
+resolution = 1280
+aspect_ratio = 0.564
+free_aspect = true
+
+[node name="SubViewport" type="SubViewport" parent="GameView"]
+handle_input_locally = false
+audio_listener_enable_2d = true
+audio_listener_enable_3d = true
+size = Vector2i(2435, 1280)
+size_2d_override = Vector2i(2435, 1280)
+size_2d_override_stretch = true
+render_target_update_mode = 4
+script = ExtResource("2_i7jsx")
+
+[node name="StartLoad" parent="GameView/SubViewport" instance=ExtResource("2_k2gmx")]
+
+[connection signal="size_changed" from="GameView/SubViewport" to="GameView" method="_on_sub_viewport_size_changed"]
+[connection signal="load" from="GameView/SubViewport/StartLoad" to="GameView/SubViewport" method="_on_start_load_load"]

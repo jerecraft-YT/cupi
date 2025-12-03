@@ -6,6 +6,8 @@ var pickRandomMusic = true
 var MusicSelected:int
 var musicaPick:String
 var prevMusic:int
+@onready var boton = $Button
+
 @export var audio:AudioStreamPlayer
 var musicLoaded = false
 # Called when the node enters the scene tree for the first time.

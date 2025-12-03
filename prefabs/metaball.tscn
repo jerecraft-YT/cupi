@@ -1,20 +1,29 @@
-[gd_scene load_steps=6 format=3 uid="uid://cmwdw8kgbef6b"]
+[gd_scene load_steps=8 format=3 uid="uid://cmwdw8kgbef6b"]
 
 [ext_resource type="Script" uid="uid://rujdkhv2ul8t" path="res://metaball/Metaball.gd" id="1_5scw5"]
 [ext_resource type="Script" uid="uid://de21rbsaslsxw" path="res://metaball/show_spectrum.gd" id="1_jhxxm"]
 [ext_resource type="Shader" uid="uid://rghpfcnh0win" path="res://shaders/sinCos.tres" id="3_luhwx"]
 [ext_resource type="Script" uid="uid://dhgymk6ayct4i" path="res://scripts/shaderController/distorsionLine.gd" id="4_luhwx"]
+[ext_resource type="Shader" uid="uid://bd1h0aucl5xim" path="res://shaders/sinCosforLine.tres" id="4_ut3li"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_luhwx"]
+shader = ExtResource("3_luhwx")
+shader_parameter/Color = Color(0, 0, 0, 1)
+shader_parameter/frequency = 60.0
+shader_parameter/TimeMultiplier = 5.0
+shader_parameter/amplitude = 1.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2m0ka"]
-shader = ExtResource("3_luhwx")
-shader_parameter/TimeMultiplier = 5.0
+shader = ExtResource("4_ut3li")
 shader_parameter/frequency = 60.0
-shader_parameter/amplitude = 0.002
+shader_parameter/TimeMultiplier = 5.0
+shader_parameter/amplitude = 1.0
 
 [node name="metaball" type="Node2D" groups=["spectro"]]
 script = ExtResource("1_jhxxm")
 
 [node name="ball" type="Polygon2D" parent="." node_paths=PackedStringArray("poligono", "metaball", "spectro", "line", "distorsion")]
+material = SubResource("ShaderMaterial_luhwx")
 color = Color(0, 0, 0, 1)
 script = ExtResource("1_5scw5")
 poligono = NodePath(".")
@@ -36,4 +45,5 @@ material = SubResource("ShaderMaterial_2m0ka")
 scale = Vector2(0.75, 0.75)
 closed = true
 width = 50.0
+default_color = Color(0, 0, 0, 1)
 script = ExtResource("4_luhwx")
