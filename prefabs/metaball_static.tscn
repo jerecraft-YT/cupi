@@ -12,7 +12,7 @@ shader = ExtResource("7_ewiwc")
 shader_parameter/Color = Color(0, 0, 0, 1)
 shader_parameter/frequency = 60.0
 shader_parameter/TimeMultiplier = 5.0
-shader_parameter/amplitude = 1.0
+shader_parameter/amplitude = 1.5
 
 [node name="metaballStatic" type="Node2D" node_paths=PackedStringArray("spectro")]
 script = ExtResource("1_m1nff")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=24 format=3 uid="uid://d1fqn8rr6ofpe"]
 
 [ext_resource type="Texture2D" uid="uid://bowvms2w6ac6j" path="res://sprites/background/Background_1.png" id="1_e767d"]
-[ext_resource type="Script" uid="uid://btqx7jldobmj5" path="res://scripts/musicRandom.gd" id="1_h8syl"]
+[ext_resource type="Script" uid="uid://btqx7jldobmj5" path="res://scripts/MainMenuController.gd" id="1_h8syl"]
 [ext_resource type="Texture2D" uid="uid://lmhfiai4rdll" path="res://sprites/background/Background_2.png" id="2_mmg26"]
 [ext_resource type="PackedScene" uid="uid://cmwdw8kgbef6b" path="res://prefabs/metaball.tscn" id="2_pri23"]
 [ext_resource type="Texture2D" uid="uid://cer4rjvbsm2xp" path="res://sprites/background/Background_3.png" id="3_0fgxx"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://7yvx75kpug2u" path="res://prefabs/metaball_static.tscn" id="13_hgevq"]
 [ext_resource type="Shader" uid="uid://cwngsxqx2coqb" path="res://shaders/AberracionCromatica.gdshader" id="17_hgevq"]
 [ext_resource type="Script" uid="uid://cjlssy54gqe62" path="res://scripts/showMenu.gd" id="18_hgevq"]
+[ext_resource type="PackedScene" uid="uid://cagvfrvk467w0" path="res://prefabs/music_item.tscn" id="19_uquea"]
 [ext_resource type="Script" uid="uid://bx3fjtbbwusd3" path="res://scripts/button.gd" id="20_21mn0"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4pcd2"]
@@ -65,18 +66,10 @@ shader_parameter/r_displacement = Vector2(3, 0)
 shader_parameter/g_displacement = Vector2(0, 0)
 shader_parameter/b_displacement = Vector2(-3, 0)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h8syl"]
-border_width_left = 10
-border_width_top = 10
-border_width_right = 10
-border_width_bottom = 10
-corner_radius_top_right = 100
-corner_radius_bottom_left = 100
-corner_detail = 6
-shadow_size = 10
-
 [node name="PantallaTitulo" type="Node2D" node_paths=PackedStringArray("audio") groups=["PantallaTitulo"]]
 script = ExtResource("1_h8syl")
+YCOS = 0.75
+MusicItem = ExtResource("19_uquea")
 audio = NodePath("AudioStreamPlayer")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -149,13 +142,21 @@ text = "CUPI"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="comenzar" type="Label" parent="."]
+[node name="comenzar" type="RichTextLabel" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
 offset_left = -360.0
 offset_top = 400.0
 offset_right = 360.0
-offset_bottom = 477.0
-theme_override_font_sizes/font_size = 56
-text = "¡Toca para jugar!"
+offset_bottom = 507.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+text = "[wave amp=50.0 freq=5.0 connected=1][rainbow freq=0.05 sat=0.8 val=1.0 speed=5.0]¡Toca para Jugar![/rainbow][/wave]"
 horizontal_alignment = 1
 script = ExtResource("18_hgevq")
 
@@ -170,16 +171,21 @@ offset_right = 360.0
 offset_bottom = 640.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
 offset_left = -360.0
-offset_top = -500.0
+offset_top = -560.0
 offset_right = 360.0
-offset_bottom = -257.0
+offset_bottom = -317.0
+grow_horizontal = 2
 theme_override_font_sizes/normal_font_size = 136
 bbcode_enabled = true
 text = "[wave amp=50.0 freq=5.0 connected=1][rainbow freq=0.05 sat=0.8 val=1.0 speed=5.0]CUPI[/rainbow][/wave]"
 horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="."]
+visible = false
 offset_left = -133.0
 offset_top = 308.0
 offset_right = 134.0
@@ -188,36 +194,11 @@ theme_override_font_sizes/font_size = 68
 text = "JUGAR"
 script = ExtResource("20_21mn0")
 
-[node name="Node2D" type="Node2D" parent="."]
-
-[node name="Panel" type="Panel" parent="Node2D"]
-offset_left = -50.0
-offset_top = -75.0
-offset_right = 375.0
-offset_bottom = 25.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_h8syl")
-
-[node name="Label2" type="Label" parent="Node2D/Panel"]
-layout_mode = 0
-offset_left = 50.0
-offset_top = 50.0
-offset_right = 286.0
-offset_bottom = 84.0
-theme_override_font_sizes/font_size = 24
-text = "BLACKPINK "
-vertical_alignment = 1
-
-[node name="Label" type="Label" parent="Node2D/Panel"]
-layout_mode = 0
-offset_left = 20.0
-offset_top = 8.0
-offset_right = 410.0
-offset_bottom = 42.0
-theme_override_font_sizes/font_size = 24
-text = "How You Like That (Stixy)"
-vertical_alignment = 1
+[node name="Musicas" type="Node2D" parent="."]
+position = Vector2(-360, 0)
 
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
+[connection signal="showMenu" from="comenzar" to="." method="_on_comenzar_show_menu"]
 [connection signal="showMenu" from="comenzar" to="CupiMenu" method="_on_comenzar_show_menu"]
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
 

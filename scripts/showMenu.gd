@@ -1,4 +1,4 @@
-extends Label
+extends RichTextLabel
 
 signal showMenu
 var cambiarEscena = false

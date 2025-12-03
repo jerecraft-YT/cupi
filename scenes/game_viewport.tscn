@@ -96,13 +96,16 @@ func _process(_delta) -> void:
 	var sizew = Vector2(get_window().size)
 	# Set aspect
 	var aspect = aspect_ratio if not free_aspect else sizew.aspect()
+	@warning_ignore(\"narrowing_conversion\")
 	subviewport.size.x = resolution * aspect
 	#
 	if expand:
 		var ratio = aspect / aspect_ratio
 		subviewport.size_2d_override = (sizew * ratio if aspect >= aspect_ratio else sizew / (ratio)) / gui_scale
 	else:
+		@warning_ignore(\"narrowing_conversion\")
 		subviewport.size_2d_override.x = (design_size.y * aspect) / gui_scale
+		@warning_ignore(\"narrowing_conversion\")
 		subviewport.size_2d_override.y = design_size.y / gui_scale
 	
 	# Center on screen

@@ -1,15 +1,22 @@
 extends Node2D
-
+class_name MainMenu
 
 var niveles:Array
 var pickRandomMusic = true
 var MusicSelected:int
 var musicaPick:String
 var prevMusic:int
-@onready var boton = $Button
 
+var ampMusicItem = 550
+var separacionAngleMusicItem = 1
+@export var YCOS = 0.5
+var numberMusicItem = 32
+@export var MusicItem:PackedScene
+@onready var boton = $Button
+@onready var MusicasContainer = $Musicas
 @export var audio:AudioStreamPlayer
 var musicLoaded = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	print("Pantalla Titulo")
@@ -27,6 +34,14 @@ func randomMusic():
 			break
 	prevMusic = MusicSelected
 	loadMusic()
+
+func SpawnLevels():
+	for i in range(numberMusicItem):
+		var itemLevel:ItemMusic = MusicItem.instantiate()
+		MusicasContainer.add_child(itemLevel)
+		itemLevel.ID_Item = i
+		itemLevel.name = "musicItem|"+str(i)
+		itemLevel.PantallaTitulo = self
 
 func getLevels():
 	if DataGame.detectarCarpetasExternas == true:
@@ -85,3 +100,7 @@ func GetMusic():
 
 func _on_audio_stream_player_finished() -> void:
 	randomMusic()
+
+
+func _on_comenzar_show_menu() -> void:
+	SpawnLevels()
