@@ -7,7 +7,9 @@ var MusicSelected:int
 var musicaPick:String
 var prevMusic:int
 
-var ampMusicItem = 550
+@export var ampMusicItem:float = 1350
+@export var animatedItems:bool = false
+@export var objectiveAmpMusic:float = 550
 var separacionAngleMusicItem = 1
 @export var YCOS = 0.5
 @export var XCOS:float = 1
@@ -30,11 +32,10 @@ var aceleracion:float
 var prevAngle:float
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	print("Pantalla Titulo")
+	#print("Pantalla Titulo")
 	niveles = getLevels()
 	prevMusic = randi_range(0,niveles.size()-1)
 	if pickRandomMusic == true:
-		pass
 		randomMusic()
 
 func randomMusic():
@@ -46,6 +47,13 @@ func randomMusic():
 	prevMusic = MusicSelected
 	loadMusic()
 
+func changeMusic(mus):
+	musicLoaded = false
+	MusicSelected = mus
+	prevMusic = MusicSelected
+	loadMusic()
+	
+
 func SpawnLevels():
 	for child in MusicasContainer.get_child_count():
 		MusicasContainer.get_child(child).queue_free()
@@ -56,6 +64,8 @@ func SpawnLevels():
 		#print(i)
 		itemLevel.name = "musicItem|"+str(i)
 		itemLevel.PantallaTitulo = self
+		itemLevel.position.x = 1000
+	animatedItems = true
 
 func getLevels():
 	if DataGame.detectarCarpetasExternas == true:
@@ -74,7 +84,7 @@ func loadMusic():
 				break
 		if found == true:
 			ResourceLoader.load_threaded_request(DataGame.direccionNiveles+niveles[MusicSelected]+"/mainMusic/"+musicaPick)
-			print("Loading Music resource")
+			#print("Loading Music resource")
 		else:
 			randomMusic()
 	else:
@@ -87,7 +97,7 @@ func loadMusic():
 				break
 		if found == true:
 			ResourceLoader.load_threaded_request(DataGame.direccionNiveles+niveles[MusicSelected]+"/mainMusic/"+musicaPick)
-			print("Loading Music resource")
+			#print("Loading Music resource")
 		else:
 			randomMusic()
 			
@@ -103,6 +113,10 @@ func _physics_process(delta: float) -> void:
 	
 @warning_ignore("unused_parameter")
 func _process(delta: float) -> void:
+	if animatedItems == true :
+		ampMusicItem = lerp(ampMusicItem,objectiveAmpMusic,0.1*DataGame.time_fixed)
+	else:
+		ampMusicItem = lerp(ampMusicItem,1350.0,0.1*DataGame.time_fixed)
 	var anguloCercano = fmod(rotacion/pasoMusic,1)
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and detectarOffset == false:
 		# Iniciar detección
@@ -150,8 +164,6 @@ func _process(delta: float) -> void:
 	else:
 		vueltas = ceil(rotacion / pasoMusic)
 		
-		#rotacion = lerp(rotacion,vueltas*pasoMusic,0.1)
-	#print(get_child_count(true))
 	if musicLoaded == false:
 		pass
 		GetMusic()
@@ -159,7 +171,7 @@ func _process(delta: float) -> void:
 func GetMusic():
 	if ResourceLoader.load_threaded_get_status(DataGame.direccionNiveles+niveles[MusicSelected]+"/mainMusic/"+musicaPick) == ResourceLoader.THREAD_LOAD_LOADED:
 		var musica = ResourceLoader.load_threaded_get(DataGame.direccionNiveles+niveles[MusicSelected]+"/mainMusic/"+musicaPick)
-		print("getting Music resource")
+		#print("getting Music resource")
 		if musica:
 			audio.stream = musica
 			audio.play()
@@ -167,7 +179,6 @@ func GetMusic():
 
 func _on_audio_stream_player_finished() -> void:
 	randomMusic()
-
 
 func _on_comenzar_show_menu() -> void:
 	SpawnLevels()

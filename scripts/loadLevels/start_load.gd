@@ -1,6 +1,6 @@
 extends Control
 
-var externalLoad = true
+var externalLoad = false
 
 signal load
 

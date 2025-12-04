@@ -8,7 +8,7 @@ var direccionNiveles:String = "res://Niveles/"
 var musicFile:String
 var chartData
 var bpm
-var levelName:String = "1775229 89ers - Go Go Go Go! (Radio Edit) (Nightcore & Cut Ver.)"
+var levelName:String = ""
 var Music
 var datalevel
 var loadElements = false

@@ -3,10 +3,10 @@ extends Button
 var cargar = false
 var sceneLoaded = false
 var scene = null
-
+@export var boton2:Button
 signal load(scenaLoad)
 
-@export var externalLoad = true
+@export var externalLoad = false
 
 @warning_ignore("unused_parameter")
 func _process(delta: float) -> void:
@@ -33,3 +33,13 @@ func _on_pressed() -> void:
 	DataGame.loadLevelElements()
 	cargar = true
 	disabled = true
+	boton2.disabled = true
+
+
+func _on_button_2_pressed() -> void:
+	ResourceLoader.load_threaded_request("res://scenes/Level.tscn")
+	print("Loading Level resource")
+	DataGame.loadLevelElements()
+	cargar = true
+	disabled = true
+	boton2.disabled = true
