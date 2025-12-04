@@ -14,6 +14,7 @@ var datalevel
 var loadElements = false
 var musicLoaded = false
 var JSONLoaded = false
+
 @export var detectarCarpetasExternas:bool = false
 
 func _ready() -> void:

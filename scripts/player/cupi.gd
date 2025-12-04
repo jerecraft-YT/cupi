@@ -123,6 +123,7 @@ func _process(delta: float) -> void:
 			levelMusic.seek(song_time / 1000.0) # este espera tiempo en decimal, no enteros
 			#print("sinc")
 			pass
+			
 	prestartLevel += (delta * TimeMultiplier) * 1000.0
 	if prestartLevel >= 1500:
 		if firstLoad == false:
@@ -138,6 +139,7 @@ func _process(delta: float) -> void:
 func BulletDestroy(bullet):
 		var particles:GPUParticles2D = particulasBullet.instantiate()
 		add_child(particles)
+		particles.rotation = deg_to_rad(bullet.angle)
 		particles.tiempoVida = bullet.duracionBala
 		if !bullet.isSpiral:
 			particles.one_shot = true
@@ -148,7 +150,6 @@ func BulletDestroy(bullet):
 		var materialparticulas:ParticleProcessMaterial = particles.process_material
 		materialparticulas.scale_min = scale.x*1.5
 		particles.position = bullet.position
-		particles.rotation = bullet.angle
 
 func BgBeat():
 	pass

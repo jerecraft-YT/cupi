@@ -1,6 +1,5 @@
-[gd_scene load_steps=5 format=3 uid="uid://claqkikipq8rt"]
+[gd_scene load_steps=4 format=3 uid="uid://claqkikipq8rt"]
 
-[ext_resource type="Texture2D" uid="uid://cqk3ysk80cik" path="res://icon.svg" id="1_k2gmx"]
 [ext_resource type="Script" uid="uid://nhut8w43g1lx" path="res://scenes/LevelLoader.gd" id="2_i7jsx"]
 [ext_resource type="PackedScene" uid="uid://qwgdhe76ve32" path="res://scenes/StartLoad.tscn" id="2_k2gmx"]
 
@@ -176,12 +175,11 @@ func _change_scene(packed:PackedScene) -> void:
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -432.0
-offset_right = 128.0
+offset_left = -433.00003
+offset_right = 127.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.54, 1.54)
-texture = ExtResource("1_k2gmx")
 expand_mode = 2
 stretch_mode = 1
 

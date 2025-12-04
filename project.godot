@@ -47,6 +47,10 @@ CupiContainer=""
 cupi=""
 PantallaTitulo=""
 
+[input_devices]
+
+pointing/android/disable_scroll_deadzone=true
+
 [physics]
 
 2d/run_on_separate_thread=true
@@ -57,7 +61,9 @@ PantallaTitulo=""
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true
+shader_compiler/shader_cache/compress=false
 shader_compiler/shader_cache/strip_debug=true
+camera/depth_of_field/depth_of_field_bokeh_shape=0
 environment/defaults/default_clear_color=Color(0, 0, 0, 1)
 environment/gi/use_half_resolution=false
 environment/transparent_background=false

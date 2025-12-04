@@ -1,158 +1,183 @@
 72322a848ab928aa5c89f0cb78209805
-::res://::1764774468
-chart-easy.json::JSON::-1::1764774132::0::1::::<><><>0<>0<><>::
-estructura json chartt.txt::TextFile::-1::1764774132::0::1::::<><><>0<>0<><>::
-export_presets.cfg::TextFile::-1::1764774132::0::1::::<><><>0<>0<><>::
-icon.svg::CompressedTexture2D::174066192364344378::1764774132::1764774468::1::::<><><>0<>0<>d26cd61c336390e624049fd21c72787b<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-::res://animations/::1764774760
-cupiEyes.tres::SpriteFrames::9086718789934383266::1764774760::0::1::::<><><>0<>0<><>::uid://cuu52i5ueaqmu::::res://sprites/cupi/ojos/CupiEyes.tres
-cupiMouth.tres::SpriteFrames::1404653848414325822::1764774760::0::1::::<><><>0<>0<><>::uid://b2j5ac01hh5be::::res://sprites/cupi/boca/CupiMouth.tres
-::res://metaball/::1764774468
-audioAnalizer.tres::AudioBusLayout::4081396580252559891::1764774468::0::1::::<><><>0<>0<><>::
-Metaball.gd::GDScript::1235050244282516177::1764774132::0::1::::MetaballVisualizer<>Polygon2D<><>0<>0<><>::
-metaball.gdshader::Shader::5857679592818050605::1764774132::0::1::::<><><>0<>0<><>::
-MetaballOptimized.gd::GDScript::6452535727045554619::1764774132::0::1::::<>Node2D<><>0<>0<><>::
-show_spectrum.gd::GDScript::7497364705653695588::1764774132::0::1::::SpectroAnalizer<>Node2D<><>0<>0<><>::
-::res://Niveles/::1764774132
-::res://Niveles/1287352 Crystal Castles - Untrust Us/::1764774132
-chart.json::JSON::-1::1764774132::0::1::::<><><>0<>0<><>::
-::res://Niveles/1287352 Crystal Castles - Untrust Us/mainMusic/::1764774468
-audio.mp3::AudioStreamMP3::4571020835538404002::1764774132::1764774468::1::::<><><>0<>0<>8bdd53900bd4cbcc0b58ca5fcd725d57<>res://.godot/imported/audio.mp3-df3e0dfed14181e7c3d6dc946fe181dd.mp3str::
-::res://Niveles/1775229 89ers - Go Go Go Go! (Radio Edit) (Nightcore & Cut Ver.)/::1764774132
-chart.json::JSON::-1::1764774132::0::1::::<><><>0<>0<><>::
-::res://Niveles/1775229 89ers - Go Go Go Go! (Radio Edit) (Nightcore & Cut Ver.)/mainMusic/::1764774467
-audio.mp3::AudioStreamMP3::1511247318307617296::1764774132::1764774467::1::::<><><>0<>0<>c78e229dc6a8cde43e47e262ece2c2e6<>res://.godot/imported/audio.mp3-5b40d3b6b7e0b7a89f93e8d0b2d51e02.mp3str::
-::res://Niveles/2368598 Crystal Castles - Knights/::1764774132
-chart.json::JSON::-1::1764774132::0::1::::<><><>0<>0<><>::
-::res://Niveles/2368598 Crystal Castles - Knights/mainMusic/::1764774468
-audio.mp3::AudioStreamMP3::6855372443187208968::1764774132::1764774468::1::::<><><>0<>0<>6a384d118204d525f6925804c1f45750<>res://.godot/imported/audio.mp3-34c0c010446ef777ccea8321edf832f1.mp3str::
-::res://Niveles/BLACKPINK - How You Like That (Stixy)/::1764774132
-chart.json::JSON::-1::1764774132::0::1::::<><><>0<>0<><>::
-::res://Niveles/BLACKPINK - How You Like That (Stixy)/mainMusic/::1764774468
-audio.mp3::AudioStreamMP3::5927910185750819872::1764774132::1764774468::1::::<><><>0<>0<>96f7e682f427cafd87f180330f0c6c94<>res://.godot/imported/audio.mp3-2af7b1fae8074cf498e5247f6d43ed05.mp3str::
-::res://Niveles/DECO27 - マシュマロ feat. 初音ミク/::1764774132
-chart.json::JSON::-1::1764774132::0::1::::<><><>0<>0<><>::
-level.json::JSON::-1::1764774132::0::1::::<><><>0<>0<><>::
-::res://Niveles/DECO27 - マシュマロ feat. 初音ミク/mainMusic/::1764774468
-audio.ogg::AudioStreamOggVorbis::1950962539407403712::1764774132::1764774468::1::::<><><>0<>0<>6899f4fc158907f6beeaf34936607340<>res://.godot/imported/audio.ogg-6e680a188a8abce39b393e0e0334e4e0.oggvorbisstr::
-::res://Niveles/fiveNights/::1764774132
-chart.json::JSON::-1::1764774132::0::1::::<><><>0<>0<><>::
-::res://Niveles/fiveNights/mainMusic/::1764774468
-audio.mp3::AudioStreamMP3::1648015515813961309::1764774132::1764774468::1::::<><><>0<>0<>f79902f638ca427acf82c1c7dcc17fd1<>res://.godot/imported/audio.mp3-8cc2ad4d1af31ab76bc5074b98001095.mp3str::
-::res://Niveles/Juan Luis Guerra - Las Avispas (Millesimale)/::1764774132
-chart.json::JSON::-1::1764774132::0::1::::<><><>0<>0<><>::
-::res://Niveles/Juan Luis Guerra - Las Avispas (Millesimale)/mainMusic/::1764774468
-audio.ogg::AudioStreamOggVorbis::7155572668438207013::1764774132::1764774468::1::::<><><>0<>0<>231028355c4a7735818df9ad3ffa6f36<>res://.godot/imported/audio.ogg-124bb709d145bb657fdcd7af9493fb42.oggvorbisstr::
-::res://Niveles/KINEMA106 - Luna (-Eresh)/::1764774132
-chart.json::JSON::-1::1764774132::0::1::::<><><>0<>0<><>::
-::res://Niveles/KINEMA106 - Luna (-Eresh)/mainMusic/::1764774468
-audio.mp3::AudioStreamMP3::2473030674497196004::1764774132::1764774468::1::::<><><>0<>0<>3d4a3121299de7e73c34091e5c66e802<>res://.godot/imported/audio.mp3-73884cdb46af96bf6ee8defedcffada5.mp3str::
-::res://Niveles/Paradiso feat. Maria Garcia & Dj Patrick Samoy - Bailando (Cut Ver.) (Den59)/::1764774132
-chart.json::JSON::-1::1764774132::0::1::::<><><>0<>0<><>::
-::res://Niveles/Paradiso feat. Maria Garcia & Dj Patrick Samoy - Bailando (Cut Ver.) (Den59)/mainMusic/::1764774467
-PARADISIO.mp3::AudioStreamMP3::2093464353233706382::1764774132::1764774467::1::::<><><>0<>0<>12abca3123e9416ed329346e17ef7713<>res://.godot/imported/PARADISIO.mp3-c52acf0598dfc2df53fe20edff14e31d.mp3str::
-::res://Niveles/Ricky Martin - Livin' La Vida Loca (schoolboy)/::1764774132
-chart.json::JSON::-1::1764774132::0::1::::<><><>0<>0<><>::
-::res://Niveles/Ricky Martin - Livin' La Vida Loca (schoolboy)/mainMusic/::1764774468
-audio.mp3::AudioStreamMP3::7224190618973295109::1764774132::1764774468::1::::<><><>0<>0<>7ce2dc5a4f41b71c349aaf614cb71b5a<>res://.godot/imported/audio.mp3-59b627024bf786bb7423b6c90f1d19de.mp3str::
-::res://Niveles/toby fox - MEGALOVANIA (Kyshiro)/::1764774132
-chart.json::JSON::-1::1764774132::0::1::::<><><>0<>0<><>::
-::res://Niveles/toby fox - MEGALOVANIA (Kyshiro)/mainMusic/::1764774468
-toby fox - UNDERTALE Soundtrack - 100 MEGALOVANIA 192.mp3::AudioStreamMP3::3207970357883842729::1764774132::1764774468::1::::<><><>0<>0<>998eaa2076ad382009be16aa22c7b87f<>res://.godot/imported/toby fox - UNDERTALE Soundtrack - 100 MEGALOVANIA 192.mp3-5f9e2ff732ef6185fb4399106a5d34b1.mp3str::
-::res://Niveles/ダイダイダイダイダイキライ - 初音ミク VS 重音テト  (Daidaidaidaidaikirai - HatsuneMiku VS KasaneTeto)/::1764774132
-daidaidaikirai_modificado.json::JSON::-1::1764774132::0::1::::<><><>0<>0<><>::
-level.json::JSON::-1::1764774132::0::1::::<><><>0<>0<><>::
-::res://Niveles/ダイダイダイダイダイキライ - 初音ミク VS 重音テト  (Daidaidaidaidaikirai - HatsuneMiku VS KasaneTeto)/mainMusic/::1764774468
-audio.ogg::AudioStreamOggVorbis::2687052899378427505::1764774132::1764774468::1::::<><><>0<>0<>6da7ded1b7d63e0542c9f4a3819e941b<>res://.godot/imported/audio.ogg-2a085c34f79ba76cc7ddf9b8086a084a.oggvorbisstr::
-::res://particulas/::1764774132
-shieldParticles.tres::ParticleProcessMaterial::1942620231192224242::1764774132::0::1::::<><><>0<>0<><>::
-::res://prefabs/::1764777083
-beat_detected.tscn::PackedScene::610351513580080197::1764774132::0::1::::<><><>0<>0<><>::uid://cqk3ysk80cik::::res://icon.svg<>uid://c3bplxso2r8il::::res://scripts/beatDetect.gd
-bullet.tscn::PackedScene::3880220200260419715::1764774132::0::1::::<><><>0<>0<><>::uid://dc7fcu80avr8w::::res://scripts/bullets/StandartBullet.gd
-central_3dbg.tscn::PackedScene::651217005278546175::1764774132::0::1::::<><><>0<>0<><>::uid://dwro78a8bfmp3::::res://shaders/efectoEsfera.gdshader<>uid://bxk4nrhap8o4m::::res://scripts/shaderController/movimientoEsferaBG.gd
-cupi.tscn::PackedScene::262805280615344873::1764774132::0::1::::<><><>0<>0<><>::uid://bp713wa275s4p::::res://scripts/player/cupi.gd<>uid://d3eu6dejhuca6::::res://scripts/reverseAudio/reversable_audio_stream_player.gd<>uid://c515s8eiyg4px::::res://prefabs/cupi_container.tscn<>uid://cdannsch5vxx4::::res://sfx/beatBar0.ogg<>uid://bg6tq4trreu05::::res://sfx/beatBar1.ogg
-cupi_container.tscn::PackedScene::6934035892051607609::1764774132::0::1::::<><><>0<>0<><>::uid://bs5gkvsjdkqnr::::res://scripts/player/ExpresionesCupi.gd<>uid://uaopc4watrc5::::res://animations/cupiMouth.tres<>uid://d2pw6wdp10rkc::::res://animations/cupiEyes.tres
-gameplay.tscn::PackedScene::3915078244948235321::1764774132::0::1::::<><><>0<>0<><>::uid://cmwdw8kgbef6b::::res://prefabs/metaball.tscn<>uid://n2c72dch62rh::::res://scripts/bullets/BulletSpawner.gd<>uid://d0kmnpjiacab::::res://prefabs/cupi.tscn<>uid://bvjuwoyoq48kd::::res://prefabs/bullet.tscn<>uid://cjvixm8nwnbvl::::res://prefabs/SpiralBullet.tscn
-metaball.tscn::PackedScene::5660746989068824739::1764777083::0::1::::<><><>0<>0<><>::uid://rujdkhv2ul8t::::res://metaball/Metaball.gd<>uid://de21rbsaslsxw::::res://metaball/show_spectrum.gd<>uid://rghpfcnh0win::::res://shaders/sinCos.tres<>uid://dhgymk6ayct4i::::res://scripts/shaderController/distorsionLine.gd<>uid://bd1h0aucl5xim::::res://shaders/sinCosforLine.tres
-metaball_static.tscn::PackedScene::2296905920188909586::1764776713::0::1::::<><><>0<>0<><>::uid://cx6wk5yxgaalf::::res://metaball/MetaballOptimized.gd<>uid://ck4sa4dap5f7s::::res://sprites/cupi/circuloRitmo/bordeCirculo2.png<>uid://de21rbsaslsxw::::res://metaball/show_spectrum.gd<>uid://bag8lvtsxurme::::res://sprites/cupi/circuloRitmo/bordeCirculo1.png<>uid://rghpfcnh0win::::res://shaders/sinCos.tres<>uid://diphwn7jukihk::::res://scripts/shaderController/distorsion.gd
-particulas_destruir_bullet.tscn::PackedScene::7309118007043119540::1764774132::0::1::::<><><>0<>0<><>::uid://2xaw3ehd0fhy::::res://particulas/shieldParticles.tres<>uid://6ghjiqyemyni::::res://scripts/particulas_destruir_bullet.gd
-music_item.tscn::PackedScene::4786512545560390349::1764777505::0::1::::<><><>0<>0<><>::uid://cp4jv030jk13::::res://prefabs/music_item.gd
-music_item.gd::GDScript::173121361438762832::1764777529::0::1::::ItemMusic<>Node2D<><>0<>0<><>::
-SpiralBullet.tscn::PackedScene::5448420384045013377::1764774132::0::1::::<><><>0<>0<><>::uid://bbo5yvl7gkhxw::::res://scripts/bullets/SpiralBullet.gd<>uid://bvjuwoyoq48kd::::res://prefabs/bullet.tscn
-::res://scenes/::1764777113
-displayScenes.tscn::PackedScene::1930731126054869820::1764774132::0::1::::<><><>0<>0<><>::
-game_viewport.tscn::PackedScene::5545908413246912073::1764777083::0::1::::<><><>0<>0<><>::uid://cqk3ysk80cik::::res://icon.svg<>uid://nhut8w43g1lx::::res://scenes/LevelLoader.gd<>uid://qwgdhe76ve32::::res://scenes/StartLoad.tscn
-Level.tscn::PackedScene::3157461997121050757::1764774132::0::1::::<><><>0<>0<><>::uid://14kk4kka54n1::::res://shaders/grid.gdshader<>uid://dqguof25omg2e::::res://scripts/background.gd<>uid://bv1q1ckfcnds8::::res://prefabs/gameplay.tscn<>uid://dinxdtthuvvkf::::res://scripts/debug/control_velocity.gd<>uid://dbbyxbbf2gp17::::res://scripts/debug/debugInfo.gd<>uid://b32sgw55o2c8f::::res://scripts/player/controles.gd<>uid://c1ce3lbjrnp2o::::res://sprites/controller/disco.png<>uid://cwngsxqx2coqb::::res://shaders/AberracionCromatica.gdshader
-LevelLoader.gd::GDScript::928155650123924613::1764774132::0::1::::<>SubViewport<><>0<>0<><>::
-Pantalla_Titulo.tscn::PackedScene::8995490321990086102::1764777553::0::1::::<><><>0<>0<><>::uid://bowvms2w6ac6j::::res://sprites/background/Background_1.png<>uid://btqx7jldobmj5::::res://scripts/musicRandom.gd<>uid://lmhfiai4rdll::::res://sprites/background/Background_2.png<>uid://cmwdw8kgbef6b::::res://prefabs/metaball.tscn<>uid://cer4rjvbsm2xp::::res://sprites/background/Background_3.png<>uid://c515s8eiyg4px::::res://prefabs/cupi_container.tscn<>uid://buok78nq5p1ik::::res://sprites/background/Background_4.png<>uid://cit8xgcws0kuc::::res://sprites/background/Background_5.png<>uid://ksv03ym07omq::::res://sprites/background/Background_6.png<>uid://cud1i8mhv12n7::::res://scripts/background_1.gd<>uid://ylyvmroyq0sy::::res://scripts/level_loader.gd<>uid://c3bplxso2r8il::::res://scripts/beatDetect.gd<>uid://c0xylibq7685x::::res://scripts/controladorMenu.gd<>uid://co88i1klqein::::res://shaders/3_sample_blur.gdshader<>uid://7yvx75kpug2u::::res://prefabs/metaball_static.tscn<>uid://cwngsxqx2coqb::::res://shaders/AberracionCromatica.gdshader<>uid://cjlssy54gqe62::::res://scripts/showMenu.gd<>uid://cagvfrvk467w0::::res://prefabs/music_item.tscn<>uid://bx3fjtbbwusd3::::res://scripts/button.gd
-StartLoad.tscn::PackedScene::1168807843475006331::1764774132::0::1::::<><><>0<>0<><>::uid://dmhy14nbg60km::::res://scripts/loadLevels/start_load.gd
-::res://scripts/::1764774980
-background.gd::GDScript::8295909462490898674::1764774132::0::1::::<>ColorRect<><>0<>0<><>::
-background_1.gd::GDScript::6184406053727568710::1764774132::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
-beatDetect.gd::GDScript::6741125002146035863::1764774132::0::1::::<>Node2D<><>0<>0<><>::
-button.gd::GDScript::4058887321154594986::1764774132::0::1::::<>Button<><>0<>0<><>::
-controladorMenu.gd::GDScript::6576520420742328271::1764774132::0::1::::<>Node2D<><>0<>0<><>::
-dataGame.gd::GDScript::3975429187141085249::1764774132::0::1::::<>Node<><>0<>0<><>::
-level_loader.gd::GDScript::1708735769316535904::1764774132::0::1::::<>Node<><>0<>0<><>::
-musicRandom.gd::GDScript::3754492882977326472::1764777476::0::1::::<>Node2D<><>0<>0<><>::
-niveles.gd::GDScript::5286546427791918285::1764774132::0::1::::<>Control<><>0<>0<><>::
-particulas_destruir_bullet.gd::GDScript::2188681956397839042::1764774132::0::1::::<>GPUParticles2D<><>0<>0<><>::
-showMenu.gd::GDScript::5428375473814051401::1764774980::0::1::::<>RichTextLabel<><>0<>0<><>::
-::res://scripts/bullets/::1764774132
-BulletSpawner.gd::GDScript::968373168910867101::1764774132::0::1::::BulletSpawner<>Node2D<><>0<>0<><>::
-SpiralBullet.gd::GDScript::2487376306170236848::1764774132::0::1::::CupiSpiral<>Node2D<><>0<>0<><>::
-StandartBullet.gd::GDScript::7366008085619203268::1764774132::0::1::::CupiBullet<>Node2D<><>0<>0<><>::
-::res://scripts/debug/::1764774132
-control_velocity.gd::GDScript::7749012586842244021::1764774132::0::1::::<>HSlider<><>0<>0<><>::
-debugInfo.gd::GDScript::7233013607889269904::1764774132::0::1::::<>RichTextLabel<><>0<>0<><>::
-::res://scripts/loadLevels/::1764774132
-start_load.gd::GDScript::8017484000796345340::1764774132::0::1::::<>Control<><>0<>0<><>::
-::res://scripts/player/::1764774132
-controles.gd::GDScript::4408551328791519207::1764774132::0::1::::<>Node2D<><>0<>0<><>::
-cupi.gd::GDScript::3506943227219188097::1764774132::0::1::::Cupi<>Node2D<><>0<>0<><>::
-ExpresionesCupi.gd::GDScript::3712134492905297323::1764774132::0::1::::CupiContainer<>Node2D<><>0<>0<><>::
-::res://scripts/reverseAudio/::1764774132
-reversable_audio_stream_player.gd::GDScript::9134077047595159767::1764774132::0::1::::ReversableAudioStreamPlayer<>AudioStreamPlayer<><>0<>1<><>::
-::res://scripts/shaderController/::1764774132
-distorsion.gd::GDScript::7752203505583073096::1764774132::0::1::::<>Sprite2D<><>0<>0<><>::
-distorsionLine.gd::GDScript::7664449433577754366::1764774132::0::1::::<>Line2D<><>0<>0<><>::
-movimientoEsferaBG.gd::GDScript::4023192776751377366::1764774132::0::1::::<>MeshInstance3D<><>0<>0<><>::
-::res://sfx/::1764774468
-beatBar0.ogg::AudioStreamOggVorbis::4984221383395929199::1764774132::1764774468::1::::<><><>0<>0<>b9a6cbadbf8bd86303da2d031c4c0337<>res://.godot/imported/beatBar0.ogg-241758c9fa0508d2a871917a5fb450f8.oggvorbisstr::
-beatBar1.ogg::AudioStreamOggVorbis::2872733204785928784::1764774132::1764774468::1::::<><><>0<>0<>ae0f081a0ff1c9b2bdfe81d56d529127<>res://.godot/imported/beatBar1.ogg-6dca954d6c2ca3e19beae88868e6be88.oggvorbisstr::
-::res://shaders/::1764777083
-3_sample_blur.gdshader::Shader::171342028614460189::1764774760::0::1::::<><><>0<>0<><>::
-AberracionCromatica.gdshader::Shader::6344230518307693689::1764774760::0::1::::<><><>0<>0<><>::
-cupi.gdshader::Shader::5891174223316013381::1764774132::0::1::::<><><>0<>0<><>::
-distorsion.gdshader::Shader::5506496069201868502::1764774132::0::1::::<><><>0<>0<><>::
-efectoEsfera.gdshader::Shader::8739419951010189986::1764774132::0::1::::<><><>0<>0<><>::
-grid.gdshader::Shader::1885403456404054776::1764774760::0::1::::<><><>0<>0<><>::
-metaball_static.gdshader::Shader::4682756219470297099::1764774132::0::1::::<><><>0<>0<><>::
-Pantalla_Titulo.gdshader::Shader::9216610537972559229::1764774760::0::1::::<><><>0<>0<><>::
-Pantalla_Titulo.tres::VisualShader::79813356662986814::1764774132::0::1::::<><><>0<>0<><>::
-sinCos.tres::VisualShader::1206048680536230605::1764776713::0::1::::<><><>0<>0<><>::
-sinCosforLine.tres::VisualShader::2651130731012604888::1764777083::0::1::::<><><>0<>0<><>::
-WaterNoise.gdshader::Shader::4418437704935854323::1764774132::0::1::::<><><>0<>0<><>::
-::res://sprites/::1764774468
-mascara.png::CompressedTexture2D::2955863389728153049::1764774132::1764774468::1::::<><><>0<>0<>fb7eb72faa2199caf0e858d9a20a89a1<>res://.godot/imported/mascara.png-ed30c3c3c364cbc59a0b59718b83f147.ctex::
-::res://sprites/background/::1764774470
-Background_1.png::CompressedTexture2D::3415778279760854943::1764774132::1764774469::1::::<><><>0<>0<>84ee646c142ba0723dfbcfbcf7a5adb4<>res://.godot/imported/Background_1.png-9c8de04f1318a05b259e09601761b468.ctex::
-Background_2.png::CompressedTexture2D::797284181575673573::1764774132::1764774469::1::::<><><>0<>0<>7894b8efe83063ceef34764b125d2b27<>res://.godot/imported/Background_2.png-858284dd4f690f0f9154b7d5b4baa5cf.ctex::
-Background_3.png::CompressedTexture2D::5090482820264995689::1764774132::1764774470::1::::<><><>0<>0<>8f0e8a295d61688a3a4a72cdefd1acc1<>res://.godot/imported/Background_3.png-ca14d4c4646494db4675cc4757514d5d.ctex::
-Background_4.png::CompressedTexture2D::3819764914463895834::1764774132::1764774469::1::::<><><>0<>0<>d0601c7718996a387cb7272a046b950a<>res://.godot/imported/Background_4.png-d50453ce49a386723e65343413be7b21.ctex::
-Background_5.png::CompressedTexture2D::5375620347093040762::1764774132::1764774469::1::::<><><>0<>0<>22de4d93c7e90eb9a3b35353529e0467<>res://.godot/imported/Background_5.png-c81de7adbf8c4129973bea109ac1707a.ctex::
-Background_6.png::CompressedTexture2D::740368445958135792::1764774132::1764774470::1::::<><><>0<>0<>f371d76d771079c1f9e0bda3e671dc41<>res://.godot/imported/Background_6.png-c17446d1571fb95f902463698131d59a.ctex::
-::res://sprites/controller/::1764774469
-disco.png::CompressedTexture2D::6602173507417388344::1764774132::1764774469::1::::<><><>0<>0<>21d104077036ab7488976f1908b8f37b<>res://.godot/imported/disco.png-3d21f5c421e4820c71b0433baa281419.ctex::
-::res://sprites/cupi/::1764774132
-::res://sprites/cupi/boca/::1764774468
-CupiMouth.tres::AtlasTexture::4301920516347303238::1764774132::0::1::::<><><>0<>0<><>::uid://bler7o18gyany::::res://sprites/cupi/boca/cupiMouthExpresions.png
-cupiMouthExpresions.png::CompressedTexture2D::3167845586009830546::1764774132::1764774468::1::::<><><>0<>0<>a972cc4d606045c6df4a08fb95f202ea<>res://.godot/imported/cupiMouthExpresions.png-bf8ec55665701dca327801e24dbd0676.ctex::
-::res://sprites/cupi/circuloRitmo/::1764774468
-bordeCirculo1.png::CompressedTexture2D::2400831387902723312::1764774132::1764774468::1::::<><><>0<>0<>bf7d2e19e0cf7aa63dcee150acd12ece<>res://.godot/imported/bordeCirculo1.png-ab19202d36556adfa9ccddcf9f2a2883.ctex::
-bordeCirculo2.png::CompressedTexture2D::5535691192336854278::1764774132::1764774468::1::::<><><>0<>0<>017af58a21c2a5452f35ab42c7514456<>res://.godot/imported/bordeCirculo2.png-21e0d9924f7a938df84467786bb1818a.ctex::
-::res://sprites/cupi/ojos/::1764774468
-CupiEyes.tres::AtlasTexture::6219775988891477804::1764774132::0::1::::<><><>0<>0<><>::uid://vld3jhw3acr1::::res://sprites/cupi/ojos/cupiEyesExpresions.png
-cupiEyesExpresions.png::CompressedTexture2D::1496906509461755940::1764774132::1764774468::1::::<><><>0<>0<>34b78f9e0bdf07615510a3cca2b4de2c<>res://.godot/imported/cupiEyesExpresions.png-292735151f65bd79e8f91c839303fc5d.ctex::
-::res://sprites/testing/::1764774468
-notita.png::CompressedTexture2D::6857715550077730380::1764774132::1764774468::1::::<><><>0<>0<>338fb7597191ee0d281b03536fa1a6d9<>res://.godot/imported/notita.png-c87a752e4c2a762a28bbc8ab21c9d728.ctex::
+::res://::1764800976
+chart-easy.json::JSON::-1::1764715899::0::1::::<><><>0<>0<><>::
+estructura json chartt.txt::TextFile::-1::1764715899::0::1::::<><><>0<>0<><>::
+export_presets.cfg::TextFile::-1::1764715899::0::1::::<><><>0<>0<><>::
+icon.svg::CompressedTexture2D::174066192364344378::1764715899::1764726824::1::::<><><>0<>0<>d26cd61c336390e624049fd21c72787b<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://animations/::1764800271
+cupiEyes.tres::SpriteFrames::9086718789934383266::1764800271::0::1::::<><><>0<>0<><>::uid://cuu52i5ueaqmu::::res://sprites/cupi/ojos/CupiEyes.tres
+cupiMouth.tres::SpriteFrames::1404653848414325822::1764800271::0::1::::<><><>0<>0<><>::uid://b2j5ac01hh5be::::res://sprites/cupi/boca/CupiMouth.tres
+::res://metaball/::1764799785
+audioAnalizer.tres::AudioBusLayout::4081396580252559891::1764799785::0::1::::<><><>0<>0<><>::
+Metaball.gd::GDScript::1235050244282516177::1764715899::0::1::::MetaballVisualizer<>Polygon2D<><>0<>0<><>::
+metaball.gdshader::Shader::5857679592818050605::1764715899::0::1::::<><><>0<>0<><>::
+MetaballOptimized.gd::GDScript::6452535727045554619::1764715899::0::1::::<>Node2D<><>0<>0<><>::
+show_spectrum.gd::GDScript::7497364705653695588::1764715899::0::1::::SpectroAnalizer<>Node2D<><>0<>0<><>::
+::res://Niveles/::1764811752
+::res://Niveles/Bailando (Cut Ver.)/::1764715946
+chart.json::JSON::-1::1764715899::0::1::::<><><>0<>0<><>::
+::res://Niveles/Bailando (Cut Ver.)/mainMusic/::1764810646
+PARADISIO.mp3::AudioStreamMP3::2093464353233706382::1764715899::1764810646::1::::<><><>0<>0<>d8a56304b48a5f2d1183e897dd9bd7e5<>res://.godot/imported/PARADISIO.mp3-06f59953b2d10dddd9a39dd2e6cc3d51.mp3str::
+::res://Niveles/Crystal Castles - Knights/::1764715946
+chart.json::JSON::-1::1764715899::0::1::::<><><>0<>0<><>::
+::res://Niveles/Crystal Castles - Knights/mainMusic/::1764810646
+audio.mp3::AudioStreamMP3::6855372443187208968::1764715899::1764810646::1::::<><><>0<>0<>2199d8328c6cb4ca95e16eca1f8c3f42<>res://.godot/imported/audio.mp3-2beadfcc01a4eb316f1b961fc4286f9c.mp3str::
+::res://Niveles/Crystal Castles - Untrust Us/::1764715946
+chart.json::JSON::-1::1764715899::0::1::::<><><>0<>0<><>::
+::res://Niveles/Crystal Castles - Untrust Us/mainMusic/::1764810646
+audio.mp3::AudioStreamMP3::4571020835538404002::1764715899::1764810646::1::::<><><>0<>0<>a6b8365e1c77b1a88cd06447515d7769<>res://.godot/imported/audio.mp3-93cf96e31daecb8f225cd5e3f2ab2939.mp3str::
+::res://Niveles/Daidaidaidaidaikirai/::1764715946
+daidaidaikirai_modificado.json::JSON::-1::1764715899::0::1::::<><><>0<>0<><>::
+level.json::JSON::-1::1764715899::0::1::::<><><>0<>0<><>::
+::res://Niveles/Daidaidaidaidaikirai/mainMusic/::1764810646
+audio.ogg::AudioStreamOggVorbis::2687052899378427505::1764715899::1764810646::1::::<><><>0<>0<>f81b8cdcf4dc58524dda4cbbbe57ae1f<>res://.godot/imported/audio.ogg-8a44529e90d30327b643130199e89d0f.oggvorbisstr::
+::res://Niveles/DECO27 - マシュマロ feat. 初音ミク/::1764715946
+chart.json::JSON::-1::1764715899::0::1::::<><><>0<>0<><>::
+level.json::JSON::-1::1764715899::0::1::::<><><>0<>0<><>::
+::res://Niveles/DECO27 - マシュマロ feat. 初音ミク/mainMusic/::1764726824
+audio.ogg::AudioStreamOggVorbis::1950962539407403712::1764715899::1764726824::1::::<><><>0<>0<>6899f4fc158907f6beeaf34936607340<>res://.godot/imported/audio.ogg-6e680a188a8abce39b393e0e0334e4e0.oggvorbisstr::
+::res://Niveles/fiveNights/::1764715946
+chart.json::JSON::-1::1764715899::0::1::::<><><>0<>0<><>::
+::res://Niveles/fiveNights/mainMusic/::1764726824
+audio.mp3::AudioStreamMP3::1648015515813961309::1764715899::1764726824::1::::<><><>0<>0<>f79902f638ca427acf82c1c7dcc17fd1<>res://.godot/imported/audio.mp3-8cc2ad4d1af31ab76bc5074b98001095.mp3str::
+::res://Niveles/Go Go Go Go! (Radio Edit)/::1764715946
+chart.json::JSON::-1::1764715899::0::1::::<><><>0<>0<><>::
+::res://Niveles/Go Go Go Go! (Radio Edit)/mainMusic/::1764810646
+audio.mp3::AudioStreamMP3::1511247318307617296::1764715899::1764810646::1::::<><><>0<>0<>e4cf099a00599b1755ca7490321d99dd<>res://.godot/imported/audio.mp3-2370753082b36ea11d0c861001f98acc.mp3str::
+::res://Niveles/How You Like That/::1764715946
+chart.json::JSON::-1::1764715899::0::1::::<><><>0<>0<><>::
+::res://Niveles/How You Like That/mainMusic/::1764810646
+audio.mp3::AudioStreamMP3::5927910185750819872::1764715899::1764810646::1::::<><><>0<>0<>26f0ce5b427a69313c49e51abaa894b7<>res://.godot/imported/audio.mp3-7f66a7a289c8929bdaf8d2877462d933.mp3str::
+::res://Niveles/Las Avispas/::1764715946
+chart.json::JSON::-1::1764715899::0::1::::<><><>0<>0<><>::
+::res://Niveles/Las Avispas/mainMusic/::1764810646
+audio.ogg::AudioStreamOggVorbis::7155572668438207013::1764715899::1764810646::1::::<><><>0<>0<>20eb7e61603951c412b5f170467730fa<>res://.godot/imported/audio.ogg-77ba5275887f49218055fed62042d1b9.oggvorbisstr::
+::res://Niveles/Livin' La Vida Loca/::1764715946
+chart.json::JSON::-1::1764715899::0::1::::<><><>0<>0<><>::
+::res://Niveles/Livin' La Vida Loca/mainMusic/::1764810646
+audio.mp3::AudioStreamMP3::7224190618973295109::1764715899::1764810646::1::::<><><>0<>0<>0ba94212b41f73b08be8b5d7c08dbf61<>res://.godot/imported/audio.mp3-39c4c0869f7b2bd0d04dba0816467dfe.mp3str::
+::res://Niveles/Luna/::1764715946
+chart.json::JSON::-1::1764715899::0::1::::<><><>0<>0<><>::
+::res://Niveles/Luna/mainMusic/::1764810646
+audio.mp3::AudioStreamMP3::2473030674497196004::1764715899::1764810646::1::::<><><>0<>0<>3bff5d03f1bfca5165c4e7e8a8a2b48e<>res://.godot/imported/audio.mp3-3b9c41c873981c8e945344ff093c339a.mp3str::
+::res://Niveles/MEGALOVANIA/::1764715946
+chart.json::JSON::-1::1764715899::0::1::::<><><>0<>0<><>::
+::res://Niveles/MEGALOVANIA/mainMusic/::1764810646
+toby fox - UNDERTALE Soundtrack - 100 MEGALOVANIA 192.mp3::AudioStreamMP3::3207970357883842729::1764715899::1764810646::1::::<><><>0<>0<>b5e9caacf1cd2d6b36d6eeaea3d7eed6<>res://.godot/imported/toby fox - UNDERTALE Soundtrack - 100 MEGALOVANIA 192.mp3-9f997845b0077f7bff266d45155faa0f.mp3str::
+::res://Niveles/musica 13/::1764811221
+daidaidaikirai_modificado.json::JSON::-1::1764715899::0::1::::<><><>0<>0<><>::
+level.json::JSON::-1::1764715899::0::1::::<><><>0<>0<><>::
+::res://Niveles/musica 13/mainMusic/::1764811254
+audio.ogg::AudioStreamOggVorbis::2687052899378427505::1764715899::1764811254::1::::<><><>0<>0<>f2dfdb8fbc2a0de6b4fe211cb98e85a8<>res://.godot/imported/audio.ogg-5d9c796cb84ea5700bafda867753ed6f.oggvorbisstr::
+::res://Niveles/musica 14/::1764811230
+daidaidaikirai_modificado.json::JSON::-1::1764715899::0::1::::<><><>0<>0<><>::
+level.json::JSON::-1::1764715899::0::1::::<><><>0<>0<><>::
+::res://Niveles/musica 14/mainMusic/::1764811254
+audio.ogg::AudioStreamOggVorbis::2687052899378427505::1764715899::1764811254::1::::<><><>0<>0<>4def0937f09e4e0fd2631de0af71d5b5<>res://.godot/imported/audio.ogg-49b285d9875309aaf3304336bae33085.oggvorbisstr::
+::res://Niveles/musica 15/::1764811243
+daidaidaikirai_modificado.json::JSON::-1::1764715899::0::1::::<><><>0<>0<><>::
+level.json::JSON::-1::1764715899::0::1::::<><><>0<>0<><>::
+::res://Niveles/musica 15/mainMusic/::1764811254
+audio.ogg::AudioStreamOggVorbis::2687052899378427505::1764715899::1764811254::1::::<><><>0<>0<>4ee3e54e092119d5108318827b51652a<>res://.godot/imported/audio.ogg-ea82e3e2421ab993ebb5d7aa3e881057.oggvorbisstr::
+::res://Niveles/musica 16/::1764811249
+daidaidaikirai_modificado.json::JSON::-1::1764715899::0::1::::<><><>0<>0<><>::
+level.json::JSON::-1::1764715899::0::1::::<><><>0<>0<><>::
+::res://Niveles/musica 16/mainMusic/::1764811254
+audio.ogg::AudioStreamOggVorbis::2687052899378427505::1764715899::1764811254::1::::<><><>0<>0<>84f8ce5c62f68f2f2159d0b2e5c9077a<>res://.godot/imported/audio.ogg-1280ca8371f7bf8825f9d472070048c3.oggvorbisstr::
+::res://Niveles/musica 17/::1764811749
+daidaidaikirai_modificado.json::JSON::-1::1764715899::0::1::::<><><>0<>0<><>::
+level.json::JSON::-1::1764715899::0::1::::<><><>0<>0<><>::
+::res://Niveles/musica 17/mainMusic/::1764811749
+audio.ogg::AudioStreamOggVorbis::2687052899378427505::1764715899::1764811754::1::::<><><>0<>0<>641ca55aeb7555f36c1f9ecfca94c48f<>res://.godot/imported/audio.ogg-a54af120c8b28fd32fb5fba69b14abee.oggvorbisstr::
+::res://particulas/::1764715946
+shieldParticles.tres::ParticleProcessMaterial::1942620231192224242::1764715899::0::1::::<><><>0<>0<><>::
+::res://prefabs/::1764811648
+beat_detected.tscn::PackedScene::610351513580080197::1764715899::0::1::::<><><>0<>0<><>::uid://cqk3ysk80cik::::res://icon.svg<>uid://c3bplxso2r8il::::res://scripts/beatDetect.gd
+bullet.tscn::PackedScene::3880220200260419715::1764715899::0::1::::<><><>0<>0<><>::uid://dc7fcu80avr8w::::res://scripts/bullets/StandartBullet.gd
+central_3dbg.tscn::PackedScene::651217005278546175::1764715899::0::1::::<><><>0<>0<><>::uid://dwro78a8bfmp3::::res://shaders/efectoEsfera.gdshader<>uid://bxk4nrhap8o4m::::res://scripts/shaderController/movimientoEsferaBG.gd
+cupi.tscn::PackedScene::262805280615344873::1764715899::0::1::::<><><>0<>0<><>::uid://bp713wa275s4p::::res://scripts/player/cupi.gd<>uid://d3eu6dejhuca6::::res://scripts/reverseAudio/reversable_audio_stream_player.gd<>uid://c515s8eiyg4px::::res://prefabs/cupi_container.tscn<>uid://cdannsch5vxx4::::res://sfx/beatBar0.ogg<>uid://bg6tq4trreu05::::res://sfx/beatBar1.ogg
+cupi_container.tscn::PackedScene::6934035892051607609::1764715899::0::1::::<><><>0<>0<><>::uid://bs5gkvsjdkqnr::::res://scripts/player/ExpresionesCupi.gd<>uid://uaopc4watrc5::::res://animations/cupiMouth.tres<>uid://d2pw6wdp10rkc::::res://animations/cupiEyes.tres
+gameplay.tscn::PackedScene::3915078244948235321::1764800675::0::1::::<><><>0<>0<><>::uid://cmwdw8kgbef6b::::res://prefabs/metaball.tscn<>uid://n2c72dch62rh::::res://scripts/bullets/BulletSpawner.gd<>uid://d0kmnpjiacab::::res://prefabs/cupi.tscn<>uid://bvjuwoyoq48kd::::res://prefabs/bullet.tscn<>uid://cjvixm8nwnbvl::::res://prefabs/SpiralBullet.tscn
+metaball.tscn::PackedScene::5660746989068824739::1764732471::0::1::::<><><>0<>0<><>::uid://rujdkhv2ul8t::::res://metaball/Metaball.gd<>uid://de21rbsaslsxw::::res://metaball/show_spectrum.gd<>uid://rghpfcnh0win::::res://shaders/sinCos.tres<>uid://dhgymk6ayct4i::::res://scripts/shaderController/distorsionLine.gd<>uid://bd1h0aucl5xim::::res://shaders/sinCosforLine.tres
+metaball_static.tscn::PackedScene::2296905920188909586::1764799691::0::1::::<><><>0<>0<><>::uid://cx6wk5yxgaalf::::res://metaball/MetaballOptimized.gd<>uid://ck4sa4dap5f7s::::res://sprites/cupi/circuloRitmo/bordeCirculo2.png<>uid://de21rbsaslsxw::::res://metaball/show_spectrum.gd<>uid://bag8lvtsxurme::::res://sprites/cupi/circuloRitmo/bordeCirculo1.png<>uid://rghpfcnh0win::::res://shaders/sinCos.tres<>uid://diphwn7jukihk::::res://scripts/shaderController/distorsion.gd
+music_item.gd::GDScript::173121361438762832::1764811648::0::1::::ItemMusic<>Node2D<><>0<>0<><>::
+music_item.tscn::PackedScene::4786512545560390349::1764811648::0::1::::<><><>0<>0<><>::uid://cp4jv030jk13::::res://prefabs/music_item.gd
+particulas_destruir_bullet.tscn::PackedScene::7309118007043119540::1764715899::0::1::::<><><>0<>0<><>::uid://2xaw3ehd0fhy::::res://particulas/shieldParticles.tres<>uid://6ghjiqyemyni::::res://scripts/particulas_destruir_bullet.gd
+SpiralBullet.tscn::PackedScene::5448420384045013377::1764802249::0::1::::<><><>0<>0<><>::uid://bbo5yvl7gkhxw::::res://scripts/bullets/SpiralBullet.gd<>uid://bvjuwoyoq48kd::::res://prefabs/bullet.tscn
+::res://scenes/::1764803428
+displayScenes.tscn::PackedScene::1930731126054869820::1764733057::0::1::::<><><>0<>0<><>::
+game_viewport.tscn::PackedScene::5545908413246912073::1764800334::0::1::::<><><>0<>0<><>::uid://nhut8w43g1lx::::res://scenes/LevelLoader.gd<>uid://qwgdhe76ve32::::res://scenes/StartLoad.tscn
+Level.tscn::PackedScene::3157461997121050757::1764803428::0::1::::<><><>0<>0<><>::uid://14kk4kka54n1::::res://shaders/grid.gdshader<>uid://dqguof25omg2e::::res://scripts/background.gd<>uid://bv1q1ckfcnds8::::res://prefabs/gameplay.tscn<>uid://dinxdtthuvvkf::::res://scripts/debug/control_velocity.gd<>uid://dbbyxbbf2gp17::::res://scripts/debug/debugInfo.gd<>uid://b32sgw55o2c8f::::res://scripts/player/controles.gd<>uid://c1ce3lbjrnp2o::::res://sprites/controller/disco.png<>uid://cwngsxqx2coqb::::res://shaders/AberracionCromatica.gdshader
+LevelLoader.gd::GDScript::928155650123924613::1764735679::0::1::::<>SubViewport<><>0<>0<><>::
+Pantalla_Titulo.tscn::PackedScene::8995490321990086102::1764801585::0::1::::<><><>0<>0<><>::uid://bowvms2w6ac6j::::res://sprites/background/Background_1.png<>uid://btqx7jldobmj5::::res://scripts/MainMenuController.gd<>uid://lmhfiai4rdll::::res://sprites/background/Background_2.png<>uid://cmwdw8kgbef6b::::res://prefabs/metaball.tscn<>uid://cer4rjvbsm2xp::::res://sprites/background/Background_3.png<>uid://c515s8eiyg4px::::res://prefabs/cupi_container.tscn<>uid://buok78nq5p1ik::::res://sprites/background/Background_4.png<>uid://cit8xgcws0kuc::::res://sprites/background/Background_5.png<>uid://ksv03ym07omq::::res://sprites/background/Background_6.png<>uid://cud1i8mhv12n7::::res://scripts/background_1.gd<>uid://ylyvmroyq0sy::::res://scripts/level_loader.gd<>uid://c3bplxso2r8il::::res://scripts/beatDetect.gd<>uid://c0xylibq7685x::::res://scripts/controladorMenu.gd<>uid://co88i1klqein::::res://shaders/3_sample_blur.gdshader<>uid://7yvx75kpug2u::::res://prefabs/metaball_static.tscn<>uid://cwngsxqx2coqb::::res://shaders/AberracionCromatica.gdshader<>uid://cjlssy54gqe62::::res://scripts/showMenu.gd<>uid://cagvfrvk467w0::::res://prefabs/music_item.tscn<>uid://bx3fjtbbwusd3::::res://scripts/button.gd
+StartLoad.tscn::PackedScene::1168807843475006331::1764735006::0::1::::<><><>0<>0<><>::uid://dmhy14nbg60km::::res://scripts/loadLevels/start_load.gd
+::res://scripts/::1764811163
+background.gd::GDScript::8295909462490898674::1764715899::0::1::::<>ColorRect<><>0<>0<><>::
+background_1.gd::GDScript::6184406053727568710::1764715899::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
+beatDetect.gd::GDScript::6741125002146035863::1764715899::0::1::::<>Node2D<><>0<>0<><>::
+button.gd::GDScript::4058887321154594986::1764801585::0::1::::<>Button<><>0<>0<><>::
+controladorMenu.gd::GDScript::6576520420742328271::1764715899::0::1::::<>Node2D<><>0<>0<><>::
+dataGame.gd::GDScript::3975429187141085249::1764801507::0::1::::<>Node<><>0<>0<><>::
+level_loader.gd::GDScript::1708735769316535904::1764715899::0::1::::<>Node<><>0<>0<><>::
+MainMenuController.gd::GDScript::3754492882977326472::1764811163::0::1::::MainMenu<>Node2D<><>0<>0<><>::
+niveles.gd::GDScript::5286546427791918285::1764715899::0::1::::<>Control<><>0<>0<><>::
+particulas_destruir_bullet.gd::GDScript::2188681956397839042::1764715899::0::1::::<>GPUParticles2D<><>0<>0<><>::
+showMenu.gd::GDScript::5428375473814051401::1764799691::0::1::::<>RichTextLabel<><>0<>0<><>::
+::res://scripts/bullets/::1764802249
+BulletSpawner.gd::GDScript::968373168910867101::1764715899::0::1::::BulletSpawner<>Node2D<><>0<>0<><>::
+SpiralBullet.gd::GDScript::2487376306170236848::1764801700::0::1::::CupiSpiral<>Node2D<><>0<>0<><>::
+StandartBullet.gd::GDScript::7366008085619203268::1764802249::0::1::::CupiBullet<>Node2D<><>0<>0<><>::
+::res://scripts/debug/::1764803428
+control_velocity.gd::GDScript::7749012586842244021::1764715899::0::1::::<>HSlider<><>0<>0<><>::
+debugInfo.gd::GDScript::7233013607889269904::1764803428::0::1::::<>RichTextLabel<><>0<>0<><>::
+::res://scripts/loadLevels/::1764734221
+start_load.gd::GDScript::8017484000796345340::1764734221::0::1::::<>Control<><>0<>0<><>::
+::res://scripts/player/::1764802132
+controles.gd::GDScript::4408551328791519207::1764715899::0::1::::<>Node2D<><>0<>0<><>::
+cupi.gd::GDScript::3506943227219188097::1764802132::0::1::::Cupi<>Node2D<><>0<>0<><>::
+ExpresionesCupi.gd::GDScript::3712134492905297323::1764715899::0::1::::CupiContainer<>Node2D<><>0<>0<><>::
+::res://scripts/reverseAudio/::1764715946
+reversable_audio_stream_player.gd::GDScript::9134077047595159767::1764715899::0::1::::ReversableAudioStreamPlayer<>AudioStreamPlayer<><>0<>1<><>::
+::res://scripts/shaderController/::1764727638
+distorsion.gd::GDScript::7752203505583073096::1764727638::0::1::::<>Sprite2D<><>0<>0<><>::
+distorsionLine.gd::GDScript::7664449433577754366::1764715899::0::1::::<>Line2D<><>0<>0<><>::
+movimientoEsferaBG.gd::GDScript::4023192776751377366::1764715899::0::1::::<>MeshInstance3D<><>0<>0<><>::
+::res://sfx/::1764726824
+beatBar0.ogg::AudioStreamOggVorbis::4984221383395929199::1764715899::1764726824::1::::<><><>0<>0<>b9a6cbadbf8bd86303da2d031c4c0337<>res://.godot/imported/beatBar0.ogg-241758c9fa0508d2a871917a5fb450f8.oggvorbisstr::
+beatBar1.ogg::AudioStreamOggVorbis::2872733204785928784::1764715899::1764726824::1::::<><><>0<>0<>ae0f081a0ff1c9b2bdfe81d56d529127<>res://.godot/imported/beatBar1.ogg-6dca954d6c2ca3e19beae88868e6be88.oggvorbisstr::
+::res://shaders/::1764800271
+3_sample_blur.gdshader::Shader::171342028614460189::1764800271::0::1::::<><><>0<>0<><>::
+AberracionCromatica.gdshader::Shader::6344230518307693689::1764800271::0::1::::<><><>0<>0<><>::
+cupi.gdshader::Shader::5891174223316013381::1764715899::0::1::::<><><>0<>0<><>::
+distorsion.gdshader::Shader::5506496069201868502::1764715899::0::1::::<><><>0<>0<><>::
+efectoEsfera.gdshader::Shader::8739419951010189986::1764715899::0::1::::<><><>0<>0<><>::
+grid.gdshader::Shader::1885403456404054776::1764800271::0::1::::<><><>0<>0<><>::
+metaball_static.gdshader::Shader::4682756219470297099::1764715899::0::1::::<><><>0<>0<><>::
+Pantalla_Titulo.gdshader::Shader::9216610537972559229::1764800271::0::1::::<><><>0<>0<><>::
+Pantalla_Titulo.tres::VisualShader::79813356662986814::1764726845::0::1::::<><><>0<>0<><>::
+sinCos.tres::VisualShader::1206048680536230605::1764800271::0::1::::<><><>0<>0<><>::
+sinCosforLine.tres::VisualShader::2651130731012604888::1764800271::0::1::::<><><>0<>0<><>::
+WaterNoise.gdshader::Shader::4418437704935854323::1764715899::0::1::::<><><>0<>0<><>::
+::res://sprites/::1764726824
+mascara.png::CompressedTexture2D::2955863389728153049::1764715900::1764726824::1::::<><><>0<>0<>fb7eb72faa2199caf0e858d9a20a89a1<>res://.godot/imported/mascara.png-ed30c3c3c364cbc59a0b59718b83f147.ctex::
+::res://sprites/background/::1764726828
+Background_1.png::CompressedTexture2D::3415778279760854943::1764715899::1764726827::1::::<><><>0<>0<>84ee646c142ba0723dfbcfbcf7a5adb4<>res://.godot/imported/Background_1.png-9c8de04f1318a05b259e09601761b468.ctex::
+Background_2.png::CompressedTexture2D::797284181575673573::1764715899::1764726827::1::::<><><>0<>0<>7894b8efe83063ceef34764b125d2b27<>res://.godot/imported/Background_2.png-858284dd4f690f0f9154b7d5b4baa5cf.ctex::
+Background_3.png::CompressedTexture2D::5090482820264995689::1764715899::1764726828::1::::<><><>0<>0<>8f0e8a295d61688a3a4a72cdefd1acc1<>res://.godot/imported/Background_3.png-ca14d4c4646494db4675cc4757514d5d.ctex::
+Background_4.png::CompressedTexture2D::3819764914463895834::1764715899::1764726826::1::::<><><>0<>0<>d0601c7718996a387cb7272a046b950a<>res://.godot/imported/Background_4.png-d50453ce49a386723e65343413be7b21.ctex::
+Background_5.png::CompressedTexture2D::5375620347093040762::1764715900::1764726826::1::::<><><>0<>0<>22de4d93c7e90eb9a3b35353529e0467<>res://.godot/imported/Background_5.png-c81de7adbf8c4129973bea109ac1707a.ctex::
+Background_6.png::CompressedTexture2D::740368445958135792::1764715900::1764726827::1::::<><><>0<>0<>f371d76d771079c1f9e0bda3e671dc41<>res://.godot/imported/Background_6.png-c17446d1571fb95f902463698131d59a.ctex::
+::res://sprites/controller/::1764726826
+disco.png::CompressedTexture2D::6602173507417388344::1764715900::1764726826::1::::<><><>0<>0<>21d104077036ab7488976f1908b8f37b<>res://.godot/imported/disco.png-3d21f5c421e4820c71b0433baa281419.ctex::
+::res://sprites/cupi/::1764715946
+::res://sprites/cupi/boca/::1764726824
+CupiMouth.tres::AtlasTexture::4301920516347303238::1764715900::0::1::::<><><>0<>0<><>::uid://bler7o18gyany::::res://sprites/cupi/boca/cupiMouthExpresions.png
+cupiMouthExpresions.png::CompressedTexture2D::3167845586009830546::1764715900::1764726824::1::::<><><>0<>0<>a972cc4d606045c6df4a08fb95f202ea<>res://.godot/imported/cupiMouthExpresions.png-bf8ec55665701dca327801e24dbd0676.ctex::
+::res://sprites/cupi/circuloRitmo/::1764726824
+bordeCirculo1.png::CompressedTexture2D::2400831387902723312::1764715900::1764726824::1::::<><><>0<>0<>bf7d2e19e0cf7aa63dcee150acd12ece<>res://.godot/imported/bordeCirculo1.png-ab19202d36556adfa9ccddcf9f2a2883.ctex::
+bordeCirculo2.png::CompressedTexture2D::5535691192336854278::1764715900::1764726824::1::::<><><>0<>0<>017af58a21c2a5452f35ab42c7514456<>res://.godot/imported/bordeCirculo2.png-21e0d9924f7a938df84467786bb1818a.ctex::
+::res://sprites/cupi/ojos/::1764726824
+CupiEyes.tres::AtlasTexture::6219775988891477804::1764715900::0::1::::<><><>0<>0<><>::uid://vld3jhw3acr1::::res://sprites/cupi/ojos/cupiEyesExpresions.png
+cupiEyesExpresions.png::CompressedTexture2D::1496906509461755940::1764715900::1764726824::1::::<><><>0<>0<>34b78f9e0bdf07615510a3cca2b4de2c<>res://.godot/imported/cupiEyesExpresions.png-292735151f65bd79e8f91c839303fc5d.ctex::
+::res://sprites/testing/::1764726824
+notita.png::CompressedTexture2D::6857715550077730380::1764715900::1764726824::1::::<><><>0<>0<>338fb7597191ee0d281b03536fa1a6d9<>res://.godot/imported/notita.png-c87a752e4c2a762a28bbc8ab21c9d728.ctex::

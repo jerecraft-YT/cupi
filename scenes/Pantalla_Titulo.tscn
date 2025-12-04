@@ -68,7 +68,7 @@ shader_parameter/b_displacement = Vector2(-3, 0)
 
 [node name="PantallaTitulo" type="Node2D" node_paths=PackedStringArray("audio") groups=["PantallaTitulo"]]
 script = ExtResource("1_h8syl")
-YCOS = 0.75
+YCOS = 0.6
 MusicItem = ExtResource("19_uquea")
 audio = NodePath("AudioStreamPlayer")
 
@@ -185,7 +185,6 @@ text = "[wave amp=50.0 freq=5.0 connected=1][rainbow freq=0.05 sat=0.8 val=1.0 s
 horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="."]
-visible = false
 offset_left = -133.0
 offset_top = 308.0
 offset_right = 134.0

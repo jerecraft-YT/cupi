@@ -19,6 +19,9 @@ var startDestroy = false
 var duracionBala:float
 var cooldown:float
 var deathcooldown:float
+@export var update_interval: float = 0.008
+
+var _time_accum: float = 0.0
 
 func _ready() -> void:
 	position = Vector2.ONE * 1000
@@ -115,13 +118,16 @@ func _process(delta: float) -> void:
 				cooldown = 0.1  # IMPORTANTE: Prevenir detección continua
 	
 	# Movimiento de la bala
-	timeLerp = max(0, 1.0 - inverse_lerp(baseSpawnTime, baseStrumTime, currentTime))
-	amp = distance * timeLerp * spawner.speed
-	ampSpiral = distance * timeLerp
-	ampSpiral += 35
-	amp += 35
-	position = Vector2(spawner.position.x + cos(deg_to_rad(angle)) * amp, spawner.position.y + sin(deg_to_rad(angle)) * amp)
+	_time_accum += delta
 	
+	if _time_accum >= update_interval:
+		timeLerp = max(0, 1.0 - inverse_lerp(baseSpawnTime, baseStrumTime, currentTime))
+		amp = distance * timeLerp * spawner.speed
+		ampSpiral = distance * timeLerp
+		ampSpiral += 35
+		amp += 35
+		position = Vector2(spawner.position.x + cos(deg_to_rad(angle)) * amp, spawner.position.y + sin(deg_to_rad(angle)) * amp)
+		_time_accum = 0
 	# Balas normales
 	if timeLerp <= 0 and not isSpiral and cupi.TimeMultiplier > 0:
 		if cupi.cupiBot:
