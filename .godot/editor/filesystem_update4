@@ -1,5 +1,4 @@
-res://metaball/audioAnalizer.tres
-res://scenes/Pantalla_Titulo.tscn
+res://prefabs/music_item.tscn
 res://shaders/grid.gdshader
 res://shaders/sinCos.tres
 res://shaders/sinCosforLine.tres
@@ -8,15 +7,9 @@ res://animations/cupiEyes.tres
 res://shaders/AberracionCromatica.gdshader
 res://shaders/3_sample_blur.gdshader
 res://shaders/Pantalla_Titulo.gdshader
-res://prefabs/music_item.gd
+res://particulas/shieldParticles.tres
+res://scripts/music_item.gd
+res://prefabs/music_item.tres
+res://scenes/Pantalla_Titulo.tscn
+res://prefabs/mascaraCircular.tres
 res://scripts/MainMenuController.gd
-res://prefabs/metaball.tscn
-res://scenes/Level.tscn
-res://scenes/game_viewport.tscn
-res://scenes/StartLoad.tscn
-res://scripts/loadLevels/start_load.gd
-res://scripts/button.gd
-res://prefabs/music_item.tscn
-res://scripts/controladorMenu.gd
-res://scripts/dataGame.gd
-res://scripts/showMenu.gd

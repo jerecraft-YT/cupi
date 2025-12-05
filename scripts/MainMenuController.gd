@@ -13,7 +13,9 @@ var prevMusic:int
 var separacionAngleMusicItem = 1
 @export var YCOS = 0.5
 @export var XCOS:float = 1
-var numberMusicItem = 32
+var numberMusicItem = 16
+var angulosMusic:float = 45
+var midleAngulos:float = angulosMusic/2
 @export var MusicItem:PackedScene
 @onready var boton = $Button
 @onready var MusicasContainer = $Musicas
@@ -23,7 +25,7 @@ var numberMusicItem = 32
 var vueltas:float
 var offsetMusic
 var musicLoaded = false
-var pasoMusic = 360.0/numberMusicItem
+var pasoMusic = angulosMusic/numberMusicItem
 var detectarOffset:bool = false
 var offsetMouse:float
 var lastMousePos: Vector2

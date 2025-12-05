@@ -68,7 +68,8 @@ shader_parameter/b_displacement = Vector2(-3, 0)
 
 [node name="PantallaTitulo" type="Node2D" node_paths=PackedStringArray("audio") groups=["PantallaTitulo"]]
 script = ExtResource("1_h8syl")
-YCOS = 0.6
+objectiveAmpMusic = 570.0
+YCOS = 3.0
 MusicItem = ExtResource("19_uquea")
 audio = NodePath("AudioStreamPlayer")
 

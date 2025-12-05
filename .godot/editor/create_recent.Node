@@ -1,9 +1,9 @@
+Panel
 Button
 Node2D
 Sprite2D
 RichTextLabel
 Label
-Panel
 ColorRect
 AspectRatioContainer
 ScrollContainer
@@ -12,4 +12,3 @@ Control
 PanelContainer
 Container
 TabBar
-Line2D

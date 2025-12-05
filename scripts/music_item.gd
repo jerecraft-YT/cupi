@@ -1,4 +1,4 @@
-extends Node2D
+extends Panel
 class_name ItemMusic
 
 var ID_Item:int
@@ -25,27 +25,28 @@ func _physics_process(delta: float) -> void:
 	newID = ID_Item + PantallaTitulo.offsetMusic
 	position = Vector2(	cos(
 							deg_to_rad	(
-								(ID_Item*(360.0/PantallaTitulo.numberMusicItem))
-								+PantallaTitulo.fixedRotacion+180
+								(ID_Item*(PantallaTitulo.angulosMusic/PantallaTitulo.numberMusicItem))
+								+PantallaTitulo.fixedRotacion-PantallaTitulo.midleAngulos
 										)
 							)
 							*PantallaTitulo.ampMusicItem-220*PantallaTitulo.XCOS,
 						sin(
 							deg_to_rad	(
-								(ID_Item*(360.0/PantallaTitulo.numberMusicItem))
-								+PantallaTitulo.fixedRotacion+180
+								(ID_Item*(PantallaTitulo.angulosMusic/PantallaTitulo.numberMusicItem))
+								+PantallaTitulo.fixedRotacion-PantallaTitulo.midleAngulos
 										)
 							)
 							*PantallaTitulo.ampMusicItem*PantallaTitulo.YCOS
 						)
-	rotation = deg_to_rad((ID_Item*(360.0/PantallaTitulo.numberMusicItem))+PantallaTitulo.fixedRotacion+180)
+						
+	rotation = deg_to_rad((ID_Item*(PantallaTitulo.angulosMusic/PantallaTitulo.numberMusicItem))+PantallaTitulo.fixedRotacion-PantallaTitulo.midleAngulos)
 	
-	var progresoScale = 1-min(abs(rotation_degrees-360),PantallaTitulo.pasoMusic*5)/(PantallaTitulo.pasoMusic*5)
+	var progresoScale = 1-min(abs(rotation_degrees),PantallaTitulo.pasoMusic*5)/(PantallaTitulo.pasoMusic*5)
 	scale = Vector2(max(progresoScale,0.75),max(progresoScale,0.75))
 	
 	if progresoScale >0.85:
 		z_index = 2
-	elif progresoScale >0.25:
+	elif progresoScale >0.15:
 		z_index = 1
 	else:
 		z_index = 0
