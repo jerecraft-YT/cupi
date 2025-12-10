@@ -16,7 +16,11 @@ var playback_direction := 1
 
 @export_range(-4.0, 4.0, 0.001) var playback_rate = 1.0 :
 	set(v):
-		pitch_scale = abs(v)
+		if pitch_scale == 0:
+			stream_paused = true
+		else:
+			stream_paused = false
+			pitch_scale = abs(v)
 		playback_rate = v
 		var dir := -1 if v < 0 else 1
 		if dir != playback_direction:
