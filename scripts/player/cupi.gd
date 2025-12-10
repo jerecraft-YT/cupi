@@ -85,12 +85,15 @@ func get_song_time() -> float:
 	
 func ralentizar():
 	TimeMultiplier = 0.5+(wah*0.15)
-
-func _process(delta: float) -> void:
-	if cupiBot:
-		controladorGeneral.rotation += deg_to_rad(2*DataGame.time_fixed)
 	
+@warning_ignore("unused_parameter")
+func _physics_process(delta: float) -> void:
+	if cupiBot:
+		controladorGeneral.rotation += deg_to_rad(2)
 	wah = cos(TimeScene*0.025)
+	
+func _process(delta: float) -> void:
+
 	TimeMultiplier = lerp(TimeMultiplier,timeMultiplierObjective,0.2*DataGame.time_fixed)
 	line.scale = Vector2.ONE*cupiContainer.lineScale
 	if controladorGeneral != null:

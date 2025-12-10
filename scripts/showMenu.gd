@@ -4,9 +4,11 @@ signal showMenu
 var cambiarEscena = false
 @export var boton1:Button
 @export var boton2:Button
+@export var mainMenu:MainMenu
 @warning_ignore("unused_parameter")
 func _process(delta: float) -> void:
 	if Input.is_anything_pressed() and cambiarEscena == false:
+		mainMenu.pickRandomMusic = false
 		showMenu.emit()
 		cambiarEscena = true
 		await get_tree().create_timer(0.25).timeout 

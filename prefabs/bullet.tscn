@@ -1,10 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://bvjuwoyoq48kd"]
+[gd_scene load_steps=3 format=3 uid="uid://bvjuwoyoq48kd"]
 
 [ext_resource type="Script" uid="uid://dc7fcu80avr8w" path="res://scripts/bullets/StandartBullet.gd" id="1_fh0yl"]
+[ext_resource type="Texture2D" uid="uid://c4x6tqup0qbn5" path="res://sprites/testing/notita.png" id="2_lv25w"]
 
 [node name="Bullet" type="Node2D"]
 script = ExtResource("1_fh0yl")
 
-[node name="Polygon2D" type="Polygon2D" parent="."]
-scale = Vector2(0.1, 0.1)
-polygon = PackedVector2Array(-3, 28, -9, 23, -25, 20, -37, 25, -42, 31, -44, 38, -43, 46, -36, 55, -21, 60, -11, 57, -3, 51, 1, 43, 3, 31, 3, -30, 15, -19, 21, -11, 23, -3, 20, 17, 25, 10, 32, -8, 30, -19, 26, -26, 16, -36, -3, -56)
+[node name="Notita" type="Sprite2D" parent="."]
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("2_lv25w")

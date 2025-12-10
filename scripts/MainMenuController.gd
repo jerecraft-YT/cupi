@@ -14,7 +14,7 @@ var separacionAngleMusicItem = 1
 @export var YCOS = 0.5
 @export var XCOS:float = 1
 var numberMusicItem = 16
-var angulosMusic:float = 45
+var angulosMusic:float = 60
 var midleAngulos:float = angulosMusic/2
 @export var MusicItem:PackedScene
 @onready var boton = $Button
@@ -34,7 +34,6 @@ var aceleracion:float
 var prevAngle:float
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	#print("Pantalla Titulo")
 	niveles = getLevels()
 	prevMusic = randi_range(0,niveles.size()-1)
 	if pickRandomMusic == true:
@@ -47,6 +46,7 @@ func randomMusic():
 		if MusicSelected != prevMusic:
 			break
 	prevMusic = MusicSelected
+	vueltas = MusicSelected
 	loadMusic()
 
 func changeMusic(mus):
@@ -119,7 +119,7 @@ func _process(delta: float) -> void:
 		ampMusicItem = lerp(ampMusicItem,objectiveAmpMusic,0.1*DataGame.time_fixed)
 	else:
 		ampMusicItem = lerp(ampMusicItem,1350.0,0.1*DataGame.time_fixed)
-	var anguloCercano = fmod(rotacion/pasoMusic,1)
+	#var anguloCercano = fmod(rotacion/pasoMusic,1)
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and detectarOffset == false:
 		# Iniciar detección
 		detectarOffset = true
@@ -146,7 +146,7 @@ func _process(delta: float) -> void:
 		lastMousePos = currentMousePos
 	
 	if !Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
-		rotacion += aceleracion
+		rotacion += aceleracion*DataGame.time_fixed
 		aceleracion = lerp(aceleracion,0.0,0.1*DataGame.time_fixed)
 		#print(aceleracion)
 		# Detener detección
@@ -154,20 +154,27 @@ func _process(delta: float) -> void:
 		#print(ceil(rotacion / pasoMusic))
 		if aceleracion < 0.1 and aceleracion > -0.1:
 			aceleracion = 0
-			if anguloCercano > 0.5:
-				rotacion = lerp(rotacion,ceil(rotacion / pasoMusic)*pasoMusic,0.1)
-			elif anguloCercano < -0.5:
-				rotacion = lerp(rotacion,floor(rotacion / pasoMusic)*pasoMusic,0.1)
+			if rotacion > pasoMusic/2:
+				rotacion = lerp(rotacion,pasoMusic,0.1*DataGame.time_fixed)
+			elif rotacion < -pasoMusic/2:
+				rotacion = lerp(rotacion,-pasoMusic,0.1*DataGame.time_fixed)
 			else:
-				rotacion = lerp(rotacion,floor(rotacion / pasoMusic)*pasoMusic,0.1)
-	fixedRotacion = fmod(rotacion,pasoMusic)
-	if rotacion > 0:
-		vueltas = floor(rotacion / pasoMusic)
-	else:
-		vueltas = ceil(rotacion / pasoMusic)
+				rotacion = lerp(rotacion,0.0,0.1*DataGame.time_fixed)
+	
+	if rotacion >= pasoMusic-0.1:
+		vueltas += 1
+		rotacion -= pasoMusic
+	elif rotacion <= -pasoMusic+0.1:
+		vueltas -= 1
+		rotacion += pasoMusic
+	
+	fixedRotacion = rotacion
+	#if rotacion > 0:
+		#vueltas = floor(rotacion / pasoMusic)
+	#else:
+		#vueltas = ceil(rotacion / pasoMusic)
 		
 	if musicLoaded == false:
-		pass
 		GetMusic()
 
 func GetMusic():
@@ -180,7 +187,9 @@ func GetMusic():
 			musicLoaded = true
 
 func _on_audio_stream_player_finished() -> void:
-	randomMusic()
+	if pickRandomMusic == true:
+		randomMusic()
 
 func _on_comenzar_show_menu() -> void:
-	SpawnLevels()
+	call_deferred("SpawnLevels")
+	#SpawnLevels()

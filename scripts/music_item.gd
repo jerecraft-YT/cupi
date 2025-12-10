@@ -3,9 +3,9 @@ class_name ItemMusic
 
 var ID_Item:int
 var PantallaTitulo:MainMenu
-@onready var Autor:Label = $Panel/Autor
-@onready var Name:Label = $Panel/Name
-@onready var panel:Panel = $Panel
+@onready var Autor:Label = $Autor
+@onready var Name:Label = $Name
+@onready var panel:Panel = self
 var prevVueltas:float = -1
 var newID:int
 # Called when the node enters the scene tree for the first time.
@@ -42,14 +42,16 @@ func _physics_process(delta: float) -> void:
 	rotation = deg_to_rad((ID_Item*(PantallaTitulo.angulosMusic/PantallaTitulo.numberMusicItem))+PantallaTitulo.fixedRotacion-PantallaTitulo.midleAngulos)
 	
 	var progresoScale = 1-min(abs(rotation_degrees),PantallaTitulo.pasoMusic*5)/(PantallaTitulo.pasoMusic*5)
-	scale = Vector2(max(progresoScale,0.75),max(progresoScale,0.75))
-	
+	scale = Vector2(max(progresoScale,0.65),max(progresoScale,0.65))
+	modulate = Color(progresoScale,progresoScale,progresoScale)
 	if progresoScale >0.85:
 		z_index = 2
 	elif progresoScale >0.15:
 		z_index = 1
 	else:
 		z_index = 0
+	
+	
 	
 	if progresoScale > 0.95:
 		if PantallaTitulo.niveles[fmod(ID_Item-PantallaTitulo.vueltas,PantallaTitulo.niveles.size())] != PantallaTitulo.niveles[PantallaTitulo.MusicSelected]:

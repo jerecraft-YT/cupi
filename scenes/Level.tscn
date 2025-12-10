@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bk8q65ctlgoef"]
+[gd_scene load_steps=10 format=3 uid="uid://bk8q65ctlgoef"]
 
 [ext_resource type="Shader" uid="uid://14kk4kka54n1" path="res://shaders/grid.gdshader" id="1_2eouu"]
 [ext_resource type="Script" uid="uid://dqguof25omg2e" path="res://scripts/background.gd" id="2_rccsh"]
@@ -7,7 +7,6 @@
 [ext_resource type="Script" uid="uid://dbbyxbbf2gp17" path="res://scripts/debug/debugInfo.gd" id="5_m0xki"]
 [ext_resource type="Script" uid="uid://b32sgw55o2c8f" path="res://scripts/player/controles.gd" id="6_xe3hh"]
 [ext_resource type="Texture2D" uid="uid://c1ce3lbjrnp2o" path="res://sprites/controller/disco.png" id="7_p6oy6"]
-[ext_resource type="Shader" uid="uid://cwngsxqx2coqb" path="res://shaders/AberracionCromatica.gdshader" id="8_opqd1"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_p7d8n"]
 shader = ExtResource("1_2eouu")
@@ -18,15 +17,9 @@ shader_parameter/wave_size = 2.0000000475
 shader_parameter/wave_time_mul = 0.50000002049012
 shader_parameter/total_phases = 9
 
-[sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_faw0r"]
+[sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_4qegb"]
 mix_rate_mode = 0
 buffer_length = 0.1
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_rjiow"]
-shader = ExtResource("8_opqd1")
-shader_parameter/r_displacement = Vector2(3, 0)
-shader_parameter/g_displacement = Vector2(0, 0)
-shader_parameter/b_displacement = Vector2(-3, 0)
 
 [node name="Level" type="Node2D"]
 
@@ -36,6 +29,7 @@ ignore_rotation = false
 position_smoothing_enabled = true
 
 [node name="BG" type="ColorRect" parent="."]
+visible = false
 z_index = -15
 material = SubResource("ShaderMaterial_p7d8n")
 anchors_preset = 5
@@ -53,11 +47,8 @@ scale = Vector2(0.75, 0.75)
 [node name="bullet spawner" parent="Gameplay" index="1"]
 speed = 0.2
 
-[node name="Cupi" parent="Gameplay" index="2"]
-levelName = "BLACKPINK - How You Like That (Stixy)"
-
 [node name="ReversableAudioStreamPlayer" parent="Gameplay/Cupi" index="0"]
-stream = SubResource("AudioStreamGenerator_faw0r")
+stream = SubResource("AudioStreamGenerator_4qegb")
 
 [node name="LevelMusic" parent="Gameplay/Cupi" index="1"]
 autoplay = false
@@ -65,6 +56,7 @@ autoplay = false
 [node name="HUD" type="CanvasLayer" parent="."]
 
 [node name="ControlVelocity" type="HSlider" parent="HUD" groups=["slider"]]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -137,24 +129,13 @@ script = ExtResource("6_xe3hh")
 [node name="backController" type="Polygon2D" parent="HUD/Control/controles"]
 z_index = 150
 scale = Vector2(0.25, 0.25)
-color = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(-60, -292, -476, 60, -28, 276, 996, 104, 1020, 76, 1020, -80, 1004, -108)
+color = Color(0, 0, 1, 1)
+polygon = PackedVector2Array(-60, -292, -476, 60, -28, 276, 1017.14307, 87.6189, 1032.3811, 60.952393, 1032.3811, -95.23828, 1017.14307, -121.904785)
 
 [node name="diskController" type="Sprite2D" parent="HUD/Control/controles"]
 z_index = 200
-scale = Vector2(0.25, 0.25)
 texture = ExtResource("7_p6oy6")
 offset = Vector2(5, -4)
-
-[node name="BackBufferCopy" type="BackBufferCopy" parent="."]
-copy_mode = 2
-rect = Rect2(0, 0, 720, 720)
-
-[node name="ColorRect" type="ColorRect" parent="."]
-z_index = 100
-material = SubResource("ShaderMaterial_rjiow")
-offset_right = 720.0
-offset_bottom = 720.0
 
 [editable path="Gameplay"]
 [editable path="Gameplay/metaball"]

@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cmwdw8kgbef6b"]
+[gd_scene load_steps=9 format=3 uid="uid://cmwdw8kgbef6b"]
 
 [ext_resource type="Script" uid="uid://rujdkhv2ul8t" path="res://metaball/Metaball.gd" id="1_5scw5"]
 [ext_resource type="Script" uid="uid://de21rbsaslsxw" path="res://metaball/show_spectrum.gd" id="1_jhxxm"]
 [ext_resource type="Shader" uid="uid://rghpfcnh0win" path="res://shaders/sinCos.tres" id="3_luhwx"]
 [ext_resource type="Script" uid="uid://dhgymk6ayct4i" path="res://scripts/shaderController/distorsionLine.gd" id="4_luhwx"]
+[ext_resource type="Texture2D" uid="uid://b8n16gbc0uxrf" path="res://sprites/cupi/circuloRitmo/blurRing.png" id="4_qnwvi"]
 [ext_resource type="Shader" uid="uid://bd1h0aucl5xim" path="res://shaders/sinCosforLine.tres" id="4_ut3li"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_luhwx"]
@@ -22,6 +23,11 @@ shader_parameter/amplitude = 1.0
 [node name="metaball" type="Node2D" groups=["spectro"]]
 script = ExtResource("1_jhxxm")
 
+[node name="BlurRing" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 1, 0.47058824)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("4_qnwvi")
+
 [node name="ball" type="Polygon2D" parent="." node_paths=PackedStringArray("poligono", "metaball", "spectro", "line", "distorsion")]
 material = SubResource("ShaderMaterial_luhwx")
 color = Color(0, 0, 0, 1)
@@ -35,10 +41,6 @@ distorsion = NodePath("distorsion")
 [node name="Line2D" type="Line2D" parent="ball"]
 closed = true
 default_color = Color(0, 0, 1, 1)
-
-[node name="BackBufferCopy" type="BackBufferCopy" parent="ball"]
-copy_mode = 2
-rect = Rect2(0, 0, 200, 200)
 
 [node name="distorsion" type="Line2D" parent="ball"]
 material = SubResource("ShaderMaterial_2m0ka")

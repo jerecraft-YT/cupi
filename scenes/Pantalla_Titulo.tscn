@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://d1fqn8rr6ofpe"]
+[gd_scene load_steps=20 format=3 uid="uid://d1fqn8rr6ofpe"]
 
 [ext_resource type="Texture2D" uid="uid://bowvms2w6ac6j" path="res://sprites/background/Background_1.png" id="1_e767d"]
 [ext_resource type="Script" uid="uid://btqx7jldobmj5" path="res://scripts/MainMenuController.gd" id="1_h8syl"]
@@ -13,9 +13,7 @@
 [ext_resource type="Script" uid="uid://ylyvmroyq0sy" path="res://scripts/level_loader.gd" id="7_wjr8j"]
 [ext_resource type="Script" uid="uid://c3bplxso2r8il" path="res://scripts/beatDetect.gd" id="8_e767d"]
 [ext_resource type="Script" uid="uid://c0xylibq7685x" path="res://scripts/controladorMenu.gd" id="10_uquea"]
-[ext_resource type="Shader" uid="uid://co88i1klqein" path="res://shaders/3_sample_blur.gdshader" id="11_h8syl"]
 [ext_resource type="PackedScene" uid="uid://7yvx75kpug2u" path="res://prefabs/metaball_static.tscn" id="13_hgevq"]
-[ext_resource type="Shader" uid="uid://cwngsxqx2coqb" path="res://shaders/AberracionCromatica.gdshader" id="17_hgevq"]
 [ext_resource type="Script" uid="uid://cjlssy54gqe62" path="res://scripts/showMenu.gd" id="18_hgevq"]
 [ext_resource type="PackedScene" uid="uid://cagvfrvk467w0" path="res://prefabs/music_item.tscn" id="19_uquea"]
 [ext_resource type="Script" uid="uid://bx3fjtbbwusd3" path="res://scripts/button.gd" id="20_21mn0"]
@@ -54,18 +52,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_hgevq"]
-shader = ExtResource("11_h8syl")
-shader_parameter/blur_amount = 2.47600021261
-shader_parameter/mix_amount = 0.0
-shader_parameter/color_over = Color(0, 0, 0, 1)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_6xp4g"]
-shader = ExtResource("17_hgevq")
-shader_parameter/r_displacement = Vector2(3, 0)
-shader_parameter/g_displacement = Vector2(0, 0)
-shader_parameter/b_displacement = Vector2(-3, 0)
-
 [node name="PantallaTitulo" type="Node2D" node_paths=PackedStringArray("audio") groups=["PantallaTitulo"]]
 script = ExtResource("1_h8syl")
 objectiveAmpMusic = 570.0
@@ -79,10 +65,9 @@ autoplay = true
 [node name="LevelLoader" type="Node" parent="."]
 script = ExtResource("7_wjr8j")
 
-[node name="BeatDetecter" type="Node2D" parent="." node_paths=PackedStringArray("camarita")]
+[node name="BeatDetecter" type="Node2D" parent="."]
 position = Vector2(-191, -289)
 script = ExtResource("8_e767d")
-camarita = NodePath("../Camera2D")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -98,14 +83,7 @@ frame = 4
 script = ExtResource("7_6xp4g")
 
 [node name="Musicas" type="Node2D" parent="."]
-position = Vector2(-360, 0)
-
-[node name="blur" type="ColorRect" parent="."]
-material = SubResource("ShaderMaterial_hgevq")
-offset_left = -360.0
-offset_top = -1000.0
-offset_right = 360.0
-offset_bottom = 1000.0
+position = Vector2(-360, -60)
 
 [node name="CupiMenu" type="Node2D" parent="." node_paths=PackedStringArray("titulo", "comenzar")]
 scale = Vector2(2, 2)
@@ -125,7 +103,7 @@ ScaleAmplitude = 2.0
 [node name="metaball" parent="CupiMenu" instance=ExtResource("2_pri23")]
 scale = Vector2(0.9, 0.9)
 
-[node name="distorsion" parent="CupiMenu/metaball/ball" index="2"]
+[node name="distorsion" parent="CupiMenu/metaball/ball" index="1"]
 ScaleFrequency = 2.5
 
 [node name="cupiContainer" parent="CupiMenu" instance=ExtResource("3_6ajat")]
@@ -137,7 +115,7 @@ frame = 6
 [node name="mouth" parent="CupiMenu/cupiContainer/Face" index="1"]
 frame = 7
 
-[node name="comenzar" type="RichTextLabel" parent="." node_paths=PackedStringArray("boton1", "boton2")]
+[node name="comenzar" type="RichTextLabel" parent="." node_paths=PackedStringArray("boton1", "boton2", "mainMenu")]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -156,16 +134,7 @@ horizontal_alignment = 1
 script = ExtResource("18_hgevq")
 boton1 = NodePath("../Button")
 boton2 = NodePath("../Button2")
-
-[node name="BackBufferCopy" type="BackBufferCopy" parent="."]
-copy_mode = 2
-
-[node name="ColorRect" type="ColorRect" parent="."]
-material = SubResource("ShaderMaterial_6xp4g")
-offset_left = -360.0
-offset_top = -640.0
-offset_right = 360.0
-offset_bottom = 640.0
+mainMenu = NodePath("..")
 
 [node name="Titulo" type="RichTextLabel" parent="."]
 anchors_preset = 5
@@ -181,7 +150,7 @@ bbcode_enabled = true
 text = "[wave amp=50.0 freq=5.0 connected=1][rainbow freq=0.05 sat=0.8 val=1.0 speed=5.0]CUPI[/rainbow][/wave]"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="." node_paths=PackedStringArray("boton2")]
+[node name="Button" type="Button" parent="." node_paths=PackedStringArray("boton2", "pantallaTitulo")]
 modulate = Color(1, 1, 1, 0)
 z_index = 10
 offset_left = -30.0
@@ -192,6 +161,7 @@ theme_override_font_sizes/font_size = 68
 disabled = true
 script = ExtResource("20_21mn0")
 boton2 = NodePath("../Button2")
+pantallaTitulo = NodePath("..")
 
 [node name="Button2" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
