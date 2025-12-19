@@ -46,7 +46,7 @@ func randomMusic():
 		if MusicSelected != prevMusic:
 			break
 	prevMusic = MusicSelected
-	vueltas = MusicSelected
+	#vueltas = MusicSelected
 	loadMusic()
 
 func changeMusic(mus):
@@ -59,6 +59,7 @@ func changeMusic(mus):
 func SpawnLevels():
 	for child in MusicasContainer.get_child_count():
 		MusicasContainer.get_child(child).queue_free()
+	vueltas = -MusicSelected
 	for i in range(numberMusicItem):
 		var itemLevel:ItemMusic = MusicItem.instantiate()
 		MusicasContainer.add_child(itemLevel)
@@ -67,6 +68,8 @@ func SpawnLevels():
 		itemLevel.name = "musicItem|"+str(i)
 		itemLevel.PantallaTitulo = self
 		itemLevel.position.x = 1000
+		@warning_ignore("integer_division")
+		itemLevel.ID_ItemView = i- int(numberMusicItem / 2)
 	animatedItems = true
 
 func getLevels():

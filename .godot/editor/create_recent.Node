@@ -1,8 +1,9 @@
+Sprite2D
+SubViewport
 GPUParticles2D
 Panel
 Button
 Node2D
-Sprite2D
 RichTextLabel
 Label
 ColorRect
@@ -11,5 +12,3 @@ ScrollContainer
 BoxContainer
 Control
 PanelContainer
-Container
-TabBar

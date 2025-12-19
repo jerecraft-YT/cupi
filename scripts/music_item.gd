@@ -2,18 +2,16 @@ extends Panel
 class_name ItemMusic
 
 var ID_Item:int
+var ID_ItemView:int
 var PantallaTitulo:MainMenu
 @onready var Autor:Label = $Autor
 @onready var Name:Label = $Name
 @onready var panel:Panel = self
 var prevVueltas:float = -1
 var newID:int
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass
-	
+
 func UpdateData():
-	Name.text = str(PantallaTitulo.niveles[fmod(ID_Item-PantallaTitulo.vueltas,PantallaTitulo.niveles.size())]).left(-1)
+	Name.text = str(PantallaTitulo.niveles[fmod(ID_ItemView-PantallaTitulo.vueltas,PantallaTitulo.niveles.size())]).left(-1)
 	Autor.text = str("Autor")
 	prevVueltas = PantallaTitulo.vueltas
 
@@ -21,7 +19,6 @@ func UpdateData():
 func _physics_process(delta: float) -> void:
 	if prevVueltas != PantallaTitulo.vueltas:
 		UpdateData()
-	
 	newID = ID_Item + PantallaTitulo.offsetMusic
 	position = Vector2(	cos(
 							deg_to_rad	(
@@ -51,9 +48,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		z_index = 0
 	
-	
-	
 	if progresoScale > 0.95:
-		if PantallaTitulo.niveles[fmod(ID_Item-PantallaTitulo.vueltas,PantallaTitulo.niveles.size())] != PantallaTitulo.niveles[PantallaTitulo.MusicSelected]:
-			PantallaTitulo.changeMusic(fmod(ID_Item-PantallaTitulo.vueltas,PantallaTitulo.niveles.size()))
-			DataGame.levelName = str(PantallaTitulo.niveles[fmod(ID_Item-PantallaTitulo.vueltas,PantallaTitulo.niveles.size())]).left(-1)
+		if PantallaTitulo.niveles[fmod(ID_ItemView-PantallaTitulo.vueltas,PantallaTitulo.niveles.size())] != PantallaTitulo.niveles[PantallaTitulo.MusicSelected]:
+			PantallaTitulo.changeMusic(fmod(ID_ItemView-PantallaTitulo.vueltas,PantallaTitulo.niveles.size()))
+			DataGame.levelName = str(PantallaTitulo.niveles[fmod(ID_ItemView-PantallaTitulo.vueltas,PantallaTitulo.niveles.size())]).left(-1)
