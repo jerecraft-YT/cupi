@@ -1,14 +1,14 @@
-Sprite2D
-SubViewport
-GPUParticles2D
 Panel
-Button
-Node2D
-RichTextLabel
 Label
-ColorRect
-AspectRatioContainer
+Button
+OptionButton
+VBoxContainer
 ScrollContainer
-BoxContainer
-Control
-PanelContainer
+MenuButton
+GraphNode
+HSlider
+SpinBox
+HSeparator
+TabBar
+TextureRect
+Label      - Matches the "text" keyword.

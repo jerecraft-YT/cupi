@@ -1,4 +1,4 @@
-res://scripts/MainMenuController.gd
+res://metaball/audioAnalizer.tres
 res://scenes/Pantalla_Titulo.tscn
 res://shaders/grid.gdshader
 res://shaders/sinCos.tres
@@ -8,5 +8,5 @@ res://animations/cupiEyes.tres
 res://shaders/AberracionCromatica.gdshader
 res://shaders/3_sample_blur.gdshader
 res://shaders/Pantalla_Titulo.gdshader
-res://scripts/music_item.gd
-res://prefabs/music_item.tscn
+res://prefabs/audioModifierDebug.tscn
+res://scripts/debug/controlMusic.gd

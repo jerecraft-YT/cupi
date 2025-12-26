@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://d1fqn8rr6ofpe"]
+[gd_scene load_steps=21 format=3 uid="uid://d1fqn8rr6ofpe"]
 
 [ext_resource type="Texture2D" uid="uid://bowvms2w6ac6j" path="res://sprites/background/Background_1.png" id="1_e767d"]
 [ext_resource type="Script" uid="uid://btqx7jldobmj5" path="res://scripts/MainMenuController.gd" id="1_h8syl"]
@@ -15,6 +15,7 @@
 [ext_resource type="Script" uid="uid://c0xylibq7685x" path="res://scripts/controladorMenu.gd" id="10_uquea"]
 [ext_resource type="PackedScene" uid="uid://7yvx75kpug2u" path="res://prefabs/metaball_static.tscn" id="13_hgevq"]
 [ext_resource type="Script" uid="uid://cjlssy54gqe62" path="res://scripts/showMenu.gd" id="18_hgevq"]
+[ext_resource type="PackedScene" uid="uid://cd2h0hwky0h4x" path="res://prefabs/audioModifierDebug.tscn" id="18_uquea"]
 [ext_resource type="PackedScene" uid="uid://cagvfrvk467w0" path="res://prefabs/music_item.tscn" id="19_uquea"]
 [ext_resource type="Script" uid="uid://bx3fjtbbwusd3" path="res://scripts/button.gd" id="20_21mn0"]
 
@@ -171,6 +172,12 @@ offset_right = -67.0
 offset_bottom = 153.0
 disabled = true
 
+[node name="AudioModifierDebug" parent="." instance=ExtResource("18_uquea")]
+position = Vector2(-360, -640)
+
+[node name="Panel" parent="AudioModifierDebug" index="0" node_paths=PackedStringArray("musicScene")]
+musicScene = NodePath("../../AudioStreamPlayer")
+
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
 [connection signal="showMenu" from="comenzar" to="." method="_on_comenzar_show_menu"]
 [connection signal="showMenu" from="comenzar" to="CupiMenu" method="_on_comenzar_show_menu"]
@@ -180,3 +187,4 @@ disabled = true
 [editable path="CupiMenu/metaballStatic"]
 [editable path="CupiMenu/metaball"]
 [editable path="CupiMenu/cupiContainer"]
+[editable path="AudioModifierDebug"]

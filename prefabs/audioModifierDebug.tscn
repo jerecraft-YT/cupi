@@ -1,0 +1,160 @@
+[gd_scene load_steps=7 format=3 uid="uid://cd2h0hwky0h4x"]
+
+[ext_resource type="Script" uid="uid://bfqw3g6hrcl0p" path="res://scripts/debug/controlMusic.gd" id="1_oplwf"]
+[ext_resource type="AudioStream" uid="uid://43db1flkpsao" path="res://Niveles/Bailando (Cut Ver.)/mainMusic/PARADISIO.mp3" id="2_5iogq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2nkla"]
+bg_color = Color(0.23753911, 0.23753914, 0.23753902, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5iogq"]
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oplwf"]
+bg_color = Color(0.17641911, 0.17641908, 0.17641908, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_28daj"]
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[node name="AudioModifierDebug" type="Node2D"]
+z_index = 999
+
+[node name="Panel" type="Panel" parent="." node_paths=PackedStringArray("infoAudio", "efectos", "scrollVertical", "generalScroll", "panelParametros", "scrollParametros", "panelControles", "listaEfectos", "botonPausa", "botonPlay", "botonAgregarEfecto", "botonEliminarEfecto", "botonHabilitarEfecto", "botonDeshabilitarEfecto", "labelEstado")]
+offset_left = 22.0
+offset_top = 17.0
+offset_right = 702.0
+offset_bottom = 1263.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2nkla")
+script = ExtResource("1_oplwf")
+infoAudio = NodePath("Label")
+efectos = NodePath("../efectos")
+scrollVertical = NodePath("Panel3/ScrollContainer/VBoxContainer")
+generalScroll = NodePath("Panel3/ScrollContainer")
+panelParametros = NodePath("Panel")
+scrollParametros = NodePath("Panel/ScrollContainer/VBoxContainer")
+panelControles = NodePath("Panel2")
+listaEfectos = NodePath("Panel2/VBoxContainer/OptionButton")
+botonPausa = NodePath("Panel2/VBoxContainer/pausar")
+botonPlay = NodePath("Panel2/VBoxContainer/play")
+botonAgregarEfecto = NodePath("Panel2/VBoxContainer/addEffect")
+botonEliminarEfecto = NodePath("Panel2/VBoxContainer/deleteEffect")
+botonHabilitarEfecto = NodePath("Panel2/VBoxContainer/habilitarEffect")
+botonDeshabilitarEfecto = NodePath("Panel2/VBoxContainer/deshabilitarEffect")
+labelEstado = NodePath("Panel2/VBoxContainer/Estado")
+font_size_titulo = 40
+font_size_subtitulo = 28
+font_size_normal = 20
+font_size_pequeno = 20
+
+[node name="Panel3" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 289.0
+offset_right = 292.0
+offset_bottom = 554.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5iogq")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/Panel3"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 21.0
+offset_right = 269.0
+offset_bottom = 247.0
+draw_focus_border = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Panel3/ScrollContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 21.0
+offset_right = 276.0
+offset_bottom = 282.0
+theme_override_font_sizes/font_size = 24
+text = "audio Effects:"
+
+[node name="Panel" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 572.0
+offset_right = 669.0
+offset_bottom = 1231.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_oplwf")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/Panel"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 22.0
+offset_right = 623.0
+offset_bottom = 632.0
+draw_focus_border = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Panel/ScrollContainer"]
+layout_mode = 2
+
+[node name="Panel2" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 306.0
+offset_top = 90.0
+offset_right = 670.0
+offset_bottom = 554.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_28daj")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Panel2"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 15.0
+offset_right = 345.0
+offset_bottom = 446.0
+
+[node name="OptionButton" type="OptionButton" parent="Panel/Panel2/VBoxContainer"]
+layout_mode = 2
+
+[node name="play" type="Button" parent="Panel/Panel2/VBoxContainer"]
+layout_mode = 2
+
+[node name="pausar" type="Button" parent="Panel/Panel2/VBoxContainer"]
+layout_mode = 2
+
+[node name="addEffect" type="Button" parent="Panel/Panel2/VBoxContainer"]
+layout_mode = 2
+
+[node name="deleteEffect" type="Button" parent="Panel/Panel2/VBoxContainer"]
+layout_mode = 2
+
+[node name="habilitarEffect" type="Button" parent="Panel/Panel2/VBoxContainer"]
+layout_mode = 2
+
+[node name="deshabilitarEffect" type="Button" parent="Panel/Panel2/VBoxContainer"]
+layout_mode = 2
+
+[node name="Estado" type="Label" parent="Panel/Panel2/VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="efectos" type="Button" parent="."]
+visible = false
+custom_minimum_size = Vector2(200, 50)
+offset_left = 64.0
+offset_top = 352.0
+offset_right = 264.0
+offset_bottom = 410.0
+theme_override_font_sizes/font_size = 36
+text = "efecto 1"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_5iogq")
