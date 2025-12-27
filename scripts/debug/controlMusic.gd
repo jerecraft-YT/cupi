@@ -24,7 +24,6 @@ extends Panel
 @export var font_size_subtitulo: int = 32
 @export var font_size_normal: int = 32
 @export var font_size_pequeno: int = 24
-
 var efecto_seleccionado: AudioEffect = null
 var indice_efecto_seleccionado: int = -1
 var audio_pausado: bool = false
@@ -105,11 +104,12 @@ func configurar_controles():
 	
 	# Configurar estado inicial
 	actualizar_estado_audio()
-
+@warning_ignore("unused_parameter")
 func _process(delta: float) -> void:
 	infoAudio.text = drawEffects()
 	actualizar_estado_controles()
-
+	
+@warning_ignore("unused_parameter")
 func _physics_process(delta: float) -> void:
 	generalScroll.size.x = scrollVertical.size.x + 8
 

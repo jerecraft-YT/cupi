@@ -1,73 +1,70 @@
-[gd_scene load_steps=7 format=3 uid="uid://cd2h0hwky0h4x"]
+[gd_scene load_steps=4 format=3 uid="uid://cd2h0hwky0h4x"]
 
+[ext_resource type="StyleBox" uid="uid://dget578shl0bp" path="res://diseños/music_item.tres" id="1_5iogq"]
 [ext_resource type="Script" uid="uid://bfqw3g6hrcl0p" path="res://scripts/debug/controlMusic.gd" id="1_oplwf"]
 [ext_resource type="AudioStream" uid="uid://43db1flkpsao" path="res://Niveles/Bailando (Cut Ver.)/mainMusic/PARADISIO.mp3" id="2_5iogq"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2nkla"]
-bg_color = Color(0.23753911, 0.23753914, 0.23753902, 1)
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5iogq"]
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oplwf"]
-bg_color = Color(0.17641911, 0.17641908, 0.17641908, 1)
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_28daj"]
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
-
-[node name="AudioModifierDebug" type="Node2D"]
+[node name="AudioModifierDebug" type="Control"]
 z_index = 999
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
-[node name="Panel" type="Panel" parent="." node_paths=PackedStringArray("infoAudio", "efectos", "scrollVertical", "generalScroll", "panelParametros", "scrollParametros", "panelControles", "listaEfectos", "botonPausa", "botonPlay", "botonAgregarEfecto", "botonEliminarEfecto", "botonHabilitarEfecto", "botonDeshabilitarEfecto", "labelEstado")]
-offset_left = 22.0
+[node name="background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelGeneral" type="Panel" parent="." node_paths=PackedStringArray("infoAudio", "efectos", "scrollVertical", "generalScroll", "panelParametros", "scrollParametros", "musicScene", "panelControles", "listaEfectos", "botonPausa", "botonPlay", "botonAgregarEfecto", "botonEliminarEfecto", "botonHabilitarEfecto", "botonDeshabilitarEfecto", "labelEstado")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 18.0
 offset_top = 17.0
-offset_right = 702.0
-offset_bottom = 1263.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_2nkla")
+offset_right = -19.0
+offset_bottom = -19.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("1_5iogq")
 script = ExtResource("1_oplwf")
-infoAudio = NodePath("Label")
-efectos = NodePath("../efectos")
-scrollVertical = NodePath("Panel3/ScrollContainer/VBoxContainer")
-generalScroll = NodePath("Panel3/ScrollContainer")
-panelParametros = NodePath("Panel")
-scrollParametros = NodePath("Panel/ScrollContainer/VBoxContainer")
-panelControles = NodePath("Panel2")
-listaEfectos = NodePath("Panel2/VBoxContainer/OptionButton")
-botonPausa = NodePath("Panel2/VBoxContainer/pausar")
-botonPlay = NodePath("Panel2/VBoxContainer/play")
-botonAgregarEfecto = NodePath("Panel2/VBoxContainer/addEffect")
-botonEliminarEfecto = NodePath("Panel2/VBoxContainer/deleteEffect")
-botonHabilitarEfecto = NodePath("Panel2/VBoxContainer/habilitarEffect")
-botonDeshabilitarEfecto = NodePath("Panel2/VBoxContainer/deshabilitarEffect")
-labelEstado = NodePath("Panel2/VBoxContainer/Estado")
+infoAudio = NodePath("DetallesMusica")
+efectos = NodePath("../PlantillaBotones")
+scrollVertical = NodePath("PanelEffects/ScrollContainer/VBoxContainer")
+generalScroll = NodePath("PanelEffects/ScrollContainer")
+panelParametros = NodePath("PanelInfoEffects")
+scrollParametros = NodePath("PanelInfoEffects/ScrollContainer/VBoxContainer")
+musicScene = NodePath("../AudioStreamPlayer")
+panelControles = NodePath("PanelMiscelanea")
+listaEfectos = NodePath("PanelMiscelanea/VBoxContainer/OptionButton")
+botonPausa = NodePath("PanelMiscelanea/VBoxContainer/pausar")
+botonPlay = NodePath("PanelMiscelanea/VBoxContainer/play")
+botonAgregarEfecto = NodePath("PanelMiscelanea/VBoxContainer/addEffect")
+botonEliminarEfecto = NodePath("PanelMiscelanea/VBoxContainer/deleteEffect")
+botonHabilitarEfecto = NodePath("PanelMiscelanea/VBoxContainer/habilitarEffect")
+botonDeshabilitarEfecto = NodePath("PanelMiscelanea/VBoxContainer/deshabilitarEffect")
+labelEstado = NodePath("PanelMiscelanea/VBoxContainer/Estado")
 font_size_titulo = 40
 font_size_subtitulo = 28
 font_size_normal = 20
 font_size_pequeno = 20
 
-[node name="Panel3" type="Panel" parent="Panel"]
-layout_mode = 0
-offset_left = 13.0
-offset_top = 289.0
-offset_right = 292.0
-offset_bottom = 554.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_5iogq")
+[node name="PanelEffects" type="Panel" parent="PanelGeneral"]
+layout_mode = 1
+offset_left = 18.0
+offset_top = 281.0
+offset_right = 298.0
+offset_bottom = 561.0
+theme_override_styles/panel = ExtResource("1_5iogq")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Panel/Panel3"]
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelGeneral/PanelEffects"]
 layout_mode = 0
 offset_left = 12.0
 offset_top = 21.0
@@ -75,86 +72,103 @@ offset_right = 269.0
 offset_bottom = 247.0
 draw_focus_border = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Panel3/ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelGeneral/PanelEffects/ScrollContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Panel"]
-layout_mode = 0
-offset_left = 14.0
+[node name="DetallesMusica" type="Label" parent="PanelGeneral"]
+layout_mode = 1
+offset_left = 21.0
 offset_top = 21.0
-offset_right = 276.0
-offset_bottom = 282.0
+offset_right = 292.0
+offset_bottom = 273.0
 theme_override_font_sizes/font_size = 24
 text = "audio Effects:"
 
-[node name="Panel" type="Panel" parent="Panel"]
-layout_mode = 0
-offset_left = 13.0
-offset_top = 572.0
-offset_right = 669.0
-offset_bottom = 1231.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_oplwf")
+[node name="PanelInfoEffects" type="Panel" parent="PanelGeneral"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = -671.0
+offset_right = -19.0
+offset_bottom = -19.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = ExtResource("1_5iogq")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Panel/Panel"]
-layout_mode = 0
-offset_left = 15.0
-offset_top = 22.0
-offset_right = 623.0
-offset_bottom = 632.0
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelGeneral/PanelInfoEffects"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 22.0
+offset_top = 26.0
+offset_right = -26.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
 draw_focus_border = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Panel/ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelGeneral/PanelInfoEffects/ScrollContainer"]
 layout_mode = 2
 
-[node name="Panel2" type="Panel" parent="Panel"]
+[node name="PanelMiscelanea" type="Panel" parent="PanelGeneral"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -374.0
+offset_top = 51.0
+offset_right = -19.0
+offset_bottom = 562.0
+grow_horizontal = 0
+theme_override_styles/panel = ExtResource("1_5iogq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelGeneral/PanelMiscelanea"]
 layout_mode = 0
-offset_left = 306.0
-offset_top = 90.0
-offset_right = 670.0
-offset_bottom = 554.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_28daj")
+offset_left = 19.0
+offset_top = 36.0
+offset_right = 338.0
+offset_bottom = 455.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Panel2"]
-layout_mode = 0
-offset_left = 18.0
-offset_top = 15.0
-offset_right = 345.0
-offset_bottom = 446.0
-
-[node name="OptionButton" type="OptionButton" parent="Panel/Panel2/VBoxContainer"]
+[node name="OptionButton" type="OptionButton" parent="PanelGeneral/PanelMiscelanea/VBoxContainer"]
 layout_mode = 2
 
-[node name="play" type="Button" parent="Panel/Panel2/VBoxContainer"]
+[node name="play" type="Button" parent="PanelGeneral/PanelMiscelanea/VBoxContainer"]
 layout_mode = 2
 
-[node name="pausar" type="Button" parent="Panel/Panel2/VBoxContainer"]
+[node name="pausar" type="Button" parent="PanelGeneral/PanelMiscelanea/VBoxContainer"]
 layout_mode = 2
 
-[node name="addEffect" type="Button" parent="Panel/Panel2/VBoxContainer"]
+[node name="addEffect" type="Button" parent="PanelGeneral/PanelMiscelanea/VBoxContainer"]
 layout_mode = 2
 
-[node name="deleteEffect" type="Button" parent="Panel/Panel2/VBoxContainer"]
+[node name="deleteEffect" type="Button" parent="PanelGeneral/PanelMiscelanea/VBoxContainer"]
 layout_mode = 2
 
-[node name="habilitarEffect" type="Button" parent="Panel/Panel2/VBoxContainer"]
+[node name="habilitarEffect" type="Button" parent="PanelGeneral/PanelMiscelanea/VBoxContainer"]
 layout_mode = 2
 
-[node name="deshabilitarEffect" type="Button" parent="Panel/Panel2/VBoxContainer"]
+[node name="deshabilitarEffect" type="Button" parent="PanelGeneral/PanelMiscelanea/VBoxContainer"]
 layout_mode = 2
 
-[node name="Estado" type="Label" parent="Panel/Panel2/VBoxContainer"]
+[node name="Estado" type="Label" parent="PanelGeneral/PanelMiscelanea/VBoxContainer"]
 visible = false
 layout_mode = 2
 
-[node name="efectos" type="Button" parent="."]
+[node name="PlantillaBotones" type="Button" parent="."]
 visible = false
 custom_minimum_size = Vector2(200, 50)
+layout_mode = 0
 offset_left = 64.0
 offset_top = 352.0
-offset_right = 264.0
+offset_right = 294.0
 offset_bottom = 410.0
 theme_override_font_sizes/font_size = 36
 text = "efecto 1"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_5iogq")
+autoplay = true

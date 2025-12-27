@@ -47,7 +47,7 @@ func detectMusicFile():
 		for archivo in archivos:
 			if archivo.right(4) == ".ogg" or archivo.right(4) == ".mp3" or archivo.right(4) == ".wav":
 				return archivo
-
+	return "nada"
 func loadSong():
 	if ResourceLoader.load_threaded_get_status(direccionNiveles+levelName+"/mainMusic/"+musicFile) == ResourceLoader.THREAD_LOAD_LOADED:
 		Music = ResourceLoader.load_threaded_get(direccionNiveles+levelName+"/mainMusic/"+musicFile)

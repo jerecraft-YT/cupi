@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bk8q65ctlgoef"]
+[gd_scene load_steps=12 format=3 uid="uid://bk8q65ctlgoef"]
 
 [ext_resource type="Shader" uid="uid://14kk4kka54n1" path="res://shaders/grid.gdshader" id="1_2eouu"]
 [ext_resource type="Script" uid="uid://dqguof25omg2e" path="res://scripts/background.gd" id="2_rccsh"]
@@ -7,6 +7,10 @@
 [ext_resource type="Script" uid="uid://dbbyxbbf2gp17" path="res://scripts/debug/debugInfo.gd" id="5_m0xki"]
 [ext_resource type="Script" uid="uid://b32sgw55o2c8f" path="res://scripts/player/controles.gd" id="6_xe3hh"]
 [ext_resource type="Texture2D" uid="uid://c1ce3lbjrnp2o" path="res://sprites/controller/disco.png" id="7_p6oy6"]
+[ext_resource type="Script" uid="uid://cv4s2ki2jjc8b" path="res://scenes/csg_box_3d.gd" id="8_faw0r"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_2eouu"]
+viewport_path = NodePath("SubViewport")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_p7d8n"]
 shader = ExtResource("1_2eouu")
@@ -17,11 +21,15 @@ shader_parameter/wave_size = 2.0000000475
 shader_parameter/wave_time_mul = 0.50000002049012
 shader_parameter/total_phases = 9
 
-[sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_4qegb"]
+[sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_rccsh"]
 mix_rate_mode = 0
 buffer_length = 0.1
 
 [node name="Level" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(179, 317)
+texture = SubResource("ViewportTexture_2eouu")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(360, 640)
@@ -48,7 +56,7 @@ scale = Vector2(0.75, 0.75)
 speed = 0.2
 
 [node name="ReversableAudioStreamPlayer" parent="Gameplay/Cupi" index="0"]
-stream = SubResource("AudioStreamGenerator_4qegb")
+stream = SubResource("AudioStreamGenerator_rccsh")
 
 [node name="LevelMusic" parent="Gameplay/Cupi" index="1"]
 autoplay = false
@@ -135,6 +143,20 @@ polygon = PackedVector2Array(-60, -292, -476, 60, -28, 276, 1017.14307, 87.6189,
 z_index = 200
 texture = ExtResource("7_p6oy6")
 offset = Vector2(5, -4)
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+
+[node name="Node3D" type="Node3D" parent="SubViewport"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="SubViewport/Node3D"]
+transform = Transform3D(0.8952739, 0.29116672, -0.337204, -0.2845149, 0.9560993, 0.070181526, 0.342835, 0.033107884, 0.9388119, 0, 0, -0.7733234)
+script = ExtResource("8_faw0r")
+
+[node name="Camera3D" type="Camera3D" parent="SubViewport/Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.21831203, 2.536714)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewport/Node3D"]
 
 [editable path="Gameplay"]
 [editable path="Gameplay/metaball"]

@@ -1,14 +1,15 @@
+DirectionalLight3D
+ColorRect
+Sprite2D
+SubViewport
+Camera3D
+CSGBox3D
+Node3D
 Panel
-Label
+Container
 Button
-OptionButton
-VBoxContainer
-ScrollContainer
-MenuButton
-GraphNode
-HSlider
-SpinBox
-HSeparator
-TabBar
 TextureRect
-Label      - Matches the "text" keyword.
+CanvasLayer
+Control
+Label
+OptionButton

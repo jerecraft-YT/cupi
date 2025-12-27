@@ -9,4 +9,12 @@ res://shaders/AberracionCromatica.gdshader
 res://shaders/3_sample_blur.gdshader
 res://shaders/Pantalla_Titulo.gdshader
 res://prefabs/audioModifierDebug.tscn
+res://scripts/MainMenuController.gd
+res://scripts/controladorMenu.gd
+res://scripts/showMenu.gd
 res://scripts/debug/controlMusic.gd
+res://scenes/Level.tscn
+res://scenes/csg_box_3d.gd
+res://scripts/dataGame.gd
+res://scripts/music_item.gd
+res://prefabs/music_item.tscn

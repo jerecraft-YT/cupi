@@ -17,7 +17,6 @@ var numberMusicItem = 16
 var angulosMusic:float = 60
 var midleAngulos:float = angulosMusic/2
 @export var MusicItem:PackedScene
-@onready var boton = $Button
 @onready var MusicasContainer = $Musicas
 @export var audio:AudioStreamPlayer
 @export var rotacion:float = 0
@@ -70,8 +69,10 @@ func SpawnLevels():
 		itemLevel.position.x = 1000
 		@warning_ignore("integer_division")
 		itemLevel.ID_ItemView = i- int(numberMusicItem / 2)
+		itemLevel.UpdateData()
+	DataGame.levelName = str(niveles[MusicSelected]).left(-1)
 	animatedItems = true
-
+	
 func getLevels():
 	if DataGame.detectarCarpetasExternas == true:
 		return DirAccess.get_directories_at(DataGame.direccionNiveles)

@@ -67,10 +67,10 @@ autoplay = true
 script = ExtResource("7_wjr8j")
 
 [node name="BeatDetecter" type="Node2D" parent="."]
-position = Vector2(-191, -289)
 script = ExtResource("8_e767d")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+ignore_rotation = false
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 amount = 64
@@ -78,7 +78,6 @@ preprocess = 3.0
 process_material = SubResource("ParticleProcessMaterial_4pcd2")
 
 [node name="Background1" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_uquea")
 frame = 4
 script = ExtResource("7_6xp4g")
@@ -89,8 +88,8 @@ position = Vector2(-360, -60)
 [node name="CupiMenu" type="Node2D" parent="." node_paths=PackedStringArray("titulo", "comenzar")]
 scale = Vector2(2, 2)
 script = ExtResource("10_uquea")
-titulo = NodePath("../Titulo")
-comenzar = NodePath("../comenzar")
+titulo = NodePath("../CanvasLayer/Titulo")
+comenzar = NodePath("../CanvasLayer/comenzar")
 
 [node name="metaballStatic" parent="CupiMenu" instance=ExtResource("13_hgevq")]
 visible = false
@@ -116,16 +115,18 @@ frame = 6
 [node name="mouth" parent="CupiMenu/cupiContainer/Face" index="1"]
 frame = 7
 
-[node name="comenzar" type="RichTextLabel" parent="." node_paths=PackedStringArray("boton1", "boton2", "mainMenu")]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="comenzar" type="RichTextLabel" parent="CanvasLayer" node_paths=PackedStringArray("boton1", "boton2", "mainMenu")]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -360.0
-offset_top = 400.0
+offset_top = -180.0
 offset_right = 360.0
-offset_bottom = 507.0
+offset_bottom = -73.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/normal_font_size = 64
@@ -135,56 +136,68 @@ horizontal_alignment = 1
 script = ExtResource("18_hgevq")
 boton1 = NodePath("../Button")
 boton2 = NodePath("../Button2")
-mainMenu = NodePath("..")
+mainMenu = NodePath("../..")
 
-[node name="Titulo" type="RichTextLabel" parent="."]
+[node name="Titulo" type="RichTextLabel" parent="CanvasLayer"]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -360.0
-offset_top = -560.0
 offset_right = 360.0
-offset_bottom = -317.0
+offset_bottom = 243.0
 grow_horizontal = 2
 theme_override_font_sizes/normal_font_size = 136
 bbcode_enabled = true
 text = "[wave amp=50.0 freq=5.0 connected=1][rainbow freq=0.05 sat=0.8 val=1.0 speed=5.0]CUPI[/rainbow][/wave]"
 horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Button" type="Button" parent="." node_paths=PackedStringArray("boton2", "pantallaTitulo")]
+[node name="Button" type="Button" parent="CanvasLayer" node_paths=PackedStringArray("boton2", "pantallaTitulo")]
 modulate = Color(1, 1, 1, 0)
 z_index = 10
-offset_left = -30.0
-offset_top = -55.0
-offset_right = 370.0
-offset_bottom = 46.0
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -50.5
+offset_bottom = 50.5
+grow_horizontal = 0
+grow_vertical = 2
 theme_override_font_sizes/font_size = 68
 disabled = true
 script = ExtResource("20_21mn0")
 boton2 = NodePath("../Button2")
-pantallaTitulo = NodePath("..")
+pantallaTitulo = NodePath("../..")
 
-[node name="Button2" type="Button" parent="."]
+[node name="Button2" type="Button" parent="CanvasLayer"]
 modulate = Color(1, 1, 1, 0)
-offset_left = -354.0
-offset_top = -141.0
-offset_right = -67.0
-offset_bottom = 153.0
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -147.0
+offset_right = 287.0
+offset_bottom = 147.0
+grow_vertical = 2
 disabled = true
 
-[node name="AudioModifierDebug" parent="." instance=ExtResource("18_uquea")]
-position = Vector2(-360, -640)
+[node name="AudioModifierDebug" parent="CanvasLayer" instance=ExtResource("18_uquea")]
+visible = false
 
-[node name="Panel" parent="AudioModifierDebug" index="0" node_paths=PackedStringArray("musicScene")]
-musicScene = NodePath("../../AudioStreamPlayer")
+[node name="PanelGeneral" parent="CanvasLayer/AudioModifierDebug" index="1" node_paths=PackedStringArray("musicScene")]
+musicScene = NodePath("../../../AudioStreamPlayer")
+
+[node name="AudioStreamPlayer" parent="CanvasLayer/AudioModifierDebug" index="3"]
+autoplay = false
 
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
-[connection signal="showMenu" from="comenzar" to="." method="_on_comenzar_show_menu"]
-[connection signal="showMenu" from="comenzar" to="CupiMenu" method="_on_comenzar_show_menu"]
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
-[connection signal="pressed" from="Button2" to="Button" method="_on_button_2_pressed"]
+[connection signal="showMenu" from="CanvasLayer/comenzar" to="." method="_on_comenzar_show_menu"]
+[connection signal="showMenu" from="CanvasLayer/comenzar" to="CupiMenu" method="_on_comenzar_show_menu"]
+[connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button2" to="CanvasLayer/Button" method="_on_button_2_pressed"]
 
 [editable path="CupiMenu/metaballStatic"]
 [editable path="CupiMenu/metaball"]
 [editable path="CupiMenu/cupiContainer"]
-[editable path="AudioModifierDebug"]
+[editable path="CanvasLayer/AudioModifierDebug"]
