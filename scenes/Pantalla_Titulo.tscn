@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://d1fqn8rr6ofpe"]
+[gd_scene load_steps=22 format=3 uid="uid://d1fqn8rr6ofpe"]
 
 [ext_resource type="Texture2D" uid="uid://bowvms2w6ac6j" path="res://sprites/background/Background_1.png" id="1_e767d"]
 [ext_resource type="Script" uid="uid://btqx7jldobmj5" path="res://scripts/MainMenuController.gd" id="1_h8syl"]
@@ -15,6 +15,7 @@
 [ext_resource type="Script" uid="uid://c0xylibq7685x" path="res://scripts/controladorMenu.gd" id="10_uquea"]
 [ext_resource type="PackedScene" uid="uid://7yvx75kpug2u" path="res://prefabs/metaball_static.tscn" id="13_hgevq"]
 [ext_resource type="Script" uid="uid://cjlssy54gqe62" path="res://scripts/showMenu.gd" id="18_hgevq"]
+[ext_resource type="Script" uid="uid://bh1obd3gn3luq" path="res://scenes/button_3.gd" id="18_icyuc"]
 [ext_resource type="PackedScene" uid="uid://cd2h0hwky0h4x" path="res://prefabs/audioModifierDebug.tscn" id="18_uquea"]
 [ext_resource type="PackedScene" uid="uid://cagvfrvk467w0" path="res://prefabs/music_item.tscn" id="19_uquea"]
 [ext_resource type="Script" uid="uid://bx3fjtbbwusd3" path="res://scripts/button.gd" id="20_21mn0"]
@@ -160,9 +161,10 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -400.0
-offset_top = -50.5
-offset_bottom = 50.5
+offset_left = -440.0
+offset_top = -70.5
+offset_right = -40.0
+offset_bottom = 30.5
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_font_sizes/font_size = 68
@@ -176,17 +178,29 @@ modulate = Color(1, 1, 1, 0)
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_top = -147.0
+offset_top = -167.0
 offset_right = 287.0
-offset_bottom = 147.0
+offset_bottom = 127.0
 grow_vertical = 2
 disabled = true
+
+[node name="Button3" type="Button" parent="CanvasLayer" node_paths=PackedStringArray("audioDebug", "titulo")]
+offset_left = 16.0
+offset_top = 14.0
+offset_right = 219.0
+offset_bottom = 81.0
+theme_override_font_sizes/font_size = 32
+text = "Audio debug"
+script = ExtResource("18_icyuc")
+audioDebug = NodePath("../AudioModifierDebug")
+titulo = NodePath("../..")
 
 [node name="AudioModifierDebug" parent="CanvasLayer" instance=ExtResource("18_uquea")]
 visible = false
 
-[node name="PanelGeneral" parent="CanvasLayer/AudioModifierDebug" index="1" node_paths=PackedStringArray("musicScene")]
+[node name="PanelGeneral" parent="CanvasLayer/AudioModifierDebug" index="1" node_paths=PackedStringArray("musicScene", "prevScreen")]
 musicScene = NodePath("../../../AudioStreamPlayer")
+prevScreen = NodePath("../../..")
 
 [node name="AudioStreamPlayer" parent="CanvasLayer/AudioModifierDebug" index="3"]
 autoplay = false
@@ -196,6 +210,7 @@ autoplay = false
 [connection signal="showMenu" from="CanvasLayer/comenzar" to="CupiMenu" method="_on_comenzar_show_menu"]
 [connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_pressed"]
 [connection signal="pressed" from="CanvasLayer/Button2" to="CanvasLayer/Button" method="_on_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button3" to="CanvasLayer/Button3" method="_on_pressed"]
 
 [editable path="CupiMenu/metaballStatic"]
 [editable path="CupiMenu/metaball"]

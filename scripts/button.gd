@@ -7,18 +7,24 @@ var scene = null
 signal load(scenaLoad)
 @export var pantallaTitulo:MainMenu
 @export var externalLoad = false
+var can_change_scene = true
 
 @warning_ignore("unused_parameter")
 func _process(delta: float) -> void:
+	if not is_inside_tree():
+		return
 	if cargar == true:
 		loadLevel()
-	if DataGame.musicLoaded == true and DataGame.JSONLoaded == true and sceneLoaded == true:
+	if DataGame.musicLoaded and DataGame.JSONLoaded and sceneLoaded and can_change_scene:
+		can_change_scene = false
 		pantallaTitulo.animatedItems = false
 		await get_tree().create_timer(1.0).timeout
 		print(DataGame.levelName)
 		if externalLoad == false:
-			if scene != null:
+			if scene != null :
 				get_tree().change_scene_to_packed(scene)
+				set_process(false)
+				return
 		else:
 			load.emit(scene)
 		

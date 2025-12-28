@@ -1,3 +1,10 @@
+Button
+Panel
+VSlider
+OpenXRInteractionProfileEditor
+Node2D
+Control
+Area2D
 DirectionalLight3D
 ColorRect
 Sprite2D
@@ -5,11 +12,3 @@ SubViewport
 Camera3D
 CSGBox3D
 Node3D
-Panel
-Container
-Button
-TextureRect
-CanvasLayer
-Control
-Label
-OptionButton

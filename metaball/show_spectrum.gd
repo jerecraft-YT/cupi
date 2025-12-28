@@ -16,9 +16,11 @@ var min_values = []
 var max_values = []
 var data = []  # Reutilizar array
 var time_since_last_update = 0.0
+var numberEffects:int
 
 func _ready():
-	spectrum = AudioServer.get_bus_effect_instance(0, 0)
+	numberEffects = AudioServer.get_bus_effect_count(0)
+	setAudioInstance()
 	min_values.resize(VU_COUNT)
 	max_values.resize(VU_COUNT)
 	data.resize(VU_COUNT)
@@ -26,7 +28,15 @@ func _ready():
 	max_values.fill(0.0)
 	data.fill(0.0)
 
+func setAudioInstance():
+	spectrum = AudioServer.get_bus_effect_instance(0, 0)
+	numberEffects = AudioServer.get_bus_effect_count(0)
+	print("update spectrum")
+	
 func _process(delta):
+	if numberEffects != AudioServer.get_bus_effect_count(0):
+		setAudioInstance()
+	
 	time_since_last_update += delta
 	
 	# Limitar frecuencia de actualización

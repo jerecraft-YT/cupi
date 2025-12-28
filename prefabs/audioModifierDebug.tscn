@@ -1,8 +1,46 @@
-[gd_scene load_steps=4 format=3 uid="uid://cd2h0hwky0h4x"]
+[gd_scene load_steps=9 format=3 uid="uid://cd2h0hwky0h4x"]
 
 [ext_resource type="StyleBox" uid="uid://dget578shl0bp" path="res://diseños/music_item.tres" id="1_5iogq"]
 [ext_resource type="Script" uid="uid://bfqw3g6hrcl0p" path="res://scripts/debug/controlMusic.gd" id="1_oplwf"]
 [ext_resource type="AudioStream" uid="uid://43db1flkpsao" path="res://Niveles/Bailando (Cut Ver.)/mainMusic/PARADISIO.mp3" id="2_5iogq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5iogq"]
+bg_color = Color(1, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2nkla"]
+bg_color = Color(0.66560394, 1.961328e-06, 4.3317675e-07, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_28daj"]
+bg_color = Color(0.9999966, 0.17391428, 0.12977144, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bn6ei"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1fpia"]
 
 [node name="AudioModifierDebug" type="Control"]
 z_index = 999
@@ -172,3 +210,23 @@ text = "efecto 1"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_5iogq")
 autoplay = true
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -72.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = 72.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_5iogq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2nkla")
+theme_override_styles/hover = SubResource("StyleBoxFlat_28daj")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_bn6ei")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1fpia")
+text = "X"
+
+[connection signal="pressed" from="Button" to="PanelGeneral" method="_on_button_pressed"]

@@ -7,7 +7,7 @@ extends Panel
 @export var panelParametros: Panel
 @export var scrollParametros: VBoxContainer
 @export var musicScene: AudioStreamPlayer
-
+@export var prevScreen:MainMenu
 # Nuevos controles exportados
 @export var panelControles: Panel
 @export var listaEfectos: OptionButton
@@ -38,9 +38,9 @@ var todos_efectos_disponibles = [
 	{"nombre": "EQ (6 bandas)", "clase": "AudioEffectEQ6"},
 	{"nombre": "EQ (10 bandas)", "clase": "AudioEffectEQ10"},
 	{"nombre": "EQ (21 bandas)", "clase": "AudioEffectEQ21"},
-	{"nombre": "HighPass Filter", "clase": "AudioEffectHighpassFilter"},
-	{"nombre": "LowPass Filter", "clase": "AudioEffectLowpassFilter"},
-	{"nombre": "BandPass Filter", "clase": "AudioEffectBandpassFilter"},
+	{"nombre": "HighPass Filter", "clase": "AudioEffectHighPassFilter"},
+	{"nombre": "LowPass Filter", "clase": "AudioEffectLowPassFilter"},
+	{"nombre": "BandPass Filter", "clase": "AudioEffectBandPassFilter"},
 	{"nombre": "Notch Filter", "clase": "AudioEffectNotchFilter"},
 	{"nombre": "Limiter", "clase": "AudioEffectLimiter"},
 	{"nombre": "Panner", "clase": "AudioEffectPanner"},
@@ -51,7 +51,6 @@ var todos_efectos_disponibles = [
 	{"nombre": "Stereo Enhance", "clase": "AudioEffectStereoEnhance"},
 	{"nombre": "Record", "clase": "AudioEffectRecord"}
 ]
-
 func _ready() -> void:
 	# Configurar tamaños de fuente iniciales
 	infoAudio.add_theme_font_size_override("font_size", font_size_normal)
@@ -464,7 +463,7 @@ func _on_agregar_efecto_pressed():
 			if nuevo_efecto:
 				# Agregar al bus 0
 				AudioServer.add_bus_effect(0, nuevo_efecto)
-				print("Efecto agregado: ", efecto_info["nombre"])
+				#print("Efecto agregado: ", efecto_info["nombre"])
 				
 				# Actualizar interfaz
 				spawnEffects()
@@ -553,3 +552,10 @@ func _on_refrescar_pressed():
 	panelParametros.visible = false
 	infoAudio.text = drawEffects()
 	actualizar_estado_audio()
+
+
+func _on_button_pressed() -> void:
+	get_parent().visible = false
+	if prevScreen != null:
+		prevScreen.mainScreenActive = true
+	pass # Replace with function body.

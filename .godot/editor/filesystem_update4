@@ -18,3 +18,7 @@ res://scenes/csg_box_3d.gd
 res://scripts/dataGame.gd
 res://scripts/music_item.gd
 res://prefabs/music_item.tscn
+res://scripts/button.gd
+res://metaball/show_spectrum.gd
+res://scenes/button_3.gd
+res://export_presets.cfg
