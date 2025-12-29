@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://br4mw6v1mafcw"]
+
+[ext_resource type="Shader" uid="uid://rghpfcnh0win" path="res://shaders/sinCos.tres" id="1_l0t27"]
+
+[resource]
+shader = ExtResource("1_l0t27")
+shader_parameter/Color = Color(0, 0, 0, 1)
+shader_parameter/frequency = 30.0
+shader_parameter/TimeMultiplier = 5.0
+shader_parameter/amplitude = 0.5

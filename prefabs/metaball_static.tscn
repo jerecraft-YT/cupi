@@ -1,18 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://7yvx75kpug2u"]
+[gd_scene load_steps=7 format=3 uid="uid://7yvx75kpug2u"]
 
 [ext_resource type="Script" uid="uid://cx6wk5yxgaalf" path="res://metaball/MetaballOptimized.gd" id="1_m1nff"]
 [ext_resource type="Texture2D" uid="uid://ck4sa4dap5f7s" path="res://sprites/cupi/circuloRitmo/bordeCirculo2.png" id="2_7nw1l"]
 [ext_resource type="Script" uid="uid://de21rbsaslsxw" path="res://metaball/show_spectrum.gd" id="2_ctm4h"]
 [ext_resource type="Texture2D" uid="uid://bag8lvtsxurme" path="res://sprites/cupi/circuloRitmo/bordeCirculo1.png" id="3_ctm4h"]
-[ext_resource type="Shader" uid="uid://rghpfcnh0win" path="res://shaders/sinCos.tres" id="7_ewiwc"]
+[ext_resource type="Material" uid="uid://br4mw6v1mafcw" path="res://materiales/metaball_static.tres" id="4_nvmvs"]
 [ext_resource type="Script" uid="uid://diphwn7jukihk" path="res://scripts/shaderController/distorsion.gd" id="7_p3wh2"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_25ol6"]
-shader = ExtResource("7_ewiwc")
-shader_parameter/Color = Color(0, 0, 0, 1)
-shader_parameter/frequency = 60.0
-shader_parameter/TimeMultiplier = 5.0
-shader_parameter/amplitude = 1.5
 
 [node name="metaballStatic" type="Node2D" node_paths=PackedStringArray("spectro")]
 script = ExtResource("1_m1nff")
@@ -27,7 +20,7 @@ texture = ExtResource("3_ctm4h")
 offset = Vector2(0, -5)
 
 [node name="distorsion" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_25ol6")
+material = ExtResource("4_nvmvs")
 scale = Vector2(0.95, 0.95)
 texture = ExtResource("2_7nw1l")
 offset = Vector2(0, -5)

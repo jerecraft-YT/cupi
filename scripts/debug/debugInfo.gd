@@ -4,5 +4,7 @@ extends RichTextLabel
 
 @warning_ignore("unused_parameter")
 func _process(delta: float) -> void:
-	pass
-	text = str("FPS: ",Engine.get_frames_per_second(),"\nPuntos: ",cupi.puntosNivel,"\nErrores: ", cupi.errores)
+	text = ""
+	text = str("FPS: ",Engine.get_frames_per_second())
+	if cupi != null:
+		text += str("\nPuntos: ",cupi.puntosNivel,"\nErrores: ", cupi.errores)

@@ -5,6 +5,7 @@ var externalLoad = false
 signal load
 
 func _ready() -> void:
+	
 	ResourceLoader.load_threaded_request("res://scenes/Pantalla_Titulo.tscn")
 	
 @warning_ignore("unused_parameter")

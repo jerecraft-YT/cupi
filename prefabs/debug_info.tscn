@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1y8yp35e5vm5"]
+
+[ext_resource type="Script" uid="uid://dbbyxbbf2gp17" path="res://scripts/debug/debugInfo.gd" id="1_cpdng"]
+
+[node name="DebugInfo" type="RichTextLabel"]
+clip_contents = false
+offset_left = 8.0
+offset_top = 9.0
+offset_right = 2351.3333
+offset_bottom = 1049.0
+scale = Vector2(0.3, 0.3)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 50
+theme_override_font_sizes/normal_font_size = 90
+bbcode_enabled = true
+text = "Debug Info..."
+scroll_active = false
+tab_size = 3
+script = ExtResource("1_cpdng")

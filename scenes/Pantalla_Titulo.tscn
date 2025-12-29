@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://d1fqn8rr6ofpe"]
+[gd_scene load_steps=26 format=3 uid="uid://d1fqn8rr6ofpe"]
 
 [ext_resource type="Texture2D" uid="uid://bowvms2w6ac6j" path="res://sprites/background/Background_1.png" id="1_e767d"]
 [ext_resource type="Script" uid="uid://btqx7jldobmj5" path="res://scripts/MainMenuController.gd" id="1_h8syl"]
@@ -14,11 +14,14 @@
 [ext_resource type="Script" uid="uid://c3bplxso2r8il" path="res://scripts/beatDetect.gd" id="8_e767d"]
 [ext_resource type="Script" uid="uid://c0xylibq7685x" path="res://scripts/controladorMenu.gd" id="10_uquea"]
 [ext_resource type="PackedScene" uid="uid://7yvx75kpug2u" path="res://prefabs/metaball_static.tscn" id="13_hgevq"]
+[ext_resource type="PackedScene" uid="uid://d1y8yp35e5vm5" path="res://prefabs/debug_info.tscn" id="16_icyuc"]
 [ext_resource type="Script" uid="uid://cjlssy54gqe62" path="res://scripts/showMenu.gd" id="18_hgevq"]
-[ext_resource type="Script" uid="uid://bh1obd3gn3luq" path="res://scenes/button_3.gd" id="18_icyuc"]
+[ext_resource type="Script" uid="uid://bh1obd3gn3luq" path="res://scripts/button_3.gd" id="18_icyuc"]
 [ext_resource type="PackedScene" uid="uid://cd2h0hwky0h4x" path="res://prefabs/audioModifierDebug.tscn" id="18_uquea"]
 [ext_resource type="PackedScene" uid="uid://cagvfrvk467w0" path="res://prefabs/music_item.tscn" id="19_uquea"]
 [ext_resource type="Script" uid="uid://bx3fjtbbwusd3" path="res://scripts/button.gd" id="20_21mn0"]
+[ext_resource type="Shader" uid="uid://bymx27jlswj05" path="res://scenes/caleidoscopio.gdshader" id="21_21mn0"]
+[ext_resource type="Texture2D" uid="uid://cqk3ysk80cik" path="res://icon.svg" id="22_a1lvp"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4pcd2"]
 particle_flag_disable_z = true
@@ -53,6 +56,16 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2d28k"]
+shader = ExtResource("21_21mn0")
+shader_parameter/segments = 6.0
+shader_parameter/segmentReflect = true
+shader_parameter/polarOffset = Vector2(0.5, 0.5)
+shader_parameter/polarAngle = 0.0
+shader_parameter/sourceOffset = Vector2(0.5, 0.5)
+shader_parameter/sourceScale = 2.0
+shader_parameter/sourceAngle = 0.0
 
 [node name="PantallaTitulo" type="Node2D" node_paths=PackedStringArray("audio") groups=["PantallaTitulo"]]
 script = ExtResource("1_h8syl")
@@ -117,6 +130,10 @@ frame = 6
 frame = 7
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DebugInfo" parent="CanvasLayer" instance=ExtResource("16_icyuc")]
+offset_top = 5.0
+offset_bottom = 1045.0
 
 [node name="comenzar" type="RichTextLabel" parent="CanvasLayer" node_paths=PackedStringArray("boton1", "boton2", "mainMenu")]
 anchors_preset = 7
@@ -185,10 +202,10 @@ grow_vertical = 2
 disabled = true
 
 [node name="Button3" type="Button" parent="CanvasLayer" node_paths=PackedStringArray("audioDebug", "titulo")]
-offset_left = 16.0
-offset_top = 14.0
-offset_right = 219.0
-offset_bottom = 81.0
+offset_left = 508.0
+offset_top = 8.0
+offset_right = 711.0
+offset_bottom = 75.0
 theme_override_font_sizes/font_size = 32
 text = "Audio debug"
 script = ExtResource("18_icyuc")
@@ -204,6 +221,15 @@ prevScreen = NodePath("../../..")
 
 [node name="AudioStreamPlayer" parent="CanvasLayer/AudioModifierDebug" index="3"]
 autoplay = false
+
+[node name="BackBufferCopy" type="BackBufferCopy" parent="."]
+scale = Vector2(5.6210938, 10.000001)
+copy_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_2d28k")
+scale = Vector2(5.6210938, 10.000001)
+texture = ExtResource("22_a1lvp")
 
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
 [connection signal="showMenu" from="CanvasLayer/comenzar" to="." method="_on_comenzar_show_menu"]

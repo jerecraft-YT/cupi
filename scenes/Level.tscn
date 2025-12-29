@@ -1,27 +1,16 @@
-[gd_scene load_steps=12 format=3 uid="uid://bk8q65ctlgoef"]
+[gd_scene load_steps=9 format=3 uid="uid://bk8q65ctlgoef"]
 
-[ext_resource type="Shader" uid="uid://14kk4kka54n1" path="res://shaders/grid.gdshader" id="1_2eouu"]
-[ext_resource type="Script" uid="uid://dqguof25omg2e" path="res://scripts/background.gd" id="2_rccsh"]
 [ext_resource type="PackedScene" uid="uid://bv1q1ckfcnds8" path="res://prefabs/gameplay.tscn" id="3_ax7ne"]
+[ext_resource type="PackedScene" uid="uid://d1y8yp35e5vm5" path="res://prefabs/debug_info.tscn" id="3_dke22"]
 [ext_resource type="Script" uid="uid://dinxdtthuvvkf" path="res://scripts/debug/control_velocity.gd" id="4_sv41r"]
-[ext_resource type="Script" uid="uid://dbbyxbbf2gp17" path="res://scripts/debug/debugInfo.gd" id="5_m0xki"]
 [ext_resource type="Script" uid="uid://b32sgw55o2c8f" path="res://scripts/player/controles.gd" id="6_xe3hh"]
 [ext_resource type="Texture2D" uid="uid://c1ce3lbjrnp2o" path="res://sprites/controller/disco.png" id="7_p6oy6"]
-[ext_resource type="Script" uid="uid://cv4s2ki2jjc8b" path="res://scenes/csg_box_3d.gd" id="8_faw0r"]
+[ext_resource type="Script" uid="uid://cv4s2ki2jjc8b" path="res://scripts/csg_box_3d.gd" id="8_faw0r"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_2eouu"]
 viewport_path = NodePath("SubViewport")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_p7d8n"]
-shader = ExtResource("1_2eouu")
-shader_parameter/bottom_color = Color(0.61339027, 0.61339027, 0.61339027, 1)
-shader_parameter/top_color = Color(0, 0, 0, 1)
-shader_parameter/wave_amp = 0.03400000324494
-shader_parameter/wave_size = 2.0000000475
-shader_parameter/wave_time_mul = 0.50000002049012
-shader_parameter/total_phases = 9
-
-[sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_rccsh"]
+[sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_dke22"]
 mix_rate_mode = 0
 buffer_length = 0.1
 
@@ -36,18 +25,6 @@ offset = Vector2(360, 640)
 ignore_rotation = false
 position_smoothing_enabled = true
 
-[node name="BG" type="ColorRect" parent="."]
-visible = false
-z_index = -15
-material = SubResource("ShaderMaterial_p7d8n")
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_right = 721.0
-offset_bottom = 720.0
-grow_horizontal = 2
-script = ExtResource("2_rccsh")
-
 [node name="Gameplay" parent="." instance=ExtResource("3_ax7ne")]
 position = Vector2(360, 360)
 scale = Vector2(0.75, 0.75)
@@ -56,7 +33,7 @@ scale = Vector2(0.75, 0.75)
 speed = 0.2
 
 [node name="ReversableAudioStreamPlayer" parent="Gameplay/Cupi" index="0"]
-stream = SubResource("AudioStreamGenerator_rccsh")
+stream = SubResource("AudioStreamGenerator_dke22")
 
 [node name="LevelMusic" parent="Gameplay/Cupi" index="1"]
 autoplay = false
@@ -101,21 +78,7 @@ pivot_offset = Vector2(120, 93)
 color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 
-[node name="DebugInfo" type="RichTextLabel" parent="HUD"]
-clip_contents = false
-offset_left = 8.0
-offset_top = 9.0
-offset_right = 2351.3333
-offset_bottom = 1049.0
-scale = Vector2(0.3, 0.3)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 50
-theme_override_font_sizes/normal_font_size = 90
-bbcode_enabled = true
-text = "Debug Info..."
-scroll_active = false
-tab_size = 3
-script = ExtResource("5_m0xki")
+[node name="DebugInfo" parent="HUD" instance=ExtResource("3_dke22")]
 
 [node name="Control" type="Control" parent="HUD"]
 layout_mode = 3
@@ -135,6 +98,7 @@ script = ExtResource("6_xe3hh")
 
 [node name="backController" type="Polygon2D" parent="HUD/Control/controles"]
 z_index = 150
+position = Vector2(-4.761963, 1.9047852)
 scale = Vector2(0.25, 0.25)
 color = Color(0, 0, 1, 1)
 polygon = PackedVector2Array(-60, -292, -476, 60, -28, 276, 1017.14307, 87.6189, 1032.3811, 60.952393, 1032.3811, -95.23828, 1017.14307, -121.904785)
@@ -142,7 +106,7 @@ polygon = PackedVector2Array(-60, -292, -476, 60, -28, 276, 1017.14307, 87.6189,
 [node name="diskController" type="Sprite2D" parent="HUD/Control/controles"]
 z_index = 200
 texture = ExtResource("7_p6oy6")
-offset = Vector2(5, -4)
+offset = Vector2(1, -1)
 
 [node name="SubViewport" type="SubViewport" parent="."]
 transparent_bg = true
@@ -150,7 +114,7 @@ transparent_bg = true
 [node name="Node3D" type="Node3D" parent="SubViewport"]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="SubViewport/Node3D"]
-transform = Transform3D(0.8952739, 0.29116672, -0.337204, -0.2845149, 0.9560993, 0.070181526, 0.342835, 0.033107884, 0.9388119, 0, 0, -0.7733234)
+transform = Transform3D(0.851075, 0.13862334, -0.50641364, -0.2627634, 0.9474944, -0.18223551, 0.454562, 0.28816313, 0.84281385, 0, 0, -0.7733234)
 script = ExtResource("8_faw0r")
 
 [node name="Camera3D" type="Camera3D" parent="SubViewport/Node3D"]

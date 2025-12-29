@@ -1,8 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://claqkikipq8rt"]
 
 [ext_resource type="Texture2D" uid="uid://cqk3ysk80cik" path="res://icon.svg" id="1_i7jsx"]
-[ext_resource type="Script" uid="uid://nhut8w43g1lx" path="res://scenes/LevelLoader.gd" id="2_i7jsx"]
+[ext_resource type="Script" uid="uid://nhut8w43g1lx" path="res://scripts/LevelLoader.gd" id="2_i7jsx"]
 [ext_resource type="PackedScene" uid="uid://qwgdhe76ve32" path="res://scenes/StartLoad.tscn" id="2_k2gmx"]
+
 
 [sub_resource type="GDScript" id="GDScript_xp7q5"]
 resource_name = "GameView"

@@ -169,7 +169,7 @@ layout_mode = 0
 offset_left = 19.0
 offset_top = 36.0
 offset_right = 338.0
-offset_bottom = 455.0
+offset_bottom = 473.0
 
 [node name="OptionButton" type="OptionButton" parent="PanelGeneral/PanelMiscelanea/VBoxContainer"]
 layout_mode = 2

@@ -13,4 +13,4 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	#factorAmp = 720.0/get_viewport().get_visible_rect().size.x
 	material.set_shader_parameter("amplitude",0.5 * ScaleAmplitude)
-	material.set_shader_parameter("frequency",60.0 * ScaleFrequency)
+	material.set_shader_parameter("frequency",30.0 * ScaleFrequency)

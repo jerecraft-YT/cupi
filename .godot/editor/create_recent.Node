@@ -1,3 +1,7 @@
+BackBufferCopy
+Sprite2D
+ColorRect
+GPUParticles2D
 Button
 Panel
 VSlider
@@ -6,9 +10,6 @@ Node2D
 Control
 Area2D
 DirectionalLight3D
-ColorRect
-Sprite2D
 SubViewport
 Camera3D
 CSGBox3D
-Node3D

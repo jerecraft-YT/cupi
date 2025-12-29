@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://d035q15k4ghlu"]
+
+[ext_resource type="Shader" uid="uid://bd1h0aucl5xim" path="res://shaders/sinCosforLine.tres" id="1_x1b63"]
+
+[resource]
+shader = ExtResource("1_x1b63")
+shader_parameter/frequency = 60.0
+shader_parameter/TimeMultiplier = 5.0
+shader_parameter/amplitude = 1.0
