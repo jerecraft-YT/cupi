@@ -17,7 +17,12 @@ buffer_length = 0.1
 [node name="Level" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(179, 317)
+position = Vector2(84, 325)
+texture = SubResource("ViewportTexture_2eouu")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(485, 135)
+rotation = 0.7749262
 texture = SubResource("ViewportTexture_2eouu")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -64,14 +69,10 @@ metadata/_edit_use_anchors_ = true
 z_index = 100
 z_as_relative = false
 custom_minimum_size = Vector2(720, 558)
-anchors_preset = 7
-anchor_left = 0.5
+anchors_preset = 12
 anchor_top = 1.0
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -360.0
-offset_top = -560.0
-offset_right = 360.0
 grow_horizontal = 2
 grow_vertical = 0
 pivot_offset = Vector2(120, 93)
@@ -93,7 +94,8 @@ grow_horizontal = 2
 grow_vertical = 0
 
 [node name="controles" type="Node2D" parent="HUD/Control" groups=["controlador"]]
-scale = Vector2(1.05, 1.05)
+position = Vector2(218, 138)
+scale = Vector2(0.5, 0.5)
 script = ExtResource("6_xe3hh")
 
 [node name="backController" type="Polygon2D" parent="HUD/Control/controles"]

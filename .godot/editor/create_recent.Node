@@ -1,3 +1,4 @@
+AudioStreamPlayer
 BackBufferCopy
 Sprite2D
 ColorRect
@@ -12,4 +13,3 @@ Area2D
 DirectionalLight3D
 SubViewport
 Camera3D
-CSGBox3D

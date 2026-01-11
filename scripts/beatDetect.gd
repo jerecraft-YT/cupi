@@ -12,7 +12,7 @@ signal beatless
 @export var cooldown: float = 0.15	        # tiempo mínimo entre beats (segundos)
 @export var bass_lowpass_alpha: float = 0.2 # IIR alpha para enfatizar bajas frecuencias (0..1)
 @export var camarita:Camera2D
-@export var background:ColorRect
+@export var background:AnimatedSprite2D
 var capture = null
 var smoothed_energy: float = 0.0
 var last_beat_time: float = -10.0
@@ -66,5 +66,6 @@ func _detect_beat() -> void:
 		last_beat_time = now
 
 func _beat() -> void:
+	#print("beat")
 	emit_signal("beatless")
 	scale = Vector2.ONE * 1.05

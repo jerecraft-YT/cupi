@@ -34,47 +34,12 @@ func _process(delta: float) -> void:
 		if spiralStart:
 			var circularAttack = get_parent()
 			angle = circularAttack.anguloFinal + circularAttack.AngleFinal
-			visible = true
-			if timeLerp <= 0 and cupi.TimeMultiplier > 0:
+			if timeLerp > 0:
+				visible = true
 				
+			if timeLerp <= 0 and cupi.TimeMultiplier > 0:
 				if cupi.cupiBot:
 					controladorGeneral.rotation = deg_to_rad(angle)
-				
-				var diferencia = abs(rad_to_deg(controladorGeneral.rotation) - fmod(angle, 360))
-				var shortest_diff = min(diferencia, 360 - diferencia)
-				deathcooldown += delta * cupi.TimeMultiplier
-				
-				# Lógica CORREGIDA - sin condiciones duplicadas
-				if shortest_diff <= cupi.cobertura / 2.0 and shortest_diff >= -cupi.cobertura / 2.0:
-					visible = false
-					if cooldown <= 0:
-						# ACIERTO
-						if shortest_diff <= (cupi.cobertura / 2.0) * 0.32:
-							cupi.puntosNivel += 100
-						elif shortest_diff <= (cupi.cobertura / 2.0) * 0.60:
-							cupi.puntosNivel += 50
-						elif shortest_diff <= (cupi.cobertura / 2.0) * 0.8:
-							cupi.puntosNivel += 25
-						else:
-							cupi.puntosNivel += 10
-						cooldown = 0.1
-				else:
-					# ERROR - Solo detectar después del deathcooldown
-					if deathcooldown > 0.1 and cooldown <= 0:
-						cupi.ralentizar()
-						cupi.errores += 1
-						if cupi.errores > 50:
-							cupi.puntosNivel -= 200
-						elif cupi.errores > 35:
-							cupi.puntosNivel -= 150
-						elif cupi.errores > 20:
-							cupi.puntosNivel -= 100
-						elif cupi.errores > 10:
-							cupi.puntosNivel -= 50
-						else:
-							cupi.puntosNivel -= 30
-						cupi.puntosNivel = max(0, cupi.puntosNivel)
-						cooldown = 0.1
 				
 				duracionBala = circularAttack.calc / 1000.0
 				if not startDestroy:
@@ -85,37 +50,6 @@ func _process(delta: float) -> void:
 			if timeLerp <= 0 and cupi.TimeMultiplier > 0 and cooldown <= 0:
 				if cupi.cupiBot:
 					controladorGeneral.rotation = deg_to_rad(angle)
-				
-				var diferencia = abs(rad_to_deg(controladorGeneral.rotation) - fmod(angle, 360))
-				var shortest_diff = min(diferencia, 360 - diferencia)
-				
-				if shortest_diff <= cupi.cobertura / 2.0 and shortest_diff >= -cupi.cobertura / 2.0:
-					# ACIERTO
-					if shortest_diff <= (cupi.cobertura / 2.0) * 0.32:
-						cupi.puntosNivel += 100
-					elif shortest_diff <= (cupi.cobertura / 2.0) * 0.60:
-						cupi.puntosNivel += 50
-					elif shortest_diff <= (cupi.cobertura / 2.0) * 0.8:
-						cupi.puntosNivel += 25
-					else:
-						cupi.puntosNivel += 10
-				else:
-					# ERROR
-					cupi.ralentizar()
-					cupi.errores += 1
-					if cupi.errores > 50:
-						cupi.puntosNivel -= 200
-					elif cupi.errores > 35:
-						cupi.puntosNivel -= 150
-					elif cupi.errores > 20:
-						cupi.puntosNivel -= 100
-					elif cupi.errores > 10:
-						cupi.puntosNivel -= 50
-					else:
-						cupi.puntosNivel -= 30
-					cupi.puntosNivel = max(0, cupi.puntosNivel)
-				
-				cooldown = 0.1  # IMPORTANTE: Prevenir detección continua
 	
 	# Movimiento de la bala
 	_time_accum += delta
@@ -128,8 +62,11 @@ func _process(delta: float) -> void:
 		amp += 35
 		position = Vector2(spawner.position.x + cos(deg_to_rad(angle)) * amp, spawner.position.y + sin(deg_to_rad(angle)) * amp)
 		_time_accum = 0
-	# Balas normales
-	if timeLerp <= 0 and not isSpiral and cupi.TimeMultiplier > 0:
+		
+	bulletHit(delta)
+	
+func bulletHit(delta):
+	if timeLerp <= 0 and cupi.TimeMultiplier > 0:
 		if cupi.cupiBot:
 			controladorGeneral.rotation = deg_to_rad(angle)
 		
@@ -138,7 +75,8 @@ func _process(delta: float) -> void:
 		deathcooldown += delta
 		
 		# Verificar si está dentro de la cobertura
-		if shortest_diff <= cupi.cobertura / 2.0 and shortest_diff >= -cupi.cobertura / 2.0:
+		if shortest_diff <= cupi.cobertura / 2.0 and shortest_diff >= -cupi.cobertura / 2.0 and visible == true:
+			visible = false
 			# ACIERTO
 			if shortest_diff <= (cupi.cobertura / 2.0) * 0.25:
 				cupi.puntosNivel += 100
@@ -149,13 +87,19 @@ func _process(delta: float) -> void:
 			else:
 				cupi.puntosNivel += 10
 			cupi.BgBeat()
-			queue_free()
-			duracionBala = 0.1
-			cupi.BulletDestroy(self)
 			cupiContainer.cupiBeat()
+			
+			if isSpiral and !spiralStart:
+				cupi.bulletHit()
+			
+			if not isSpiral:
+				queue_free()
+				duracionBala = 0.1
+				cupi.BulletDestroy(self)
 		
 		# ERROR - Solo después del deathcooldown
-		if deathcooldown > 0.1:
+		if deathcooldown > 0.1 and visible == true:
+			visible = false
 			cupi.errores += 1
 			if cupi.errores > 50:
 				cupi.puntosNivel -= 300
@@ -169,4 +113,5 @@ func _process(delta: float) -> void:
 				cupi.puntosNivel -= 100
 			cupi.puntosNivel = max(0, cupi.puntosNivel)
 			cupi.ralentizar()
-			queue_free()
+			if not isSpiral:
+				queue_free()

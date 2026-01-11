@@ -3,8 +3,8 @@ class_name CupiSpiral
 
 # NODOS
 @export var line: Line2D
-@onready var bulletStart: Node2D = $startNote
-@onready var bulletFinal: Node2D = $FinalNote
+@onready var bulletStart: CupiBullet = $startNote
+@onready var bulletFinal: CupiBullet = $FinalNote
 @onready var cupi: Node2D = get_tree().get_first_node_in_group("cupi")
 @onready var spawner: Node2D = get_tree().get_first_node_in_group("bulletSpawner")
 
@@ -60,6 +60,7 @@ func _process(delta: float) -> void:
 
 	# condición de eliminación
 	if bulletFinal.timeLerp <= 0:
+		bulletFinal.bulletHit(10)
 		queue_free()
 
 # Llamada a easing de forma segura y rápida

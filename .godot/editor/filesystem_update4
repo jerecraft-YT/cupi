@@ -1,14 +1,1 @@
 res://metaball/audioAnalizer.tres
-res://scenes/Pantalla_Titulo.tscn
-res://shaders/sinCosforLine.tres
-res://animations/cupiMouth.tres
-res://animations/cupiEyes.tres
-res://shaders/sinCos.tres
-res://scenes/caleidoscopio.gdshader
-res://shaders/Frosted_Glass_Shader.gdshader
-res://shaders/Universal_Transition_Shader.gdshader
-res://shaders/dynamicProgressBar.gdshader
-res://shaders/ScreenEdges.gdshader
-res://shaders/3_sample_blur.gdshader
-res://shaders/caleidoscopio.tres
-res://scenes/Level.tscn

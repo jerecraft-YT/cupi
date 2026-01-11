@@ -12,6 +12,7 @@ signal waveBeat
 @export var InverseLevelMusic:ReversableAudioStreamPlayer
 @export var barBeat0Player:AudioStreamPlayer
 @export var barBeat1Player:AudioStreamPlayer
+@export var bulletHitAudio:AudioStreamPlayer
 @export var cupiBot:bool
 @export var levelName:String
 @export var amp:float = 35
@@ -85,7 +86,7 @@ func get_song_time() -> float:
 	
 func ralentizar():
 	TimeMultiplier = 0.5+(wah*0.15)
-	
+
 @warning_ignore("unused_parameter")
 func _physics_process(delta: float) -> void:
 	if cupiBot:
@@ -138,8 +139,12 @@ func _process(delta: float) -> void:
 	TimeScene = max(0,TimeScene)
 	levelMusic.pitch_scale = max(0.001,abs(TimeMultiplier))
 	InverseLevelMusic.playback_rate = TimeMultiplier
+
+func bulletHit():
+	bulletHitAudio.play()
 	
 func BulletDestroy(bullet):
+		bulletHit()
 		var particles:GPUParticles2D = particulasBullet.instantiate()
 		add_child(particles)
 		particles.rotation = deg_to_rad(bullet.angle)

@@ -14,6 +14,7 @@ var datalevel
 var loadElements = false
 var musicLoaded = false
 var JSONLoaded = false
+var pcos:PackedFloat32Array = []
 
 @export var detectarCarpetasExternas:bool = false
 
@@ -24,6 +25,8 @@ func _ready() -> void:
 		print("funciono")
 	else:
 		print(":(")
+	
+	precalCOS()
 
 func loadLevelElements():
 	musicFile = detectMusicFile()
@@ -80,7 +83,29 @@ func _process(delta: float) -> void:
 func loadCupi():
 	cupi = get_tree().get_first_node_in_group("cupi")
 	return cupi
+
+var MAXANGLE = 360
+
+func precalCOS():
 	
+	pcos.resize(MAXANGLE+1)
+	
+	for i in range(pcos.size()):
+		pcos[i] = cos(deg_to_rad(i))
+
+func getCOS(getAngle:float):
+	getAngle = wrapf(getAngle , 0.0 , 360.0)
+	
+	var decimalPart = getAngle - int(getAngle)
+	var angle = pcos[floor(getAngle)]
+	
+	if decimalPart == 0:
+		return angle
+	else:
+		var topAngle = pcos[ceil(getAngle)]
+		
+		return lerp(angle,topAngle,decimalPart)
+
 func easeInSine(x):
 	return 1 - cos((x * PI) / 2)
 func easeOutSine(x):

@@ -80,8 +80,10 @@ autoplay = true
 [node name="LevelLoader" type="Node" parent="."]
 script = ExtResource("7_wjr8j")
 
-[node name="BeatDetecter" type="Node2D" parent="."]
+[node name="BeatDetecter" type="Node2D" parent="." node_paths=PackedStringArray("camarita", "background")]
 script = ExtResource("8_e767d")
+camarita = NodePath("../Camera2D")
+background = NodePath("../Background1")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 ignore_rotation = false
@@ -132,6 +134,7 @@ frame = 7
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="DebugInfo" parent="CanvasLayer" instance=ExtResource("16_icyuc")]
+z_index = 1000
 offset_top = 5.0
 offset_bottom = 1045.0
 
@@ -213,7 +216,6 @@ audioDebug = NodePath("../AudioModifierDebug")
 titulo = NodePath("../..")
 
 [node name="AudioModifierDebug" parent="CanvasLayer" instance=ExtResource("18_uquea")]
-visible = false
 
 [node name="PanelGeneral" parent="CanvasLayer/AudioModifierDebug" index="1" node_paths=PackedStringArray("musicScene", "prevScreen")]
 musicScene = NodePath("../../../AudioStreamPlayer")
@@ -223,10 +225,12 @@ prevScreen = NodePath("../../..")
 autoplay = false
 
 [node name="BackBufferCopy" type="BackBufferCopy" parent="."]
+visible = false
 scale = Vector2(5.6210938, 10.000001)
 copy_mode = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 material = SubResource("ShaderMaterial_2d28k")
 scale = Vector2(5.6210938, 10.000001)
 texture = ExtResource("22_a1lvp")
