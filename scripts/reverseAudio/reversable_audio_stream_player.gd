@@ -20,7 +20,8 @@ var playback_direction := 1
 			stream_paused = true
 		else:
 			stream_paused = false
-			pitch_scale = abs(v)
+			if pitch_scale != 0:
+				pitch_scale = abs(v)
 		playback_rate = v
 		var dir := -1 if v < 0 else 1
 		if dir != playback_direction:
