@@ -1,24 +1,27 @@
-[gd_scene load_steps=6 format=3 uid="uid://bv1q1ckfcnds8"]
+[gd_scene load_steps=7 format=3 uid="uid://bv1q1ckfcnds8"]
 
 [ext_resource type="PackedScene" uid="uid://cmwdw8kgbef6b" path="res://prefabs/metaball.tscn" id="1_7dn3w"]
 [ext_resource type="Script" uid="uid://n2c72dch62rh" path="res://scripts/bullets/BulletSpawner.gd" id="2_v5r4t"]
 [ext_resource type="PackedScene" uid="uid://d0kmnpjiacab" path="res://prefabs/cupi.tscn" id="3_7dn3w"]
 [ext_resource type="PackedScene" uid="uid://bvjuwoyoq48kd" path="res://prefabs/bullet.tscn" id="3_v5r4t"]
 [ext_resource type="PackedScene" uid="uid://cjvixm8nwnbvl" path="res://prefabs/SpiralBullet.tscn" id="4_7dn3w"]
+[ext_resource type="PackedScene" uid="uid://by85qvn8hujbg" path="res://prefabs/customEffect.tscn" id="5_5vd6e"]
 
 [node name="Gameplay" type="Node2D"]
 
 [node name="metaball" parent="." instance=ExtResource("1_7dn3w")]
 
-[node name="distorsion" parent="metaball/ball" index="2"]
-ScaleFrequency = 3.0
+[node name="distorsion" parent="metaball" index="3"]
+ScaleFrequency = 2.5
 
-[node name="bullet spawner" type="Node2D" parent="." node_paths=PackedStringArray("spirales", "normales", "cupi", "cupiContainer") groups=["bulletSpawner"]]
+[node name="bullet spawner" type="Node2D" parent="." node_paths=PackedStringArray("spirales", "normales", "efectos", "cupi", "cupiContainer") groups=["bulletSpawner"]]
 script = ExtResource("2_v5r4t")
 prefabBulletNormal = ExtResource("3_v5r4t")
 prefabBulletSpiral = ExtResource("4_7dn3w")
+prefabEffecto = ExtResource("5_5vd6e")
 spirales = NodePath("spirales")
 normales = NodePath("normales")
+efectos = NodePath("efectos")
 cupi = NodePath("../Cupi")
 cupiContainer = NodePath("../Cupi/cupiContainer")
 
@@ -27,6 +30,8 @@ scale = Vector2(3, 3)
 
 [node name="normales" type="Node2D" parent="bullet spawner"]
 scale = Vector2(3, 3)
+
+[node name="efectos" type="Node2D" parent="bullet spawner"]
 
 [node name="Cupi" parent="." groups=["cupi"] instance=ExtResource("3_7dn3w")]
 scale = Vector2(3, 3)

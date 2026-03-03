@@ -11,6 +11,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 @warning_ignore("unused_parameter")
 func _process(delta: float) -> void:
+	pass
 	factorAmp = 720.0/get_viewport().get_visible_rect().size.x
 	material.set_shader_parameter("amplitude",0.5*factorAmp*ScaleAmplitude)
 	material.set_shader_parameter("frequency",60.0 * factorAmp * ScaleFrequency)

@@ -7,4 +7,4 @@ func _process(delta: float) -> void:
 	text = ""
 	text = str("FPS: ",Engine.get_frames_per_second())
 	if cupi != null:
-		text += str("\nPuntos: ",cupi.puntosNivel,"\nErrores: ", cupi.errores)
+		text += str("\nPuntos: ",cupi.puntosNivel,"\nErrores: ", cupi.errores,"\nTime: " ,cupi.TimeScene )

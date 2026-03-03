@@ -1,16 +1,22 @@
 extends Node2D
 class_name BulletSpawner
 
+@onready var Efecto_NoRefresh:EffectNoRefresh = get_tree().get_first_node_in_group("effectNoRefresh")
+
 @export var prefabBulletNormal:PackedScene
 @export var prefabBulletSpiral:PackedScene
+@export var prefabEffecto:PackedScene
 
 var actualview_chart:int = 0
 var bullet_index:int = -1
 var actualview_chartSpiral:int = 0
 var bullet_spiral_index: int = -1
+var actualview_efectos:int = 0
+var efectos_index: int = -1
 
 @export var spirales:Node2D 
 @export var normales:Node2D
+@export var efectos:Node2D
 
 @export var speed:float = 0.75
 # Referencia a cupi
@@ -19,9 +25,13 @@ var bullet_spiral_index: int = -1
 
 @warning_ignore("unused_parameter")
 func _process(delta: float) -> void:
-	# limitar esto a 2 segundos o algo
+	spawnDataDrewVersion()
+	
+func spawnDataDrewVersion():
+	#esta version originalmente fue creada con andrew dev yo solo cambie cosas para que soportara mas tipos de bala :P
 	var time_offset:float = 0.0
 	var time_offsetSpiral:float = 0.0
+	var time_offsetEfectos:float = 0.0
 	var song_time:float = cupi.get_song_time()
 	#bala normal
 	for i in range(50):
@@ -44,15 +54,14 @@ func _process(delta: float) -> void:
 				bullet.baseSpawnTime = cupi.get_song_time()
 				bullet.baseStrumTime = next_time
 				bullet.distance = (next_time - song_time)
-				bullet.angle = cupi.chartData.data.bullets[actualview_chart-1]["angle"]
-				actualview_chart += 1
+				bullet.angle = fmod(cupi.chartData.data.bullets[actualview_chart-1]["angle"],360)
 				bullet_index = actualview_chart
 				bullet.expresionContain=cupi.chartData.data.bullets[actualview_chart-1]["expresion"]
 				bullet.cupi = cupi
 				bullet.cupiContainer = cupiContainer
 				bullet.spawner = self
 				#print(cupi.chartData.data.bullets[actualview_chart-1]["id"])
-				
+				actualview_chart += 1
 						
 		else:
 			
@@ -96,7 +105,7 @@ func _process(delta: float) -> void:
 				var spiral:CupiSpiral = prefabBulletSpiral.instantiate()  
 				var duracion = cupi.chartData.data.spiral[actualview_chartSpiral-1]["duration"]
 				var spiralTime = cupi.chartData.data.spiral[actualview_chartSpiral-1]["time"]
-				
+				bullet_spiral_index = actualview_chartSpiral
 				spirales.add_child(spiral)
 						
 				#establecer datos de bala inicial
@@ -176,3 +185,54 @@ func _process(delta: float) -> void:
 				spiral.bulletFinal.cupi = cupi
 				spiral.bulletFinal.cupiContainer = cupiContainer
 				spiral.bulletFinal.spawner = self
+	
+	#efectos
+	for i in range(50):
+		if !cupi.chartData.data.has("effects"):
+			break
+		var cur_time:float = time_offsetEfectos # woops
+		if cupi.musicNormalOrInverted:
+			if cur_time >= 2000 + song_time or actualview_efectos >= cupi.chartData.data.effects.size() or actualview_efectos<0:
+				#print(cur_time,"|||",2000+snapped(song_time,0),"|||",actualview_chart,"|||",str(Time.get_ticks_msec()),"|||",cupi.musicNormalOrInverted)
+				break
+
+			var next_time:float = cupi.chartData.data.effects[actualview_efectos]["time"]
+			
+			if cur_time >= next_time:
+				actualview_efectos += 1
+			else:
+				time_offsetEfectos = next_time+1
+				
+			if efectos_index != actualview_efectos:
+				var effect:CupiCustomEffect = prefabEffecto.instantiate()  
+				efectos.add_child(effect)
+				effect.cupi = cupi
+				effect.baseSpawnTime = cupi.get_song_time()
+				effect.baseStrumTime = next_time
+				efectos_index = actualview_efectos
+				if cupi.chartData.data.effects[actualview_efectos].has("effectNoRefresh"):
+					effect.NoRefreshEffect = Efecto_NoRefresh
+					effect.NoRefreshEffectState = cupi.chartData.data.effects[actualview_efectos]["effectNoRefresh"]
+				actualview_efectos += 1
+						
+		else:
+			
+			var reverseView = actualview_chart-normales.get_child_count()-1
+
+			if reverseView<0:
+				break
+			if song_time < cupi.chartData.data.bullets[reverseView]["time"]:
+				var bullet:CupiBullet = prefabBulletNormal.instantiate()  
+				normales.add_child(bullet)
+				bullet.baseSpawnTime = cupi.get_song_time()
+				bullet.baseStrumTime = cupi.chartData.data.bullets[reverseView]["time"]
+				bullet.distance = (cupi.chartData.data.bullets[reverseView]["time"] - song_time)
+				bullet.angle = cupi.chartData.data.bullets[reverseView]["angle"]
+				bullet_index = actualview_chart
+				bullet.expresionContain=cupi.chartData.data.bullets[reverseView-1]["expresion"]
+				bullet.cupi = cupi
+				bullet.cupiContainer = cupiContainer
+				bullet.spawner = self
+				
+				#cupi.cupiMouth.frame=cupi.chartData.data.bullets[reverseView]["expresion"]
+				#print(cupi.chartData.data.bullets[reverseView]["time"])

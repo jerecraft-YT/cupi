@@ -11,17 +11,17 @@ var mainScreenActive:bool = true
 @export var ampMusicItem:float = 1350
 @export var animatedItems:bool = false
 @export var objectiveAmpMusic:float = 550
-var separacionAngleMusicItem = 1
 @export var YCOS = 0.5
 @export var XCOS:float = 1
-var numberMusicItem = 16
-var angulosMusic:float = 60
-var midleAngulos:float = angulosMusic/2
 @export var MusicItem:PackedScene
 @onready var MusicasContainer = $Musicas
 @export var audio:AudioStreamPlayer
 @export var rotacion:float = 0
 @export var fixedRotacion:float
+var separacionAngleMusicItem = 1
+var numberMusicItem = 16
+var angulosMusic:float = 60
+var midleAngulos:float = angulosMusic/2
 var vueltas:float
 var offsetMusic
 var musicLoaded = false
@@ -115,6 +115,7 @@ func _input(event: InputEvent) -> void:
 
 @warning_ignore("unused_parameter")
 func _physics_process(delta: float) -> void:
+	#RenderingServer.viewport_set_clear_mode(get_viewport().get_viewport_rid(),RenderingServer.VIEWPORT_CLEAR_NEVER)
 	offsetMusic = (rotacion+(pasoMusic/2))/pasoMusic
 	#print(fmod(rotacion/pasoMusic,1))
 	
@@ -186,6 +187,7 @@ func GetMusic():
 		var musica = ResourceLoader.load_threaded_get(DataGame.direccionNiveles+niveles[MusicSelected]+"/mainMusic/"+musicaPick)
 		#print("getting Music resource")
 		if musica:
+			musica.loop = true
 			audio.stream = musica
 			audio.play()
 			musicLoaded = true

@@ -61,7 +61,8 @@ func _process(delta: float) -> void:
 	# condición de eliminación
 	if bulletFinal.timeLerp <= 0:
 		bulletFinal.bulletHit(10)
-		queue_free()
+		call_deferred("queue_free")
+		#queue_free()
 
 # Llamada a easing de forma segura y rápida
 func _easing_eval(t: float, idFunc: int) -> float:

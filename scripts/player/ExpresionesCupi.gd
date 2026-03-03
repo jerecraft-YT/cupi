@@ -45,7 +45,7 @@ func _process(delta: float) -> void:
 	posY = (sin(deg_to_rad(time)))*1
 	position.y = posY
 	
-		#rotar cara de cupi
+	#rotar cara de cupi
 	faceAngle = lerp(faceAngle,0.0, 0.1 * DataGame.time_fixed)
 	CaraCupi.rotation = deg_to_rad(faceAngle)
 	

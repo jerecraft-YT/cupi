@@ -8,7 +8,7 @@ class_name MetaballVisualizer
 @export var distorsion: Line2D
 
 # Configuración optimizada
-@export_range(8, 64) var NUMERO_PUNTOS := 24  # Reducido por defecto
+@export_range(8, 64) var NUMERO_PUNTOS := 32  # Reducido por defecto
 @export_range(1, 60) var TARGET_FPS := 30     # Limitar FPS
 
 var update_accumulator := 0.0

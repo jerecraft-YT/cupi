@@ -86,14 +86,15 @@ func bulletHit(delta):
 				cupi.puntosNivel += 25
 			else:
 				cupi.puntosNivel += 10
-			cupi.BgBeat()
-			cupiContainer.cupiBeat()
+			#cupi.BgBeat()
+			#cupiContainer.cupiBeat()
 			
 			if isSpiral and !spiralStart:
 				cupi.bulletHit()
 			
 			if not isSpiral:
-				queue_free()
+				call_deferred("queue_free")
+				#queue_free()
 				duracionBala = 0.1
 				cupi.BulletDestroy(self)
 		
@@ -114,4 +115,5 @@ func bulletHit(delta):
 			cupi.puntosNivel = max(0, cupi.puntosNivel)
 			cupi.ralentizar()
 			if not isSpiral:
-				queue_free()
+				call_deferred("queue_free")
+				#queue_free()

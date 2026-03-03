@@ -3,11 +3,11 @@ class_name SpectroAnalizer
 
 @export var VU_COUNT = 9
 @export_range(1, 60) var UPDATE_RATE = 30  # Limitar updates por segundo
+@export var WIDTH = 800
+@export var HEIGHT = 250
+@export var HEIGHT_SCALE = 3.0
 
 const FREQ_MAX = 15050.0
-const WIDTH = 800
-const HEIGHT = 250
-const HEIGHT_SCALE = 3.0
 const MIN_DB = 60
 const ANIMATION_SPEED = 0.2
 
@@ -34,6 +34,7 @@ func setAudioInstance():
 	print("update spectrum")
 	
 func _process(delta):
+	rotation += deg_to_rad(10)*delta
 	if numberEffects != AudioServer.get_bus_effect_count(0):
 		setAudioInstance()
 	

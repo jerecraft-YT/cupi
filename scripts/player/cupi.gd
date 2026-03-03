@@ -1,12 +1,12 @@
-extends Node2D
-class_name Cupi
+class_name Cupi extends Node2D
 
-signal waveBeat
+#signal waveBeat
+signal play
 
 #ASTRID paso por aca 22/10/2025 y eta punto del colapso mental uwu
 
-@export var cupi:Node2D
-@export var cupiContainer:Node2D
+@export var cupi:Cupi
+@export var cupiContainer:CupiContainer
 @export var line:Line2D
 @export var levelMusic:AudioStreamPlayer
 @export var InverseLevelMusic:ReversableAudioStreamPlayer
@@ -47,11 +47,16 @@ signal waveBeat
 
 @onready var lineScale:float
 @onready var controladorGeneral:Node2D = get_tree().get_first_node_in_group("controlador")
+@export var cobertura:float = 75:
+	set(v):
+		cobertura = v
+		createcircle()
+	get:
+		return cobertura
 
 var particulasBullet:PackedScene = load("res://prefabs/particulas_destruir_bullet.tscn")
 var actual_angle:float
 var puntosNivel:float
-var cobertura:float = 75
 var time:float
 var TimeScene:float
 var timeBPM:float
@@ -69,6 +74,7 @@ var normalMusic:AudioStream
 var chartData:JSON
 var prestartLevel:float
 var firstLoad = false
+
 func _ready() -> void:
 	DataGame.loadCupi()
 	#generar circulo al inicio de la escena
@@ -94,7 +100,6 @@ func _physics_process(delta: float) -> void:
 	wah = cos(TimeScene*0.025)
 	
 func _process(delta: float) -> void:
-
 	TimeMultiplier = lerp(TimeMultiplier,timeMultiplierObjective,0.2*DataGame.time_fixed)
 	line.scale = Vector2.ONE*cupiContainer.lineScale
 	if controladorGeneral != null:
@@ -108,18 +113,19 @@ func _process(delta: float) -> void:
 		if beat % 4 == 0:
 			# beat 0 significa el inicio de una marca, las marcas duran 4 beats
 			# (en time signature 4/4)
-			#barBeat0Player.play()
+			barBeat0Player.play()
 			#BgBeat()
-			waveBeat.emit()
-			#cupiBeat(time)
+			#waveBeat.emit()
+			cupiContainer.cupiBeat()
 		else:
 			# beat 1 al 3, fin de marca
-			#barBeat1Player.play()
+			barBeat1Player.play()
 			#BgBeat()
-			waveBeat.emit()
-			#cupiBeat(time)
+			#waveBeat.emit()
+			cupiContainer.cupiBeat()
+			
 		beat += 1
-		
+		#cupiContainer.cupiBeat()
 		# Sincronizarrrrrr
 		var song_time = get_song_time()
 		if song_time > 0 and abs(song_time - (levelMusic.get_playback_position() + AudioServer.get_time_since_last_mix())) >= 1.0/120.0 and musicNormalOrInverted:
@@ -131,6 +137,7 @@ func _process(delta: float) -> void:
 	prestartLevel += (delta * TimeMultiplier) * 1000.0
 	if prestartLevel >= 1500:
 		if firstLoad == false:
+			play.emit()
 			InverseLevelMusic.play()
 			levelMusic.play()
 			firstLoad = true
@@ -167,7 +174,7 @@ func createcircle():
 	#limpiar puntos de shield
 	line.clear_points()
 	
-	for i in range(number_points):
+	for i in range(number_points+1):
 		
 		#crear puntos en orden en forma de circulo
 		actual_angle = (float(i)*(cobertura/number_points))-(cobertura/2.0)

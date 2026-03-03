@@ -11,8 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://ksv03ym07omq" path="res://sprites/background/Background_6.png" id="6_hgevq"]
 [ext_resource type="Script" uid="uid://cud1i8mhv12n7" path="res://scripts/background_1.gd" id="7_6xp4g"]
 [ext_resource type="Script" uid="uid://ylyvmroyq0sy" path="res://scripts/level_loader.gd" id="7_wjr8j"]
-[ext_resource type="Script" uid="uid://c3bplxso2r8il" path="res://scripts/beatDetect.gd" id="8_e767d"]
 [ext_resource type="Script" uid="uid://c0xylibq7685x" path="res://scripts/controladorMenu.gd" id="10_uquea"]
+[ext_resource type="PackedScene" uid="uid://r8erhl8y1ums" path="res://prefabs/beat_detecter.tscn" id="11_a1lvp"]
 [ext_resource type="PackedScene" uid="uid://7yvx75kpug2u" path="res://prefabs/metaball_static.tscn" id="13_hgevq"]
 [ext_resource type="PackedScene" uid="uid://d1y8yp35e5vm5" path="res://prefabs/debug_info.tscn" id="16_icyuc"]
 [ext_resource type="Script" uid="uid://cjlssy54gqe62" path="res://scripts/showMenu.gd" id="18_hgevq"]
@@ -80,11 +80,6 @@ autoplay = true
 [node name="LevelLoader" type="Node" parent="."]
 script = ExtResource("7_wjr8j")
 
-[node name="BeatDetecter" type="Node2D" parent="." node_paths=PackedStringArray("camarita", "background")]
-script = ExtResource("8_e767d")
-camarita = NodePath("../Camera2D")
-background = NodePath("../Background1")
-
 [node name="Camera2D" type="Camera2D" parent="."]
 ignore_rotation = false
 
@@ -97,6 +92,10 @@ process_material = SubResource("ParticleProcessMaterial_4pcd2")
 sprite_frames = SubResource("SpriteFrames_uquea")
 frame = 4
 script = ExtResource("7_6xp4g")
+
+[node name="BeatDetecter" parent="." node_paths=PackedStringArray("camarita") instance=ExtResource("11_a1lvp")]
+position = Vector2(21, -354)
+camarita = NodePath("../Camera2D")
 
 [node name="Musicas" type="Node2D" parent="."]
 position = Vector2(-360, -60)
@@ -113,22 +112,22 @@ scale = Vector2(0.5, 0.5)
 defaultScale = Vector2(0.5, 0.5)
 magnitudExtra = 0.25
 
-[node name="distorsion" parent="CupiMenu/metaballStatic" index="2"]
+[node name="distorsion" parent="CupiMenu/metaballStatic" index="3"]
 ScaleAmplitude = 2.0
 
 [node name="metaball" parent="CupiMenu" instance=ExtResource("2_pri23")]
 scale = Vector2(0.9, 0.9)
 
-[node name="distorsion" parent="CupiMenu/metaball/ball" index="1"]
+[node name="distorsion" parent="CupiMenu/metaball" index="4"]
 ScaleFrequency = 2.5
 
 [node name="cupiContainer" parent="CupiMenu" instance=ExtResource("3_6ajat")]
 scale = Vector2(3, 3)
 
-[node name="eyes" parent="CupiMenu/cupiContainer/Face" index="0"]
+[node name="eyes" parent="CupiMenu/cupiContainer/Face" index="1"]
 frame = 6
 
-[node name="mouth" parent="CupiMenu/cupiContainer/Face" index="1"]
+[node name="mouth" parent="CupiMenu/cupiContainer/Face" index="2"]
 frame = 7
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -139,6 +138,7 @@ offset_top = 5.0
 offset_bottom = 1045.0
 
 [node name="comenzar" type="RichTextLabel" parent="CanvasLayer" node_paths=PackedStringArray("boton1", "boton2", "mainMenu")]
+visible = false
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -160,6 +160,7 @@ boton2 = NodePath("../Button2")
 mainMenu = NodePath("../..")
 
 [node name="Titulo" type="RichTextLabel" parent="CanvasLayer"]
+visible = false
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -169,7 +170,7 @@ offset_bottom = 243.0
 grow_horizontal = 2
 theme_override_font_sizes/normal_font_size = 136
 bbcode_enabled = true
-text = "[wave amp=50.0 freq=5.0 connected=1][rainbow freq=0.05 sat=0.8 val=1.0 speed=5.0]CUPI[/rainbow][/wave]"
+text = "[wave amp=50.0 freq=5.0 connected=0][rainbow freq=0.08 sat=0.8 val=1.0 speed=5.0]CUPI[/rainbow][/wave]"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -216,6 +217,7 @@ audioDebug = NodePath("../AudioModifierDebug")
 titulo = NodePath("../..")
 
 [node name="AudioModifierDebug" parent="CanvasLayer" instance=ExtResource("18_uquea")]
+visible = false
 
 [node name="PanelGeneral" parent="CanvasLayer/AudioModifierDebug" index="1" node_paths=PackedStringArray("musicScene", "prevScreen")]
 musicScene = NodePath("../../../AudioStreamPlayer")

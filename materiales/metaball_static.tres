@@ -5,6 +5,6 @@
 [resource]
 shader = ExtResource("1_l0t27")
 shader_parameter/Color = Color(0, 0, 0, 1)
-shader_parameter/frequency = 30.0
-shader_parameter/TimeMultiplier = 5.0
-shader_parameter/amplitude = 0.5
+shader_parameter/TimeMultiplier = 0.1
+shader_parameter/frequency = 0.03
+shader_parameter/Xoffset = -0.015

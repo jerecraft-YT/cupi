@@ -1,9 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://ixwnuxvol13n"]
-
-[ext_resource type="Texture2D" uid="uid://cqk3ysk80cik" path="res://icon.svg" id="1_c106a"]
-[ext_resource type="Script" uid="uid://c3bplxso2r8il" path="res://scripts/beatDetect.gd" id="2_mjjce"]
-
-[node name="beatDetected" type="Sprite2D"]
-visible = false
-texture = ExtResource("1_c106a")
-script = ExtResource("2_mjjce")

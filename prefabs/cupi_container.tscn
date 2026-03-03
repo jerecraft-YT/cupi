@@ -1,13 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://c515s8eiyg4px"]
+[gd_scene load_steps=5 format=3 uid="uid://c515s8eiyg4px"]
 
 [ext_resource type="Script" uid="uid://bs5gkvsjdkqnr" path="res://scripts/player/ExpresionesCupi.gd" id="1_1n5mj"]
 [ext_resource type="SpriteFrames" uid="uid://uaopc4watrc5" path="res://animations/cupiMouth.tres" id="2_1n5mj"]
 [ext_resource type="SpriteFrames" uid="uid://d2pw6wdp10rkc" path="res://animations/cupiEyes.tres" id="2_64fe8"]
+[ext_resource type="Texture2D" uid="uid://webqek5nlcjb" path="res://sprites/cupi/diseños alternativos/mi_novia.png" id="2_kgbqq"]
 
 [node name="cupiContainer" type="Node2D" groups=["CupiContainer"]]
 script = ExtResource("1_1n5mj")
 
 [node name="Face" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Face"]
+visible = false
+texture_filter = 1
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("2_kgbqq")
+offset = Vector2(0, 0.5)
 
 [node name="eyes" type="AnimatedSprite2D" parent="Face"]
 texture_filter = 1

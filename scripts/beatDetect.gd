@@ -1,4 +1,4 @@
-extends Node2D
+class_name beatDetect extends Node2D
 
 signal beatless
 
@@ -29,10 +29,10 @@ func _ready() -> void:
 			push_warning("El efecto no es AudioEffectCapture")
 		pass
 @warning_ignore("unused_parameter")
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	_detect_beat()
 	# suavizado visual de la escala hacia 1.0
-	scale = scale.lerp(Vector2.ONE, 0.1*DataGame.time_fixed)
+	scale = lerp(scale,Vector2.ONE,1.0*delta)
 	if camarita != null:
 		camarita.zoom = scale
 	if background != null:
@@ -68,4 +68,5 @@ func _detect_beat() -> void:
 func _beat() -> void:
 	#print("beat")
 	emit_signal("beatless")
-	scale = Vector2.ONE * 1.05
+	scale = Vector2.ONE * 1.1
+	

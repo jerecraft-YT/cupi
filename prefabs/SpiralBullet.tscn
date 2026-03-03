@@ -1,15 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://cjvixm8nwnbvl"]
+[gd_scene format=3 uid="uid://cjvixm8nwnbvl"]
 
 [ext_resource type="Script" uid="uid://bbo5yvl7gkhxw" path="res://scripts/bullets/SpiralBullet.gd" id="1_d23ml"]
 [ext_resource type="PackedScene" uid="uid://bvjuwoyoq48kd" path="res://prefabs/bullet.tscn" id="2_70ue5"]
 
-[node name="CircularAttack" type="Node2D" node_paths=PackedStringArray("line")]
+[node name="CircularAttack" type="Node2D" unique_id=1365763835 node_paths=PackedStringArray("line")]
 script = ExtResource("1_d23ml")
 line = NodePath("Line")
 
-[node name="Line" type="Line2D" parent="."]
-width = 4.0
+[node name="Line" type="Line2D" parent="." unique_id=1270817533]
+width = 6.0
 
-[node name="startNote" parent="." instance=ExtResource("2_70ue5")]
+[node name="startNote" parent="." unique_id=2094597837 instance=ExtResource("2_70ue5")]
 
-[node name="FinalNote" parent="." instance=ExtResource("2_70ue5")]
+[node name="FinalNote" parent="." unique_id=2048587127 instance=ExtResource("2_70ue5")]
