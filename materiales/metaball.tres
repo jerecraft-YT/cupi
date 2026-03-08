@@ -4,6 +4,6 @@
 
 [resource]
 shader = ExtResource("1_x1b63")
-shader_parameter/frequency = 60.0
-shader_parameter/TimeMultiplier = 5.0
-shader_parameter/amplitude = 1.0
+shader_parameter/frequency = 30.0
+shader_parameter/TimeMultiplier = 15.0
+shader_parameter/amplitude = 3.0

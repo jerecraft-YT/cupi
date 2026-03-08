@@ -11,9 +11,6 @@
 
 [node name="metaball" parent="." instance=ExtResource("1_7dn3w")]
 
-[node name="distorsion" parent="metaball" index="3"]
-ScaleFrequency = 2.5
-
 [node name="bullet spawner" type="Node2D" parent="." node_paths=PackedStringArray("spirales", "normales", "efectos", "cupi", "cupiContainer") groups=["bulletSpawner"]]
 script = ExtResource("2_v5r4t")
 prefabBulletNormal = ExtResource("3_v5r4t")
@@ -35,5 +32,3 @@ scale = Vector2(3, 3)
 
 [node name="Cupi" parent="." groups=["cupi"] instance=ExtResource("3_7dn3w")]
 scale = Vector2(3, 3)
-
-[editable path="metaball"]

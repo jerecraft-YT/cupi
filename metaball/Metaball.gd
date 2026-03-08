@@ -75,7 +75,7 @@ func _process(delta: float) -> void:
 	update_accumulator = 0.0
 	
 	# Animación básica
-	poligono.rotation += 0.01 * DataGame.time_fixed
+	#poligono.rotation += 0.01 * DataGame.time_fixed
 	
 	# Actualizar y renderizar
 	_actualizar_amplitudes_desde_espectro()

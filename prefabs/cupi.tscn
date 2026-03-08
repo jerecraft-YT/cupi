@@ -45,12 +45,15 @@ width_curve = SubResource("Curve_d23ml")
 
 [node name="beat0" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_lqyft")
+bus = &"SFX"
 
 [node name="beat1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_66pfm")
+bus = &"SFX"
 
 [node name="bulletHit" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_lqyft")
 max_polyphony = 16
+bus = &"SFX"
 
 [editable path="cupiContainer"]

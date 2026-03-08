@@ -105,8 +105,9 @@ func _process(delta: float) -> void:
 	if controladorGeneral != null:
 		line.rotation = controladorGeneral.rotation
 	convertedBPM = bpm*TimeMultiplier
-
-	timeBPM += delta*abs(TimeMultiplier)
+	
+	if firstLoad:
+		timeBPM += delta*abs(TimeMultiplier)
 
 	if timeBPM >= abs(60 / convertedBPM):
 		timeBPM -= abs(60 / convertedBPM)

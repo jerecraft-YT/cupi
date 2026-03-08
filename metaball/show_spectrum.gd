@@ -6,6 +6,7 @@ class_name SpectroAnalizer
 @export var WIDTH = 800
 @export var HEIGHT = 250
 @export var HEIGHT_SCALE = 3.0
+@export var test:Node2D
 
 const FREQ_MAX = 15050.0
 const MIN_DB = 60
@@ -19,6 +20,7 @@ var time_since_last_update = 0.0
 var numberEffects:int
 
 func _ready():
+	print(test)
 	numberEffects = AudioServer.get_bus_effect_count(0)
 	setAudioInstance()
 	min_values.resize(VU_COUNT)
@@ -34,7 +36,7 @@ func setAudioInstance():
 	print("update spectrum")
 	
 func _process(delta):
-	rotation += deg_to_rad(10)*delta
+	#centerMetaball.rotation += deg_to_rad(10)*delta
 	if numberEffects != AudioServer.get_bus_effect_count(0):
 		setAudioInstance()
 	
@@ -74,6 +76,6 @@ func update_visuals():
 		if current_data <= 0.0:
 			min_values[i] = lerpf(min_values[i], 0.0, ANIMATION_SPEED)
 	
-	queue_redraw()  # Solo redibujar cuando sea necesario
+	#queue_redraw()  # Solo redibujar cuando sea necesario
 
 # También considera usar _physics_process para updates más estables

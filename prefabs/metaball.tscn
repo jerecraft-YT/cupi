@@ -1,62 +1,60 @@
-[gd_scene load_steps=10 format=3 uid="uid://cmwdw8kgbef6b"]
+[gd_scene load_steps=7 format=3 uid="uid://cmwdw8kgbef6b"]
 
 [ext_resource type="Script" uid="uid://rujdkhv2ul8t" path="res://metaball/Metaball.gd" id="1_5scw5"]
 [ext_resource type="Script" uid="uid://de21rbsaslsxw" path="res://metaball/show_spectrum.gd" id="1_jhxxm"]
-[ext_resource type="Script" uid="uid://dhgymk6ayct4i" path="res://scripts/shaderController/distorsionLine.gd" id="4_luhwx"]
-[ext_resource type="Texture2D" uid="uid://cqk3ysk80cik" path="res://icon.svg" id="4_pla18"]
 [ext_resource type="Texture2D" uid="uid://b8n16gbc0uxrf" path="res://sprites/cupi/circuloRitmo/blurRing.png" id="4_qnwvi"]
 [ext_resource type="Material" uid="uid://d035q15k4ghlu" path="res://materiales/metaball.tres" id="4_ut3li"]
-[ext_resource type="Texture2D" uid="uid://b0usykeold6pj" path="res://metaball/metaballDegradado.tres" id="4_v8njb"]
+[ext_resource type="Script" uid="uid://i67np3ipbpn6" path="res://metaball/pivot_rotation.gd" id="4_v8njb"]
 
-[sub_resource type="Gradient" id="Gradient_qnwvi"]
-offsets = PackedFloat32Array(0.38780487, 0.67560977)
-colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 0)
+[sub_resource type="ViewportTexture" id="ViewportTexture_qnwvi"]
+viewport_path = NodePath("SubViewport")
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_pla18"]
-gradient = SubResource("Gradient_qnwvi")
-fill = 1
-fill_from = Vector2(0.5, 0.5)
-fill_to = Vector2(1, 1)
-
-[node name="metaball" type="Node2D" groups=["spectro"]]
+[node name="metaball" type="Node2D" node_paths=PackedStringArray("test") groups=["spectro"]]
 script = ExtResource("1_jhxxm")
-HEIGHT_SCALE = 1.5
+HEIGHT_SCALE = 2.5
+test = NodePath("SubViewport/pivotRotation")
 
 [node name="BlurRing" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 1, 0.47058824)
 scale = Vector2(1.3, 1.3)
 texture = ExtResource("4_qnwvi")
 
-[node name="mascara" type="Sprite2D" parent="."]
-visible = false
-clip_children = 1
-texture = SubResource("GradientTexture2D_pla18")
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(64, 64)
 
-[node name="Sprite2D" type="Sprite2D" parent="mascara"]
-scale = Vector2(3.3789063, 3.3250594)
-texture = ExtResource("4_pla18")
+[node name="pivotRotation" type="Node2D" parent="SubViewport"]
+script = ExtResource("4_v8njb")
 
-[node name="ball" type="Polygon2D" parent="." node_paths=PackedStringArray("poligono", "metaball", "spectro", "line", "distorsion")]
+[node name="ball" type="Polygon2D" parent="SubViewport/pivotRotation" node_paths=PackedStringArray("poligono", "metaball", "spectro", "line", "distorsion")]
 clip_children = 2
 color = Color(0, 0, 0, 1)
 script = ExtResource("1_5scw5")
 poligono = NodePath(".")
-metaball = NodePath("..")
-spectro = NodePath("..")
+metaball = NodePath("../../..")
+spectro = NodePath("../../..")
 line = NodePath("../lineaBase")
 distorsion = NodePath("../distorsion")
 
-[node name="lineaBase" type="Line2D" parent="."]
+[node name="lineaBase" type="Line2D" parent="SubViewport/pivotRotation"]
+texture_filter = 1
 closed = true
-width = 40.0
+width = 15.0
 default_color = Color(0, 0, 1, 1)
-texture = ExtResource("4_v8njb")
-texture_mode = 1
 
-[node name="distorsion" type="Line2D" parent="."]
+[node name="distorsion" type="Line2D" parent="SubViewport/pivotRotation"]
+texture_filter = 1
 material = ExtResource("4_ut3li")
 scale = Vector2(0.75, 0.75)
 closed = true
-width = 60.0
+width = 40.0
 default_color = Color(0, 0, 0, 1)
-script = ExtResource("4_luhwx")
+
+[node name="Camera2D" type="Camera2D" parent="SubViewport"]
+zoom = Vector2(0.32, 0.32)
+
+[node name="metaballRender" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = SubResource("ViewportTexture_qnwvi")

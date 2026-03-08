@@ -158,10 +158,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.21831203, 2.536714)
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewport/Node3D"]
 
 [node name="Node2D" type="Node2D" parent="."]
+visible = false
 position = Vector2(364, 345)
 script = ExtResource("9_2eouu")
 
 [editable path="GameplayViewport/Gameplay"]
-[editable path="GameplayViewport/Gameplay/metaball"]
 [editable path="GameplayViewport/Gameplay/Cupi"]
 [editable path="GameplayViewport/Gameplay/Cupi/cupiContainer"]
