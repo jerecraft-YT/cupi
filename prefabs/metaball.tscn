@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://cmwdw8kgbef6b"]
 
-[ext_resource type="Script" uid="uid://rujdkhv2ul8t" path="res://metaball/Metaball.gd" id="1_5scw5"]
-[ext_resource type="Script" uid="uid://de21rbsaslsxw" path="res://metaball/show_spectrum.gd" id="1_jhxxm"]
+[ext_resource type="Script" uid="uid://rujdkhv2ul8t" path="res://scripts/metaball/Metaball.gd" id="1_5scw5"]
+[ext_resource type="Script" uid="uid://de21rbsaslsxw" path="res://scripts/audio/show_spectrum.gd" id="1_jhxxm"]
 [ext_resource type="Texture2D" uid="uid://b8n16gbc0uxrf" path="res://sprites/cupi/circuloRitmo/blurRing.png" id="4_qnwvi"]
-[ext_resource type="Material" uid="uid://d035q15k4ghlu" path="res://materiales/metaball.tres" id="4_ut3li"]
-[ext_resource type="Script" uid="uid://i67np3ipbpn6" path="res://metaball/pivot_rotation.gd" id="4_v8njb"]
+[ext_resource type="Material" uid="uid://d035q15k4ghlu" path="res://resources/metaball/materiales/metaball.tres" id="4_ut3li"]
+[ext_resource type="Script" uid="uid://i67np3ipbpn6" path="res://scripts/metaball/pivot_rotation.gd" id="4_v8njb"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_qnwvi"]
 viewport_path = NodePath("SubViewport")

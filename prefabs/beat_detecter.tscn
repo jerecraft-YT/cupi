@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://r8erhl8y1ums"]
 
-[ext_resource type="Script" uid="uid://c3bplxso2r8il" path="res://scripts/beatDetect.gd" id="1_nqedr"]
+[ext_resource type="Script" uid="uid://c3bplxso2r8il" path="res://scripts/audio/beatDetect.gd" id="1_nqedr"]
 
 [node name="BeatDetecter" type="Node2D" node_paths=PackedStringArray("camarita")]
 visible = false

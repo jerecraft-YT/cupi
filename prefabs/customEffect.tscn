@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://by85qvn8hujbg"]
 
-[ext_resource type="Script" uid="uid://dcsf7h5bsu03y" path="res://prefabs/custom_effect.gd" id="1_brq15"]
+[ext_resource type="Script" uid="uid://dcsf7h5bsu03y" path="res://scripts/MainLevel/Effects/custom_effect.gd" id="1_brq15"]
 [ext_resource type="Texture2D" uid="uid://dxfymkdkh40vg" path="res://sprites/cupi/circuloRitmo/ringParticle.png" id="2_brq15"]
 
 [node name="CustomEffect" type="Node2D"]

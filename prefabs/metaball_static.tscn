@@ -1,34 +1,69 @@
 [gd_scene load_steps=8 format=3 uid="uid://7yvx75kpug2u"]
 
-[ext_resource type="Script" uid="uid://cx6wk5yxgaalf" path="res://metaball/MetaballOptimized.gd" id="1_m1nff"]
+[ext_resource type="Script" uid="uid://cx6wk5yxgaalf" path="res://scripts/metaball/MetaballOptimized.gd" id="1_m1nff"]
 [ext_resource type="Texture2D" uid="uid://ck4sa4dap5f7s" path="res://sprites/cupi/circuloRitmo/bordeCirculo2.png" id="2_7nw1l"]
-[ext_resource type="Script" uid="uid://de21rbsaslsxw" path="res://metaball/show_spectrum.gd" id="2_ctm4h"]
+[ext_resource type="Script" uid="uid://de21rbsaslsxw" path="res://scripts/audio/show_spectrum.gd" id="2_ctm4h"]
 [ext_resource type="Texture2D" uid="uid://b8n16gbc0uxrf" path="res://sprites/cupi/circuloRitmo/blurRing.png" id="2_p3wh2"]
 [ext_resource type="Texture2D" uid="uid://bag8lvtsxurme" path="res://sprites/cupi/circuloRitmo/bordeCirculo1.png" id="3_ctm4h"]
-[ext_resource type="Material" uid="uid://br4mw6v1mafcw" path="res://materiales/metaball_static.tres" id="4_nvmvs"]
-[ext_resource type="Script" uid="uid://diphwn7jukihk" path="res://scripts/shaderController/distorsion.gd" id="7_p3wh2"]
+[ext_resource type="Material" uid="uid://d035q15k4ghlu" path="res://resources/metaball/materiales/metaball.tres" id="6_nvmvs"]
 
-[node name="metaballStatic" type="Node2D" node_paths=PackedStringArray("spectro")]
+[sub_resource type="ViewportTexture" id="ViewportTexture_p3wh2"]
+viewport_path = NodePath("SubViewport")
+
+[node name="metaballStatic" type="Node2D" node_paths=PackedStringArray("spectro", "metaball")]
 script = ExtResource("1_m1nff")
+defaultScale = Vector2(0.6, 0.6)
 spectro = NodePath("Spectro")
+metaball = NodePath("SubViewport/metaballPivot")
+
+[node name="Spectro" type="Node2D" parent="."]
+script = ExtResource("2_ctm4h")
 
 [node name="BlurRing" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 1, 0.47058824)
 scale = Vector2(2, 2)
 texture = ExtResource("2_p3wh2")
 
-[node name="Spectro" type="Node2D" parent="."]
-script = ExtResource("2_ctm4h")
+[node name="SubViewport" type="SubViewport" parent="."]
+disable_3d = true
+transparent_bg = true
+size = Vector2i(64, 64)
 
-[node name="front" type="Sprite2D" parent="."]
-modulate = Color(0, 0, 1, 1)
-texture = ExtResource("3_ctm4h")
-offset = Vector2(0, -5)
+[node name="metaballScale" type="Node" parent="SubViewport"]
 
-[node name="distorsion" type="Sprite2D" parent="."]
+[node name="metaballPivot" type="Node2D" parent="SubViewport"]
+
+[node name="back" type="Sprite2D" parent="SubViewport/metaballPivot"]
 modulate = Color(0, 0, 0, 1)
-material = ExtResource("4_nvmvs")
+texture_filter = 1
 scale = Vector2(0.95, 0.95)
 texture = ExtResource("2_7nw1l")
 offset = Vector2(0, -5)
-script = ExtResource("7_p3wh2")
+
+[node name="front" type="Sprite2D" parent="SubViewport/metaballPivot"]
+modulate = Color(0, 0, 1, 1)
+texture_filter = 1
+texture = ExtResource("3_ctm4h")
+offset = Vector2(0, -5)
+
+[node name="extrafront" type="Sprite2D" parent="SubViewport/metaballPivot"]
+modulate = Color(0, 0, 1, 1)
+texture_filter = 1
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("3_ctm4h")
+offset = Vector2(0, -5)
+
+[node name="distorsion" type="Sprite2D" parent="SubViewport/metaballPivot"]
+modulate = Color(0, 0, 0, 1)
+material = ExtResource("6_nvmvs")
+scale = Vector2(0.95, 0.95)
+texture = ExtResource("2_7nw1l")
+offset = Vector2(0, -5)
+
+[node name="Camera2D" type="Camera2D" parent="SubViewport"]
+zoom = Vector2(0.32, 0.32)
+
+[node name="metaballRender" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = SubResource("ViewportTexture_p3wh2")

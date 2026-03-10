@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bv1q1ckfcnds8"]
 
 [ext_resource type="PackedScene" uid="uid://cmwdw8kgbef6b" path="res://prefabs/metaball.tscn" id="1_7dn3w"]
-[ext_resource type="Script" uid="uid://n2c72dch62rh" path="res://scripts/bullets/BulletSpawner.gd" id="2_v5r4t"]
+[ext_resource type="Script" uid="uid://n2c72dch62rh" path="res://scripts/MainLevel/bullets/BulletSpawner.gd" id="2_v5r4t"]
 [ext_resource type="PackedScene" uid="uid://d0kmnpjiacab" path="res://prefabs/cupi.tscn" id="3_7dn3w"]
 [ext_resource type="PackedScene" uid="uid://bvjuwoyoq48kd" path="res://prefabs/bullet.tscn" id="3_v5r4t"]
 [ext_resource type="PackedScene" uid="uid://cjvixm8nwnbvl" path="res://prefabs/SpiralBullet.tscn" id="4_7dn3w"]
@@ -32,3 +32,4 @@ scale = Vector2(3, 3)
 
 [node name="Cupi" parent="." groups=["cupi"] instance=ExtResource("3_7dn3w")]
 scale = Vector2(3, 3)
+cupiBot = false

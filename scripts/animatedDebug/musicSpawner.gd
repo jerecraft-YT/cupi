@@ -11,12 +11,12 @@ func _process(delta: float) -> void:
 		itemLeter = min(max(0,itemLeter),letraMusica.data.size()-1)
 		if itemLeter == letraMusica.data.size()-1:
 			break
+		
 		if DataGame.cupi.TimeMultiplier < 0:
 			if letraMusica.data[itemLeter]["time"] >= actualTime:
 				if get_child_count() != 0:
-					for o in range(get_child_count()):
-						if get_child(o) != null:
-							get_child(o).queue_free()
+					for child in range(get_child_count()):
+						get_child(child).queue_free()
 				var textoScene:textDraw = textDraw.new()
 				add_child(textoScene)
 				textoScene.position = Vector2(0,-120)
@@ -28,9 +28,8 @@ func _process(delta: float) -> void:
 		if DataGame.cupi.TimeMultiplier > 0:
 			if letraMusica.data[itemLeter]["time"] <= actualTime:
 				if get_child_count() != 0:
-					if get_child(0) != null:
-						#print("hi")
-						get_child(0).queue_free()
+					for child in range(get_child_count()):
+						get_child(child).queue_free()
 				var textoScene:textDraw = textDraw.new()
 				add_child(textoScene)
 				textoScene.position = Vector2(0,-120)

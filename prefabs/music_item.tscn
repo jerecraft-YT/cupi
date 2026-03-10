@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cagvfrvk467w0"]
 
-[ext_resource type="StyleBox" uid="uid://dget578shl0bp" path="res://diseños/music_item.tres" id="1_ktpj3"]
-[ext_resource type="Script" uid="uid://cp4jv030jk13" path="res://scripts/music_item.gd" id="1_ys6ex"]
+[ext_resource type="StyleBox" uid="uid://dget578shl0bp" path="res://resources/diseños/music_item.tres" id="1_ktpj3"]
+[ext_resource type="Script" uid="uid://cp4jv030jk13" path="res://scripts/menu/music_item.gd" id="1_ys6ex"]
 
 [node name="MusicItem" type="Panel"]
 offset_right = 425.0

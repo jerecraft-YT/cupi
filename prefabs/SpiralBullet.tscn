@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://cjvixm8nwnbvl"]
+[gd_scene load_steps=0 format=3 uid="uid://cjvixm8nwnbvl"]
 
-[ext_resource type="Script" uid="uid://bbo5yvl7gkhxw" path="res://scripts/bullets/SpiralBullet.gd" id="1_d23ml"]
+[ext_resource type="Script" uid="uid://bbo5yvl7gkhxw" path="res://scripts/MainLevel/bullets/SpiralBullet.gd" id="1_d23ml"]
 [ext_resource type="PackedScene" uid="uid://bvjuwoyoq48kd" path="res://prefabs/bullet.tscn" id="2_70ue5"]
 
 [node name="CircularAttack" type="Node2D" unique_id=1365763835 node_paths=PackedStringArray("line")]

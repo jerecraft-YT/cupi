@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://cd2h0hwky0h4x"]
+[gd_scene load_steps=0 format=3 uid="uid://cd2h0hwky0h4x"]
 
-[ext_resource type="StyleBox" uid="uid://dget578shl0bp" path="res://diseños/music_item.tres" id="1_5iogq"]
+[ext_resource type="StyleBox" uid="uid://dget578shl0bp" path="res://resources/diseños/music_item.tres" id="1_5iogq"]
 [ext_resource type="Script" uid="uid://bfqw3g6hrcl0p" path="res://scripts/debug/controlMusic.gd" id="1_oplwf"]
 [ext_resource type="AudioStream" uid="uid://43db1flkpsao" path="res://Niveles/Bailando (Cut Ver.)/mainMusic/PARADISIO.mp3" id="2_5iogq"]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bvjuwoyoq48kd"]
 
-[ext_resource type="Script" uid="uid://dc7fcu80avr8w" path="res://scripts/bullets/StandartBullet.gd" id="1_fh0yl"]
+[ext_resource type="Script" uid="uid://dc7fcu80avr8w" path="res://scripts/MainLevel/bullets/StandartBullet.gd" id="1_fh0yl"]
 [ext_resource type="Texture2D" uid="uid://c4x6tqup0qbn5" path="res://sprites/testing/notita.png" id="2_lv25w"]
 
 [node name="Bullet" type="Node2D"]

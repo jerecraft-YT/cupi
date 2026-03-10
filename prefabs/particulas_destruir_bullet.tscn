@@ -1,7 +1,8 @@
 [gd_scene load_steps=3 format=3 uid="uid://dceudugpm2jeq"]
 
-[ext_resource type="Material" uid="uid://2xaw3ehd0fhy" path="res://particulas/shieldParticles.tres" id="1_yxm3q"]
-[ext_resource type="Script" uid="uid://6ghjiqyemyni" path="res://scripts/particulas_destruir_bullet.gd" id="2_58okv"]
+[ext_resource type="Material" uid="uid://2xaw3ehd0fhy" path="res://resources/particulas/shieldParticles.tres" id="1_yxm3q"]
+[ext_resource type="Script" uid="uid://6ghjiqyemyni" path="res://scripts/MainLevel/bullets/particulas_destruir_bullet.gd" id="2_58okv"]
+
 
 [node name="particulas_destruir_bullet" type="GPUParticles2D"]
 amount = 16

@@ -1,7 +1,7 @@
-[gd_scene load_steps=26 format=3 uid="uid://d1fqn8rr6ofpe"]
+[gd_scene load_steps=25 format=3 uid="uid://d1fqn8rr6ofpe"]
 
 [ext_resource type="Texture2D" uid="uid://bowvms2w6ac6j" path="res://sprites/background/Background_1.png" id="1_e767d"]
-[ext_resource type="Script" uid="uid://btqx7jldobmj5" path="res://scripts/MainMenuController.gd" id="1_h8syl"]
+[ext_resource type="Script" uid="uid://btqx7jldobmj5" path="res://scripts/menu/MainMenuController.gd" id="1_h8syl"]
 [ext_resource type="Texture2D" uid="uid://lmhfiai4rdll" path="res://sprites/background/Background_2.png" id="2_mmg26"]
 [ext_resource type="PackedScene" uid="uid://cmwdw8kgbef6b" path="res://prefabs/metaball.tscn" id="2_pri23"]
 [ext_resource type="Texture2D" uid="uid://cer4rjvbsm2xp" path="res://sprites/background/Background_3.png" id="3_0fgxx"]
@@ -9,18 +9,17 @@
 [ext_resource type="Texture2D" uid="uid://buok78nq5p1ik" path="res://sprites/background/Background_4.png" id="4_6xp4g"]
 [ext_resource type="Texture2D" uid="uid://cit8xgcws0kuc" path="res://sprites/background/Background_5.png" id="5_h8syl"]
 [ext_resource type="Texture2D" uid="uid://ksv03ym07omq" path="res://sprites/background/Background_6.png" id="6_hgevq"]
-[ext_resource type="Script" uid="uid://cud1i8mhv12n7" path="res://scripts/background_1.gd" id="7_6xp4g"]
-[ext_resource type="Script" uid="uid://ylyvmroyq0sy" path="res://scripts/level_loader.gd" id="7_wjr8j"]
-[ext_resource type="Script" uid="uid://c0xylibq7685x" path="res://scripts/controladorMenu.gd" id="10_uquea"]
+[ext_resource type="Script" uid="uid://cud1i8mhv12n7" path="res://scripts/miscelanea/rotateTexture.gd" id="7_6xp4g"]
+[ext_resource type="Script" uid="uid://ylyvmroyq0sy" path="res://scripts/loadLevels/level_loader.gd" id="7_wjr8j"]
+[ext_resource type="Script" uid="uid://c0xylibq7685x" path="res://scripts/menu/controladorMenu.gd" id="10_uquea"]
 [ext_resource type="PackedScene" uid="uid://r8erhl8y1ums" path="res://prefabs/beat_detecter.tscn" id="11_a1lvp"]
-[ext_resource type="PackedScene" uid="uid://7yvx75kpug2u" path="res://prefabs/metaball_static.tscn" id="13_hgevq"]
 [ext_resource type="PackedScene" uid="uid://d1y8yp35e5vm5" path="res://prefabs/debug_info.tscn" id="16_icyuc"]
-[ext_resource type="Script" uid="uid://cjlssy54gqe62" path="res://scripts/showMenu.gd" id="18_hgevq"]
-[ext_resource type="Script" uid="uid://bh1obd3gn3luq" path="res://scripts/button_3.gd" id="18_icyuc"]
+[ext_resource type="Script" uid="uid://cjlssy54gqe62" path="res://scripts/menu/showMenu.gd" id="18_hgevq"]
+[ext_resource type="Script" uid="uid://bh1obd3gn3luq" path="res://scripts/audio/show_audio_debug.gd" id="18_icyuc"]
 [ext_resource type="PackedScene" uid="uid://cd2h0hwky0h4x" path="res://prefabs/audioModifierDebug.tscn" id="18_uquea"]
 [ext_resource type="PackedScene" uid="uid://cagvfrvk467w0" path="res://prefabs/music_item.tscn" id="19_uquea"]
-[ext_resource type="Script" uid="uid://bx3fjtbbwusd3" path="res://scripts/button.gd" id="20_21mn0"]
-[ext_resource type="Shader" uid="uid://bymx27jlswj05" path="res://scenes/caleidoscopio.gdshader" id="21_21mn0"]
+[ext_resource type="Script" uid="uid://bx3fjtbbwusd3" path="res://scripts/menu/loadMainLevelButton.gd" id="20_21mn0"]
+[ext_resource type="Shader" uid="uid://bymx27jlswj05" path="res://shaders/caleidoscopio.gdshader" id="21_21mn0"]
 [ext_resource type="Texture2D" uid="uid://cqk3ysk80cik" path="res://icon.svg" id="22_a1lvp"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4pcd2"]
@@ -106,15 +105,6 @@ script = ExtResource("10_uquea")
 titulo = NodePath("../CanvasLayer/Titulo")
 comenzar = NodePath("../CanvasLayer/comenzar")
 
-[node name="metaballStatic" parent="CupiMenu" instance=ExtResource("13_hgevq")]
-visible = false
-scale = Vector2(0.5, 0.5)
-defaultScale = Vector2(0.5, 0.5)
-magnitudExtra = 0.25
-
-[node name="distorsion" parent="CupiMenu/metaballStatic" index="3"]
-ScaleAmplitude = 2.0
-
 [node name="metaball" parent="CupiMenu" instance=ExtResource("2_pri23")]
 scale = Vector2(0.9, 0.9)
 
@@ -135,7 +125,6 @@ offset_top = 5.0
 offset_bottom = 1045.0
 
 [node name="comenzar" type="RichTextLabel" parent="CanvasLayer" node_paths=PackedStringArray("boton1", "boton2", "mainMenu")]
-visible = false
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -202,7 +191,7 @@ offset_bottom = 127.0
 grow_vertical = 2
 disabled = true
 
-[node name="Button3" type="Button" parent="CanvasLayer" node_paths=PackedStringArray("audioDebug", "titulo")]
+[node name="audioDebugButton" type="Button" parent="CanvasLayer" node_paths=PackedStringArray("audioDebug", "titulo")]
 offset_left = 508.0
 offset_top = 8.0
 offset_right = 711.0
@@ -239,8 +228,7 @@ texture = ExtResource("22_a1lvp")
 [connection signal="showMenu" from="CanvasLayer/comenzar" to="CupiMenu" method="_on_comenzar_show_menu"]
 [connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_pressed"]
 [connection signal="pressed" from="CanvasLayer/Button2" to="CanvasLayer/Button" method="_on_button_2_pressed"]
-[connection signal="pressed" from="CanvasLayer/Button3" to="CanvasLayer/Button3" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/audioDebugButton" to="CanvasLayer/audioDebugButton" method="_on_pressed"]
 
-[editable path="CupiMenu/metaballStatic"]
 [editable path="CupiMenu/cupiContainer"]
 [editable path="CanvasLayer/AudioModifierDebug"]

@@ -1,8 +1,5 @@
 extends Control
 
-var externalLoad = false
-
-signal load
 
 func _ready() -> void:
 	
@@ -14,8 +11,5 @@ func _process(delta: float) -> void:
 		var scene = ResourceLoader.load_threaded_get("res://scenes/Pantalla_Titulo.tscn")
 		if scene:
 			await get_tree().create_timer(0.25).timeout 
-			if externalLoad == false:
-				get_tree().change_scene_to_packed(scene)
-			else:
-				load.emit(scene)
+			get_tree().change_scene_to_packed(scene)
 		set_process(false)

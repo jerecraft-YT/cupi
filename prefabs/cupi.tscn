@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://d0kmnpjiacab"]
 
-[ext_resource type="Script" uid="uid://bp713wa275s4p" path="res://scripts/player/cupi.gd" id="1_d23ml"]
-[ext_resource type="Script" uid="uid://d3eu6dejhuca6" path="res://scripts/reverseAudio/reversable_audio_stream_player.gd" id="2_lqyft"]
+[ext_resource type="Script" uid="uid://bp713wa275s4p" path="res://scripts/MainLevel/player/cupi.gd" id="1_d23ml"]
+[ext_resource type="Script" uid="uid://d3eu6dejhuca6" path="res://scripts/audio/reverseAudio/reversable_audio_stream_player.gd" id="2_lqyft"]
 [ext_resource type="PackedScene" uid="uid://c515s8eiyg4px" path="res://prefabs/cupi_container.tscn" id="3_bnee4"]
 [ext_resource type="AudioStream" uid="uid://cdannsch5vxx4" path="res://sfx/beatBar0.ogg" id="5_lqyft"]
 [ext_resource type="AudioStream" uid="uid://bg6tq4trreu05" path="res://sfx/beatBar1.ogg" id="6_66pfm"]
@@ -25,7 +25,6 @@ InverseLevelMusic = NodePath("ReversableAudioStreamPlayer")
 barBeat0Player = NodePath("beat0")
 barBeat1Player = NodePath("beat1")
 bulletHitAudio = NodePath("bulletHit")
-cupiBot = true
 
 [node name="ReversableAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamGenerator_lqyft")

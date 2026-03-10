@@ -16,7 +16,7 @@ var variablesElement:Array
 		return textToDraw
 		
 @export var BaseColor:Color = Color(1.0, 1.0, 1.0, 1.0) ##Activo cuando el efecto RGB no lo esta
-@export var fuente:Font = load("res://font.tres")
+@export var fuente:Font = load("res://testeos/font.tres")
 @export var fontSize:int = 32:
 	set(v):
 		if fontSize == v:

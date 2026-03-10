@@ -5,9 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://bv1q1ckfcnds8" path="res://prefabs/gameplay.tscn" id="3_ax7ne"]
 [ext_resource type="PackedScene" uid="uid://d1y8yp35e5vm5" path="res://prefabs/debug_info.tscn" id="3_dke22"]
 [ext_resource type="Script" uid="uid://dinxdtthuvvkf" path="res://scripts/debug/control_velocity.gd" id="4_sv41r"]
-[ext_resource type="Script" uid="uid://b32sgw55o2c8f" path="res://scripts/player/controles.gd" id="6_xe3hh"]
+[ext_resource type="Script" uid="uid://b32sgw55o2c8f" path="res://scripts/MainLevel/player/controles.gd" id="6_xe3hh"]
 [ext_resource type="Texture2D" uid="uid://c1ce3lbjrnp2o" path="res://sprites/controller/disco.png" id="7_p6oy6"]
-[ext_resource type="Script" uid="uid://cv4s2ki2jjc8b" path="res://scripts/csg_box_3d.gd" id="8_faw0r"]
+[ext_resource type="Script" uid="uid://cv4s2ki2jjc8b" path="res://scripts/miscelanea/animated3dBox.gd" id="8_faw0r"]
 [ext_resource type="Script" uid="uid://21w34c5tn380" path="res://scripts/animatedDebug/musicSpawner.gd" id="9_2eouu"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_2eouu"]
@@ -157,7 +157,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.21831203, 2.536714)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewport/Node3D"]
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="letterSpawnerTest" type="Node2D" parent="."]
 visible = false
 position = Vector2(364, 345)
 script = ExtResource("9_2eouu")
