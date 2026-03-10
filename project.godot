@@ -36,6 +36,7 @@ DataGame="*res://scripts/dataGame.gd"
 
 window/size/viewport_width=720
 window/size/viewport_height=1280
+window/frame_pacing/android/swappy_mode=0
 window/stretch/mode="canvas_items"
 window/stretch/aspect="keep_height"
 window/dpi/allow_hidpi=false

@@ -6,7 +6,6 @@ class_name SpectroAnalizer
 @export var WIDTH = 800
 @export var HEIGHT = 250
 @export var HEIGHT_SCALE = 3.0
-@export var test:Node2D
 
 const FREQ_MAX = 15050.0
 const MIN_DB = 60
@@ -20,7 +19,6 @@ var time_since_last_update = 0.0
 var numberEffects:int
 
 func _ready():
-	print(test)
 	numberEffects = AudioServer.get_bus_effect_count(0)
 	setAudioInstance()
 	min_values.resize(VU_COUNT)
