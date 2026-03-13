@@ -54,13 +54,11 @@ texture_filter = 1
 position = Vector2(360, 360)
 texture = ExtResource("1_faw0r")
 script = ExtResource("2_2eouu")
+EffectActive = true
 
 [node name="Gameplay" parent="GameplayViewport" instance=ExtResource("3_ax7ne")]
 position = Vector2(360, 360)
 scale = Vector2(1.025, 1.025)
-
-[node name="bullet spawner" parent="GameplayViewport/Gameplay" index="1"]
-speed = 0.2
 
 [node name="ReversableAudioStreamPlayer" parent="GameplayViewport/Gameplay/Cupi" index="0"]
 stream = SubResource("AudioStreamGenerator_2eouu")

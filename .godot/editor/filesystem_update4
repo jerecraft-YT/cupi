@@ -37,3 +37,7 @@ res://Niveles/Bailando (Cut Ver.)/chart.json
 res://scripts/dataGame.gd
 res://scripts/metaball/pivot_rotation.gd
 res://scripts/audio/show_spectrum.gd
+res://Niveles/1-800/chart.json
+res://scripts/MainLevel/player/cupi.gd
+res://scripts/MainLevel/bullets/BulletSpawner.gd
+res://testeos/noise.gd

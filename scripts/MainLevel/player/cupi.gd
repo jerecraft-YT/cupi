@@ -2,7 +2,7 @@ class_name Cupi extends Node2D
 
 #signal waveBeat
 signal play
-
+signal beat
 #ASTRID paso por aca 22/10/2025 y eta punto del colapso mental uwu
 
 @export var cupi:Cupi
@@ -67,7 +67,7 @@ var wah:float
 var beatStartTime:float = 0
 var errores:int
 var number_points:int = 8
-var beat:int = 0
+var beatNumber:int = 0
 var musicNormalOrInverted:bool = true
 var musicChangeApply:bool=true
 var normalMusic:AudioStream
@@ -111,10 +111,11 @@ func _process(delta: float) -> void:
 
 	if timeBPM >= abs(60 / convertedBPM):
 		timeBPM -= abs(60 / convertedBPM)
-		if beat % 4 == 0:
+		if beatNumber % 4 == 0:
 			# beat 0 significa el inicio de una marca, las marcas duran 4 beats
 			# (en time signature 4/4)
 			barBeat0Player.play()
+			beat.emit()
 			#BgBeat()
 			#waveBeat.emit()
 			cupiContainer.cupiBeat()
@@ -124,8 +125,9 @@ func _process(delta: float) -> void:
 			#BgBeat()
 			#waveBeat.emit()
 			cupiContainer.cupiBeat()
+			beat.emit()
 			
-		beat += 1
+		beatNumber += 1
 		#cupiContainer.cupiBeat()
 		# Sincronizarrrrrr
 		var song_time = get_song_time()

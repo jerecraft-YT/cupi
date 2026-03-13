@@ -18,13 +18,15 @@ var efectos_index: int = -1
 @export var normales:Node2D
 @export var efectos:Node2D
 
-@export var speed:float = 0.75
+var speed:float = 0.3
+@export var speedObjective:float = 0.3
 # Referencia a cupi
 @export var cupi:Cupi
 @export var cupiContainer:CupiContainer
 
 @warning_ignore("unused_parameter")
 func _process(delta: float) -> void:
+	speed = lerp(speed,speedObjective,0.1*DataGame.time_fixed)
 	spawnDataDrewVersion()
 	
 func spawnDataDrewVersion():
@@ -236,3 +238,7 @@ func spawnDataDrewVersion():
 				
 				#cupi.cupiMouth.frame=cupi.chartData.data.bullets[reverseView]["expresion"]
 				#print(cupi.chartData.data.bullets[reverseView]["time"])
+
+
+func _on_cupi_beat() -> void:
+	speed = 0.1

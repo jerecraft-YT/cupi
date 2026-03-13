@@ -32,4 +32,6 @@ scale = Vector2(3, 3)
 
 [node name="Cupi" parent="." groups=["cupi"] instance=ExtResource("3_7dn3w")]
 scale = Vector2(3, 3)
-cupiBot = false
+cupiBot = true
+
+[connection signal="beat" from="Cupi" to="bullet spawner" method="_on_cupi_beat"]
