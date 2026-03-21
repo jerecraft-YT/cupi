@@ -71,7 +71,6 @@ var beatNumber:int = 0
 var musicNormalOrInverted:bool = true
 var musicChangeApply:bool=true
 var normalMusic:AudioStream
-var chartData:JSON
 var prestartLevel:float
 var firstLoad = false
 
@@ -81,9 +80,6 @@ func _ready() -> void:
 	createcircle()
 	# Reproducir música a la vez que el beat
 	beatStartTime = TimeScene # Tiempo de marca actual
-	
-	chartData = DataGame.datalevel
-	bpm = chartData.data.bpm
 	InverseLevelMusic.bstream = DataGame.Music
 	levelMusic.stream = DataGame.Music
 	
@@ -134,8 +130,6 @@ func _process(delta: float) -> void:
 		if song_time > 0 and abs(song_time - (levelMusic.get_playback_position() + AudioServer.get_time_since_last_mix())) >= 1.0/120.0 and musicNormalOrInverted:
 			# Sincronizar si está atrasado por 8 milisegundos
 			levelMusic.seek(song_time / 1000.0) # este espera tiempo en decimal, no enteros
-			#print("sinc")
-			pass
 			
 	prestartLevel += (delta * TimeMultiplier) * 1000.0
 	if prestartLevel >= 1500:
