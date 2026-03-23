@@ -301,7 +301,8 @@ func generateChunksData() -> void:
 	if !chunkBullet.is_empty():
 		bulletsChunks.append(chunkBullet)
 	
-	#spirales
+func generateBulletsChunks():
+	pass
 	
 func chunkControl(songTime):
 	for chunk_bullet_index in bulletsChunks.size():
