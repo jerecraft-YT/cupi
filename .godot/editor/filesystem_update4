@@ -1,5 +1,5 @@
 res://resources/metaball/audioAnalizer.tres
-res://scenes/Level.tscn
+res://prefabs/gameplay.tscn
 res://testeos/noise.tres
 res://shaders/sinCosforLine.tres
 res://resources/animations/cupiMouth.tres
@@ -14,7 +14,3 @@ res://shaders/sinCos.tres
 res://shaders/3_sample_blur.gdshader
 res://shaders/caleidoscopio.tres
 res://scripts/MainLevel/bullets/BulletSpawner.gd
-res://prefabs/chunk.tscn
-res://prefabs/chunkControl.gd
-res://prefabs/gameplay.tscn
-res://scripts/audio/reverseAudio/reversable_audio_stream_player.gd
