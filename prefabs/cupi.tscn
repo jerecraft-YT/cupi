@@ -25,6 +25,7 @@ InverseLevelMusic = NodePath("ReversableAudioStreamPlayer")
 barBeat0Player = NodePath("beat0")
 barBeat1Player = NodePath("beat1")
 bulletHitAudio = NodePath("bulletHit")
+cupiBot = true
 
 [node name="ReversableAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamGenerator_lqyft")
@@ -39,7 +40,7 @@ autoplay = true
 
 [node name="Shield" type="Line2D" parent="."]
 points = PackedVector2Array(25.981, -15, 27.716, -11.481, 28.978, -7.765, 29.743, -3.916, 30, 0, 29.743, 3.916, 28.978, 7.765, 27, 12, 23, 17)
-width = 2.0
+width = 3.0
 width_curve = SubResource("Curve_d23ml")
 
 [node name="beat0" type="AudioStreamPlayer" parent="."]

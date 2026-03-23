@@ -16,17 +16,23 @@ var playback_direction := 1
 
 @export_range(-4.0, 4.0, 0.001) var playback_rate = 1.0 :
 	set(v):
-		if pitch_scale == 0 or v == 0:
-			stream_paused = true
-			pitch_scale = 0.001  # Valor muy pequeño pero positivo
-		else:
-			stream_paused = false
-			pitch_scale = abs(v)
-			
 		playback_rate = v
 		var dir := -1 if v < 0 else 1
+		
+		# Actualizar dirección de reproducción
 		if dir != playback_direction:
 			playback_direction = dir
+		
+		# Manejar el pitch_scale de forma segura
+		var target_pitch = abs(v)
+		
+		# Evitar valores problemáticos
+		if target_pitch <= 0.0:
+			stream_paused = true
+			pitch_scale = 0.001  # Valor mínimo seguro
+		else:
+			stream_paused = false
+			pitch_scale = target_pitch
 	get:
 		return playback_rate
 
@@ -63,18 +69,30 @@ func _render_audio() -> void:
 	
 func mix_audio():
 	var playback := get_stream_playback()
-	if not playback: return
-	for i in range(playback.get_frames_available()):
+	if not playback: 
+		return
+	
+	var frames_available = playback.get_frames_available()
+	if frames_available <= 0:
+		return
+	
+	for i in range(frames_available):
 		if reversed.size() > 0:
-			playback.push_frame(reversed[roundi(offset)])
+			var idx = roundi(offset)
+			# Asegurar que el índice esté dentro de límites
+			idx = clampi(idx, 0, reversed_size - 1)
+			playback.push_frame(reversed[idx])
 			offset += 1 * playback_direction
-			offset = clamp(offset, 0, reversed_size - 1)
+			
+			# Detener si se sale de los límites
+			if offset < 0 or offset >= reversed_size - 1:
+				stop()
+				offset = 0
+				break
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 @warning_ignore("unused_parameter")
 func _process(delta: float) -> void:
 	if not playing: 
-		offset = 0
 		return
 	mix_audio()
-	

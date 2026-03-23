@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://caxdhjrntk7j2"]
+
+[ext_resource type="Script" uid="uid://dv7co6xg04mki" path="res://prefabs/chunkControl.gd" id="1_7b883"]
+
+[node name="chunk" type="Node2D"]
+script = ExtResource("1_7b883")

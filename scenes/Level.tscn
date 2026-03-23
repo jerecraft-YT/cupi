@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bk8q65ctlgoef"]
+[gd_scene load_steps=12 format=3 uid="uid://bk8q65ctlgoef"]
 
 [ext_resource type="Texture2D" uid="uid://b5v25fj0wvh8y" path="res://testeos/noise.tres" id="1_faw0r"]
 [ext_resource type="Script" uid="uid://5k5uwsb3c0jj" path="res://testeos/noise.gd" id="2_2eouu"]
@@ -12,10 +12,6 @@
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_2eouu"]
 viewport_path = NodePath("SubViewport")
-
-[sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_2eouu"]
-mix_rate_mode = 0
-buffer_length = 0.1
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_rccsh"]
 viewport_path = NodePath("GameplayViewport")
@@ -54,20 +50,10 @@ texture_filter = 1
 position = Vector2(360, 360)
 texture = ExtResource("1_faw0r")
 script = ExtResource("2_2eouu")
-EffectActive = true
 
 [node name="Gameplay" parent="GameplayViewport" instance=ExtResource("3_ax7ne")]
 position = Vector2(360, 360)
 scale = Vector2(1.025, 1.025)
-
-[node name="ReversableAudioStreamPlayer" parent="GameplayViewport/Gameplay/Cupi" index="0"]
-stream = SubResource("AudioStreamGenerator_2eouu")
-
-[node name="LevelMusic" parent="GameplayViewport/Gameplay/Cupi" index="1"]
-autoplay = false
-
-[node name="Shield" parent="GameplayViewport/Gameplay/Cupi" index="3"]
-width = 3.0
 
 [node name="GameplayRender" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -77,7 +63,6 @@ texture = SubResource("ViewportTexture_rccsh")
 [node name="HUD" type="CanvasLayer" parent="."]
 
 [node name="ControlVelocity" type="HSlider" parent="HUD" groups=["slider"]]
-visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -112,7 +97,6 @@ color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="DebugInfo" parent="HUD" instance=ExtResource("3_dke22")]
-visible = false
 
 [node name="Control" type="Control" parent="HUD"]
 layout_mode = 3
@@ -161,5 +145,3 @@ position = Vector2(364, 345)
 script = ExtResource("9_2eouu")
 
 [editable path="GameplayViewport/Gameplay"]
-[editable path="GameplayViewport/Gameplay/Cupi"]
-[editable path="GameplayViewport/Gameplay/Cupi/cupiContainer"]

@@ -54,19 +54,21 @@ func _process(delta: float) -> void:
 	# Movimiento de la bala
 	_time_accum += delta
 	
-	if _time_accum >= update_interval:
-		timeLerp = max(0, 1.0 - inverse_lerp(baseSpawnTime, baseStrumTime, currentTime))
-		amp = distance * timeLerp * spawner.speed
-		ampSpiral = distance * timeLerp
-		ampSpiral += 35
-		amp += 35
-		position = Vector2(spawner.position.x + cos(deg_to_rad(angle)) * amp, spawner.position.y + sin(deg_to_rad(angle)) * amp)
-		_time_accum = 0
+	timeLerp = min(1.0,max(0, 1.0 - inverse_lerp(baseSpawnTime, baseStrumTime, currentTime)))
+	amp = distance * timeLerp * spawner.speed
+	ampSpiral = distance * timeLerp
+	ampSpiral += 35
+	amp += 35
+	position = Vector2(spawner.position.x + cos(deg_to_rad(angle)) * amp, spawner.position.y + sin(deg_to_rad(angle)) * amp)
+	_time_accum = 0
 		
 	bulletHit(delta)
 	
 func bulletHit(delta):
-	if timeLerp <= 0 and cupi.TimeMultiplier > 0:
+	if timeLerp >0:
+		visible = true
+	
+	if timeLerp <= 0 and cupi.TimeMultiplier > 0 and visible == true:
 		if cupi.cupiBot:
 			controladorGeneral.rotation = deg_to_rad(angle)
 		
@@ -75,7 +77,7 @@ func bulletHit(delta):
 		deathcooldown += delta
 		
 		# Verificar si está dentro de la cobertura
-		if shortest_diff <= cupi.cobertura / 2.0 and shortest_diff >= -cupi.cobertura / 2.0 and visible == true:
+		if shortest_diff <= cupi.cobertura / 2.0 and shortest_diff >= -cupi.cobertura / 2.0:
 			visible = false
 			# ACIERTO
 			if shortest_diff <= (cupi.cobertura / 2.0) * 0.25:
@@ -93,7 +95,8 @@ func bulletHit(delta):
 				cupi.bulletHit()
 			
 			if not isSpiral:
-				call_deferred("queue_free")
+				print("tiempo actual: " + str(cupi.get_song_time()) + "| tiempo a llegar: " + str(baseStrumTime))
+				#call_deferred("queue_free")
 				#queue_free()
 				duracionBala = 0.1
 				cupi.BulletDestroy(self)
@@ -115,5 +118,6 @@ func bulletHit(delta):
 			cupi.puntosNivel = max(0, cupi.puntosNivel)
 			cupi.ralentizar()
 			if not isSpiral:
-				call_deferred("queue_free")
+				pass
+				#call_deferred("queue_free")
 				#queue_free()

@@ -8,6 +8,7 @@ var chartData:JSON = DataGame.datalevel
 @export var prefabBulletNormal:PackedScene
 @export var prefabBulletSpiral:PackedScene
 @export var prefabEffecto:PackedScene
+@export var chunkSpawner:PackedScene
 
 @export var speedObjective:float = 0.3
 var speed:float = 0.3
@@ -20,10 +21,13 @@ var actualview_chart:int = 0
 var actualview_chartSpiral:int = 0
 var actualview_efectos:int = 0
 var chunk_size:float = 5000 ##longitud en milisegundos
+var offset_spawn:float = 2000 ##longitud en milisegundos
+var chunkView:int = -1
 
 @export var spirales:Node2D 
 @export var normales:Node2D
 @export var efectos:Node2D
+@export var bulletChunk:Node2D
 
 var bulletsData:Array
 var spiralesData:Array
@@ -55,10 +59,14 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	var songTime:float = cupi.get_song_time()
 	speed = lerp(speed,speedObjective,0.1*DataGame.time_fixed)
-	spawnDataDrewVersion(songTime)
-	spawnBullets(songTime)
 	
-func spawnDataDrewVersion(songTime):
+	#spawnDataDrewVersion()
+	
+	#nuevo sistema
+	chunkControl(songTime)
+	
+func spawnDataDrewVersion():
+	var songTime:float = cupi.get_song_time()
 	#esta version originalmente fue creada con andrew dev yo solo cambie cosas para que soportara mas tipos de bala :P
 	var time_offset:float = 0.0
 	var time_offsetSpiral:float = 0.0
@@ -86,9 +94,9 @@ func spawnDataDrewVersion(songTime):
 				bullet.baseSpawnTime = cupi.get_song_time()
 				bullet.baseStrumTime = next_time
 				bullet.distance = (next_time - songTime)
-				bullet.angle = fmod(chartData.data.bullets[actualview_chart-1]["angle"],360)
+				bullet.angle = fmod(chartData.data.bullets[actualview_chart]["angle"],360)
 				bullet_index = actualview_chart
-				bullet.expresionContain= chartData.data.bullets[actualview_chart-1]["expresion"]
+				bullet.expresionContain= chartData.data.bullets[actualview_chart]["expresion"]
 				bullet.cupi = cupi
 				bullet.cupiContainer = cupiContainer
 				bullet.spawner = self
@@ -104,7 +112,7 @@ func spawnDataDrewVersion(songTime):
 			if songTime < chartData.data.bullets[reverseView]["time"]:
 				var bullet:CupiBullet = prefabBulletNormal.instantiate()  
 				normales.add_child(bullet)
-				bullet.baseSpawnTime = cupi.get_song_time()
+				bullet.baseSpawnTime = songTime
 				bullet.baseStrumTime = chartData.data.bullets[reverseView]["time"]
 				bullet.distance = (chartData.data.bullets[reverseView]["time"] - songTime)
 				bullet.angle = chartData.data.bullets[reverseView]["angle"]
@@ -271,31 +279,90 @@ func spawnDataDrewVersion(songTime):
 				#cupi.cupiMouth.frame=cupi.chartData.data.bullets[reverseView]["expresion"]
 				#print(cupi.chartData.data.bullets[reverseView]["time"])
 
-func generateChunksData():
+func generateChunksData() -> void:
 	if bulletsData.size() == 0:
 		return
-	var intialtime:float = bulletsData[0]["time"]
-	var chunkBullet:Array
+	var intialtimeBullets:float = bulletsData[0]["time"]
+	var chunkBullet:Array 
 	
-	for item in bulletsData:
+	#bullets
+	for itemBullets in bulletsData:
 		#print(item)
-		if item["time"] <= intialtime + chunk_size:
-			chunkBullet.append(item)
+		if itemBullets["time"] <= intialtimeBullets + chunk_size:
+			chunkBullet.append(itemBullets)
 			#print(item)
 		else:
 			bulletsChunks.append(chunkBullet.duplicate())
-			print(bulletsChunks)
+			#print(bulletsChunks)
 			chunkBullet.clear()
-			chunkBullet.append(item)
-			intialtime = item["time"]
+			intialtimeBullets = itemBullets["time"]
+			chunkBullet.append(itemBullets)
 			
 	if !chunkBullet.is_empty():
 		bulletsChunks.append(chunkBullet)
-		
-func spawnBullets(songTime):
-	pass
 	
+	#spirales
+	
+func chunkControl(songTime):
+	for chunk_bullet_index in bulletsChunks.size():
+		if cupi.musicNormalOrInverted:
+			if  songTime >= bulletsChunks[chunk_bullet_index][0]["time"] - offset_spawn and songTime <= bulletsChunks[chunk_bullet_index][0]["time"] + chunk_size - offset_spawn and chunkView != chunk_bullet_index:
+				chunkView = chunk_bullet_index
+				spawnBullets()
+				break
+		else:
+			if  songTime >= bulletsChunks[chunk_bullet_index][0]["time"] and songTime <= bulletsChunks[chunk_bullet_index][0]["time"] + chunk_size and chunkView != chunk_bullet_index:
+				chunkView = chunk_bullet_index
+				spawnBullets()
+				break
 
+func spawnBullets():
+	print("spawneando balas para el chunk " + str(chunkView))
+	#for child in bulletChunk.get_children():
+		#child.queue_free()
+	var chunkContainer:chunkController = null
+	var chunkFound:bool = false
+	
+	if bulletChunk.get_child_count() != 0:
+		for chunk in bulletChunk.get_children():
+			if chunk.name == "chunk_" + str(chunkView):
+				print("el chunk " + str(chunkView) + " si existe")
+				chunkContainer = chunk
+				chunkFound = true
+				if chunk.get_child_count() != 0:
+					print("ya existen balas, abortando spawneo")
+					return
+				else:
+					print("creando balas")
+		if !chunkFound:
+			chunkContainer = chunkSpawner.instantiate()
+			chunkContainer.name = "chunk_" + str(chunkView)
+			bulletChunk.add_child(chunkContainer)
+	else:
+		chunkContainer = chunkSpawner.instantiate()
+		chunkContainer.name = "chunk_" + str(chunkView)
+		bulletChunk.add_child(chunkContainer)
+		
+	chunkContainer.timeCleanFinal = bulletsChunks[chunkView][0]["time"] + chunk_size
+	chunkContainer.timeCleanStart = bulletsChunks[chunkView][0]["time"] - offset_spawn 
+	chunkContainer.cupi = cupi
+	chunkContainer.set_process(true)
+		
+	for item in bulletsChunks[chunkView]:
+		var bullet:CupiBullet = prefabBulletNormal.instantiate()  
+		chunkContainer.add_child(bullet)
+		bullet.visible = false
+		bullet.baseSpawnTime = 0.0
+		bullet.baseStrumTime = item["time"]
+		bullet.distance = item["time"]
+		bullet.angle = fmod(item["angle"],360)
+		bullet.expresionContain = item["expresion"]
+		bullet.cupi = cupi
+		bullet.cupiContainer = cupiContainer
+		bullet.spawner = self
+		bullet.name = "bala_0" # se supone que el numero cambiara cuando haya mas de una bala
+		
+		
 func _on_cupi_beat() -> void:
 	pass
 	#speed = 0.1

@@ -46,6 +46,7 @@ signal beat
 		return TimeMultiplier
 
 @onready var lineScale:float
+#para que esto funcione el gameplay debe estar como hijo editable para que pueda agarrar el nodo
 @onready var controladorGeneral:Node2D = get_tree().get_first_node_in_group("controlador")
 @export var cobertura:float = 75:
 	set(v):

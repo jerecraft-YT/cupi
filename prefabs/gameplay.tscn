@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bv1q1ckfcnds8"]
+[gd_scene load_steps=8 format=3 uid="uid://bv1q1ckfcnds8"]
 
 [ext_resource type="PackedScene" uid="uid://cmwdw8kgbef6b" path="res://prefabs/metaball.tscn" id="1_7dn3w"]
 [ext_resource type="Script" uid="uid://n2c72dch62rh" path="res://scripts/MainLevel/bullets/BulletSpawner.gd" id="2_v5r4t"]
@@ -6,32 +6,39 @@
 [ext_resource type="PackedScene" uid="uid://bvjuwoyoq48kd" path="res://prefabs/bullet.tscn" id="3_v5r4t"]
 [ext_resource type="PackedScene" uid="uid://cjvixm8nwnbvl" path="res://prefabs/SpiralBullet.tscn" id="4_7dn3w"]
 [ext_resource type="PackedScene" uid="uid://by85qvn8hujbg" path="res://prefabs/customEffect.tscn" id="5_5vd6e"]
+[ext_resource type="PackedScene" uid="uid://caxdhjrntk7j2" path="res://prefabs/chunk.tscn" id="6_hgjke"]
 
 [node name="Gameplay" type="Node2D"]
 
 [node name="metaball" parent="." instance=ExtResource("1_7dn3w")]
 
-[node name="bullet spawner" type="Node2D" parent="." node_paths=PackedStringArray("spirales", "normales", "efectos", "cupi", "cupiContainer") groups=["bulletSpawner"]]
+[node name="bullet spawner" type="Node2D" parent="." node_paths=PackedStringArray("spirales", "normales", "efectos", "bulletChunk", "cupi", "cupiContainer") groups=["bulletSpawner"]]
 script = ExtResource("2_v5r4t")
 prefabBulletNormal = ExtResource("3_v5r4t")
 prefabBulletSpiral = ExtResource("4_7dn3w")
 prefabEffecto = ExtResource("5_5vd6e")
+chunkSpawner = ExtResource("6_hgjke")
 spirales = NodePath("spirales")
 normales = NodePath("normales")
 efectos = NodePath("efectos")
+bulletChunk = NodePath("bulletChunks")
 cupi = NodePath("../Cupi")
 cupiContainer = NodePath("../Cupi/cupiContainer")
 
 [node name="spirales" type="Node2D" parent="bullet spawner"]
+visible = false
 scale = Vector2(3, 3)
 
 [node name="normales" type="Node2D" parent="bullet spawner"]
+modulate = Color(1, 1, 1, 0.39215687)
 scale = Vector2(3, 3)
 
 [node name="efectos" type="Node2D" parent="bullet spawner"]
 
+[node name="bulletChunks" type="Node2D" parent="bullet spawner"]
+scale = Vector2(3, 3)
+
 [node name="Cupi" parent="." groups=["cupi"] instance=ExtResource("3_7dn3w")]
 scale = Vector2(3, 3)
-cupiBot = true
 
 [connection signal="beat" from="Cupi" to="bullet spawner" method="_on_cupi_beat"]
