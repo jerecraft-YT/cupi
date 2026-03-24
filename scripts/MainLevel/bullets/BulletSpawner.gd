@@ -464,6 +464,7 @@ func spawnSpirals():
 		spiral.bulletStart.expresionContain= item["expresion"]
 		spiral.bulletStart.isSpiral = true
 		spiral.bulletStart.spiralStart = true
+		spiral.bulletStart.visible = false
 		#ahora la otra bala
 		spiral.bulletFinal.baseSpawnTime = 0.0
 		spiral.bulletFinal.baseStrumTime = spiralTime + duracion
@@ -471,16 +472,18 @@ func spawnSpirals():
 		spiral.bulletFinal.angle = -item["finalAngle"]
 		spiral.bulletFinal.expresionContain = item["expresion"]
 		spiral.bulletFinal.isSpiral = true
+		spiral.bulletFinal.visible = false
 		spiral.bulletFinal.spiralStart = false
 
 		#referencia de datos
 		spiral.bulletStart.cupi = cupi
 		spiral.bulletStart.cupiContainer = cupiContainer
 		spiral.bulletStart.spawner = self
-		
+		spiral.bulletStart.circularAttack = spiral
 		spiral.bulletFinal.cupi = cupi
 		spiral.bulletFinal.cupiContainer = cupiContainer
 		spiral.bulletFinal.spawner = self
+		spiral.bulletFinal.circularAttack = spiral
 		spiral.name = "spiral_0" # se supone que el numero cambiara cuando haya mas de una bala
 		
 func _on_cupi_beat() -> void:

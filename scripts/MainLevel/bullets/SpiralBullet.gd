@@ -58,12 +58,6 @@ func _process(delta: float) -> void:
 		createcircle()
 		calcAngle()
 
-	# condición de eliminación
-	if bulletFinal.timeLerp <= 0:
-		bulletFinal.bulletHit(10)
-		call_deferred("queue_free")
-		#queue_free()
-
 # Llamada a easing de forma segura y rápida
 func _easing_eval(t: float, idFunc: int) -> float:
 	if idFunc < 0 or idFunc >= _easing_callables.size():

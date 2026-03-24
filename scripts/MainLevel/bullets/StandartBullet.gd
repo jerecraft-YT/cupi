@@ -19,9 +19,7 @@ var startDestroy = false
 var duracionBala:float
 var cooldown:float
 var deathcooldown:float
-@export var update_interval: float = 0.008
-
-var _time_accum: float = 0.0
+var circularAttack:CupiSpiral
 
 func _ready() -> void:
 	position = Vector2.ONE * 1000
@@ -29,47 +27,35 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	var currentTime = cupi.get_song_time()
 	cooldown = max(0, cooldown - delta * cupi.TimeMultiplier)
-	
-	if isSpiral:
-		if spiralStart:
-			var circularAttack = get_parent()
-			angle = circularAttack.anguloFinal + circularAttack.AngleFinal
-			if timeLerp > 0:
-				visible = true
-				
-			if timeLerp <= 0 and cupi.TimeMultiplier > 0:
-				if cupi.cupiBot:
-					controladorGeneral.rotation = deg_to_rad(angle)
-				
-				duracionBala = circularAttack.calc / 1000.0
-				if not startDestroy:
-					startDestroy = true
-					cupi.BulletDestroy(self)
-		else:
-			# Spirales no iniciados - AÑADIR COOLDOWN
-			if timeLerp <= 0 and cupi.TimeMultiplier > 0 and cooldown <= 0:
-				if cupi.cupiBot:
-					controladorGeneral.rotation = deg_to_rad(angle)
-	
-	# Movimiento de la bala
-	_time_accum += delta
-	
+	if isSpiral and spiralStart:
+		angle = circularAttack.anguloFinal + circularAttack.AngleFinal
+
 	timeLerp = min(1.0,max(0, 1.0 - inverse_lerp(baseSpawnTime, baseStrumTime, currentTime)))
 	amp = distance * timeLerp * spawner.speed
 	ampSpiral = distance * timeLerp
 	ampSpiral += 35
 	amp += 35
 	position = Vector2(spawner.position.x + cos(deg_to_rad(angle)) * amp, spawner.position.y + sin(deg_to_rad(angle)) * amp)
-	_time_accum = 0
 		
 	bulletHit(delta)
 	
 func bulletHit(delta):
-	if timeLerp >0:
+	if timeLerp > 0:
 		visible = true
+		if isSpiral and spiralStart:
+			startDestroy = false
+	if timeLerp <= 0 and cupi.TimeMultiplier > 0 and isSpiral and spiralStart and circularAttack.bulletFinal.visible == true:
+		if cupi.cupiBot:
+			controladorGeneral.rotation = deg_to_rad(angle)
 	
 	if timeLerp <= 0 and cupi.TimeMultiplier > 0 and visible == true:
-		if cupi.cupiBot:
+		
+		if isSpiral and spiralStart and !startDestroy:
+				duracionBala = circularAttack.calc / 1000.0
+				startDestroy = true
+				cupi.BulletDestroy(self)
+		
+		if cupi.cupiBot and !isSpiral:
 			controladorGeneral.rotation = deg_to_rad(angle)
 		
 		var diferencia = abs(rad_to_deg(controladorGeneral.rotation) - fmod(angle, 360))
@@ -96,8 +82,6 @@ func bulletHit(delta):
 			
 			if not isSpiral:
 				print("tiempo actual: " + str(cupi.get_song_time()) + "| tiempo a llegar: " + str(baseStrumTime))
-				#call_deferred("queue_free")
-				#queue_free()
 				duracionBala = 0.1
 				cupi.BulletDestroy(self)
 		
@@ -117,7 +101,3 @@ func bulletHit(delta):
 				cupi.puntosNivel -= 100
 			cupi.puntosNivel = max(0, cupi.puntosNivel)
 			cupi.ralentizar()
-			if not isSpiral:
-				pass
-				#call_deferred("queue_free")
-				#queue_free()

@@ -17,3 +17,5 @@ func _process(delta: float) -> void:
 		emitting = false
 	if emitting == false and time >= tiempoVida+lifetime:
 		queue_free()
+	if time <= 0:
+		queue_free()
