@@ -20,6 +20,7 @@ var duracionBala:float
 var cooldown:float
 var deathcooldown:float
 var circularAttack:CupiSpiral
+var notifyBot:bool = false
 
 func _ready() -> void:
 	position = Vector2.ONE * 1000
@@ -31,6 +32,13 @@ func _process(delta: float) -> void:
 		angle = circularAttack.anguloFinal + circularAttack.AngleFinal
 
 	timeLerp = min(1.0,max(0, 1.0 - inverse_lerp(baseSpawnTime, baseStrumTime, currentTime)))
+	if timeLerp > 0.9:
+		notifyBot = false
+		
+	if timeLerp < 0.9 and !notifyBot:
+		notifyBot = true
+		cupi.notifyBot(angle,baseStrumTime)
+		
 	amp = distance * timeLerp * spawner.speed
 	ampSpiral = distance * timeLerp
 	ampSpiral += 35

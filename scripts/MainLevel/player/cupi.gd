@@ -47,7 +47,7 @@ signal beat
 
 @onready var lineScale:float
 #para que esto funcione el gameplay debe estar como hijo editable para que pueda agarrar el nodo
-@onready var controladorGeneral:Node2D = get_tree().get_first_node_in_group("controlador")
+@onready var controladorGeneral:ControlGame = get_tree().get_first_node_in_group("controlador")
 @export var cobertura:float = 75:
 	set(v):
 		cobertura = v
@@ -92,8 +92,6 @@ func ralentizar():
 
 @warning_ignore("unused_parameter")
 func _physics_process(delta: float) -> void:
-	if cupiBot:
-		controladorGeneral.rotation += deg_to_rad(2)
 	wah = cos(TimeScene*0.025)
 	
 func _process(delta: float) -> void:
@@ -163,6 +161,9 @@ func BulletDestroy(bullet):
 		var materialparticulas:ParticleProcessMaterial = particles.process_material
 		materialparticulas.scale_min = scale.x*1.5
 		particles.position = bullet.position
+
+func notifyBot(Angle:float,StrumTime:float):
+	controladorGeneral.MoveToAngle(Angle,StrumTime)
 
 func BgBeat():
 	pass

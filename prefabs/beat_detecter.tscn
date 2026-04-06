@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://c3bplxso2r8il" path="res://scripts/audio/beatDetect.gd" id="1_nqedr"]
 
-[node name="BeatDetecter" type="Node2D" node_paths=PackedStringArray("camarita")]
+[node name="BeatDetecter" type="Node2D"]
 visible = false
 script = ExtResource("1_nqedr")
-camarita = NodePath("")

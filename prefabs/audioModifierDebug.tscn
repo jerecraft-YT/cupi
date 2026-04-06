@@ -1,4 +1,4 @@
-[gd_scene load_steps=0 format=3 uid="uid://cd2h0hwky0h4x"]
+[gd_scene load_steps=9 format=3 uid="uid://cd2h0hwky0h4x"]
 
 [ext_resource type="StyleBox" uid="uid://dget578shl0bp" path="res://resources/diseños/music_item.tres" id="1_5iogq"]
 [ext_resource type="Script" uid="uid://bfqw3g6hrcl0p" path="res://scripts/debug/controlMusic.gd" id="1_oplwf"]
@@ -42,7 +42,7 @@ corner_radius_bottom_left = 25
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1fpia"]
 
-[node name="AudioModifierDebug" type="Control" unique_id=1737202284]
+[node name="AudioModifierDebug" type="Control"]
 z_index = 999
 layout_mode = 3
 anchors_preset = 15
@@ -52,7 +52,7 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="background" type="Panel" parent="." unique_id=269177084]
+[node name="background" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -60,7 +60,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PanelGeneral" type="Panel" parent="." unique_id=216154873 node_paths=PackedStringArray("infoAudio", "efectos", "scrollVertical", "generalScroll", "panelParametros", "scrollParametros", "musicScene", "panelControles", "listaEfectos", "botonPausa", "botonPlay", "botonAgregarEfecto", "botonEliminarEfecto", "botonHabilitarEfecto", "botonDeshabilitarEfecto", "labelEstado")]
+[node name="PanelGeneral" type="Panel" parent="." node_paths=PackedStringArray("infoAudio", "efectos", "scrollVertical", "generalScroll", "panelParametros", "scrollParametros", "musicScene", "panelControles", "listaEfectos", "botonPausa", "botonPlay", "botonAgregarEfecto", "botonEliminarEfecto", "botonHabilitarEfecto", "botonDeshabilitarEfecto", "labelEstado")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -94,7 +94,7 @@ font_size_subtitulo = 28
 font_size_normal = 20
 font_size_pequeno = 20
 
-[node name="PanelEffects" type="Panel" parent="PanelGeneral" unique_id=808750265]
+[node name="PanelEffects" type="Panel" parent="PanelGeneral"]
 layout_mode = 1
 offset_left = 18.0
 offset_top = 281.0
@@ -102,7 +102,7 @@ offset_right = 298.0
 offset_bottom = 561.0
 theme_override_styles/panel = ExtResource("1_5iogq")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="PanelGeneral/PanelEffects" unique_id=1380722777]
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelGeneral/PanelEffects"]
 layout_mode = 0
 offset_left = 12.0
 offset_top = 21.0
@@ -110,10 +110,10 @@ offset_right = 269.0
 offset_bottom = 247.0
 draw_focus_border = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelGeneral/PanelEffects/ScrollContainer" unique_id=1286826588]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelGeneral/PanelEffects/ScrollContainer"]
 layout_mode = 2
 
-[node name="DetallesMusica" type="Label" parent="PanelGeneral" unique_id=541079140]
+[node name="DetallesMusica" type="Label" parent="PanelGeneral"]
 layout_mode = 1
 offset_left = 21.0
 offset_top = 21.0
@@ -122,7 +122,7 @@ offset_bottom = 273.0
 theme_override_font_sizes/font_size = 24
 text = "audio Effects:"
 
-[node name="PanelInfoEffects" type="Panel" parent="PanelGeneral" unique_id=1429328953]
+[node name="PanelInfoEffects" type="Panel" parent="PanelGeneral"]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -136,7 +136,7 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = ExtResource("1_5iogq")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="PanelGeneral/PanelInfoEffects" unique_id=1260649386]
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelGeneral/PanelInfoEffects"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -149,10 +149,10 @@ grow_horizontal = 2
 grow_vertical = 2
 draw_focus_border = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelGeneral/PanelInfoEffects/ScrollContainer" unique_id=1088073175]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelGeneral/PanelInfoEffects/ScrollContainer"]
 layout_mode = 2
 
-[node name="PanelMiscelanea" type="Panel" parent="PanelGeneral" unique_id=883817347]
+[node name="PanelMiscelanea" type="Panel" parent="PanelGeneral"]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -164,39 +164,39 @@ offset_bottom = 562.0
 grow_horizontal = 0
 theme_override_styles/panel = ExtResource("1_5iogq")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelGeneral/PanelMiscelanea" unique_id=1155955554]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelGeneral/PanelMiscelanea"]
 layout_mode = 0
 offset_left = 19.0
 offset_top = 36.0
 offset_right = 338.0
 offset_bottom = 473.0
 
-[node name="OptionButton" type="OptionButton" parent="PanelGeneral/PanelMiscelanea/VBoxContainer" unique_id=516431150]
+[node name="OptionButton" type="OptionButton" parent="PanelGeneral/PanelMiscelanea/VBoxContainer"]
 layout_mode = 2
 
-[node name="play" type="Button" parent="PanelGeneral/PanelMiscelanea/VBoxContainer" unique_id=1678632167]
+[node name="play" type="Button" parent="PanelGeneral/PanelMiscelanea/VBoxContainer"]
 layout_mode = 2
 
-[node name="pausar" type="Button" parent="PanelGeneral/PanelMiscelanea/VBoxContainer" unique_id=2075628110]
+[node name="pausar" type="Button" parent="PanelGeneral/PanelMiscelanea/VBoxContainer"]
 layout_mode = 2
 
-[node name="addEffect" type="Button" parent="PanelGeneral/PanelMiscelanea/VBoxContainer" unique_id=343516112]
+[node name="addEffect" type="Button" parent="PanelGeneral/PanelMiscelanea/VBoxContainer"]
 layout_mode = 2
 
-[node name="deleteEffect" type="Button" parent="PanelGeneral/PanelMiscelanea/VBoxContainer" unique_id=327812200]
+[node name="deleteEffect" type="Button" parent="PanelGeneral/PanelMiscelanea/VBoxContainer"]
 layout_mode = 2
 
-[node name="habilitarEffect" type="Button" parent="PanelGeneral/PanelMiscelanea/VBoxContainer" unique_id=1079486188]
+[node name="habilitarEffect" type="Button" parent="PanelGeneral/PanelMiscelanea/VBoxContainer"]
 layout_mode = 2
 
-[node name="deshabilitarEffect" type="Button" parent="PanelGeneral/PanelMiscelanea/VBoxContainer" unique_id=1766172010]
+[node name="deshabilitarEffect" type="Button" parent="PanelGeneral/PanelMiscelanea/VBoxContainer"]
 layout_mode = 2
 
-[node name="Estado" type="Label" parent="PanelGeneral/PanelMiscelanea/VBoxContainer" unique_id=417093048]
+[node name="Estado" type="Label" parent="PanelGeneral/PanelMiscelanea/VBoxContainer"]
 visible = false
 layout_mode = 2
 
-[node name="PlantillaBotones" type="Button" parent="." unique_id=2118621734]
+[node name="PlantillaBotones" type="Button" parent="."]
 visible = false
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 0
@@ -207,11 +207,11 @@ offset_bottom = 410.0
 theme_override_font_sizes/font_size = 36
 text = "efecto 1"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=494776349]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_5iogq")
 autoplay = true
 
-[node name="Button" type="Button" parent="." unique_id=122218917]
+[node name="Button" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
