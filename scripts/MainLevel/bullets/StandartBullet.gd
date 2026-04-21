@@ -21,6 +21,7 @@ var cooldown:float
 var deathcooldown:float
 var circularAttack:CupiSpiral
 var notifyBot:bool = false
+var usableParaBot:bool = false
 
 func _ready() -> void:
 	position = Vector2.ONE * 1000
@@ -29,15 +30,20 @@ func _process(delta: float) -> void:
 	var currentTime = cupi.get_song_time()
 	cooldown = max(0, cooldown - delta * cupi.TimeMultiplier)
 	if isSpiral and spiralStart:
+		usableParaBot = true
 		angle = circularAttack.anguloFinal + circularAttack.AngleFinal
-
+	if !isSpiral:
+		usableParaBot = true
 	timeLerp = min(1.0,max(0, 1.0 - inverse_lerp(baseSpawnTime, baseStrumTime, currentTime)))
-	if timeLerp > 0.9:
+	if timeLerp > 0.9 and cupi.TimeMultiplier < 0:
 		notifyBot = false
 		
-	if timeLerp < 0.9 and !notifyBot:
+	if timeLerp < 0.9 and !notifyBot and usableParaBot:
+		if isSpiral:
+			cupi.notifyBot(circularAttack.AngleStart,baseStrumTime)
+		else:
+			cupi.notifyBot(angle,baseStrumTime)
 		notifyBot = true
-		cupi.notifyBot(angle,baseStrumTime)
 		
 	amp = distance * timeLerp * spawner.speed
 	ampSpiral = distance * timeLerp

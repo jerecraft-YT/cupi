@@ -287,6 +287,7 @@ func generateChunksData() -> void:
 	generateBulletsChunks()
 	generateSpiralsChunks()
 	
+	
 func generateBulletsChunks() -> void:
 	if bulletsData.is_empty():
 		return
@@ -341,6 +342,9 @@ func chunkControl(songTime):
 	chunkSpiralControl(songTime)
 
 func chunkBulletControl(songTime):
+	if bulletsChunks.is_empty():
+		return
+	
 	for chunk_bullet_index in bulletsChunks.size():
 		if cupi.musicNormalOrInverted:
 			if  songTime >= bulletsChunks[chunk_bullet_index][0]["time"] - offset_spawn and songTime <= bulletsChunks[chunk_bullet_index][0]["time"] + chunk_size - offset_spawn and chunkBulletView != chunk_bullet_index:
@@ -354,6 +358,9 @@ func chunkBulletControl(songTime):
 				break
 				
 func chunkSpiralControl(songTime):
+	if spiralsChunks.is_empty():
+		return
+	
 	for chunk_spiral_index in spiralsChunks.size():
 		if cupi.musicNormalOrInverted:
 			if  songTime >= spiralsChunks[chunk_spiral_index][0]["time"] - offset_spawn and songTime <= spiralsChunks[chunk_spiral_index][0]["time"] + chunk_size - offset_spawn and chunkSpiralView != chunk_spiral_index:
@@ -367,23 +374,22 @@ func chunkSpiralControl(songTime):
 				break
 
 func spawnBullets():
-	print("spawneando balas para el chunk " + str(chunkBulletView))
-	#for child in bulletChunk.get_children():
-		#child.queue_free()
+	#print("spawneando balas para el chunk " + str(chunkBulletView))
 	var chunkContainer:chunkController = null
 	var chunkFound:bool = false
 	
 	if bulletChunkContainer.get_child_count() != 0:
 		for chunk in bulletChunkContainer.get_children():
 			if chunk.name == "chunk_" + str(chunkBulletView):
-				print("el chunk " + str(chunkBulletView) + " si existe")
+				#print("el chunk " + str(chunkBulletView) + " si existe")
 				chunkContainer = chunk
 				chunkFound = true
 				if chunk.get_child_count() != 0:
-					print("ya existen balas, abortando spawneo")
+					#print("ya existen balas, cancelando spawneo")
 					return
 				else:
-					print("creando balas")
+					pass
+					#print("creando balas")
 		if !chunkFound:
 			chunkContainer = chunkSpawner.instantiate()
 			chunkContainer.name = "chunk_" + str(chunkBulletView)
@@ -399,12 +405,14 @@ func spawnBullets():
 	chunkContainer.set_process(true)
 		
 	for item in bulletsChunks[chunkBulletView]:
+		var time = item["time"]
 		var bullet:CupiBullet = prefabBulletNormal.instantiate()  
 		chunkContainer.add_child(bullet)
+		
 		bullet.visible = false
 		bullet.baseSpawnTime = 0.0
-		bullet.baseStrumTime = item["time"]
-		bullet.distance = item["time"]
+		bullet.baseStrumTime = time
+		bullet.distance = time
 		bullet.angle = fmod(item["angle"],360)
 		bullet.expresionContain = item["expresion"]
 		bullet.cupi = cupi
@@ -413,21 +421,22 @@ func spawnBullets():
 		bullet.name = "bala_0" # se supone que el numero cambiara cuando haya mas de una bala
 		
 func spawnSpirals():
-	print("spawneando espirales para el chunk " + str(chunkSpiralView))
+	#print("spawneando espirales para el chunk " + str(chunkSpiralView))
 	var chunkContainer:chunkController = null
 	var chunkFound:bool = false
 	
 	if spiralChunkContainer.get_child_count() != 0:
 		for chunk in spiralChunkContainer.get_children():
 			if chunk.name == "chunk_" + str(chunkSpiralView):
-				print("el chunk " + str(chunkSpiralView) + " si existe")
+				#print("el chunk " + str(chunkSpiralView) + " si existe")
 				chunkContainer = chunk
 				chunkFound = true
 				if chunk.get_child_count() != 0:
-					print("ya existen espirales, abortando spawneo")
+					#print("ya existen espirales, abortando spawneo")
 					return
 				else:
-					print("creando espirales")
+					pass
+					#print("creando espirales")
 		if !chunkFound:
 			chunkContainer = chunkSpawner.instantiate()
 			chunkContainer.name = "chunk_" + str(chunkSpiralView)
@@ -486,6 +495,9 @@ func spawnSpirals():
 		spiral.bulletFinal.circularAttack = spiral
 		spiral.name = "spiral_0" # se supone que el numero cambiara cuando haya mas de una bala
 		
+func spawnEffects():
+	pass
+
 func _on_cupi_beat() -> void:
 	pass
 	#speed = 0.1

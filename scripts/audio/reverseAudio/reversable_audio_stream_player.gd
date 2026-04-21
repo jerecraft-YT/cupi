@@ -32,7 +32,7 @@ var playback_direction := 1
 			pitch_scale = 0.001  # Valor mínimo seguro
 		else:
 			stream_paused = false
-			pitch_scale = target_pitch
+			pitch_scale = max(0.001,target_pitch)
 	get:
 		return playback_rate
 

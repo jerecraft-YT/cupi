@@ -1,3 +1,4 @@
+class_name particulasBullet
 extends GPUParticles2D
 
 var tiempoVida:float

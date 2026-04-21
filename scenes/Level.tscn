@@ -55,13 +55,6 @@ script = ExtResource("2_2eouu")
 position = Vector2(360, 360)
 scale = Vector2(1.025, 1.025)
 
-[node name="Cupi" parent="GameplayViewport/Gameplay" index="2"]
-levelName = null
-amp = null
-timeMultiplierObjective = null
-TimeMultiplier = null
-cobertura = null
-
 [node name="GameplayRender" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(360, 360)
@@ -147,6 +140,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.21831203, 2.536714)
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewport/Node3D"]
 
 [node name="letterSpawnerTest" type="Node2D" parent="."]
+visible = false
 position = Vector2(364, 345)
 script = ExtResource("9_2eouu")
 

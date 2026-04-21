@@ -31,6 +31,7 @@ buses/default_bus_layout="uid://byfcaghl26y8j"
 [autoload]
 
 DataGame="*res://scripts/dataGame.gd"
+MathFunctions="*res://scripts/mathFunctions.gd"
 
 [display]
 

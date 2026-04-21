@@ -18,7 +18,7 @@ func _process(delta: float) -> void:
 					look_at(get_global_mouse_position())
 					rotation = deg_to_rad(fmod(rad_to_deg(rotation),360))
 			else:
-				if !angulosMeta.is_empty():
+				if !angulosMeta.is_empty() and cupi.TimeMultiplier > 0:
 					tiempoProgreso = inverse_lerp(intialTime,angulosMeta[0]["StrumTime"],cupi.TimeScene)
 					rotation = lerp_angle(rotation,deg_to_rad(angulosMeta[0]["Angle"]),tiempoProgreso)
 					if cupi.TimeScene > angulosMeta[0]["StrumTime"]:

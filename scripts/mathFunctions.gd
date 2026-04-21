@@ -1,6 +1,5 @@
 extends Node
 
-
 func easeInSine(x):
 	return 1 - cos((x * PI) / 2)
 func easeOutSine(x):

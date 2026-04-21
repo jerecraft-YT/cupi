@@ -15,7 +15,7 @@ class_name CupiSpiral
 @export var AngleStart: float = 0.0
 @export var AngleFinal: float = 0.0
 @export var calc: float = 1.0
-@export var angleRef: float = 0.0
+@export var diferenciaAngulos: float = 0.0
 @export var progresoSpiral: float = 0.0
 
 # Control de resolución / densidad
@@ -73,7 +73,7 @@ func getCalc() -> float:
 	return calc
 
 func calcAngle() -> void:
-	angleRef = AngleStart - AngleFinal
+	diferenciaAngulos = AngleStart - AngleFinal
 
 	var ampStartSpiral: float = bulletStart.ampSpiral
 	var ampFinalSpiral: float = bulletFinal.ampSpiral
@@ -85,7 +85,7 @@ func calcAngle() -> void:
 	progresoSpiral = clamp(progresoSpiral, 0.0, 1.0)
 
 	var eased_global: float = _easing_eval(progresoSpiral, idFuncion)
-	anguloFinal = angleRef * eased_global
+	anguloFinal = diferenciaAngulos * eased_global
 
 func createcircle() -> void:
 	var ampStartSpiral: float = bulletStart.ampSpiral
@@ -109,7 +109,7 @@ func createcircle() -> void:
 	points.append(calculate_spiral_point(prevPaso, prevY))
 
 	# generar segmentos
-	var local_angleRef = angleRef
+	var local_angleRef = diferenciaAngulos
 
 	for i in range(segmentos):
 		var pasoActual = paso * float(i + 1)
@@ -141,7 +141,7 @@ func createcircle() -> void:
 	line.points = points
 
 func calculate_spiral_point(t: float, eased_value: float) -> Vector2:
-	var angle_t: float = eased_value * angleRef
+	var angle_t: float = eased_value * diferenciaAngulos
 	var actual_angle_rad: float = deg_to_rad(angle_t) + deg_to_rad(AngleFinal)
 
 	var pasAmp: float = bulletStart.amp - bulletFinal.amp

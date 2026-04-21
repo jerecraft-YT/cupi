@@ -12,37 +12,24 @@
 
 [node name="metaball" parent="." instance=ExtResource("1_7dn3w")]
 
-[node name="bullet spawner" type="Node2D" parent="." node_paths=PackedStringArray("spirales", "normales", "efectos", "bulletChunkContainer", "spiralChunkContainer", "cupi", "cupiContainer") groups=["bulletSpawner"]]
+[node name="levelElements" type="Node2D" parent="." node_paths=PackedStringArray("bulletChunkContainer", "spiralChunkContainer", "cupi", "cupiContainer") groups=["bulletSpawner"]]
 script = ExtResource("2_v5r4t")
 prefabBulletNormal = ExtResource("3_v5r4t")
 prefabBulletSpiral = ExtResource("4_7dn3w")
 prefabEffecto = ExtResource("5_5vd6e")
 chunkSpawner = ExtResource("6_hgjke")
-spirales = NodePath("spirales")
-normales = NodePath("normales")
-efectos = NodePath("efectos")
 bulletChunkContainer = NodePath("bulletChunks")
 spiralChunkContainer = NodePath("spiralChunks")
 cupi = NodePath("../Cupi")
 cupiContainer = NodePath("../Cupi/cupiContainer")
 
-[node name="spirales" type="Node2D" parent="bullet spawner"]
-visible = false
+[node name="bulletChunks" type="Node2D" parent="levelElements"]
 scale = Vector2(3, 3)
 
-[node name="normales" type="Node2D" parent="bullet spawner"]
-modulate = Color(1, 1, 1, 0.39215687)
-scale = Vector2(3, 3)
-
-[node name="efectos" type="Node2D" parent="bullet spawner"]
-
-[node name="bulletChunks" type="Node2D" parent="bullet spawner"]
-scale = Vector2(3, 3)
-
-[node name="spiralChunks" type="Node2D" parent="bullet spawner"]
+[node name="spiralChunks" type="Node2D" parent="levelElements"]
 scale = Vector2(3, 3)
 
 [node name="Cupi" parent="." groups=["cupi"] instance=ExtResource("3_7dn3w")]
 scale = Vector2(3, 3)
 
-[connection signal="beat" from="Cupi" to="bullet spawner" method="_on_cupi_beat"]
+[connection signal="beat" from="Cupi" to="levelElements" method="_on_cupi_beat"]

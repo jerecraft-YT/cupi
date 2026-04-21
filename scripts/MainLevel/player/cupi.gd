@@ -55,7 +55,7 @@ signal beat
 	get:
 		return cobertura
 
-var particulasBullet:PackedScene = load("res://prefabs/particulas_destruir_bullet.tscn")
+var particulasBulletInstance:PackedScene = load("res://prefabs/particulas_destruir_bullet.tscn")
 var actual_angle:float
 var puntosNivel:float
 var time:float
@@ -123,7 +123,6 @@ func _process(delta: float) -> void:
 			beat.emit()
 			
 		beatNumber += 1
-		#cupiContainer.cupiBeat()
 		# Sincronizarrrrrr
 		var song_time = get_song_time()
 		if song_time > 0 and abs(song_time - (levelMusic.get_playback_position() + AudioServer.get_time_since_last_mix())) >= 1.0/120.0 and musicNormalOrInverted:
@@ -147,27 +146,25 @@ func bulletHit():
 	bulletHitAudio.play()
 	
 func BulletDestroy(bullet):
+		cupiContainer.shieldBeat()
 		bulletHit()
-		var particles:GPUParticles2D = particulasBullet.instantiate()
+		var particles:particulasBullet = particulasBulletInstance.instantiate()
 		add_child(particles)
 		particles.rotation = deg_to_rad(bullet.angle)
 		particles.tiempoVida = bullet.duracionBala
+		particles.emitting = true
+		particles.position = bullet.position
+		
 		if !bullet.isSpiral:
 			particles.one_shot = true
 		else:
 			particles.bulletStart = bullet
 			particles.Dinamic = true
-		particles.emitting = true
-		var materialparticulas:ParticleProcessMaterial = particles.process_material
-		materialparticulas.scale_min = scale.x*1.5
-		particles.position = bullet.position
+		var materialparticulasBullet:ParticleProcessMaterial = particles.process_material
+		materialparticulasBullet.scale_min = scale.x*1.5
 
 func notifyBot(Angle:float,StrumTime:float):
 	controladorGeneral.MoveToAngle(Angle,StrumTime)
-
-func BgBeat():
-	pass
-	#bg3d.beat()
 
 func createcircle():
 	#limpiar puntos de shield

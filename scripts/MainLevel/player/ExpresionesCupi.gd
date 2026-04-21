@@ -30,13 +30,14 @@ func cupiBeat():
 	#verificar si el zoom en beat esta activo
 	if zoomInBeat == true:
 		scalecupi = zoomBeatCupi
-	
-	lineScale = 0.9
 	#cambiar direccion de rotacion para beat
 	if rotateInBeat == true:
 		direction_beat = 1 ^ direction_beat
 		faceAngle = ((direction_beat*2.0)-1.0)*beatAngleForce
-	
+
+func shieldBeat():
+	lineScale = 0.9
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 @warning_ignore("unused_parameter")
 func _process(delta: float) -> void:
