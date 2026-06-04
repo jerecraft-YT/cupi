@@ -1,5 +1,5 @@
 72322a848ab928aa5c89f0cb78209805
-::res://::1779221990
+::res://::1780278827
 estructura json chartt.txt::TextFile::-1::1764715899::0::1::::<><><>0<>0<><>::
 export_presets.cfg::TextFile::-1::1771900778::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::174066192364344378::1764715899::1775160398::1::::<><><>0<>0<>d26cd61c336390e624049fd21c72787b<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
@@ -100,8 +100,8 @@ cupiEyes.tres::SpriteFrames::9086718789934383266::1779157217::0::1::::<><><>0<>0
 cupiMouth.tres::SpriteFrames::1404653848414325822::1779157217::0::1::::<><><>0<>0<><>::uid://b2j5ac01hh5be::::res://sprites/cupi/boca/CupiMouth.tres
 ::res://resources/diseños/::1775160410
 music_item.tres::StyleBoxFlat::7589861553156849885::1775160410::0::1::::<><><>0<>0<><>::
-::res://resources/metaball/::1779212435
-audioAnalizer.tres::AudioBusLayout::4081396580252559891::1779212435::0::1::::<><><>0<>0<><>::
+::res://resources/metaball/::1780186391
+audioAnalizer.tres::AudioBusLayout::4081396580252559891::1780186391::0::1::::<><><>0<>0<><>::
 metaballDegradado.tres::GradientTexture2D::4183565626712289035::1775160410::0::1::::<><><>0<>0<><>::
 ::res://resources/metaball/materiales/::1779157217
 metaball.tres::ShaderMaterial::8973637214073847270::1779157217::0::1::::<><><>0<>0<><>::uid://bd1h0aucl5xim::::res://shaders/sinCosforLine.tres
