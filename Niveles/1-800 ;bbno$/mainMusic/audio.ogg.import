@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://f1dfacpcf7ky"
+path="res://.godot/imported/audio.ogg-ee8ca3d8453ade79e4f9f5bf75a6007e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Niveles/1-800 ;bbno$/mainMusic/audio.ogg"
+dest_files=["res://.godot/imported/audio.ogg-ee8ca3d8453ade79e4f9f5bf75a6007e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

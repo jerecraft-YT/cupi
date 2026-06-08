@@ -12,8 +12,17 @@ var newID:int
 var progresoScale:float = 1
 
 func UpdateData():
-	Name.text = str(PantallaTitulo.niveles[fmod(ID_ItemView-PantallaTitulo.vueltas,PantallaTitulo.niveles.size())]).left(-1)
-	Autor.text = str("Autor")
+	var generalInfo:String = str(PantallaTitulo.niveles[fmod(ID_ItemView-PantallaTitulo.vueltas,PantallaTitulo.niveles.size())]).left(-1)
+	
+	var splitInfo = generalInfo.split(";",true)
+	
+	if splitInfo.size() > 1:
+		Autor.text = splitInfo[1]
+	else:
+		Autor.text = ""
+		
+	Name.text = splitInfo[0]
+
 	prevVueltas = PantallaTitulo.vueltas
 
 @warning_ignore("unused_parameter")

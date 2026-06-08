@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://22cckucuj2lw"
+path="res://.godot/imported/audio.ogg-5aafc9b253778251dc2936598126d8b7.oggvorbisstr"
+
+[deps]
+
+source_file="res://Niveles/Marshmallow feat. Hatsune Miku;DECO 27/mainMusic/audio.ogg"
+dest_files=["res://.godot/imported/audio.ogg-5aafc9b253778251dc2936598126d8b7.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

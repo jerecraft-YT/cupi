@@ -9,14 +9,17 @@ var intialTime:float
 var firstTime:bool = true
 func _ready() -> void:
 	cupi.beat.connect(beat)
+	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 
 @warning_ignore("unused_parameter")
 func _process(delta: float) -> void:
 		if cupi != null:
 			if !cupi.cupiBot:
-				if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
-					look_at(get_global_mouse_position())
-					rotation = deg_to_rad(fmod(rad_to_deg(rotation),360))
+				#if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+					#look_at(get_global_mouse_position())
+					#rotation = deg_to_rad(fmod(rad_to_deg(rotation),360))
+				look_at(get_global_mouse_position())
+				rotation = deg_to_rad(fmod(rad_to_deg(rotation),360))
 			else:
 				if !angulosMeta.is_empty() and cupi.TimeMultiplier > 0:
 					tiempoProgreso = inverse_lerp(intialTime,angulosMeta[0]["StrumTime"],cupi.TimeScene)

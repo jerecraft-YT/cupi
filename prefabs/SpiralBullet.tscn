@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cjvixm8nwnbvl"]
+[gd_scene load_steps=4 format=3 uid="uid://cjvixm8nwnbvl"]
 
 [ext_resource type="Script" uid="uid://bbo5yvl7gkhxw" path="res://scripts/MainLevel/bullets/SpiralBullet.gd" id="1_d23ml"]
+[ext_resource type="Texture2D" uid="uid://fh0v2mn0rxjy" path="res://sprites/testing/line.png" id="2_5jcwd"]
 [ext_resource type="PackedScene" uid="uid://bvjuwoyoq48kd" path="res://prefabs/bullet.tscn" id="2_70ue5"]
 
 [node name="CircularAttack" type="Node2D" node_paths=PackedStringArray("line")]
@@ -8,7 +9,8 @@ script = ExtResource("1_d23ml")
 line = NodePath("Line")
 
 [node name="Line" type="Line2D" parent="."]
-width = 6.0
+texture = ExtResource("2_5jcwd")
+texture_mode = 1
 
 [node name="startNote" parent="." instance=ExtResource("2_70ue5")]
 

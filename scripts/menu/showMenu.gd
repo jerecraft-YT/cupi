@@ -6,8 +6,8 @@ var cambiarEscena = false
 @export var boton2:Button
 @export var mainMenu:MainMenu
 @warning_ignore("unused_parameter")
-func _process(delta: float) -> void:
-	if Input.is_anything_pressed() and cambiarEscena == false:
+func _input(event: InputEvent) -> void:
+	if Input.is_anything_pressed() and cambiarEscena == false and !Input.is_action_just_pressed("ui_accept"):
 		mainMenu.pickRandomMusic = false
 		showMenu.emit()
 		cambiarEscena = true

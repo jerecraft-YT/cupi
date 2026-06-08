@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://xqktsowlohr6"
+path="res://.godot/imported/audio.mp3-da4adefa30aa2caef5bfd3c0946a3e24.mp3str"
+
+[deps]
+
+source_file="res://Niveles/Five Nights at Freddy's;The Living Tombstone/mainMusic/audio.mp3"
+dest_files=["res://.godot/imported/audio.mp3-da4adefa30aa2caef5bfd3c0946a3e24.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b5t2w2f4u2b23"
+path="res://.godot/imported/audio.mp3-82760ac99c4ce838a9d0ca3376cbb69b.mp3str"
+
+[deps]
+
+source_file="res://Niveles/The One Who's Running The Show;Gooseworx, Alex Rochon/mainMusic/audio.mp3"
+dest_files=["res://.godot/imported/audio.mp3-82760ac99c4ce838a9d0ca3376cbb69b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

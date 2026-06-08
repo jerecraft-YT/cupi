@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cmymbaunjlu8b"
+path="res://.godot/imported/audio.ogg-edb180af3a3b435a0bf049b298186dda.oggvorbisstr"
+
+[deps]
+
+source_file="res://Niveles/Aishite Aishite Aishite;Ado/mainMusic/audio.ogg"
+dest_files=["res://.godot/imported/audio.ogg-edb180af3a3b435a0bf049b298186dda.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

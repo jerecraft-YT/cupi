@@ -1,77 +1,137 @@
-[gd_scene load_steps=12 format=3 uid="uid://bk8q65ctlgoef"]
+[gd_scene load_steps=17 format=3 uid="uid://bk8q65ctlgoef"]
 
-[ext_resource type="Texture2D" uid="uid://b5v25fj0wvh8y" path="res://testeos/noise.tres" id="1_faw0r"]
-[ext_resource type="Script" uid="uid://5k5uwsb3c0jj" path="res://testeos/noise.gd" id="2_2eouu"]
+[ext_resource type="Script" uid="uid://cdx712p3gvwwr" path="res://scripts/resource_controller.gd" id="1_ax7ne"]
+[ext_resource type="Script" uid="uid://dsy6idasrimya" path="res://scripts/MainLevel/video_stream_player.gd" id="2_ax7ne"]
 [ext_resource type="PackedScene" uid="uid://bv1q1ckfcnds8" path="res://prefabs/gameplay.tscn" id="3_ax7ne"]
 [ext_resource type="PackedScene" uid="uid://d1y8yp35e5vm5" path="res://prefabs/debug_info.tscn" id="3_dke22"]
+[ext_resource type="PackedScene" uid="uid://r8erhl8y1ums" path="res://prefabs/beat_detecter.tscn" id="4_m0xki"]
 [ext_resource type="Script" uid="uid://dinxdtthuvvkf" path="res://scripts/debug/control_velocity.gd" id="4_sv41r"]
+[ext_resource type="Script" uid="uid://dtymirotlswa8" path="res://scenes/testLag.gd" id="5_ax7ne"]
 [ext_resource type="Script" uid="uid://b32sgw55o2c8f" path="res://scripts/MainLevel/player/controles.gd" id="6_xe3hh"]
 [ext_resource type="Texture2D" uid="uid://c1ce3lbjrnp2o" path="res://sprites/controller/disco.png" id="7_p6oy6"]
-[ext_resource type="Script" uid="uid://cv4s2ki2jjc8b" path="res://scripts/miscelanea/animated3dBox.gd" id="8_faw0r"]
 [ext_resource type="Script" uid="uid://21w34c5tn380" path="res://scripts/animatedDebug/musicSpawner.gd" id="9_2eouu"]
+[ext_resource type="Script" uid="uid://l7wrmu4gqejk" path="res://scripts/MouseFollow.gd" id="13_m0xki"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_2eouu"]
-viewport_path = NodePath("SubViewport")
+[sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_ax7ne"]
+mix_rate_mode = 0
+buffer_length = 0.1
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_rccsh"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xe3hh"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ax7ne"]
 viewport_path = NodePath("GameplayViewport")
+
+[sub_resource type="Gradient" id="Gradient_sv41r"]
+offsets = PackedFloat32Array(0.30182928, 1)
+colors = PackedColorArray(1, 1, 1, 0.3529412, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_m0xki"]
+gradient = SubResource("Gradient_sv41r")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.8034188, 0.8717949)
 
 [node name="Level" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="ColorRect2" type="ColorRect" parent="."]
 visible = false
-texture_filter = 1
-position = Vector2(84, 325)
-texture = SubResource("ViewportTexture_2eouu")
+offset_right = 1277.0
+offset_bottom = 720.0
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-visible = false
+[node name="ResourceController" type="Node2D" parent="." node_paths=PackedStringArray("videoPlayer", "texture")]
+script = ExtResource("1_ax7ne")
+videoPlayer = NodePath("VideoStreamPlayer")
+texture = NodePath("TextureRect")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="ResourceController"]
+offset_right = 1280.0
+offset_bottom = 720.0
+pivot_offset = Vector2(640, 360)
+volume_db = -80.0
+expand = true
+script = ExtResource("2_ax7ne")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="ResourceController"]
 texture_filter = 1
-position = Vector2(485, 135)
-rotation = 0.7749262
-texture = SubResource("ViewportTexture_2eouu")
+offset_right = 1280.0
+offset_bottom = 720.0
+pivot_offset = Vector2(640, 360)
+expand_mode = 1
+stretch_mode = 6
+
+[node name="BeatDetecter" parent="ResourceController" node_paths=PackedStringArray("camarita", "background", "background2") instance=ExtResource("4_m0xki")]
+camarita = NodePath("../../GameplayViewport/Camera2D")
+background = NodePath("../TextureRect")
+background2 = NodePath("../VideoStreamPlayer")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 720.0
+offset_right = 1280.0
 offset_bottom = 720.0
 color = Color(0, 0, 0, 0.39215687)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 440.0
+offset_right = 1280.0
+offset_bottom = 720.0
+grow_horizontal = 0
 
 [node name="GameplayViewport" type="SubViewport" parent="."]
+disable_3d = true
 transparent_bg = true
-size = Vector2i(720, 720)
+positional_shadow_atlas_size = 0
+size = Vector2i(1280, 720)
 
 [node name="Camera2D" type="Camera2D" parent="GameplayViewport"]
-offset = Vector2(360, 360)
+offset = Vector2(640, 360)
 ignore_rotation = false
 
-[node name="effectNoRefresh" type="Sprite2D" parent="GameplayViewport" groups=["effectNoRefresh"]]
-visible = false
-texture_filter = 1
-position = Vector2(360, 360)
-texture = ExtResource("1_faw0r")
-script = ExtResource("2_2eouu")
-
 [node name="Gameplay" parent="GameplayViewport" instance=ExtResource("3_ax7ne")]
-position = Vector2(360, 360)
-scale = Vector2(1.025, 1.025)
+position = Vector2(850, 360)
+scale = Vector2(0.75, 0.75)
+
+[node name="levelElements" parent="GameplayViewport/Gameplay" index="1" node_paths=PackedStringArray("transicionFinal", "textoCombo", "textoPuntaje")]
+speedObjective = 1.0
+transicionFinal = NodePath("../../../HUD/transicionFinal")
+textoCombo = NodePath("../../../HUD/combo")
+textoPuntaje = NodePath("../../../HUD/DebugInfo")
+
+[node name="Cupi" parent="GameplayViewport/Gameplay" index="2"]
+cupiBot = false
+amp = 37.0
+cobertura = 70.0
+
+[node name="ReversableAudioStreamPlayer" parent="GameplayViewport/Gameplay/Cupi" index="0"]
+stream = SubResource("AudioStreamGenerator_ax7ne")
+
+[node name="cupiContainer" parent="GameplayViewport/Gameplay/Cupi" index="2" node_paths=PackedStringArray("spawner")]
+spawner = NodePath("../../levelElements")
 
 [node name="GameplayRender" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(360, 360)
-texture = SubResource("ViewportTexture_rccsh")
+material = SubResource("ShaderMaterial_xe3hh")
+position = Vector2(640, 360)
+texture = SubResource("ViewportTexture_ax7ne")
+script = ExtResource("5_ax7ne")
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
 [node name="ControlVelocity" type="HSlider" parent="HUD" groups=["slider"]]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -325.0
-offset_top = 33.0
-offset_right = -97.117065
-offset_bottom = 49.0
+offset_left = -319.0
+offset_top = 239.0
+offset_right = -91.117065
+offset_bottom = 255.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2.905, 2.905)
@@ -83,6 +143,7 @@ script = ExtResource("4_sv41r")
 metadata/_edit_use_anchors_ = true
 
 [node name="background2" type="ColorRect" parent="HUD"]
+visible = false
 z_index = 100
 z_as_relative = false
 custom_minimum_size = Vector2(720, 558)
@@ -96,21 +157,20 @@ pivot_offset = Vector2(120, 93)
 color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 
-[node name="DebugInfo" parent="HUD" instance=ExtResource("3_dke22")]
-
 [node name="Control" type="Control" parent="HUD"]
 layout_mode = 3
-anchors_preset = 7
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 1.0
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
-offset_top = -280.0
-offset_bottom = -280.0
+anchor_bottom = 0.5
+offset_left = 210.0
+offset_right = 210.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 
 [node name="controles" type="Node2D" parent="HUD/Control" groups=["controlador"]]
+visible = false
 script = ExtResource("6_xe3hh")
 
 [node name="backController" type="Polygon2D" parent="HUD/Control/controles"]
@@ -125,23 +185,70 @@ z_index = 200
 texture = ExtResource("7_p6oy6")
 offset = Vector2(1, -1)
 
-[node name="SubViewport" type="SubViewport" parent="."]
-transparent_bg = true
+[node name="combo" type="RichTextLabel" parent="HUD"]
+offset_left = 22.0
+offset_top = 601.0
+offset_right = 339.0
+offset_bottom = 701.0
+pivot_offset = Vector2(0, 100)
+theme_override_font_sizes/normal_font_size = 32
+text = "Combo: 0"
+vertical_alignment = 2
 
-[node name="Node3D" type="Node3D" parent="SubViewport"]
+[node name="DebugInfo" parent="HUD" instance=ExtResource("3_dke22")]
+offset_left = 10.0
+offset_top = 0.0
+offset_right = 505.0
+offset_bottom = 151.0
+scale = Vector2(1, 1)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/normal_font_size = 32
 
-[node name="CSGBox3D" type="CSGBox3D" parent="SubViewport/Node3D"]
-transform = Transform3D(0.851075, 0.13862334, -0.50641364, -0.2627634, 0.9474944, -0.18223551, 0.454562, 0.28816313, 0.84281385, 0, 0, -0.7733234)
-script = ExtResource("8_faw0r")
+[node name="transicionFinal" type="ColorRect" parent="HUD"]
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+metadata/_edit_lock_ = true
 
-[node name="Camera3D" type="Camera3D" parent="SubViewport/Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.21831203, 2.536714)
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewport/Node3D"]
+[node name="ColorRect4" type="ColorRect" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_right = 440.0
+offset_bottom = 720.0
+grow_horizontal = 0
+color = Color(0, 0, 0, 0.78431374)
 
 [node name="letterSpawnerTest" type="Node2D" parent="."]
 visible = false
 position = Vector2(364, 345)
 script = ExtResource("9_2eouu")
 
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = 1032.0
+offset_top = 2.0
+offset_right = 1339.0
+offset_bottom = 59.0
+theme_override_font_sizes/normal_font_size = 24
+text = "juego en alpha"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 20.0
+offset_top = 350.0
+offset_right = 416.0
+offset_bottom = 652.0
+theme_override_font_sizes/normal_font_size = 36
+text = "sistema instrumental en desarrollo"
+horizontal_alignment = 1
+
+[node name="mouse" type="Sprite2D" parent="."]
+texture = SubResource("GradientTexture2D_m0xki")
+script = ExtResource("13_m0xki")
+
+[connection signal="play" from="GameplayViewport/Gameplay/Cupi" to="ResourceController/VideoStreamPlayer" method="_on_cupi_play"]
+
 [editable path="GameplayViewport/Gameplay"]
+[editable path="GameplayViewport/Gameplay/Cupi"]
+[editable path="GameplayViewport/Gameplay/Cupi/cupiContainer"]

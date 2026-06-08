@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bejvmsgghpqlt"
+path="res://.godot/imported/audio.ogg-d98ff662cd068e987acbc06da86d25bd.oggvorbisstr"
+
+[deps]
+
+source_file="res://Niveles/Daidaidaidaidaikirai ;雨良/mainMusic/audio.ogg"
+dest_files=["res://.godot/imported/audio.ogg-d98ff662cd068e987acbc06da86d25bd.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

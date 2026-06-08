@@ -4,5 +4,5 @@ extends HSlider
 
 @warning_ignore("unused_parameter")
 func _input(event: InputEvent) -> void:
-		cupi.timeMultiplierObjective=value
+		#cupi.timeMultiplierObjective=value
 		pass

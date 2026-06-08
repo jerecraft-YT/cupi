@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cqpr2x1hjr0u3"
+path="res://.godot/imported/audio.mp3-df8bc4b7e0ffdf95ad53b0bf51bfa908.mp3str"
+
+[deps]
+
+source_file="res://Niveles/How You Like That;BLACKPINK/mainMusic/audio.mp3"
+dest_files=["res://.godot/imported/audio.mp3-df8bc4b7e0ffdf95ad53b0bf51bfa908.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

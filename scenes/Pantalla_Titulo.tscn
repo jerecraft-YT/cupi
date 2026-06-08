@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://d1fqn8rr6ofpe"]
+[gd_scene load_steps=31 format=3 uid="uid://d1fqn8rr6ofpe"]
 
 [ext_resource type="Texture2D" uid="uid://bowvms2w6ac6j" path="res://sprites/background/Background_1.png" id="1_e767d"]
 [ext_resource type="Script" uid="uid://btqx7jldobmj5" path="res://scripts/menu/MainMenuController.gd" id="1_h8syl"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cer4rjvbsm2xp" path="res://sprites/background/Background_3.png" id="3_0fgxx"]
 [ext_resource type="PackedScene" uid="uid://c515s8eiyg4px" path="res://prefabs/cupi_container.tscn" id="3_6ajat"]
 [ext_resource type="Texture2D" uid="uid://buok78nq5p1ik" path="res://sprites/background/Background_4.png" id="4_6xp4g"]
+[ext_resource type="Script" uid="uid://cve6vwq7xci4l" path="res://scripts/background_controller.gd" id="4_a1lvp"]
 [ext_resource type="Texture2D" uid="uid://cit8xgcws0kuc" path="res://sprites/background/Background_5.png" id="5_h8syl"]
 [ext_resource type="Texture2D" uid="uid://ksv03ym07omq" path="res://sprites/background/Background_6.png" id="6_hgevq"]
 [ext_resource type="Script" uid="uid://cud1i8mhv12n7" path="res://scripts/miscelanea/rotateTexture.gd" id="7_6xp4g"]
@@ -14,6 +15,7 @@
 [ext_resource type="Script" uid="uid://c0xylibq7685x" path="res://scripts/menu/controladorMenu.gd" id="10_uquea"]
 [ext_resource type="PackedScene" uid="uid://r8erhl8y1ums" path="res://prefabs/beat_detecter.tscn" id="11_a1lvp"]
 [ext_resource type="PackedScene" uid="uid://d1y8yp35e5vm5" path="res://prefabs/debug_info.tscn" id="16_icyuc"]
+[ext_resource type="FontFile" uid="uid://ch8y4igp1acwo" path="res://testeos/Letter Magic.ttf" id="17_2d28k"]
 [ext_resource type="Script" uid="uid://cjlssy54gqe62" path="res://scripts/menu/showMenu.gd" id="18_hgevq"]
 [ext_resource type="Script" uid="uid://bh1obd3gn3luq" path="res://scripts/audio/show_audio_debug.gd" id="18_icyuc"]
 [ext_resource type="PackedScene" uid="uid://cd2h0hwky0h4x" path="res://prefabs/audioModifierDebug.tscn" id="18_uquea"]
@@ -21,6 +23,10 @@
 [ext_resource type="Script" uid="uid://bx3fjtbbwusd3" path="res://scripts/menu/loadMainLevelButton.gd" id="20_21mn0"]
 [ext_resource type="Shader" uid="uid://bymx27jlswj05" path="res://shaders/caleidoscopio.gdshader" id="21_21mn0"]
 [ext_resource type="Texture2D" uid="uid://cqk3ysk80cik" path="res://icon.svg" id="22_a1lvp"]
+[ext_resource type="Script" uid="uid://b0eq624nfltoa" path="res://scenes/valores_nivel_custom.gd" id="23_vd00m"]
+[ext_resource type="Script" uid="uid://c0200fc1ikjrb" path="res://scripts/animatedDebug/text_draw.gd" id="24_nf4dv"]
+[ext_resource type="FontFile" uid="uid://dlf5t8hggjqun" path="res://testeos/gGroovyCow.ttf" id="25_c00po"]
+[ext_resource type="FontFile" uid="uid://cskeeypph5x11" path="res://testeos/DynaPuff-VariableFont_wdth,wght.ttf" id="26_gwl00"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4pcd2"]
 particle_flag_disable_z = true
@@ -68,13 +74,14 @@ shader_parameter/sourceAngle = 0.0
 
 [node name="PantallaTitulo" type="Node2D" node_paths=PackedStringArray("audio") groups=["PantallaTitulo"]]
 script = ExtResource("1_h8syl")
-objectiveAmpMusic = 570.0
-YCOS = 3.0
+objectiveAmpMusic = 650.0
+YCOS = 2.5
 MusicItem = ExtResource("19_uquea")
 audio = NodePath("AudioStreamPlayer")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 autoplay = true
+bus = &"Music"
 
 [node name="LevelLoader" type="Node" parent="."]
 script = ExtResource("7_wjr8j")
@@ -87,9 +94,23 @@ amount = 64
 preprocess = 3.0
 process_material = SubResource("ParticleProcessMaterial_4pcd2")
 
-[node name="Background1" type="AnimatedSprite2D" parent="."]
+[node name="BackgroundController" type="Node2D" parent="." node_paths=PackedStringArray("Background1", "Background2")]
+script = ExtResource("4_a1lvp")
+Background1 = NodePath("Background1")
+Background2 = NodePath("Background2")
+imageShowBackground1 = 2
+imageShowBackground2 = 3
+changeStateEvery = 10.0
+
+[node name="Background1" type="AnimatedSprite2D" parent="BackgroundController"]
 sprite_frames = SubResource("SpriteFrames_uquea")
-frame = 4
+script = ExtResource("7_6xp4g")
+
+[node name="Background2" type="AnimatedSprite2D" parent="BackgroundController"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(3, 0)
+sprite_frames = SubResource("SpriteFrames_uquea")
+frame = 1
 script = ExtResource("7_6xp4g")
 
 [node name="BeatDetecter" parent="." node_paths=PackedStringArray("camarita") instance=ExtResource("11_a1lvp")]
@@ -99,11 +120,12 @@ camarita = NodePath("../Camera2D")
 [node name="Musicas" type="Node2D" parent="."]
 position = Vector2(-360, -60)
 
-[node name="CupiMenu" type="Node2D" parent="." node_paths=PackedStringArray("titulo", "comenzar")]
-scale = Vector2(2, 2)
+[node name="CupiMenu" type="Node2D" parent="." node_paths=PackedStringArray("titulo", "comenzar", "valoresCustom")]
+scale = Vector2(1.5, 1.5)
 script = ExtResource("10_uquea")
-titulo = NodePath("../CanvasLayer/Titulo")
-comenzar = NodePath("../CanvasLayer/comenzar")
+titulo = NodePath("../Titulo")
+comenzar = NodePath("../texto")
+valoresCustom = NodePath("../CanvasLayer/Control")
 
 [node name="metaball" parent="CupiMenu" instance=ExtResource("2_pri23")]
 scale = Vector2(0.9, 0.9)
@@ -117,11 +139,13 @@ frame = 20
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="DebugInfo" parent="CanvasLayer" instance=ExtResource("16_icyuc")]
+visible = false
 z_index = 1000
 offset_top = 5.0
 offset_bottom = 1045.0
 
 [node name="comenzar" type="RichTextLabel" parent="CanvasLayer" node_paths=PackedStringArray("boton1", "boton2", "mainMenu")]
+visible = false
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -133,6 +157,8 @@ offset_right = 360.0
 offset_bottom = -73.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_constants/outline_size = 30
+theme_override_fonts/normal_font = ExtResource("17_2d28k")
 theme_override_font_sizes/normal_font_size = 64
 bbcode_enabled = true
 text = "[wave amp=50.0 freq=5.0 connected=1][rainbow freq=0.05 sat=0.8 val=1.0 speed=5.0]¡Toca para Jugar![/rainbow][/wave]"
@@ -151,6 +177,7 @@ offset_left = -360.0
 offset_right = 360.0
 offset_bottom = 243.0
 grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("25_c00po")
 theme_override_font_sizes/normal_font_size = 136
 bbcode_enabled = true
 text = "[wave amp=50.0 freq=5.0 connected=0][rainbow freq=0.08 sat=0.8 val=1.0 speed=5.0]CUPI[/rainbow][/wave]"
@@ -165,10 +192,10 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -440.0
-offset_top = -70.5
-offset_right = -40.0
-offset_bottom = 30.5
+offset_left = -553.0
+offset_top = -68.0
+offset_right = -114.0
+offset_bottom = 48.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_font_sizes/font_size = 68
@@ -182,13 +209,15 @@ modulate = Color(1, 1, 1, 0)
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_top = -167.0
-offset_right = 287.0
-offset_bottom = 127.0
+offset_left = 259.0
+offset_top = -142.0
+offset_right = 546.0
+offset_bottom = 152.0
 grow_vertical = 2
 disabled = true
 
 [node name="audioDebugButton" type="Button" parent="CanvasLayer" node_paths=PackedStringArray("audioDebug", "titulo")]
+visible = false
 offset_left = 508.0
 offset_top = 8.0
 offset_right = 711.0
@@ -207,7 +236,63 @@ musicScene = NodePath("../../../AudioStreamPlayer")
 prevScreen = NodePath("../../..")
 
 [node name="AudioStreamPlayer" parent="CanvasLayer/AudioModifierDebug" index="3"]
+stream = null
 autoplay = false
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -300.0
+offset_right = -66.0
+offset_bottom = 189.0
+
+[node name="valoresNivelCustom" type="Label" parent="CanvasLayer/Control" node_paths=PackedStringArray("velocidadNotas", "multiplicadorVelocidad", "regularVoz")]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 17.0
+offset_right = 211.0
+offset_bottom = 196.0
+text = "Velocidad Notas:
+
+Multiplicador velocidad:
+
+
+Regular voz:
+"
+script = ExtResource("23_vd00m")
+velocidadNotas = NodePath("../velocidadNotas")
+multiplicadorVelocidad = NodePath("../multiplicadorVelocidad")
+regularVoz = NodePath("../RegularVoz")
+
+[node name="velocidadNotas" type="HSlider" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 36.0
+offset_right = 157.0
+offset_bottom = 84.0
+min_value = 0.1
+max_value = 1.0
+step = 0.1
+value = 0.30000000000000004
+
+[node name="multiplicadorVelocidad" type="HSlider" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 91.0
+offset_right = 158.0
+offset_bottom = 139.0
+min_value = 0.5
+max_value = 2.0
+step = 0.05
+value = 1.0
+
+[node name="RegularVoz" type="CheckBox" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 149.0
+offset_right = 148.0
+offset_bottom = 173.0
+button_pressed = true
 
 [node name="BackBufferCopy" type="BackBufferCopy" parent="."]
 visible = false
@@ -219,6 +304,46 @@ visible = false
 material = SubResource("ShaderMaterial_2d28k")
 scale = Vector2(5.6210938, 10.000001)
 texture = ExtResource("22_a1lvp")
+
+[node name="texto" type="Node2D" parent="."]
+position = Vector2(-232, 250)
+script = ExtResource("24_nf4dv")
+DataText = [["tornado"], ["tornado"], ["tornado"], ["tornado"], ["tornado"], ["tornado"], ["tornado"], ["tornado"], ["tornado"], ["tornado"], ["tornado"], ["tornado"], ["tornado"], ["tornado"], ["tornado"]]
+simulate = true
+textToDraw = "[tornado]toca para jugar"
+textClean = "toca para jugar"
+anchorText = 1
+fuente = ExtResource("26_gwl00")
+fontSize = 90
+chartsScales = PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+chartsOffset = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+TornadoActive = true
+RGBActive = true
+ColorMix = Color(1, 0.8203125, 0, 1)
+CoeficienteMix = 0.77
+chartShakePosition = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+chartShakeObjective = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+shadowActive = true
+
+[node name="Titulo" type="Node2D" parent="."]
+position = Vector2(-82, -180)
+script = ExtResource("24_nf4dv")
+DataText = [["tornado"], ["tornado"], ["tornado"], ["tornado"]]
+simulate = true
+textToDraw = "[tornado]CUPI"
+textClean = "CUPI"
+anchorText = 1
+fuente = ExtResource("26_gwl00")
+fontSize = 120
+chartsScales = PackedFloat32Array(1, 1, 1, 1)
+chartsOffset = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+TornadoActive = true
+RGBActive = true
+ColorMix = Color(1, 0.8203125, 0, 1)
+CoeficienteMix = 0.77
+chartShakePosition = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+chartShakeObjective = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+shadowActive = true
 
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
 [connection signal="showMenu" from="CanvasLayer/comenzar" to="." method="_on_comenzar_show_menu"]

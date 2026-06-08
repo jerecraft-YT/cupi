@@ -2,8 +2,8 @@
 
 [sub_resource type="Gradient" id="Gradient_vbegm"]
 interpolation_mode = 1
-offsets = PackedFloat32Array(0, 0.51707315)
-colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 0)
+offsets = PackedFloat32Array(0, 0.23224044)
+colors = PackedColorArray(0, 1, 0, 1, 1, 1, 1, 0)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_ehkex"]
 noise_type = 5
@@ -11,7 +11,7 @@ frequency = 1.0
 fractal_type = 0
 
 [resource]
-width = 720
+width = 1280
 height = 720
 generate_mipmaps = false
 noise = SubResource("FastNoiseLite_ehkex")

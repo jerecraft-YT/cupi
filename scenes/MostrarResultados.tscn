@@ -1,0 +1,203 @@
+[gd_scene load_steps=14 format=3 uid="uid://c8s728gsvlqpr"]
+
+[ext_resource type="Script" uid="uid://cu64abtwc6g86" path="res://scenes/mostrar_resultados.gd" id="1_7b8at"]
+[ext_resource type="FontFile" uid="uid://cskeeypph5x11" path="res://testeos/DynaPuff-VariableFont_wdth,wght.ttf" id="1_8rb8r"]
+[ext_resource type="AudioStream" uid="uid://8il3yey1n48c" path="res://sfx/394569__gb_uam__caixa-de-bateria.wav" id="3_ilasu"]
+[ext_resource type="AudioStream" uid="uid://4p3sjqx67pjf" path="res://sfx/badum.wav" id="4_xxx66"]
+[ext_resource type="PackedScene" uid="uid://cmwdw8kgbef6b" path="res://prefabs/metaball.tscn" id="5_6rxy8"]
+[ext_resource type="PackedScene" uid="uid://c515s8eiyg4px" path="res://prefabs/cupi_container.tscn" id="6_duwbt"]
+[ext_resource type="AudioStream" uid="uid://d06oyjlmaum4e" path="res://sfx/MultiplicadorNota.wav" id="7_42ug8"]
+
+[sub_resource type="Gradient" id="Gradient_42ug8"]
+colors = PackedColorArray(0.453125, 1, 0, 1, 0.17254902, 1, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_qhtbn"]
+gradient = SubResource("Gradient_42ug8")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_e3hf1"]
+particle_flag_disable_z = true
+radial_velocity_min = 52.96998
+radial_velocity_max = 291.38998
+gravity = Vector3(0, 98, 0)
+scale_min = 10.0
+scale_max = 20.869999
+color_ramp = SubResource("GradientTexture1D_qhtbn")
+
+[sub_resource type="Gradient" id="Gradient_7b8at"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ilasu"]
+gradient = SubResource("Gradient_7b8at")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_xxx66"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 55.96
+gravity = Vector3(0, 0, 0)
+linear_accel_min = 200.0
+linear_accel_max = 200.0
+radial_accel_min = 200.0
+radial_accel_max = 200.0
+scale_min = 7.58
+scale_max = 14.16
+color_ramp = SubResource("GradientTexture1D_ilasu")
+
+[node name="MostrarResultados" type="Node2D" node_paths=PackedStringArray("texto", "progresoBarra", "particles", "sonidoPrevio", "sonidoFinalBadum", "resultados", "cupi", "contenedorCupi", "sonidoMultiplicador", "textoMultiplicador", "particulasMultiplicador", "botonContinuar")]
+script = ExtResource("1_7b8at")
+expresionBoca = PackedInt32Array(30, 30, 30, 5, 5, 5, 12, 12, 12, 20, 5, 9, 7)
+expresionOjos = PackedInt32Array(8, 8, 8, 8, 8, 8, 0, 0, 0, 0, 0, 9, 10)
+texto = NodePath("CanvasLayer/nota")
+progresoBarra = NodePath("CanvasLayer/ProgressBar")
+particles = NodePath("particulasNota")
+sonidoPrevio = NodePath("AudioStreamPlayer2D")
+sonidoFinalBadum = NodePath("badum")
+resultados = NodePath("CanvasLayer/datos")
+cupi = NodePath("contenedor/cupiContainer")
+contenedorCupi = NodePath("contenedor")
+sonidoMultiplicador = NodePath("sonidoMultiplicador")
+textoMultiplicador = NodePath("CanvasLayer/multiplicador")
+particulasMultiplicador = NodePath("particulasMultiplicador")
+botonContinuar = NodePath("CanvasLayer/Button")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_right = 1281.0
+offset_bottom = 722.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="nota" type="RichTextLabel" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 50.0
+offset_right = 200.0
+offset_bottom = 450.0
+grow_horizontal = 2
+pivot_offset = Vector2(200, 200)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/outline_size = 100
+theme_override_fonts/normal_font = ExtResource("1_8rb8r")
+theme_override_font_sizes/normal_font_size = 291
+bbcode_enabled = true
+text = "A"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -500.0
+offset_top = -220.0
+offset_right = 500.0
+offset_bottom = -193.0
+grow_horizontal = 2
+grow_vertical = 0
+max_value = 1.0
+step = 0.0
+show_percentage = false
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = 80.0
+offset_right = 125.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 41
+text = "CONTINUAR"
+
+[node name="datos" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 65.0
+offset_top = 97.0
+offset_right = 537.0
+offset_bottom = 478.0
+pivot_offset = Vector2(83.785, 130.07)
+theme_override_fonts/normal_font = ExtResource("1_8rb8r")
+theme_override_font_sizes/normal_font_size = 24
+text = "Puntos:
+
+Combo Maximo:
+
+Perfecto:
+Ok:
+Meh:
+Fallidas:"
+
+[node name="multiplicador" type="RichTextLabel" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 309.00003
+offset_top = 16.999992
+offset_right = 709.0
+offset_bottom = 216.99997
+rotation = -0.5235988
+scale = Vector2(2.113, 2)
+pivot_offset = Vector2(200, 100)
+theme_override_constants/outline_size = 70
+theme_override_fonts/normal_font = ExtResource("1_8rb8r")
+theme_override_font_sizes/normal_font_size = 94
+text = "x1.25"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="particulasMultiplicador" type="GPUParticles2D" parent="."]
+position = Vector2(526, 127)
+emitting = false
+amount = 34
+lifetime = 3.63
+one_shot = true
+speed_scale = 3.08
+explosiveness = 1.0
+visibility_rect = Rect2(-500, -100, 1200, 1200)
+process_material = SubResource("ParticleProcessMaterial_e3hf1")
+
+[node name="particulasNota" type="GPUParticles2D" parent="."]
+position = Vector2(645, 255)
+emitting = false
+amount = 64
+lifetime = 1.2
+speed_scale = 2.03
+process_material = SubResource("ParticleProcessMaterial_xxx66")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ilasu")
+volume_db = 8.666
+max_polyphony = 10
+
+[node name="badum" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_xxx66")
+volume_db = 14.084
+
+[node name="contenedor" type="Node2D" parent="."]
+position = Vector2(1040, 280)
+
+[node name="metaball" parent="contenedor" instance=ExtResource("5_6rxy8")]
+scale = Vector2(1.5, 1.5)
+
+[node name="cupiContainer" parent="contenedor" instance=ExtResource("6_duwbt")]
+scale = Vector2(5, 5)
+
+[node name="eyes" parent="contenedor/cupiContainer/Face" index="1"]
+frame = 2
+
+[node name="mouth" parent="contenedor/cupiContainer/Face" index="2"]
+frame = 26
+
+[node name="sonidoMultiplicador" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_42ug8")
+volume_db = 7.622
+bus = &"SFX"
+
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
+
+[editable path="contenedor/cupiContainer"]

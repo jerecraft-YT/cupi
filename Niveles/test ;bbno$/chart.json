@@ -1,0 +1,29 @@
+{
+  "bpm": 132,
+  "bullets": [
+	{
+	  "id": 6,
+	  "expresion": 0,
+	  "time": 1000.0,
+	  "angle": 25.7307056015312,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 0.0
+	}
+  ],
+  "spiral": [
+	{
+	  "id": 0,
+	  "expresion": 0,
+	  "time": 2000.0,
+	  "duration": 340.9090909090913,
+	  "startAngle": 211.68236602705062,
+	  "finalAngle": 186.68236602705062,
+	  "moveAngle": 0.0,
+	  "expresionMouth": 0.0,
+	  "expresionEyes": 0.0,
+	  "tipeMoveAngle": 0
+	}
+  ]
+}

@@ -122,6 +122,8 @@ func _physics_process(delta: float) -> void:
 	
 @warning_ignore("unused_parameter")
 func _process(delta: float) -> void:
+	audio.pitch_scale = DataGame.multiplicadorVelocidad
+	
 	if animatedItems == true :
 		ampMusicItem = lerp(ampMusicItem,objectiveAmpMusic,0.1*DataGame.time_fixed)
 	else:

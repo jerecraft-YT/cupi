@@ -3,9 +3,10 @@
 [ext_resource type="Script" uid="uid://dc7fcu80avr8w" path="res://scripts/MainLevel/bullets/StandartBullet.gd" id="1_fh0yl"]
 [ext_resource type="Texture2D" uid="uid://c4x6tqup0qbn5" path="res://sprites/testing/notita.png" id="2_lv25w"]
 
-[node name="Bullet" type="Node2D"]
+[node name="Bullet" type="Node2D" node_paths=PackedStringArray("nota")]
 script = ExtResource("1_fh0yl")
+nota = NodePath("Notita")
 
 [node name="Notita" type="Sprite2D" parent="."]
-scale = Vector2(0.1, 0.1)
+scale = Vector2(0.14, 0.14)
 texture = ExtResource("2_lv25w")

@@ -12,7 +12,7 @@ var chartData:JSON = DataGame.datalevel
 
 @export var speedObjective:float = 0.3
 var speed:float = 0.3
-
+var comboActual:int
 var bullet_index:int = -1
 var efectos_index: int = -1
 var bullet_spiral_index: int = -1
@@ -24,6 +24,11 @@ var actualview_efectos:int = 0
 @export var offset_spawn:float = 2000 ##longitud en milisegundos, sirve para anticiparse a la primera bala del grupo y que se pueda ver su recorrido
 var chunkBulletView:int = -1
 var chunkSpiralView:int = -1
+var lastNoteTime:float
+var terminandoNivel:bool
+var waitTimeToEnd:float = 2
+var progresoOpacidad:float = 0
+@export var transicionFinal:ColorRect
 
 @export var spirales:Node2D 
 @export var normales:Node2D
@@ -38,7 +43,8 @@ var effectsData:Array
 var bulletsChunks:Array
 var spiralsChunks:Array
 var spiralMaxLength:PackedFloat32Array
-
+@export var textoCombo:RichTextLabel
+@export var textoPuntaje:RichTextLabel
 # Referencia a cupi
 @export var cupi:Cupi
 @export var cupiContainer:CupiContainer
@@ -58,17 +64,50 @@ func _ready() -> void:
 	effectsData = chartData.data.get("effects", [])
 	
 	generateChunksData()
-	
+
+func addToCombo():
+	comboActual += 1
+	if comboActual >= DataGame.comboMaximo:
+		DataGame.comboMaximo = comboActual
+	textoCombo.scale = Vector2.ONE * 1.5
+	textoPuntaje.scale = Vector2.ONE * 1.5
+	textoCombo.visible = true
+
+func restartCombo():
+	textoCombo.visible = false
+	comboActual = 0
+
 @warning_ignore("unused_parameter")
 func _process(delta: float) -> void:
+	speedObjective = DataGame.velocidadNotas
+	cupi.timeMultiplierObjective = DataGame.multiplicadorVelocidad
+	DataGame.errores = cupi.errores
+	textoCombo.scale = lerp(textoCombo.scale,Vector2.ONE,delta)
+	textoCombo.text = "Combo: " + str(comboActual)
+	textoPuntaje.scale = lerp(textoCombo.scale,Vector2.ONE,delta * 3)
 	var songTime:float = cupi.get_song_time()
 	speed = lerp(speed,speedObjective,0.1*DataGame.time_fixed)
 	
+	if songTime >= lastNoteTime + (waitTimeToEnd * 1000) and !terminandoNivel:
+		terminandoNivel = true
+		print("acabo la musica")
+		
+		endLevel()
+	if terminandoNivel:
+		progresoOpacidad = lerp(progresoOpacidad,1.0,delta * 4)
+		transicionFinal.color = Color(0,0,0,progresoOpacidad)
 	#spawnDataDrewVersion()
 	
 	#nuevo sistema
 	chunkControl(songTime)
 	
+func endLevel():
+	await get_tree().create_timer(waitTimeToEnd).timeout
+	DataGame.puntos = cupi.puntosNivel
+	DataGame.puntosMaximos = (bulletsData.size() * 100) + (spiralesData.size() * 200)
+	get_tree().change_scene_to_file("res://scenes/MostrarResultados.tscn")
+	print("termino el nivel")
+
 func spawnDataDrewVersion():
 	var songTime:float = cupi.get_song_time()
 	#esta version originalmente fue creada con andrew dev yo solo cambie cosas para que soportara mas tipos de bala :P
@@ -293,6 +332,7 @@ func generateBulletsChunks() -> void:
 		return
 		
 	var intialTimeBullets:float = bulletsData[0]["time"]
+	lastNoteTime = bulletsData[-1]["time"]
 	var chunkBullet:Array 
 	
 	#bullets
@@ -313,6 +353,7 @@ func generateSpiralsChunks() -> void:
 		return
 		
 	var intialTimeSpirales:float = spiralesData[0]["time"]
+	
 	var chunkSpiral:Array 
 	var maxLenghtSpiral:float
 	
@@ -321,6 +362,8 @@ func generateSpiralsChunks() -> void:
 		if itemSpiral["time"] <= intialTimeSpirales + chunk_size:
 			if itemSpiral["time"] + itemSpiral["duration"] > maxLenghtSpiral:
 				maxLenghtSpiral = itemSpiral["time"] + itemSpiral["duration"]
+				if (lastNoteTime < itemSpiral["time"] + itemSpiral["duration"]):
+					lastNoteTime = itemSpiral["time"] + itemSpiral["duration"]
 			chunkSpiral.append(itemSpiral)
 		else:
 			spiralsChunks.append(chunkSpiral.duplicate())
@@ -331,7 +374,9 @@ func generateSpiralsChunks() -> void:
 			chunkSpiral.append(itemSpiral)
 			if itemSpiral["time"] + itemSpiral["duration"] > maxLenghtSpiral:
 				maxLenghtSpiral = itemSpiral["time"] + itemSpiral["duration"]
-			
+				if (lastNoteTime < itemSpiral["time"] + itemSpiral["duration"]):
+					lastNoteTime = itemSpiral["time"] + itemSpiral["duration"]
+	
 	if !chunkSpiral.is_empty():
 		spiralsChunks.append(chunkSpiral)
 		spiralMaxLength.append(maxLenghtSpiral)
