@@ -1,5 +1,5 @@
 res://resources/metaball/audioAnalizer.tres
-res://scenes/MostrarResultados.tscn
+res://scenes/Pantalla_Titulo.tscn
 res://resources/animations/cupiMouth.tres
 res://resources/animations/cupiEyes.tres
 res://shaders/sinCosforLine.tres
@@ -13,6 +13,10 @@ res://shaders/sinCos.tres
 res://shaders/3_sample_blur.gdshader
 res://shaders/caleidoscopio.tres
 res://shaders/mascara.tres
-res://scenes/testLag.gd
+res://scenes/valores_nivel_custom.gd
+res://scenes/MostrarResultados.tscn
 res://scenes/mostrar_resultados.gd
-res://scenes/Pantalla_Titulo.tscn
+res://scripts/dataGame.gd
+res://Niveles/USSEEWA;Ado/chart.json
+res://Niveles/The One Who's Running The Show;Gooseworx, Alex Rochon/chart.json
+res://Niveles/MEGALOVANIA;toby fox/chart.json

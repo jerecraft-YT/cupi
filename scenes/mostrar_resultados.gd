@@ -71,6 +71,7 @@ func _process(delta: float) -> void:
 		textoMultiplicador.scale = lerp(textoMultiplicador.scale,Vector2.ONE,delta * 10.0)
 	if mostrarContinuar:
 		botonContinuar.position = lerp(botonContinuar.position,Vector2(515,600),delta * 10)
+
 func sonidoPrevioAudio():
 	sonidoPrevioActivo = false
 	await get_tree().create_timer(0.075).timeout
@@ -87,7 +88,7 @@ func Multiplicador():
 	particulasMultiplicador.emitting = true
 	sonidoMultiplicador.play()
 	resultados.scale = Vector2.ONE * 1.2
-	DataGame.puntos = DataGame.puntos *(DataGame.multiplicadorVelocidad / 2.0)
+	DataGame.puntos = DataGame.puntos * (1 +((DataGame.multiplicadorVelocidad - 1) / 2.0 ))
 	resultados.text ="
 	Puntos: %s
 	

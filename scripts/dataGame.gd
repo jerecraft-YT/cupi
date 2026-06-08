@@ -96,7 +96,7 @@ func _process(delta: float) -> void:
 	if regularVoz:
 		if !regularCambiado:
 			regularCambiado = true
-		AudioServer.get_bus_effect(1,0).set("pitch_scale",2 - multiplicadorVelocidad)
+		AudioServer.get_bus_effect(1,0).set("pitch_scale",abs(2 - multiplicadorVelocidad))
 	elif !regularVoz and regularCambiado:
 		regularCambiado = false
 		AudioServer.get_bus_effect(1,0).set("pitch_scale",1.0)
