@@ -104,13 +104,14 @@ changeStateEvery = 10.0
 
 [node name="Background1" type="AnimatedSprite2D" parent="BackgroundController"]
 sprite_frames = SubResource("SpriteFrames_uquea")
+frame = 2
 script = ExtResource("7_6xp4g")
 
 [node name="Background2" type="AnimatedSprite2D" parent="BackgroundController"]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(3, 0)
 sprite_frames = SubResource("SpriteFrames_uquea")
-frame = 1
+frame_progress = 0.4536248
 script = ExtResource("7_6xp4g")
 
 [node name="BeatDetecter" parent="." node_paths=PackedStringArray("camarita") instance=ExtResource("11_a1lvp")]
