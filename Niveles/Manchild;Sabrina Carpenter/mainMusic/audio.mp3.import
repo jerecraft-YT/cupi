@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://7qlb3qs50ad5"
+path="res://.godot/imported/audio.mp3-4efc9b0064697ddebac05f1aeb9ae439.mp3str"
+
+[deps]
+
+source_file="res://Niveles/Manchild;Sabrina Carpenter/mainMusic/audio.mp3"
+dest_files=["res://.godot/imported/audio.mp3-4efc9b0064697ddebac05f1aeb9ae439.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
