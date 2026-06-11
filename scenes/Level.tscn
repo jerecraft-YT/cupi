@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bk8q65ctlgoef"]
+[gd_scene load_steps=18 format=3 uid="uid://bk8q65ctlgoef"]
 
 [ext_resource type="Script" uid="uid://cdx712p3gvwwr" path="res://scripts/resource_controller.gd" id="1_ax7ne"]
 [ext_resource type="Script" uid="uid://dsy6idasrimya" path="res://scripts/MainLevel/video_stream_player.gd" id="2_ax7ne"]
@@ -10,9 +10,10 @@
 [ext_resource type="Script" uid="uid://b32sgw55o2c8f" path="res://scripts/MainLevel/player/controles.gd" id="6_xe3hh"]
 [ext_resource type="Texture2D" uid="uid://c1ce3lbjrnp2o" path="res://sprites/controller/disco.png" id="7_p6oy6"]
 [ext_resource type="Script" uid="uid://21w34c5tn380" path="res://scripts/animatedDebug/musicSpawner.gd" id="9_2eouu"]
+[ext_resource type="FontFile" uid="uid://cskeeypph5x11" path="res://testeos/DynaPuff-VariableFont_wdth,wght.ttf" id="9_sv41r"]
 [ext_resource type="Script" uid="uid://l7wrmu4gqejk" path="res://scripts/MouseFollow.gd" id="13_m0xki"]
 
-[sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_ax7ne"]
+[sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_m0xki"]
 mix_rate_mode = 0
 buffer_length = 0.1
 
@@ -107,7 +108,7 @@ amp = 37.0
 cobertura = 70.0
 
 [node name="ReversableAudioStreamPlayer" parent="GameplayViewport/Gameplay/Cupi" index="0"]
-stream = SubResource("AudioStreamGenerator_ax7ne")
+stream = SubResource("AudioStreamGenerator_m0xki")
 
 [node name="cupiContainer" parent="GameplayViewport/Gameplay/Cupi" index="2" node_paths=PackedStringArray("spawner")]
 spawner = NodePath("../../levelElements")
@@ -188,9 +189,10 @@ offset = Vector2(1, -1)
 [node name="combo" type="RichTextLabel" parent="HUD"]
 offset_left = 22.0
 offset_top = 601.0
-offset_right = 339.0
+offset_right = 379.0
 offset_bottom = 701.0
 pivot_offset = Vector2(0, 100)
+theme_override_fonts/normal_font = ExtResource("9_sv41r")
 theme_override_font_sizes/normal_font_size = 32
 text = "Combo: 0"
 vertical_alignment = 2
@@ -202,6 +204,7 @@ offset_right = 505.0
 offset_bottom = 151.0
 scale = Vector2(1, 1)
 theme_override_constants/outline_size = 20
+theme_override_fonts/normal_font = ExtResource("9_sv41r")
 theme_override_font_sizes/normal_font_size = 32
 
 [node name="transicionFinal" type="ColorRect" parent="HUD"]
@@ -230,15 +233,17 @@ offset_left = 1032.0
 offset_top = 2.0
 offset_right = 1339.0
 offset_bottom = 59.0
+theme_override_fonts/normal_font = ExtResource("9_sv41r")
 theme_override_font_sizes/normal_font_size = 24
 text = "juego en alpha"
 horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 20.0
-offset_top = 350.0
-offset_right = 416.0
-offset_bottom = 652.0
+offset_left = 9.0
+offset_top = 349.0
+offset_right = 423.0
+offset_bottom = 651.0
+theme_override_fonts/normal_font = ExtResource("9_sv41r")
 theme_override_font_sizes/normal_font_size = 36
 text = "sistema instrumental en desarrollo"
 horizontal_alignment = 1

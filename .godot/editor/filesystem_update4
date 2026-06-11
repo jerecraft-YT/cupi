@@ -1,5 +1,4 @@
-res://resources/metaball/audioAnalizer.tres
-res://prefabs/cupi_container.tscn
+res://scenes/Level.tscn
 res://resources/animations/cupiMouth.tres
 res://resources/animations/cupiEyes.tres
 res://shaders/sinCosforLine.tres
