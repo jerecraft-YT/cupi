@@ -13,7 +13,7 @@
 [ext_resource type="FontFile" uid="uid://cskeeypph5x11" path="res://testeos/DynaPuff-VariableFont_wdth,wght.ttf" id="9_sv41r"]
 [ext_resource type="Script" uid="uid://l7wrmu4gqejk" path="res://scripts/MouseFollow.gd" id="13_m0xki"]
 
-[sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_m0xki"]
+[sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_sv41r"]
 mix_rate_mode = 0
 buffer_length = 0.1
 
@@ -108,7 +108,7 @@ amp = 37.0
 cobertura = 70.0
 
 [node name="ReversableAudioStreamPlayer" parent="GameplayViewport/Gameplay/Cupi" index="0"]
-stream = SubResource("AudioStreamGenerator_m0xki")
+stream = SubResource("AudioStreamGenerator_sv41r")
 
 [node name="cupiContainer" parent="GameplayViewport/Gameplay/Cupi" index="2" node_paths=PackedStringArray("spawner")]
 spawner = NodePath("../../levelElements")

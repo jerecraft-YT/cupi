@@ -1,8 +1,8 @@
 72322a848ab928aa5c89f0cb78209805
-::res://::1781139398
+::res://::1784246448
 bullet_trail.gd::GDScript::6904476934282044510::1780762478::0::1::::BulletTrail<>Node2D<><>0<>0<><>::
 estructura json chartt.txt::TextFile::-1::1764715899::0::1::::<><><>0<>0<><>::
-export_presets.cfg::TextFile::-1::1780866949::0::1::::<><><>0<>0<><>::
+export_presets.cfg::TextFile::-1::1781140344::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::174066192364344378::1764715899::1775160398::1::::<><><>0<>0<>d26cd61c336390e624049fd21c72787b<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://Niveles/::1781014232
 ::res://Niveles/1-800 ;bbno$/::1780710144
@@ -83,8 +83,8 @@ chart.json::JSON::-1::1780958804::0::1::::<><><>0<>0<><>::
 toby fox - UNDERTALE Soundtrack - 100 MEGALOVANIA 192.mp3::AudioStreamMP3::3207970357883842729::1764715899::1780686469::1::::<><><>0<>0<>6d72f56660990dbc62cb348a44c7145e<>res://.godot/imported/toby fox - UNDERTALE Soundtrack - 100 MEGALOVANIA 192.mp3-7f75bd8b368913476a0db123d88531a2.mp3str::
 ::res://Niveles/MEGALOVANIA;toby fox/resources/::1780686469
 images.png::CompressedTexture2D::5278026351907916772::1780681331::1780686469::1::::<><><>0<>0<>1942ef0638f379ddc70297c90ecaa6e8<>res://.godot/imported/images.png-71fa26395126f6e899286eafd276fecf.ctex::
-::res://Niveles/test ;bbno$/::1780690802
-chart.json::JSON::-1::1780690802::0::1::::<><><>0<>0<><>::
+::res://Niveles/test ;bbno$/::1781488531
+chart.json::JSON::-1::1781488531::0::1::::<><><>0<>0<><>::
 ::res://Niveles/test ;bbno$/mainMusic/::1780689436
 audio.ogg::AudioStreamOggVorbis::6844158578565610121::1780689435::1780689436::1::::<><><>0<>0<>d30149e0e6f771b501637efdca93c7ce<>res://.godot/imported/audio.ogg-1685f43d5991ea17562695be78bff801.oggvorbisstr::
 ::res://Niveles/test ;bbno$/resources/::1780689435
@@ -123,24 +123,24 @@ music_item.tscn::PackedScene::4786512545560390349::1780686275::0::1::::<><><>0<>
 particulas_destruir_bullet.tscn::PackedScene::7309118007043119540::1775839776::0::1::::<><><>0<>0<><>::uid://2xaw3ehd0fhy::::res://resources/particulas/shieldParticles.tres<>uid://6ghjiqyemyni::::res://scripts/MainLevel/bullets/particulas_destruir_bullet.gd
 SpiralBullet.tscn::PackedScene::5448420384045013377::1780683249::0::1::::<><><>0<>0<><>::uid://bbo5yvl7gkhxw::::res://scripts/MainLevel/bullets/SpiralBullet.gd<>uid://fh0v2mn0rxjy::::res://sprites/testing/line.png<>uid://bvjuwoyoq48kd::::res://prefabs/bullet.tscn
 ::res://resources/::1773112514
-::res://resources/animations/::1781030225
-cupiEyes.tres::SpriteFrames::9086718789934383266::1781030225::0::1::::<><><>0<>0<><>::uid://cuu52i5ueaqmu::::res://sprites/cupi/ojos/CupiEyes.tres
-cupiMouth.tres::SpriteFrames::1404653848414325822::1781030225::0::1::::<><><>0<>0<><>::uid://b2j5ac01hh5be::::res://sprites/cupi/boca/CupiMouth.tres
+::res://resources/animations/::1783094059
+cupiEyes.tres::SpriteFrames::9086718789934383266::1783094059::0::1::::<><><>0<>0<><>::uid://cuu52i5ueaqmu::::res://sprites/cupi/ojos/CupiEyes.tres
+cupiMouth.tres::SpriteFrames::1404653848414325822::1783094059::0::1::::<><><>0<>0<><>::uid://b2j5ac01hh5be::::res://sprites/cupi/boca/CupiMouth.tres
 ::res://resources/diseños/::1775160410
 music_item.tres::StyleBoxFlat::7589861553156849885::1775160410::0::1::::<><><>0<>0<><>::
-::res://resources/metaball/::1781042914
-audioAnalizer.tres::AudioBusLayout::4081396580252559891::1781042914::0::1::::<><><>0<>0<><>::
+::res://resources/metaball/::1783798865
+audioAnalizer.tres::AudioBusLayout::4081396580252559891::1783798865::0::1::::<><><>0<>0<><>::
 metaballDegradado.tres::GradientTexture2D::4183565626712289035::1780672972::0::1::::<><><>0<>0<><>::
 ::res://resources/metaball/materiales/::1780789654
 metaball.tres::ShaderMaterial::8973637214073847270::1780789654::0::1::::<><><>0<>0<><>::uid://bd1h0aucl5xim::::res://shaders/sinCosforLine.tres
 metaball_static.tres::ShaderMaterial::3640267533648600494::1775160410::0::1::::<><><>0<>0<><>::
 ::res://resources/particulas/::1780694885
 shieldParticles.tres::ParticleProcessMaterial::1942620231192224242::1780694885::0::1::::<><><>0<>0<><>::
-::res://scenes/::1781139373
-Level.tscn::PackedScene::3157461997121050757::1781030225::0::1::::<><><>0<>0<><>::uid://cdx712p3gvwwr::::res://scripts/resource_controller.gd<>uid://dsy6idasrimya::::res://scripts/MainLevel/video_stream_player.gd<>uid://bv1q1ckfcnds8::::res://prefabs/gameplay.tscn<>uid://d1y8yp35e5vm5::::res://prefabs/debug_info.tscn<>uid://r8erhl8y1ums::::res://prefabs/beat_detecter.tscn<>uid://dinxdtthuvvkf::::res://scripts/debug/control_velocity.gd<>uid://dtymirotlswa8::::res://scenes/testLag.gd<>uid://b32sgw55o2c8f::::res://scripts/MainLevel/player/controles.gd<>uid://c1ce3lbjrnp2o::::res://sprites/controller/disco.png<>uid://21w34c5tn380::::res://scripts/animatedDebug/musicSpawner.gd<>uid://l7wrmu4gqejk::::res://scripts/MouseFollow.gd
+::res://scenes/::1781488531
+Level.tscn::PackedScene::3157461997121050757::1781488531::0::1::::<><><>0<>0<><>::uid://cdx712p3gvwwr::::res://scripts/resource_controller.gd<>uid://dsy6idasrimya::::res://scripts/MainLevel/video_stream_player.gd<>uid://bv1q1ckfcnds8::::res://prefabs/gameplay.tscn<>uid://d1y8yp35e5vm5::::res://prefabs/debug_info.tscn<>uid://r8erhl8y1ums::::res://prefabs/beat_detecter.tscn<>uid://dinxdtthuvvkf::::res://scripts/debug/control_velocity.gd<>uid://dtymirotlswa8::::res://scenes/testLag.gd<>uid://b32sgw55o2c8f::::res://scripts/MainLevel/player/controles.gd<>uid://c1ce3lbjrnp2o::::res://sprites/controller/disco.png<>uid://21w34c5tn380::::res://scripts/animatedDebug/musicSpawner.gd<>uid://cskeeypph5x11::::res://testeos/DynaPuff-VariableFont_wdth,wght.ttf<>uid://l7wrmu4gqejk::::res://scripts/MouseFollow.gd
 MostrarResultados.tscn::PackedScene::7128224910604039095::1781014291::0::1::::<><><>0<>0<><>::uid://cu64abtwc6g86::::res://scenes/mostrar_resultados.gd<>uid://cskeeypph5x11::::res://testeos/DynaPuff-VariableFont_wdth,wght.ttf<>uid://8il3yey1n48c::::res://sfx/394569__gb_uam__caixa-de-bateria.wav<>uid://4p3sjqx67pjf::::res://sfx/badum.wav<>uid://cmwdw8kgbef6b::::res://prefabs/metaball.tscn<>uid://c515s8eiyg4px::::res://prefabs/cupi_container.tscn<>uid://d06oyjlmaum4e::::res://sfx/MultiplicadorNota.wav
 mostrar_resultados.gd::GDScript::6242374826191042865::1780958804::0::1::::<>Node2D<><>0<>0<><>::
-Pantalla_Titulo.tscn::PackedScene::8995490321990086102::1781139373::0::1::::<><><>0<>0<><>::uid://bowvms2w6ac6j::::res://sprites/background/Background_1.png<>uid://btqx7jldobmj5::::res://scripts/menu/MainMenuController.gd<>uid://lmhfiai4rdll::::res://sprites/background/Background_2.png<>uid://cmwdw8kgbef6b::::res://prefabs/metaball.tscn<>uid://cer4rjvbsm2xp::::res://sprites/background/Background_3.png<>uid://c515s8eiyg4px::::res://prefabs/cupi_container.tscn<>uid://buok78nq5p1ik::::res://sprites/background/Background_4.png<>uid://cve6vwq7xci4l::::res://scripts/background_controller.gd<>uid://cit8xgcws0kuc::::res://sprites/background/Background_5.png<>uid://ksv03ym07omq::::res://sprites/background/Background_6.png<>uid://cud1i8mhv12n7::::res://scripts/miscelanea/rotateTexture.gd<>uid://ylyvmroyq0sy::::res://scripts/loadLevels/level_loader.gd<>uid://c0xylibq7685x::::res://scripts/menu/controladorMenu.gd<>uid://r8erhl8y1ums::::res://prefabs/beat_detecter.tscn<>uid://d1y8yp35e5vm5::::res://prefabs/debug_info.tscn<>uid://ch8y4igp1acwo::::res://testeos/Letter Magic.ttf<>uid://cjlssy54gqe62::::res://scripts/menu/showMenu.gd<>uid://bh1obd3gn3luq::::res://scripts/audio/show_audio_debug.gd<>uid://cd2h0hwky0h4x::::res://prefabs/audioModifierDebug.tscn<>uid://cagvfrvk467w0::::res://prefabs/music_item.tscn<>uid://bx3fjtbbwusd3::::res://scripts/menu/loadMainLevelButton.gd<>uid://bymx27jlswj05::::res://shaders/caleidoscopio.gdshader<>uid://cqk3ysk80cik::::res://icon.svg<>uid://b0eq624nfltoa::::res://scenes/valores_nivel_custom.gd<>uid://c0200fc1ikjrb::::res://scripts/animatedDebug/text_draw.gd<>uid://dlf5t8hggjqun::::res://testeos/gGroovyCow.ttf<>uid://cskeeypph5x11::::res://testeos/DynaPuff-VariableFont_wdth,wght.ttf
+Pantalla_Titulo.tscn::PackedScene::8995490321990086102::1781141460::0::1::::<><><>0<>0<><>::uid://bowvms2w6ac6j::::res://sprites/background/Background_1.png<>uid://btqx7jldobmj5::::res://scripts/menu/MainMenuController.gd<>uid://lmhfiai4rdll::::res://sprites/background/Background_2.png<>uid://cmwdw8kgbef6b::::res://prefabs/metaball.tscn<>uid://cer4rjvbsm2xp::::res://sprites/background/Background_3.png<>uid://c515s8eiyg4px::::res://prefabs/cupi_container.tscn<>uid://buok78nq5p1ik::::res://sprites/background/Background_4.png<>uid://cve6vwq7xci4l::::res://scripts/background_controller.gd<>uid://cit8xgcws0kuc::::res://sprites/background/Background_5.png<>uid://ksv03ym07omq::::res://sprites/background/Background_6.png<>uid://cud1i8mhv12n7::::res://scripts/miscelanea/rotateTexture.gd<>uid://ylyvmroyq0sy::::res://scripts/loadLevels/level_loader.gd<>uid://c0xylibq7685x::::res://scripts/menu/controladorMenu.gd<>uid://r8erhl8y1ums::::res://prefabs/beat_detecter.tscn<>uid://d1y8yp35e5vm5::::res://prefabs/debug_info.tscn<>uid://ch8y4igp1acwo::::res://testeos/Letter Magic.ttf<>uid://cjlssy54gqe62::::res://scripts/menu/showMenu.gd<>uid://bh1obd3gn3luq::::res://scripts/audio/show_audio_debug.gd<>uid://cd2h0hwky0h4x::::res://prefabs/audioModifierDebug.tscn<>uid://cagvfrvk467w0::::res://prefabs/music_item.tscn<>uid://bx3fjtbbwusd3::::res://scripts/menu/loadMainLevelButton.gd<>uid://bymx27jlswj05::::res://shaders/caleidoscopio.gdshader<>uid://cqk3ysk80cik::::res://icon.svg<>uid://b0eq624nfltoa::::res://scenes/valores_nivel_custom.gd<>uid://c0200fc1ikjrb::::res://scripts/animatedDebug/text_draw.gd<>uid://dlf5t8hggjqun::::res://testeos/gGroovyCow.ttf<>uid://cskeeypph5x11::::res://testeos/DynaPuff-VariableFont_wdth,wght.ttf
 StartLoad.tscn::PackedScene::1168807843475006331::1775160409::0::1::::<><><>0<>0<><>::uid://dmhy14nbg60km::::res://scripts/loadLevels/start_load.gd
 testLag.gd::GDScript::8543138951966709785::1780884062::0::1::::<>Sprite2D<><>0<>0<><>::
 valores_nivel_custom.gd::GDScript::4150427580683043888::1780786879::0::1::::<>Label<><>0<>0<><>::
@@ -205,19 +205,19 @@ beatBar0.ogg::AudioStreamOggVorbis::4984221383395929199::1764715899::1775160395:
 beatBar1.ogg::AudioStreamOggVorbis::2872733204785928784::1764715899::1775160395::1::::<><><>0<>0<>ae0f081a0ff1c9b2bdfe81d56d529127<>res://.godot/imported/beatBar1.ogg-6dca954d6c2ca3e19beae88868e6be88.oggvorbisstr::
 bulletHit.wav::AudioStreamWAV::3533109749503188423::1767038168::1775160399::1::::<><><>0<>0<>b25c7f32f0748b123c2263d6395093c0<>res://.godot/imported/bulletHit.wav-58e651538b52092830071e44da256b54.sample::
 MultiplicadorNota.wav::AudioStreamWAV::8978872239607439726::1780884726::1780884730::1::::<><><>0<>0<>69d8d1c69c4d2d09da92c66f2c46f2a5<>res://.godot/imported/MultiplicadorNota.wav-152780495acf86cfe26d2a1bd96731ab.sample::
-::res://shaders/::1781030226
-3_sample_blur.gdshader::Shader::171342028614460189::1781030225::0::1::::<><><>0<>0<><>::
+::res://shaders/::1783094059
+3_sample_blur.gdshader::Shader::171342028614460189::1783094059::0::1::::<><><>0<>0<><>::
 AberracionCromatica.gdshader::Shader::6344230518307693689::1766960857::0::1::::<><><>0<>0<><>::
-caleidoscopio.gdshader::Shader::4097171866498820484::1781030225::0::1::::<><><>0<>0<><>::
-caleidoscopio.tres::VisualShader::9064208404438607858::1781030225::0::1::::<><><>0<>0<><>::
-dynamicProgressBar.gdshader::Shader::3062471332559122312::1781030225::0::1::::<><><>0<>0<><>::
-Frosted_Glass_Shader.gdshader::Shader::1162132275360269597::1781030225::0::1::::<><><>0<>0<><>::
-gradienteSINCOS.tres::GradientTexture2D::5452109655111742229::1781030225::0::1::::<><><>0<>0<><>::
-mascara.tres::VisualShader::7679905907378488420::1781030226::0::1::::<><><>0<>0<><>::
-ScreenEdges.gdshader::Shader::132272452122779992::1781030225::0::1::::<><><>0<>0<><>::
-sinCos.tres::VisualShader::1206048680536230605::1781030225::0::1::::<><><>0<>0<><>::uid://cjxbpjto5xhr6::::res://shaders/gradienteSINCOS.tres
-sinCosforLine.tres::VisualShader::2651130731012604888::1781030225::0::1::::<><><>0<>0<><>::
-Universal_Transition_Shader.gdshader::Shader::8695209792160202106::1781030225::0::1::::<><><>0<>0<><>::
+caleidoscopio.gdshader::Shader::4097171866498820484::1783094059::0::1::::<><><>0<>0<><>::
+caleidoscopio.tres::VisualShader::9064208404438607858::1783094059::0::1::::<><><>0<>0<><>::
+dynamicProgressBar.gdshader::Shader::3062471332559122312::1783094059::0::1::::<><><>0<>0<><>::
+Frosted_Glass_Shader.gdshader::Shader::1162132275360269597::1783094059::0::1::::<><><>0<>0<><>::
+gradienteSINCOS.tres::GradientTexture2D::5452109655111742229::1783094059::0::1::::<><><>0<>0<><>::
+mascara.tres::VisualShader::7679905907378488420::1783094059::0::1::::<><><>0<>0<><>::
+ScreenEdges.gdshader::Shader::132272452122779992::1783094059::0::1::::<><><>0<>0<><>::
+sinCos.tres::VisualShader::1206048680536230605::1783094059::0::1::::<><><>0<>0<><>::uid://cjxbpjto5xhr6::::res://shaders/gradienteSINCOS.tres
+sinCosforLine.tres::VisualShader::2651130731012604888::1783094059::0::1::::<><><>0<>0<><>::
+Universal_Transition_Shader.gdshader::Shader::8695209792160202106::1783094059::0::1::::<><><>0<>0<><>::
 ::res://sprites/::1775160398
 mascara.png::CompressedTexture2D::2955863389728153049::1764715900::1775160398::1::::<><><>0<>0<>fb7eb72faa2199caf0e858d9a20a89a1<>res://.godot/imported/mascara.png-ed30c3c3c364cbc59a0b59718b83f147.ctex::
 ::res://sprites/background/::1775160399

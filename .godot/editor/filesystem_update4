@@ -1,15 +1,1 @@
-res://scenes/Level.tscn
-res://resources/animations/cupiMouth.tres
-res://resources/animations/cupiEyes.tres
-res://shaders/sinCosforLine.tres
-res://shaders/caleidoscopio.gdshader
-res://shaders/Frosted_Glass_Shader.gdshader
-res://shaders/Universal_Transition_Shader.gdshader
-res://shaders/dynamicProgressBar.gdshader
-res://shaders/ScreenEdges.gdshader
-res://shaders/gradienteSINCOS.tres
-res://shaders/sinCos.tres
-res://shaders/3_sample_blur.gdshader
-res://shaders/caleidoscopio.tres
-res://shaders/mascara.tres
-res://scenes/Pantalla_Titulo.tscn
+res://resources/metaball/audioAnalizer.tres
